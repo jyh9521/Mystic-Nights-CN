@@ -123,6 +123,10 @@ def apply_artwork(data: bytes, patch: dict, *, targets: dict | None = None, reve
         end = offset + len(after)
     if digest(output) != patch[after_key]:
         raise ValueError("Authored artwork output identity mismatch")
+    if not reverse and "state_checks" in patch:
+        from .artwork_checks import check_state_pairs
+        rendered, _ = decode_tim2(bytes(output))
+        check_state_pairs(rendered, patch["state_checks"])
     return bytes(output)
 
 

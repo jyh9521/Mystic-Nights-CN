@@ -105,6 +105,8 @@ PF不是TTF。KOREAN.PF为4,251,264字节，47个子字体；韩文部分为26×
 
 游戏贴图由三种已观察到的单图、线性TIM2配置组成：RGBA32，以及8bit索引配16bit/32bit CLUT。`graphics.py`只对配方明确支持的配置回填；每张原纹理和每个编辑矩形均绑定hash。清单保存所有物理副本，等长重建保留原尺寸、头部、调色板及矩形外像素。完整图像覆盖与背景处理方式见[图像文字](GRAPHICS_TEXT.md)。
 
+`indexed-artwork-delta` v1 可选 `state_checks` 是本项目的离线回归数据，不写入游戏。每项有唯一 `id`、`normal/selected` 两个选择器（`rect=[x,y,w,h]`、含边界的 `rgba_min/rgba_max`），`min_row_pixels/min_column_pixels` 排除孤立高光，`max_width_difference/max_height_difference` 限定核心外接矩形差。可选 `horizontal_runs` 在独立矩形内检查符合 RGBA 条件的最长连续横线，不能超过 `maximum`。正向差分先验证输出 hash，再执行这些规则；反向恢复只验证原字节与原 hash，不要求原文符合译文字形规则。
+
 ## NETGUI 原始背景与 RGB24 图像差分 — Verified / 本项目定义
 
 `NETGUI/BG.RGB` 为 640×448、逐行 RGB24，无文件头，860160 字节；原 SHA-256 为 `b23b8757334972d171fac4bc49d0550003150dca177322d8400007a754536eb8`。像素 `(x,y)` 的 RGB 位于 `(y*640+x)*3`。离线按该布局解码得到完整联网背景；标题位置 `[7,195,225,29]`，不是 TIM2，也不经过 CLUT。

@@ -59,7 +59,7 @@ U317 底部四条灰色文字是独立的暗淡／模糊状态，不是垃圾残
 
 ### 可复用原生导入
 
-`recipe.json` 结构：`{"allowed_rectangles":[[x,y,width,height]],"targets":{"slot-id":"localized text"}}`。导入前 PNG 必须已经完成原生尺寸、字形、背景和文字区域审校。
+`recipe.json` 结构：`{"allowed_rectangles":[[x,y,width,height]],"targets":{"slot-id":"localized text"}}`；可选 `state_checks` 按 FILE_FORMATS 中的规则声明成对状态回归检查，导入器在写文件前执行并保存到差分。导入前 PNG 必须已经完成原生尺寸、字形、背景和文字区域审校。
 
 ```powershell
 python -X utf8 tools/import_artwork.py --source original.TM2 --source-sha256 SOURCE_SHA256 --png reviewed-native.png --recipe recipe.json --output new-artwork-delta.json
@@ -90,5 +90,15 @@ python -X utf8 tools/import_raw_artwork.py --source original.rgb --source-sha256
 本机创作提示词、选择记录、注册坐标与哈希保存在 `build/artwork-completion/provenance.json`；最终原尺寸对照在其 `native/`。这些完整图片不提交；已提交差分足以从原盘重建，不依赖创作缓存。
 
 ## 当前范围
+
+### 主菜单选中态反馈修订
+
+2026-11-05，用户游戏截图揭示选中态字形过小及白色下划线。旧 ISO 的 L001_004 SHA 为 `8e956ca33df0b3ae3473390c3adb12f9b8f8ec25d1a2f4c02f8f51a1ba178f5e`，与当时已提交差分一致：属于实装素材问题。原版稳态缩放对照见 TECHNICAL。
+
+保留既有字体风格，从原生成稿重新界定四个字形范围，排除胶囊框线。另试的透明字稿浮雕过重，未安装。清理完整旧字床后按四个未选中标签的宽高对齐；字形注册尺寸为 53×16、63×16、63×16、39×16，仍使用原调色板。四个选中矩形内更改 3119 个索引，普通态、标题、START、MN、版权、框外图案和其他 135 张重绘纹理不变。
+
+修正后 L001_004 SHA 为 `46209d66a054791c2dda965c8e5846118a0cb146127134bc024d55ed34e889c6`。原生回读检查的亮色字高为普通态 14/12/13/13、选中态 14/13/13/13（像素阈值下的笔画核心，不是排版字号），四条 59 像素白线均为 0。机器检查和视觉复查均从 TIM2/ISO 解码，不拿生成稿作为已安装证据。局部底纹是美术修复，不声称找回了不可见的原文字下方精确像素。
+
+复用提示词补充：`Isolate ONLY the lettering. Exclude capsule frames, highlights, underline-like bars and background from glyph bounds. Match paired state dimensions after native CLUT quantization, not merely high-resolution crop dimensions.`
 
 累计 402 项可翻译 TIM2 文字全部安装，136 张唯一纹理、246 个物理成员；待重绘 0 项，2 项 D.I.A 标识保留。联网背景标题另计 1 项。模糊字迹保持原图；实际游戏混色与玩家美术验收仍单独记录。版本、哈希、实测命令与回滚结果见 VERIFICATION。

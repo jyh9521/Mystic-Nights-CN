@@ -24,6 +24,17 @@ class ArtworkTests(unittest.TestCase):
         self.assertEqual(self.source[:64], self.output[:64])
         self.assertEqual(self.source[64+32*24:], self.output[64+32*24:])
 
+    def test_forward_enforces_optional_state_checks_but_reverse_restores_source(self):
+        selector={"rect":[10,10,3,1],"rgba_min":[200,200,200,200],"rgba_max":[255,255,255,255]}
+        self.patch["state_checks"]=[{"id":"pair","normal":selector,"selected":deepcopy(selector),
+                                      "min_row_pixels":1,"min_column_pixels":1,
+                                      "max_width_difference":0,"max_height_difference":0}]
+        self.assertEqual(apply_artwork(self.source,self.patch),self.output)
+        self.assertEqual(apply_artwork(self.output,self.patch,reverse=True),self.source)
+        self.patch["state_checks"][0]["selected"]["rect"]=[0,0,3,1]
+        with self.assertRaisesRegex(ValueError,"no measurable ink"):
+            apply_artwork(self.source,self.patch)
+
     def test_import_identity_keeps_duplicate_palette_indices(self):
         source=bytearray(self.source);source[64]=7
         source=bytes(source);image,_=decode_tim2(source)

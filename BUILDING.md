@@ -16,6 +16,7 @@ python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나
 python -X utf8 tools/validate_translations.py --iso "[full2]미스틱 나이츠(K).iso"
 python -X utf8 tools/build_locale.py --iso "[full2]미스틱 나이츠(K).iso" --locale zh-CN --output build/full-text
 python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json
+python -X utf8 tools/verify_artwork_states.py --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --catalogue locales/zh-CN/graphics.json
 ```
 
 输出目录必须尚不存在。构建在新的同级事务目录中完成后才发布，不覆盖已有镜像。构建和修改版验证均支持 `--font` 指定同哈希字体；未指定时使用 `build/fonts/` 的锁定字体。
@@ -66,6 +67,8 @@ python -X utf8 tools/inspect_graphics_text.py --iso "原版.iso" --preview-only 
 字体和格式细节见 `TECHNICAL.md`、`docs/FILE_FORMATS.md`、`docs/NETWORK_FONT.md`。图片重绘不在普通构建时重新调用生成模型：已审核的逐像素差分在 `locales/zh-CN/artwork/`，相同源码和原盘会生成相同文件。
 
 已完成原分辨率排版和美术复核的 RGBA PNG 可用 `tools/import_artwork.py` 转为差分；该工具不生成或排版文字。`--source` 为原 TIM2，`--source-sha256` 为配方中的原哈希，`--recipe` 提供 `allowed_rectangles` 和 `targets`，`--output` 必须是新 JSON 路径。导入只量化到原 CLUT，并立即正反向验证；没有修改的像素保留原索引。示例见 `docs/ARTWORK_REVIEW.md`。
+
+已声明 `state_checks` 的像素差分在正向重放时额外检查成对状态的笔画核心尺寸及不应出现的连续横线；参数属于 locale 美术数据，不硬编码中文字体。上述独立回读命令核对实装哈希后执行同一规则。规则只覆盖明确声明的错误类型，不替代实际美术审校。
 
 无头 RGB24 图像使用 `tools/import_raw_artwork.py`，参数同上，recipe 另外声明 `profile=[width,height,3]`，PNG 必须为原尺寸 RGB。原图格式清单位于 `assets/raw-image-slots.json`；目标文字与像素差分放在 `locales/<locale>/raw-images.json` 和 `artwork/`。该路径不经过 TIM2 或字体渲染器，源 hash、允许区域、译文绑定和反向恢复均独立验证。
 
