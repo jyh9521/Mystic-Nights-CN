@@ -1,0 +1,72 @@
+{
+  "format": "literal-display-fields",
+  "version": 1,
+  "original_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "evidence": "RenderString 0x155c70..0x15663c compares exact control tokens; unmatched angle brackets fall through to ordinary glyph rendering. Only these source-bound natural-language headings are editable.",
+  "entries": [
+    {
+      "id": "RES/SUBSYS.RES:EVENT.SCR@0000854d",
+      "source_sha256": "9cd7ea3d1184d626d37421092998b1a1303da72e08b897bf12db6299f551ce75",
+      "literal_tokens": [
+        "<메인통제실 동력 시스템 접근 중...>"
+      ]
+    },
+    {
+      "id": "RES/SUBSYS.RES:EVENT.SCR@000149bd",
+      "source_sha256": "7bcd34c28bf20918a8b265b41fde33307920ba34dda10f05ddac28d81c19799d",
+      "literal_tokens": [
+        "<GATE OPEN>"
+      ]
+    },
+    {
+      "id": "RES/SUBSYS.RES:EVENT.SCR@00016a73",
+      "source_sha256": "1de51056b36268256af686a4f4f805aa4edc2e2cb4b5d2036aa5e68aadbc7a9c",
+      "literal_tokens": [
+        "<제 1코드 분석중>"
+      ]
+    },
+    {
+      "id": "RES/SUBSYS.RES:EVENT.SCR@00016b66",
+      "source_sha256": "c6607206ff3904dd28f1ab0f1530d5cc401893474ca0352d46d83fbc2f747cb0",
+      "literal_tokens": [
+        "<제 2코드 분석중>"
+      ]
+    },
+    {
+      "id": "RES/SUBSYS.RES:EVENT.SCR@00026c0f",
+      "source_sha256": "7bcd34c28bf20918a8b265b41fde33307920ba34dda10f05ddac28d81c19799d",
+      "literal_tokens": [
+        "<GATE OPEN>"
+      ]
+    },
+    {
+      "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001b36",
+      "source_sha256": "13b64c920f1dcb28e02c23758d91532ee367446a527395593bd28538ba6719a7",
+      "literal_tokens": [
+        "<암호 시스템 설정>"
+      ]
+    },
+    {
+      "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002ecf",
+      "source_sha256": "e75bec70a3d1aa3af65883e7c50d150bb78672fc29f90c5719e992ff17092a3a",
+      "literal_tokens": [
+        "<뱀파이어 포악성에 관한 보고>"
+      ]
+    },
+    {
+      "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002fb1",
+      "source_sha256": "82d68af5a8e4f5c838ddb4ec6834f1f5d01aca4f0a57d367e93d85a125742432",
+      "literal_tokens": [
+        "<Skip>"
+      ]
+    },
+    {
+      "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003068",
+      "source_sha256": "773ffc97133f2c1db3bc706d1878ebd0fda17c173dff545e0979d28faa907733",
+      "literal_tokens": [
+        "<뱀파이어 프로젝트>",
+        "<Skip>"
+      ]
+    }
+  ]
+}

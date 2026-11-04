@@ -2,7 +2,7 @@
   "format": "localization-catalogue",
   "version": 1,
   "locale": "zh-CN",
-  "profile": "partial",
+  "profile": "full-text",
   "files": [
     "dialogue.json",
     "items.json",

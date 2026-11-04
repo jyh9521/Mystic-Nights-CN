@@ -2,12 +2,14 @@
 from pathlib import Path
 import struct
 import sys
+import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from mysticnights.font import (FontError, allocate_codes, decode_text, encode_text,
-                              parse_fnt, parse_tim2, patch_glyphs, resource_hash)
+                              parse_fnt, parse_tim2, patch_glyphs, resource_hash, common_baseline_shift, build_font)
 
 
 def fnt_fixture():
@@ -29,6 +31,32 @@ def tim2_fixture():
 
 
 class FontTests(unittest.TestCase):
+    def test_hash_checked_font_bytes_are_used_even_if_path_changes(self):
+        from fontTools.ttLib import TTFont
+        from test_network_font import make_outline
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "synthetic.ttf"
+            digest = make_outline(path)
+            args = (fnt_fixture(), {"FONT_8.TM2": tim2_fixture()}, ["中文"], path, digest)
+            expected = build_font(*args, pixel_size=12)
+            def change_path_then_open(stream, **kwargs):
+                path.write_bytes(b"replacement after hash verification")
+                return TTFont(stream, **kwargs)
+            with patch("fontTools.ttLib.TTFont", side_effect=change_path_then_open):
+                result = build_font(*args, pixel_size=12)
+            self.assertEqual(result.font_sha256, digest)
+            self.assertEqual(result.textures, expected.textures)
+            self.assertEqual(path.read_bytes(), b"replacement after hash verification")
+
+    def test_common_baseline_never_clips_or_centers_each_character(self):
+        self.assertEqual(common_baseline_shift([]), 0)
+        self.assertEqual(common_baseline_shift([(0, 48, 52), (20, 51, 52)]), 0)
+        self.assertEqual(common_baseline_shift([(2, 44, 52), (10, 53, 52)]), -1)
+        self.assertEqual(common_baseline_shift([(-1, 40, 52), (20, 51, 52)]), 1)
+        with self.assertRaisesRegex(FontError, "common baseline"):
+            common_baseline_shift([(0, 48, 52), (12, 55, 52)])
+        with self.assertRaises(FontError):common_baseline_shift([(2, 1, 52)])
+
     def test_resource_hash_matches_all_retail_font_names(self):
         hashes = [0x624EA6CD, 0x6260BF4E, 0x6272D7CF, 0x6284F050,
                   0x629708D1, 0x62A92152, 0x62BB39D3, 0x62CD5254]

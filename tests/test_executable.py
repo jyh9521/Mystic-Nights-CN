@@ -42,6 +42,22 @@ class ExecutableTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 validate_tokens("确认", target)
 
+    def test_button_tokens_keep_order_not_only_counts(self):
+        validate_tokens("<O> yes <X> no", "<O>是<BR><X>否")
+        with self.assertRaisesRegex(ValueError, "control"):
+            validate_tokens("<O> yes <X> no", "<X>否<O>是")
+
+    def test_only_explicit_zero_alignment_padding_can_extend_span(self):
+        original = b"\x7fELF\x01\x01" + b"\0" * 10 + b"Bruce\0\0\0Next\0"
+        row = {"id":"sample","offset":16,"source":"Bruce","target":"abcdef","capacity":7,"padding_bytes":1}
+        result = patch_strings(original, [row], str.encode)
+        self.assertEqual(result[16:], b"abcdef\0\0Next\0")
+        for change in ({"padding_bytes":0}, {"padding_bytes":-1}, {"padding_bytes":True}, {"padding_bytes":16}):
+            with self.assertRaises(ValueError):patch_strings(original,[{**row,**change}],str.encode)
+        changed = original[:22] + b"X" + original[23:]
+        with self.assertRaisesRegex(ValueError,"original bytes"):
+            patch_strings(changed,[row],str.encode)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,76 @@
+{
+  "format": "save-metadata-slots",
+  "version": 1,
+  "original_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "sources": [
+    {
+      "resource": "CNF/ICON_EN.SYS",
+      "format": "ps2-icon-sys",
+      "size": 964,
+      "sha256": "c16b6c289ed4bfe689a946a472b3a6538c728af8b97e89a61e6826429f4ec407",
+      "expected_type": 4,
+      "expected_nl_offset": 24,
+      "expected_icon_filenames": [
+        "SYS_NET.ICO",
+        "SYS_NET.ICO",
+        "SYS_NET.ICO"
+      ],
+      "title": {
+        "id": "CNF/ICON_EN.SYS@000000c0",
+        "offset": 192,
+        "capacity": 68,
+        "source": "Ｙｏｕｒ　ＮｅｔｗｏｒｋＣｏｎｆｉｇｕｒａｔｉｏｎ",
+        "source_sha256": "e0947fdc29685645468e95fb575865aa0796150372d4fb7f8026f4df88d03d96"
+      }
+    }
+  ],
+  "evidence": {
+    "status": "verified_static",
+    "display_domain": "PS2 memory-card browser firmware Shift-JIS font; not the game FNT or network PF",
+    "line_break_semantics": "u16LE at 0x06 is a byte offset into title[68] at 0xC0; an offset equal to the encoded title length leaves line 2 empty",
+    "copy_path": "CreateNetConfig passes iconsys=cdrom0:\\CNF\\ICON_EN.SYS;1; MODULES/NETCNF.IRX parses the path and copies all bytes to icon.sys without decoding its title",
+    "protocol_keys_unchanged": [
+      "/BWNETCNF/BWNETCNF",
+      "BWNETCNF",
+      "/BWNETCNF",
+      "SYS_NET.ICO",
+      "icon.sys"
+    ],
+    "main_save_title_unchanged": {
+      "resource": "SCKA_200.55",
+      "offset": 1386264,
+      "source": "Mystic Nights",
+      "source_bytes": 13,
+      "capacity_with_nul": 14,
+      "reason": "CopyIconFile calls AsciiString2Sjis; preserve the original ASCII input and game save identifiers"
+    },
+    "anchors": [
+      {
+        "resource": "SCKA_200.55",
+        "sha256": "a8662cb99c7dd8abc66c6766d27e0fc15ff83fb3a04d2837001b87f88cf899c4",
+        "offset": 445124,
+        "expected_hex": "2500043c2d00053c98268424c0c2040c2034a5242d00043c2500053c60338424ae7e040ca826a5241a0003242d00023c663343a4",
+        "meaning": "ASCII title conversion, output at icon base+0xC0, u16 nlOffset=26 at base+6"
+      },
+      {
+        "resource": "MODULES/NETCNF.IRX",
+        "sha256": "b938e875b0a93ffeea4859bee38ecc86f1953dd47efe1ade2e635850826c73b9",
+        "offset": 6964,
+        "expected_hex": "0100073c9899e7242b05000c1000a627212040022c06000c21280002",
+        "meaning": "formats icon.sys path, then calls bytewise file copy with iconsys source"
+      },
+      {
+        "resource": "MODULES/NETCNF.IRX",
+        "sha256": "b938e875b0a93ffeea4859bee38ecc86f1953dd47efe1ade2e635850826c73b9",
+        "offset": 8132,
+        "expected_hex": "c4030224eaff621400000000",
+        "meaning": "icon.sys size check is 0x3C4"
+      }
+    ],
+    "format_references": [
+      "https://github.com/ps2dev/ps2sdk/blob/master/ee/rpc/memorycard/include/libmc.h",
+      "https://github.com/ps2homebrew/HDLGameInstaller/blob/main/OSD.c"
+    ],
+    "runtime_verified": false
+  }
+}

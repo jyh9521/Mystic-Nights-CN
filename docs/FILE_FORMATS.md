@@ -83,11 +83,27 @@ Header：12字节`31 2e 33 30 00 00 00 00 42 75 69 6c`（`1.30\0\0\0\0Buil`）�
 
 `mystic-nights-linked-names` v1保存源范围hash、113组规范ID和698引用；字段`capacity`是写入span，SCN/ELF含原NUL，SCR不含引号；`max_encoded_bytes`统一不含终止符。核心清单重建后必须完全相同，删掉一处引用也会拒绝修改。脚本/SCN/ELF的引用数组是静态闭包，不意味着所有计算型引用已证实。
 
-`localization-catalogue` v1索引引用同一目录下的JSON文件。源ID、偏移、容量、控制符和上下文不可变；仅`draft`/`reviewed`进入partial构建。文档逻辑页携带强制镜像声明，同一target生成两份资源；原版92页与英文107页不按偏移混配。
+`localization-catalogue` v1索引引用同一目录下的JSON文件。源ID、偏移、容量、控制符和上下文不可变；仅`draft`/`reviewed`进入构建。`partial`允许显式未译项，`full-text`要求全部非空字段有译文。文档逻辑页携带强制镜像声明，同一target生成两份资源；原版92页与英文107页不按偏移混配。
 
-## 辅助文本 — Verified编码，编辑路径未接入
+## 辅助文本 — Verified
 
-NETGUICD.ELF现有270个UTF-8 NUL韩文候选，另有多语言段，配套NETGUI/KOREAN.PF。DATA/AGREE.TXT为8180字节CP949纯文本。`assets/auxiliary-text-sources.json`另锁定主ELF通关/商标文字两个NUL槽，提取时核对完整原字节；不把候选长度直接当已验证可扩展容量。
+NETGUICD.ELF有270个UTF-8 NUL韩文槽，另有多语言段，配套NETGUI/KOREAN.PF。DATA/AGREE.TXT为8180字节CP949纯文本，行尾是CR CR LF，`<END>`终止读取。辅助目录的`source_bytes`/`source_sha256`不含NUL，主ELF构建行的`capacity`/`source_sha256`包含完整写入span。
+
+`assets/auxiliary-text-sources.json`锁定主ELF38个补充槽：通关/商标两个漏项，以及渲染调用链核实的36个原始英文界面/角色名。默认只用原字符串+NUL；6个角色名配方显式增加最小`padding_bytes`，表示原终止符后已核对为零的对齐字节（1或2）。提取/构建验证原文、全部NUL、原盘hash；未声明padding时仍按原长度拒绝溢出。每项静态引用扫描证据记录在该配方中，不代表可任意借用其他对齐空间。
+
+## NETGUI PF — Verified 只读结构与等长字形覆盖
+
+PF不是TTF。KOREAN.PF为4,251,264字节，47个子字体；韩文部分为26×26、4bpp、352字节字形步长，低半字节先出，原16色调色板不变。中文用显式Unicode别名映射到未被已调查原文使用的韩文字形槽，再按该映射编码为UTF-8。ASCII、原生符号、范围表、索引、metrics和对齐填充保持。完整偏移表、源hash和8组读取器锚点见[网络字体格式](NETWORK_FONT.md)。
+
+## PS2 icon.sys — Verified 网络配置元数据
+
+`CNF/ICON_EN.SYS`为964字节、`PS2D`标识。`u16LE@0x06`是标题内的换行**字节偏移**；CP932标题在`0xC0`，容量68字节含NUL填充，后继三个图标文件名在`0x104/0x144/0x184`。网络标题译为“通信配置”，换行偏移24→8，其他字节保持。`SYS_NET.ICO`、网络配置目录和协议键不变。
+
+主游戏存档标题`Mystic Nights`走`CopyIconFile`→`AsciiString2Sjis`，保留该ASCII品牌字符串。它是固件字体路径，不使用游戏中文图集；直接写入游戏别名字码会被错误再次转换。源锚点与配方见`assets/save-metadata-slots.json`。
+
+## 图像文字 — Verified 配方限定
+
+游戏贴图由三种已观察到的单图、线性TIM2配置组成：RGBA32，以及8bit索引配16bit/32bit CLUT。`graphics.py`只对配方明确支持的配置回填；每张原纹理和每个编辑矩形均绑定hash。清单保存所有物理副本，等长重建保留原尺寸、头部、调色板及矩形外像素。完整图像覆盖与背景处理方式见[图像文字](GRAPHICS_TEXT.md)。
 
 ## 稀疏补丁 v1 — 本项目定义
 

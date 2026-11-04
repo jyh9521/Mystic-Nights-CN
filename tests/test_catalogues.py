@@ -78,6 +78,13 @@ class ProjectTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "role"):
             load_catalogue(self.write([{**self.row, "role": "candidate_display"}]))
 
+    def test_full_text_rejects_any_untranslated_field(self):
+        index = {**self.index, "profile": "full-text"}
+        self.assertEqual(load_catalogue(self.write([self.row], index))["profile"], "full-text")
+        pending = {**self.row, "id": "pending", "status": "untranslated", "target": ""}
+        with self.assertRaisesRegex(ValueError, "untranslated"):
+            load_catalogue(self.write([self.row, pending], index))
+
 
 class TranslationDataTests(unittest.TestCase):
     def test_locale_is_consistent(self):
@@ -85,6 +92,9 @@ class TranslationDataTests(unittest.TestCase):
         self.assertEqual(report["canonical_item_names"], 113)
         self.assertEqual(report["logical_catalogue_fields"], 2036)
         self.assertGreaterEqual(report["selected_physical_fields"], 340)
+        self.assertEqual(report["states"], {"draft": 2034, "non_text": 2})
+        self.assertEqual(report["selected_physical_fields"], 2126)
+        self.assertEqual(report["auxiliary_translated_fields"], {"network": 270, "agreement": 1, "extra_interface": 38})
 
     def test_opening_and_item_batch_not_fragmented(self):
         directory = ROOT / "locales/zh-CN/text"
@@ -100,7 +110,7 @@ class TranslationDataTests(unittest.TestCase):
         rows = json.loads((ROOT / "locales/zh-CN/text/documents.json").read_text(encoding="utf8"))["entries"]
         self.assertEqual(len(rows), 92)
         self.assertTrue(all(r["mirrored_resources"] == ["RES/UI/DOCUMENT.RES"] for r in rows))
-        self.assertEqual(sum(r["status"] == "draft" for r in rows), 12)
+        self.assertEqual(sum(r["status"] == "draft" for r in rows), 92)
 
 
 if __name__ == "__main__":

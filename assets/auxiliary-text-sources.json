@@ -1,10 +1,342 @@
 {
   "sources": [
-    {"resource": "NETGUICD.ELF", "encoding": "utf-8", "layout": "nul-candidates", "unicode_ranges": [[44032, 55203]], "font": "NETGUI/KOREAN.PF"},
-    {"resource": "DATA/AGREE.TXT", "encoding": "cp949", "layout": "plain"},
-    {"resource": "SCKA_200.55", "encoding": "cp949", "layout": "explicit-slots", "slots": [
-      {"offset": 1385992, "source": "게임 클리어"},
-      {"offset": 1417680, "source": "DNAS logotype는 Sony Computer Entertainment Inc.의 상표입니다."}
-    ]}
+    {
+      "resource": "NETGUICD.ELF",
+      "encoding": "utf-8",
+      "layout": "nul-candidates",
+      "unicode_ranges": [
+        [
+          44032,
+          55203
+        ]
+      ],
+      "font": "NETGUI/KOREAN.PF"
+    },
+    {
+      "resource": "DATA/AGREE.TXT",
+      "encoding": "cp949",
+      "layout": "plain"
+    },
+    {
+      "resource": "SCKA_200.55",
+      "encoding": "cp949",
+      "layout": "explicit-slots",
+      "slots": [
+        {
+          "offset": 1375640,
+          "source": "Lv. %d"
+        },
+        {
+          "offset": 1375648,
+          "source": "Lv. MAX"
+        },
+        {
+          "offset": 1385992,
+          "source": "게임 클리어"
+        },
+        {
+          "offset": 1413440,
+          "source": "Jennifer Loren"
+        },
+        {
+          "offset": 1413456,
+          "source": "Jennifer"
+        },
+        {
+          "offset": 1413472,
+          "source": "Bruce Mckellen"
+        },
+        {
+          "offset": 1413488,
+          "source": "Bruce",
+          "padding_bytes": 1,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413493,
+            "padding_hex": "00",
+            "next_string_offset": 1413496,
+            "next_string_source": "Allen Dern",
+            "next_string_alignment": 8,
+            "checked_addresses": [
+              {
+                "file_offset": 1413493,
+                "virtual_address": 2461941,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413494,
+                "virtual_address": 2461942,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413496,
+          "source": "Allen Dern"
+        },
+        {
+          "offset": 1413512,
+          "source": "Allen"
+        },
+        {
+          "offset": 1413520,
+          "source": "Henry Anderson"
+        },
+        {
+          "offset": 1413536,
+          "source": "Henry"
+        },
+        {
+          "offset": 1413544,
+          "source": "Frank Fisher",
+          "padding_bytes": 2,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413556,
+            "padding_hex": "0000",
+            "next_string_offset": 1413560,
+            "next_string_source": "Frank",
+            "next_string_alignment": 8,
+            "checked_addresses": [
+              {
+                "file_offset": 1413556,
+                "virtual_address": 2462004,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413557,
+                "virtual_address": 2462005,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413558,
+                "virtual_address": 2462006,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413560,
+          "source": "Frank",
+          "padding_bytes": 1,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413565,
+            "padding_hex": "00",
+            "next_string_offset": 1413568,
+            "next_string_source": "John Neilson",
+            "next_string_alignment": 16,
+            "checked_addresses": [
+              {
+                "file_offset": 1413565,
+                "virtual_address": 2462013,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413566,
+                "virtual_address": 2462014,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413568,
+          "source": "John Neilson"
+        },
+        {
+          "offset": 1413584,
+          "source": "John"
+        },
+        {
+          "offset": 1413592,
+          "source": "Michael Issac",
+          "padding_bytes": 1,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413605,
+            "padding_hex": "00",
+            "next_string_offset": 1413608,
+            "next_string_source": "Michael",
+            "next_string_alignment": 8,
+            "checked_addresses": [
+              {
+                "file_offset": 1413605,
+                "virtual_address": 2462053,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413606,
+                "virtual_address": 2462054,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413608,
+          "source": "Michael"
+        },
+        {
+          "offset": 1413616,
+          "source": "Luke Wilson",
+          "padding_bytes": 1,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413627,
+            "padding_hex": "00",
+            "next_string_offset": 1413632,
+            "next_string_source": "Luke",
+            "next_string_alignment": 16,
+            "checked_addresses": [
+              {
+                "file_offset": 1413627,
+                "virtual_address": 2462075,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413628,
+                "virtual_address": 2462076,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413632,
+          "source": "Luke"
+        },
+        {
+          "offset": 1413640,
+          "source": "Kelly Post",
+          "padding_bytes": 2,
+          "padding_evidence": {
+            "status": "verified_bytes_and_bounded_static_reference_audit",
+            "original_terminator_offset": 1413650,
+            "padding_hex": "0000",
+            "next_string_offset": 1413656,
+            "next_string_source": "Kelly",
+            "next_string_alignment": 8,
+            "checked_addresses": [
+              {
+                "file_offset": 1413650,
+                "virtual_address": 2462098,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413651,
+                "virtual_address": 2462099,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              },
+              {
+                "file_offset": 1413652,
+                "virtual_address": 2462100,
+                "aligned_u32_address_hits": [],
+                "exact_addiu_ori_daddiu_low16_hits": []
+              }
+            ],
+            "scan": "Every aligned 32-bit word in all file-backed PT_LOAD segments; exact address literal and ADDIU/ORI/DADDIU low-half forms",
+            "boundaries": "No matched direct-reference forms; does not prove absence of GP-relative, computed, dynamically synthesized or externally supplied addresses. Only minimum required zero padding is consumed."
+          }
+        },
+        {
+          "offset": 1413656,
+          "source": "Kelly"
+        },
+        {
+          "offset": 1413664,
+          "source": "Jane Blair"
+        },
+        {
+          "offset": 1413680,
+          "source": "Jane"
+        },
+        {
+          "offset": 1415016,
+          "source": "I  D : "
+        },
+        {
+          "offset": 1417680,
+          "source": "DNAS logotype는 Sony Computer Entertainment Inc.의 상표입니다."
+        },
+        {
+          "offset": 1417792,
+          "source": "(NETWORK CONNECTION)"
+        },
+        {
+          "offset": 1422648,
+          "source": "CHANNEL%02d"
+        },
+        {
+          "offset": 1424344,
+          "source": "PASSWORD :"
+        },
+        {
+          "offset": 1424920,
+          "source": "ROOM-%02d"
+        },
+        {
+          "offset": 1428352,
+          "source": "I  D : "
+        },
+        {
+          "offset": 1430072,
+          "source": "SERVER(%s)"
+        },
+        {
+          "offset": 1430088,
+          "source": "SERVER(%02d)"
+        },
+        {
+          "offset": 1431072,
+          "source": "MALE"
+        },
+        {
+          "offset": 1431080,
+          "source": "LINE S"
+        },
+        {
+          "offset": 1431104,
+          "source": "LINE B"
+        },
+        {
+          "offset": 1431112,
+          "source": "LINE A"
+        },
+        {
+          "offset": 1431120,
+          "source": "LINE C"
+        },
+        {
+          "offset": 1431128,
+          "source": "FEMALE"
+        }
+      ]
+    }
   ]
 }

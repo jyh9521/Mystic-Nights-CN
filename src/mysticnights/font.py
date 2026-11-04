@@ -10,6 +10,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 import hashlib
+import io
 from pathlib import Path
 import struct
 from typing import Iterable, Mapping
@@ -17,6 +18,20 @@ from typing import Iterable, Mapping
 
 class FontError(ValueError):
     """A font input or locale glyph map violates a verified invariant."""
+
+
+def common_baseline_shift(bounds: Iterable[tuple[int, int, int]]) -> int:
+    """Fit all (top, bottom, cell_height) intervals without individual shifts."""
+    rows = list(bounds)
+    if not rows:
+        return 0
+    if any(height < 1 or top > bottom for top, bottom, height in rows):
+        raise FontError("Invalid outline bounds")
+    lower = max(-top for top, _bottom, _height in rows)
+    upper = min(height - bottom for _top, bottom, height in rows)
+    if lower > upper:
+        raise FontError("outline subset exceeds cell height at a common baseline; select a smaller pixel size")
+    return min(max(0, lower), upper)
 
 
 @dataclass(frozen=True)
@@ -243,7 +258,7 @@ def build_font(fnt: bytes, textures: Mapping[str, bytes], texts: Iterable[str],
     mapping = allocate_codes(texts, glyphs, forbidden_codes=forbidden_codes,
                              allowed_codes=allowed_codes,
                              existing_mapping=existing_mapping)
-    with TTFont(path, lazy=True) as face:
+    with TTFont(io.BytesIO(font_data), lazy=True) as face:
         cmap = face.getBestCmap()
         missing = [c for c in mapping if ord(c) not in cmap]
         units_per_em = face["head"].unitsPerEm
@@ -254,9 +269,18 @@ def build_font(fnt: bytes, textures: Mapping[str, bytes], texts: Iterable[str],
     # Supersampling avoids that clipping while retaining a common typographic
     # baseline (punctuation must not be individually vertically centered).
     supersample = 4
-    face = ImageFont.truetype(str(path), pixel_size * supersample)
+    face = ImageFont.truetype(io.BytesIO(font_data), pixel_size * supersample)
     baseline = round(pixel_size * supersample * typo_ascender / units_per_em)
     by_code = {g.code: g for g in glyphs}
+    # Fit the *entire subset* to one common baseline. In particular a fullwidth
+    # semicolon's descender must not be silently clipped or centered alone.
+    bounds = []
+    for char, code in mapping.items():
+        cell_height = (by_code[code].height - 1) * supersample
+        nominal = baseline + (cell_height - pixel_size * supersample) // 2
+        box = face.getbbox(char, anchor="ls")
+        bounds.append((nominal + box[1], nominal + box[3], cell_height))
+    shift = common_baseline_shift(bounds)
     masks = {}
     for char, code in mapping.items():
         glyph = by_code[code]
@@ -264,7 +288,7 @@ def build_font(fnt: bytes, textures: Mapping[str, bytes], texts: Iterable[str],
         cell_height = (glyph.height - 1) * supersample
         box = face.getbbox(char, anchor="ls")
         x = round((cell_width - face.getlength(char)) / 2)
-        y = baseline + (cell_height - pixel_size * supersample) // 2
+        y = baseline + (cell_height - pixel_size * supersample) // 2 + shift
         if (x + box[0] < 0 or x + box[2] > cell_width or y + box[1] < 0
                 or y + box[3] > cell_height):
             raise FontError(f"outline glyph exceeds existing cell: {char!r} (bbox={box})")

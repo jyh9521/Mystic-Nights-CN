@@ -17,8 +17,8 @@ def load_catalogue(path: Path) -> dict:
     catalogue = json.loads(path.read_text(encoding="utf-8"))
     if catalogue.get("format") == "localization-catalogue":
         catalogue = read_project(path)
-    if catalogue.get("profile") not in {"poc", "partial"}:
-        raise ValueError("Only explicitly selected poc/partial profiles are implemented")
+    if catalogue.get("profile") not in {"poc", "partial", "full-text"}:
+        raise ValueError("Unknown localization build profile")
     entries = catalogue.get("entries")
     if not isinstance(entries, list) or not entries:
         raise ValueError("Translation catalogue is empty")
@@ -82,7 +82,8 @@ def retained_codes(image, elf_recipe: dict) -> set[int]:
 
 
 def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
-                        font_path: Path, elf_recipe: dict, *, version: dict | None = None):
+                        font_path: Path, elf_recipe: dict, *, version: dict | None = None,
+                        name_targets=None, plaintext_replacements=None):
     """Build equal-sized replacement payloads; do not write any disc files."""
     entries = catalogue["entries"]
     for row in entries:
@@ -91,7 +92,14 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
     fnt = original_font.read("FONT.FNT")
     textures = {f"FONT_{n}.TM2": original_font.read(f"FONT_{n}.TM2") for n in range(1, 9)}
     protection_policy = config.get("font_protection", "poc-source-text")
-    if protection_policy == "source-text-survey":
+    if protection_policy == "retained-display-text":
+        if version is None or catalogue["profile"] != "full-text":
+            raise ValueError("Retained-display protection requires a verified full-text profile")
+        from .font_usage import collect_full_protected_codes
+        protected, _usage_report = collect_full_protected_codes(
+            image.path, version, entries, name_targets=name_targets,
+            plaintext_replacements=plaintext_replacements)
+    elif protection_policy == "source-text-survey":
         if version is None:
             raise ValueError("Font survey requires the supported original version")
         from .font_usage import collect_protected_codes
@@ -102,7 +110,9 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
         raise ValueError(f"Unknown font protection policy: {protection_policy}")
     code_range = config["font_allowed_codes"]
     allowed = range(code_range["first"], code_range["last"] + 1)
-    font = build_font(fnt, textures, [row["target"] for row in entries], font_path,
+    font_texts = [row["target"] for row in entries] + list((name_targets or {}).values())
+    font_texts += [row["target"] for row in (plaintext_replacements or {}).values()]
+    font = build_font(fnt, textures, font_texts, font_path,
                       font_spec["sha256"], pixel_size=config["font_pixel_size"],
                       forbidden_codes=protected, allowed_codes=allowed)
     encode = lambda text: encode_text(text, font.mapping)
@@ -141,7 +151,9 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
                             row["source"], row["offset"], row["capacity"], row["source_sha256"]):
                         raise ValueError(f"Script source mismatch: {row['id']}")
                 member_payloads[member] = patch_strings(
-                    script, records, {r["script_id"]: r["target"] for r in selected}, encode=encode)
+                    script, records, {r["script_id"]: r["target"] for r in selected}, encode=encode,
+                    literal_translations={r["script_id"]: r["literal_token_translations"] for r in selected
+                                          if r.get("literal_token_translations")})
             replacement[resource_name] = archive.replace(member_payloads)
         else:
             raise ValueError(f"Mixed resource edit types: {resource_name}")

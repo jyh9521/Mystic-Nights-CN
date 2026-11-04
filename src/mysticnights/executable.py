@@ -7,7 +7,6 @@ version-specific recipe. Instruction bytes and ELF layout are never rewritten.
 
 from __future__ import annotations
 
-from collections import Counter
 import re
 from typing import Callable, Mapping, Sequence
 
@@ -24,8 +23,8 @@ def validate_tokens(source: str, target: str) -> None:
     """Preserve ordered printf arguments and non-linebreak renderer commands."""
     if PRINTF.findall(source) != PRINTF.findall(target):
         raise ValueError("printf placeholder sequence changed")
-    def controls(text: str) -> Counter:
-        return Counter(t for t in TAGS.findall(text) if t != "<BR>")
+    def controls(text: str) -> tuple[str, ...]:
+        return tuple(t for t in TAGS.findall(text) if t != "<BR>")
     if controls(source) != controls(target):
         raise ValueError("renderer control tokens changed")
     if "\0" in target:
@@ -45,7 +44,10 @@ def patch_strings(data: bytes, entries: Sequence[Mapping], encode: Callable[[str
         offset, capacity = entry["offset"], entry["capacity"]
         if not isinstance(offset, int) or not isinstance(capacity, int) or offset < 0 or capacity < 1:
             raise ValueError("invalid string range")
-        expected = entry["source"].encode("cp949") + b"\0"
+        padding = entry.get("padding_bytes", 0)
+        if type(padding) is not int or not 0 <= padding <= 15:
+            raise ValueError("invalid explicitly reviewed alignment padding")
+        expected = entry["source"].encode("cp949") + b"\0" * (1 + padding)
         if len(expected) != capacity or offset + capacity > len(data):
             raise ValueError(f"invalid capacity: {entry['id']}")
         if data[offset:offset + capacity] != expected:

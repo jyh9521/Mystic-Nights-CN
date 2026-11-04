@@ -5,10 +5,10 @@ import json
 from pathlib import Path
 
 from _bootstrap import ROOT
-from mysticnights.catalogues import prepare_catalogues, read_project
+from mysticnights.catalogues import prepare_catalogues, read_project, validate_literal_fields
 from mysticnights.executable import validate_tokens
 from mysticnights.localization import load_catalogue
-from mysticnights.scripts import protected_tokens
+from mysticnights.scripts import validate_script_tokens
 from mysticnights.typography import validate_text
 from mysticnights.versions import load_version, verify_original
 
@@ -17,6 +17,8 @@ def validate_project(locale_dir: Path, image=None) -> dict:
     config = json.loads((locale_dir / "config.json").read_text(encoding="utf-8"))
     path = locale_dir / config["translations"]
     catalogue = load_catalogue(path)
+    validate_literal_fields(catalogue["entries"], json.loads((ROOT / "assets/literal-text-fields.json").read_text(encoding="utf8")),
+                            load_version(ROOT / "assets/game-version.json")["iso"]["sha256"])
     terms = json.loads((locale_dir / "terminology-checks.json").read_text(encoding="utf-8"))
     for row in catalogue["entries"]:
         target = row["target"]
@@ -24,8 +26,8 @@ def validate_project(locale_dir: Path, image=None) -> dict:
             raise ValueError(f"Forbidden literal character: {row['id']}")
         validate_text(target, row["text_type"], config["punctuation"])
         validate_tokens(row["source"], target)
-        if row["kind"] == "script" and protected_tokens(row["source"]) != protected_tokens(target):
-            raise ValueError(f"Protected script tokens differ: {row['id']}")
+        if row["kind"] == "script":
+            validate_script_tokens(row["source"], target, row.get("literal_token_translations", []))
         size = sum(1 if ord(c) < 128 else 2 for c in target) + (row["kind"] == "elf")
         if size > row["capacity"]:
             raise ValueError(f"Fixed-slot overflow {row['id']}: {size} > {row['capacity']}")
@@ -51,6 +53,45 @@ def validate_project(locale_dir: Path, image=None) -> dict:
         if row["id"] not in by_id or any(row[k] != by_id[row["id"]][k] for k in ("source", "target")):
             raise ValueError(f"Name/glossary inconsistency: {row['id']}")
     source_count = 0
+    auxiliary_counts = {}
+    extra_targets = []
+    graphics_coverage = {}
+    if catalogue["profile"] == "full-text":
+        from mysticnights.auxiliary import read_auxiliary
+        auxiliary = read_auxiliary(locale_dir, config, json.loads((ROOT / "assets/auxiliary-text-sources.json").read_text(encoding="utf8")), image)
+        auxiliary_counts = {key: len(auxiliary[key]) for key in ("network", "agreement", "extra_interface")}
+        extra_targets = auxiliary["agreement"] + auxiliary["extra_interface"]
+        for row in catalogue["entries"] + names["entries"] + sum((auxiliary[key] for key in auxiliary_counts), []):
+            if any(0xAC00 <= ord(c) <= 0xD7A3 or 0x3130 <= ord(c) <= 0x318F for c in row["target"]):
+                raise ValueError(f"Untranslated Korean remains: {row['id']}")
+        from mysticnights.save_metadata import build_save_metadata
+        metadata = json.loads((locale_dir / config["save_metadata"]).read_text(encoding="utf8"))
+        if metadata["locale"] != config["locale"]:
+            raise ValueError("Save metadata locale mismatch")
+        if image is not None:
+            build_save_metadata(image, json.loads((ROOT / "assets/save-metadata-slots.json").read_text(encoding="utf8")), metadata)
+        graphics_recipe = json.loads((ROOT / "assets/graphics-text-slots.json").read_text(encoding="utf8"))
+        from mysticnights.artwork import load_graphics_catalogue
+        graphics = load_graphics_catalogue(locale_dir / config["graphics"])
+        slots = [slot for texture in graphics_recipe["textures"] for slot in texture["slots"]]
+        graphic_ids = {r["id"] for r in graphics["entries"]}
+        if (graphics.get("locale") != config["locale"] or len(graphic_ids) != len(graphics["entries"])
+                or graphic_ids != {r["id"] for r in slots}
+                or any(r.get("status") not in {"draft", "reviewed"} or not r.get("target", "").strip() for r in graphics["entries"])):
+            raise ValueError("Graphics text catalogue is incomplete or mismatched")
+        graphics_targets = {r["id"]: r["target"] for r in graphics["entries"]}
+        authored = {t["sha256"]: t for t in graphics_recipe["textures"] if t.get("rendering") == "authored-delta"}
+        patches = graphics.get("artwork_patches", [])
+        if len(patches) != len(authored) or {r["source_sha256"] for r in patches} != set(authored):
+            raise ValueError("Authored graphics coverage mismatch")
+        for patch in patches:
+            texture = authored[patch["source_sha256"]]
+            if (patch["targets"] != {s["id"]: graphics_targets[s["id"]] for s in texture["slots"] if s["install"]}
+                    or patch["allowed_rectangles"] != texture["artwork_rectangles"]):
+                raise ValueError("Authored graphics text changed; redraw required")
+        graphics_coverage = {"translated": len(graphic_ids), "selected_for_insertion": sum(bool(r.get("install")) for r in slots),
+                             "retained_identifiers": sum(r.get("disposition") == "retain-identifier" for r in slots),
+                             "pending_art_review": sum(not r.get("install") and r.get("disposition") != "retain-identifier" for r in slots)}
     if image is not None:
         recipe = json.loads((ROOT / "assets/elf-text-slots.json").read_text(encoding="utf-8"))
         expected = prepare_catalogues(image, recipe, config["locale"])
@@ -79,7 +120,10 @@ def validate_project(locale_dir: Path, image=None) -> dict:
             if row["source"] != original["source"] or row["minimum_res_capacity"] != original["max_encoded_bytes"]:
                 raise ValueError(f"Name source/capacity mismatch: {row['id']}")
     return {**catalogue["coverage"], "glossary_terms": len(glossary), "canonical_item_names": len(identifiers),
+            "auxiliary_translated_fields": auxiliary_counts,
+            "graphics_text": graphics_coverage,
             "source_metadata_checked": source_count,
+            "required_main_glyphs": len({c for r in catalogue["entries"] + names["entries"] + extra_targets for c in r["target"] if ord(c) >= 128}),
             "required_glyphs_with_names": len({c for r in catalogue["entries"] + names["entries"] for c in r["target"] if ord(c) >= 128})}
 
 

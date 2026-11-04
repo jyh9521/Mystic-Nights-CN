@@ -280,11 +280,12 @@
       "line": 54,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "报告。<BR>爆炸导致中央大厅封闭，目前只能经由连接C区的车辆库前往外部。红队和白队正在执行平民疏散任务。蓝队正按计划前去修复通信塔。待所有平民撤离后，将炸毁整个车辆库。<BR><BR>特种部队连长 卢克·威尔逊中尉",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00000f18",
@@ -301,11 +302,12 @@
       "line": 61,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR><BR>“纪念未知能源与元素经不稳定化学结合而诞生的新金属……”",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00000fc3",
@@ -322,11 +324,12 @@
       "line": 67,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "4月2日<BR><BR>可怜的家伙！先前在研究所里怎么也找不到他，回来时却一脸僵硬。他痛苦地呻吟着，不安地站了半天，随后又不知去了哪里。难道他正埋头进行我不知道的研究？连我这个最好的朋友，他都不肯透露半句。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000010dc",
@@ -343,11 +346,12 @@
       "line": 68,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "4月5日<BR><BR>彼得……今天也没踏出房间半步。不知发生了什么，他始终把自己关在里面，痛苦的惨叫声不绝于耳。想起他近日动作迟缓、汗流不止的样子……他究竟怎么了？",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000011c9",
@@ -364,11 +368,12 @@
       "line": 69,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "4月6日<BR><BR>彼得回来了，脸色苍白，既不哭也不笑。他简直判若两人……连脸上那道深深的伤疤也消失了。我问他发生了什么，他却一言不发。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000012d6",
@@ -385,11 +390,12 @@
       "line": 75,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "正如预期，我们发现，从实验体身上取下的部分皮肤组织完全由再生能力极强的稳定细胞构成。稳定细胞在正常状态下分裂能力较低，但受到刺激后，细胞分裂会达到最大程度，迅速将受损组织恢复原状。若利用这些细胞开发人体兵器，有望造出不会死亡的强大兵器。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000145b",
@@ -406,11 +412,12 @@
       "line": 76,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "此外，为检查皮肤组织而进行合成后，一名研究员在搬运合成物时失手将其掉落，引发了爆炸。我们由此偶然发现，细胞组织与液态金属结合后会产生破坏力。爆炸威力虽与结合量成正比，但目前仍达不到军事用途所需的水平，爆炸溶液的研究尚需继续观察。详情将在下次研究结果中报告。<BR><BR>理查德·雷",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001663",
@@ -427,11 +434,12 @@
       "line": 82,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "04.29 16:30<BR><BR>刚才究竟是哪里爆炸了？震得这么厉害，恐怕是大事故……命令部队待命？该死，我到底还有没有机会开枪？<BR><BR>呃！那些怪物究竟是……<BR>我就要……死在这里了吗……",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000177f",
@@ -448,11 +456,12 @@
       "line": 88,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "DNA克隆计划研究员日志<BR><BR>-> 03.17 23:10 记录<BR>吸血鬼计划的成败，取决于作为载体的人体是否“无缺陷”。但我们发现，所有人体实验的成功率都接近“零”。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001868",
@@ -469,11 +478,12 @@
       "line": 89,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>然而，在研究人体的“无缺陷”条件时，我们很快确信，只有经DNA改造的克隆个体才能使实验成功。于是，我们得以着手开展培养克隆体的吸血鬼计划。<BR>我们将移植后不出现排斥反应的状态，定义为“无缺陷”。<BR><BR>祝愿成功 本尼·伯恩",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000019e5",
@@ -490,11 +500,12 @@
       "line": 95,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "这些该死的数据棒，竟然每根都设了密码。<BR>而且每层楼的密码还各不相同，这么多数据棒到底是怎么管理的！<BR>不过，只要拿到密码棒，就能查看所有上锁的数据棒了。只要弄到密码，应该就能看到那些隐藏的研究内容。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001b36",
@@ -511,11 +522,18 @@
       "line": 96,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<密码系统设置><BR><BR>B1密码每周自动重设。<BR>B2密码每隔一天自动重设。<BR>B3密码每天自动重设。<BR>B4密码每12小时自动重设。<BR>B5密码每6小时自动重设。<BR>B6密码每2小时自动重设。<BR>（数据棒等级以No.楼层数表示。）",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "literal_token_translations": [
+        {
+          "source": "<암호 시스템 설정>",
+          "target": "<密码系统设置>"
+        }
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001cdd",
@@ -532,11 +550,12 @@
       "line": 104,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "致吉米<BR><BR>紧急戒严令已经下达。吉米，你也听说了吧？<BR>看到便条后，立刻到紧急避难所来。<BR>似乎有人炸了动力室。<BR>幸好只有部分设施损坏，应该还能从C区返回地面。<BR>快点过来！<BR><BR>15:24 詹姆斯博士",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001e4e",
@@ -553,11 +572,12 @@
       "line": 110,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "帕尔玛塔DNA报告<BR><BR>-> 10.23 21:28<BR>现已证实，第3种DNA“帕尔玛塔”与人类DNA结合后，能使人类获得超越自身极限的能力。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00001f16",
@@ -574,11 +594,12 @@
       "line": 111,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>然而，生体实验表明，接受帕尔玛塔DNA的人类虽然获得了超越极限的怪力，却也产生了身体结构改变的副作用，变得凶暴而无法保持理智。为解决这一问题，我们开始研究新的个体……<BR>[数据丢失]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002074",
@@ -595,11 +616,12 @@
       "line": 117,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "对不起，布鲁斯。<BR><BR>直到现在，我才从艾伦那里得知你的消息。<BR>原来已经过了5年。<BR>布鲁斯，你过得还好吗？<BR>自那天起，我真像个傻瓜一样浑浑噩噩地度日……<BR>对你的近况一无所知……<BR>我好想你，布鲁斯。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002194",
@@ -616,11 +638,12 @@
       "line": 118,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "艾伦说……他失去了一位珍贵的朋友……<BR>他很后悔，总说如果你还在身边就好了。<BR>他说，你是唯一值得信赖的朋友……<BR><BR>我们还能像从前一样欢笑吧？<BR>我好想你，布鲁斯。<BR>还有好多话想说，可我更想当面告诉你。<BR>我会等你的，布鲁斯。<BR><BR>莫妮卡·德尔菲",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002327",
@@ -637,11 +660,12 @@
       "line": 124,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "幼虫反应实验记录<BR><BR>-> 06.23 18:20<BR>-> 记录人 吉姆·埃卡特<BR>幼虫反应实验带来了惊人的发现：它们能够自行发电，而且对物理冲击有极强的抵抗力。<BR>",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002410",
@@ -658,11 +682,12 @@
       "line": 125,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>受到电刺激后，幼虫组织会僵硬，外观如同失去生命，但会在2-3分钟内，将全部代谢能量转化为高强度电能释放。除持续时间较短外，它们很有希望成为替代能源。此外，与地球上正常生物相比，其皮肤组织对外部冲击的抵抗力强得异乎寻常，并会随生长进一步增强。即使使用军用枪械，也难以轻易破坏成虫的组织。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002637",
@@ -679,11 +704,12 @@
       "line": 131,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "致格雷格<BR><BR>我实在憋不住了，这件事只告诉你。你知道这座研究所是什么地方吗？我从偷偷弄到的旧文件中发现了有趣的消息。25年前，这里还只是一处军用雷达设施。后来，人们在地下深处发现了古代遗迹……并在那里找到一种叫作“远古吸血鬼”的古代生物。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000279c",
@@ -700,11 +726,12 @@
       "line": 132,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>听说他们打算利用远古吸血鬼，将人类变成怪物兵器，研究至今还在如火如荼地进行。怎么样？比以往任何消息都劲爆吧？请我喝上一杯，我就告诉你更多细节。<BR>随时联系我。嘿嘿！听完以后，你恐怕会有些毛骨悚然。<BR><BR>拉里",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000292b",
@@ -721,11 +748,12 @@
       "line": 141,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "致研究所所长<BR><BR>我们对一群吸血鬼幼虫进行了为期一个月的观察。结果表明，从幼虫开始控制宿主神经系统，到彻底变异之前，宿主的外观变化并不明显，但会周期性地丧失理智，或仅有局部身体发生变化。遭到侵蚀的宿主还会大量出汗，神经麻痹，身体的全部痛苦有时会集中到大脑。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002ab1",
@@ -742,11 +770,12 @@
       "line": 142,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>经过一段时间后，开始变异的幼虫会与宿主彻底同化，变成新的个体。被幼虫侵蚀的人类还可能与任何物质结合，变成继承该物质形态的变异体。部分达到完全体的种类表现出极强的战斗能力。<BR>观察结束后，将立即报告详细情况。<BR><BR>研究员 巴斯特·麦克",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002c8a",
@@ -763,11 +792,12 @@
       "line": 148,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "帝王分析结果报告<BR><BR>-> 02.18 09:53<BR>-> 记录人 罗伯特·丹佛<BR>利用帕尔玛塔DNA诞生的吸血鬼新个体“帝王”，<BR>经过两次实验，已接近完全体。<BR>它比其他吸血鬼更聪明，身躯高达数十米，作为生物兵器是极佳的战略资源。然而，其凶暴本能一经显现，便完全失控。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002df8",
@@ -784,11 +814,12 @@
       "line": 149,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>它尚处于不稳定的生长期，目前只能勉强靠电刺激控制。<BR>以下是帝王对电刺激的反应……<BR>……错误……",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002ecf",
@@ -805,11 +836,18 @@
       "line": 155,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "远古计划日志<BR><BR>-> 08.12 23:12<BR>-> 记录人 艾伦·德恩<BR>-> <吸血鬼凶暴性报告> 读取中……<BR>……<BR>随着实验推进，吸血鬼凶暴的本能开始变得难以控制。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "literal_token_translations": [
+        {
+          "source": "<뱀파이어 포악성에 관한 보고>",
+          "target": "<吸血鬼凶暴性报告>"
+        }
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00002fb1",
@@ -826,10 +864,17 @@
       "line": 156,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>研究组意识到危险，进行了大量研究，试图控制这些凶暴的吸血鬼，但采用任何物理手段都难以奏效。然而…… <略>",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
+      ],
+      "batch": "full-text",
+      "literal_token_translations": [
+        {
+          "source": "<Skip>",
+          "target": "<略>"
+        }
       ]
     },
     {
@@ -847,11 +892,22 @@
       "line": 157,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>-> <吸血鬼计划> 读取中……<BR>……<BR>为制衡因本能凶暴而难以控制的吸血鬼，我们利用其始祖远古吸血鬼，开始研究新的个体。<BR>我们期待远古吸血鬼能从精神上控制吸血鬼和帝王。 <略>",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "literal_token_translations": [
+        {
+          "source": "<뱀파이어 프로젝트>",
+          "target": "<吸血鬼计划>"
+        },
+        {
+          "source": "<Skip>",
+          "target": "<略>"
+        }
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000031d1",
@@ -868,11 +924,12 @@
       "line": 163,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "吸血鬼各类型说明<BR><BR>-> 10.12 15:00<BR>-> 记录人 柯克·贝克<BR>-> 吸血鬼领主<BR>被吸血鬼幼虫侵蚀的人类中，有一种会变异为接近完全体的存在。其体型巨大，战斗能力极强，而且……错误……会成为以新形态强化的吸血鬼。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000032fa",
@@ -889,11 +946,12 @@
       "line": 164,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>其智力也高于一般种类，并有绝不放弃既定目标的执着。由于这类实验体极难控制，生体实验受到严格限制。我们决定将这一新种命名为“吸血鬼领主”。<BR><BR>-> 远古吸血鬼<BR>……数据检索错误。<BR>已于04.20删除。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000347d",
@@ -910,11 +968,12 @@
       "line": 170,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "审查结果命令指引序言<BR><BR>经过为期一周的审查，国防委员会决定停止被列为危险因素的帝王培育实验。因此，远古吸血鬼的分离实验将停止，仅可继续符合《人体兵器实验安全指引》的研究。部分实验的许可与研究将受到限制，类似鲸鱼事件的外部模拟实验一律停止。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003609",
@@ -931,11 +990,12 @@
       "line": 171,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>以上具体事项，按照下发的安全指引执行……<BR>国防部战略委员会委员长 格兰特",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000036cc",
@@ -952,11 +1012,12 @@
       "line": 177,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第2阶段远古计划研究日志<BR><BR>-> 04.02 01:23<BR>-> 记录人 罗纳德·贝纳<BR>为控制帝王而开展的第1阶段远古吸血鬼研究，因环境不相容和实验体不稳定而失败。不过，我们发现，将第1阶段实验中的不稳定因子注入具有优势基因的克隆人，能提高成功的可能性。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003827",
@@ -973,11 +1034,12 @@
       "line": 178,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>国防部审查组到访后，所有实验都被全面撤销。然而，MPA仍秘密实施了全部第2阶段远古吸血鬼实验。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000038fa",
@@ -994,11 +1056,12 @@
       "line": 186,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "帝王诞生记录<BR><BR>-> 10.23 21:28<BR>-> 记录人 乔什·福格<BR>我们终于将古代生物骨骼中提取的DNA与帕尔玛塔DNA结合，创造出新的个体。这个被命名为“帝王”的新个体生长迅速，体型已超过30米。凭借高度智慧和强烈的攻击本能，它展现出成为不逊于地球上任何兵器的战斗武器的潜力。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4",
@@ -1015,11 +1078,12 @@
       "line": 192,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "远古计划研究员名单<BR><BR>-> 访问<BR>首席研究员：艾伦·德恩(Allen Dern)<BR>遗传工程：尼克·莱恩(Nick Lane)<BR>遗传工程：丹·波特曼(Dan Portman)<BR>遗传工程：德韦恩·道格(Dwayne Doig)<BR>化学工程：伯尼·科尔宾(Bernie Corbin)<BR>化学工程：文斯·沃恩(Vince Vaughn)<BR>",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003bda",
@@ -1036,11 +1100,12 @@
       "line": 193,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>化学工程：贝姬·基顿(Vecchi Kitten)<BR>生物工程：巴斯特·麦克(Buster Mac)<BR>生物工程：凯尔·哈斯克尔(Kyle Haskell)<BR><BR>-> 读取中……<BR>->无法检索数据。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003cd3",
@@ -1057,11 +1122,12 @@
       "line": 199,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第1阶段远古计划报告<BR><BR>-> 访问数据……<BR>-> 01.23 23:16<BR>-> 记录人 尼克·莱恩<BR>要控制帝王，必须将作为帝王始祖的远古幼虫移植到纯净度高的人体中。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003db4",
@@ -1078,11 +1144,12 @@
       "line": 200,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>为此，实验体“莫妮卡·德尔菲”必须保持最佳状态，并舍弃身为人类的意识，以消除对远古吸血鬼的排斥。<BR>目前，“莫妮卡·德尔菲”状态十分理想，已达到移植实验的要求。<BR>只要继续维持这一状态，预计很快就能着手实验。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00003f5a",
@@ -1099,11 +1166,12 @@
       "line": 206,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "紧急电报。请求。<BR>研究所解除安保时间：15:30。<BR>与部队投入时间一致。<BR>炸毁通信塔和直升机坪后，部队即可潜入。<BR>时间为首次投入后30分钟。<BR>国防部及多个卫星系统由COP公司控制。<BR>预计有3-4小时的余裕。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004078",
@@ -1120,11 +1188,12 @@
       "line": 207,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "COP公司的董事长也对您的行动寄予厚望。<BR>您想要的部分，可以自行处置。<BR>其他事项，请与COP公司联系后遵照指示执行。<BR>以上……<BR><BR>蓝队 斯蒂尔·米勒",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000041aa",
@@ -1141,11 +1210,12 @@
       "line": 213,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第2阶段远古计划<BR><BR>-> 访问数据……<BR>-> 03.24 23:21<BR>-> 记录人 吉尔·费里<BR>分析第1阶段远古吸血鬼实验失败的原因时，我们意识到，需要一个未受环境影响的个体。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000429b",
@@ -1162,11 +1232,12 @@
       "line": 214,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>我们发现，通过遗传研究产生的克隆体最符合条件。于是，遗传工程组秘密完成了接受移植的克隆体。<BR>将远古幼虫的DNA，与无缺陷、高纯净度的第1阶段实验体DNA结合，便诞生了这个克隆体。它在成长中曾发作、变异，有时难以控制，但实验能否成功，仍需继续观察。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000443b",
@@ -1183,11 +1254,12 @@
       "line": 223,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "远古计划研究日志<BR><BR>-> 01.04 23:21<BR>-> 记录人 丹·波特曼<BR>谁也没想到，远古吸血鬼幼虫竟是雌雄同体。早期实验将幼虫归为雌性，直到后来才发现，要成为完全体，还需要雄性。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004575",
@@ -1204,11 +1276,12 @@
       "line": 224,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>在组长建议下，我们没有向所长报告新的雄性实验，但不知道这个秘密还能维持多久。<BR>研究必须留下记录，因此雌性与雄性的实验都有记载。不过，所有上报的雄性实验报告都将删除。这一切都是组长主动揽下的，结果尚未可知。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000046ee",
@@ -1225,11 +1298,12 @@
       "line": 230,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第2阶段远古吸血鬼记录报告<BR><BR>-> 4.23 18:14<BR>-> 记录人 凯尔·哈斯克尔<BR>拥有优势基因的克隆远古吸血鬼在生长期没有出现变化，但进入潜伏期后，便开始周期性地在人类与吸血鬼本能之间摇摆，逐渐难以控制。远古吸血鬼的本能，是对人类血肉远超食肉动物的过度执着。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004865",
@@ -1246,11 +1320,12 @@
       "line": 231,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>只能期望，在人性与凶暴本能交替的潜伏期过去后，它能自行控制。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004908",
@@ -1267,11 +1342,12 @@
       "line": 237,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第21页<BR><BR>一定是我们内部的某个人在伺机对付我们。<BR>可怜的弗兰克。大家都以为是幼虫杀了他，<BR>但他们错了。<BR>要告诉大家……<BR>在掌握确凿证据之前，我什么也不能说吧？",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000049f7",
@@ -1288,11 +1364,12 @@
       "line": 238,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第25页<BR><BR>迈克尔·艾萨克先生遇害了。<BR>我原本觉得他和卢卡斯很像……<BR>卢卡斯在研究所失踪，已经过去5个月了。<BR>你到底去了哪里！<BR>没有告诉别人卢卡斯的事，应该是对的吧。<BR>没错，还是对谁都不说为好。<BR>现在也不能暴露我的记者身份。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004b48",
@@ -1309,11 +1386,12 @@
       "line": 239,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第27页<BR><BR>亨利！他竟然是吸血鬼……可是……<BR>他绝对没有杀人。<BR>到底怎么回事？不该是这样的。<BR>那么……真正的凶手究竟是谁？",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004c00",
@@ -1330,11 +1408,12 @@
       "line": 240,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第34页<BR><BR>我想，我终于明白了。<BR>所有实验的中心，始终都有他。<BR>克隆人实验、远古计划……他……<BR>究竟想对布鲁斯做什么？<BR>布鲁斯似乎越来越信任他，反倒开始怀疑我。<BR>可这一切，都是雄性远古吸血鬼艾伦策划的。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004d35",
@@ -1351,11 +1430,12 @@
       "line": 241,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "第40页<BR><BR>只要再弄清一件事，弗兰克……迈克尔……约翰……<BR>我就能知道杀害这3人的凶手是谁。<BR>但现在还不能轻举妄动。<BR>若能找到生物研究室，所有疑问就能解开了……<BR>卢卡斯似乎也与生物研究室有关。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004e8b",
@@ -1372,11 +1452,12 @@
       "line": 247,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "能源开发计划<BR><BR>-> 正在访问数据……<BR>-> 04.10 18:21 记录人 艾琳·谢弗<BR>-> 幼虫能源开发计划报告<BR>幼虫受到电刺激时，会释放大量能量。尤其是将生长期的幼虫放入电能传导率达99.9%以上的电解液缸，再加以刺激，其能量释放将达到最高水平。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00004fed",
@@ -1393,11 +1474,12 @@
       "line": 248,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>研究组为实现自主供能，已完成以电解液包裹活幼虫、将其用作动力源的开发。目前的准备工作已接近完成，即将能够替代主动力，临时供应整个研究所所需的电力。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000050ef",
@@ -1414,11 +1496,12 @@
       "line": 249,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>传导刺激时，曾发生幼虫因刺激过度而爆裂死亡的情况。但我们发现，反应的稳定性会随幼虫类型间的相性而变化。因此，我们研究了将8个相性适配的幼虫缸，分别装入动力室的4个主动力单元和4个辅助动力单元，以确保稳定供电的方案。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005243",
@@ -1435,11 +1518,12 @@
       "line": 250,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>下一步将通过实际替代研究所供电的实验，研究能源开发的可行性，以及幼虫相性所产生的影响。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000052f4",
@@ -1456,11 +1540,12 @@
       "line": 251,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>-> 幼虫动力缸分类参考报告<BR><BR>生长期的幼虫很难从外形区分，但可以通过包裹它们的电解液辨认。电解液是一种化学物质，能使幼虫麻痹、吸收电刺激造成的冲击，并将电能传导至缸体两端的电极板，同时还能将能量损耗降至最低。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005466",
@@ -1477,11 +1562,12 @@
       "line": 252,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>A型：水蛭（LEECH）：蓝色电解液<BR>B型：利刃（EDGE）：红色电解液<BR>C型：战斧（AXE）：黄色电解液<BR>D型：远程（Range）：绿色电解液",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005546",
@@ -1498,11 +1584,12 @@
       "line": 258,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "A型<BR><BR>对“A型幼虫”的观察表明，完全长成的成虫拥有锐利的外骨骼，倾向于高速冲撞。然而，与其他类型不同，它们下半身的神经系统发育不全，行动受限，因此会寻找敏捷的个体作为宿主，弥补弱点。融合后的“A型幼虫”，有时反而比其他类型行动更快。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000056ec",
@@ -1519,11 +1606,12 @@
       "line": 264,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B型<BR><BR>“B型幼虫”与“A型幼虫”不同，下半身结构稳定，但攻击能力较弱。与所有具有智慧的幼虫一样，“B型幼虫”会利用尖锐的锥形金属，弥补攻击方面的劣势，也会选择人类女性作为宿主，以迷惑对方。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005863",
@@ -1540,11 +1628,12 @@
       "line": 270,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "C型<BR><BR>神经结构简单的“C型幼虫”，倾向于将被侵蚀的宿主膨胀成庞大的体型。其肌肉力量远胜其他类型，攻击时会利用斧形骨骼劈砍对手，或用整个身体发起冲撞。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000059ac",
@@ -1561,11 +1650,12 @@
       "line": 276,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "D型<BR><BR>抵抗力较弱的“D型幼虫”，会尝试远程攻击，或利用身体硬化的部分保护自己。它们外表或许显得瘦小，却也能发动极强的攻击，并从体内喷出毒性物质，使目标中毒。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005b06",
@@ -1582,11 +1672,12 @@
       "line": 282,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "主动力由2间主动力室和2间辅助动力室提供。启动动力时，必须按照以下规则，向各动力室装入幼虫缸。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005bb7",
@@ -1603,11 +1694,12 @@
       "line": 283,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "线路A（左侧）：主动力室<BR>线路B（右侧）：辅助动力室<BR><BR>1. 左侧上组：上位B，下位C<BR>2. 左侧下组：上位D，下位A<BR>3. 右侧上组：上位A，下位D<BR>4. 右侧下组：上位C，下位B",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005cc8",
@@ -1624,11 +1716,12 @@
       "line": 289,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "致埃德……<BR><BR>竟然擅离职守……你疯了吗？<BR>你也知道，幼虫缸的电刺激脉冲超过一定限度后，刺激会减弱，幼虫就可能破缸而出。幸亏这事在我这里压下来了，要是让上面的干部知道，你在研究所的日子就到头了。<BR>你们当时到底干什么去了？",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005e32",
@@ -1645,11 +1738,12 @@
       "line": 290,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>装着红色电解液的幼虫缸，只要管理稍有疏忽，幼虫就会钻出来袭击人。你们必须时刻守在装有这种电解液的动力装置前。余下的值班时间里，要一直守在主动力室和辅助动力室的重置装置、点火装置前，直到任务结束，一步也不准离开。死也得守在那里。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00005fbe",
@@ -1666,11 +1760,12 @@
       "line": 296,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "时间：24日20:00至30日08:00<BR>（动力室运行时间：当日20:00至次日07:00）<BR>地点：动力室（主动力室／辅助动力室）<BR><BR>内容<BR>命令埃德·赫希(Ed Hirsch)与彼得·亨特(Peter Hunter)，<BR>自24日20:00至30日08:00，负责主动力室与辅助动力室<BR>的管理工作。<BR>（仅在动力室运行时值班。）",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe",
@@ -1687,11 +1782,12 @@
       "line": 297,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "值班地点<BR>主动力室：埃德·赫希<BR>辅助动力室：彼得·亨特<BR>发现异常情况，请向上级报告。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000061ab",
@@ -1708,11 +1804,12 @@
       "line": 303,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "-> 4.26 04:30<BR>-> 记录人 约翰·尼尔森<BR>被幼虫侵蚀的个体，在彻底变为吸血鬼之前，会不断经历短暂的变异。变异期间，吸血鬼特征只会间歇性显现，也无法积极抵抗外部攻击。但“远古吸血鬼”不同于一般被幼虫侵蚀的个体，即使在变异过程中，也常会表现出近乎本能的强烈攻击倾向，组织强化的速度也非常快。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006357",
@@ -1729,11 +1826,12 @@
       "line": 304,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>若遇到被侵蚀的个体，在其彻底变异前，或许还不构成严重威胁。但若对象是“远古吸血鬼”，最好有组织地启动研究所内部的防御系统。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006470",
@@ -1750,11 +1848,12 @@
       "line": 310,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "-> 11.10 18:30<BR>-> 记录人 莱斯利·伦弗鲁<BR>对吸血鬼幼虫的观察表明，它们既看不见，也听不见。若未与宿主结合来弥补这些功能，感知物体的能力似乎十分有限。然而，我们观察到，幼虫依然能够依靠目标身体散发的热量及化学反应，识别攻击对象。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000065d0",
@@ -1771,11 +1870,12 @@
       "line": 311,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "<BR><BR>它们能从所有散热物体中辨认出生物，推测也是因为生物体内的化学作用。此外，化学实验表明，被命名为“棱镜”的化学气体，会与生物体的热量发生反应，刺激幼虫的感知能力，增强其攻击倾向。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006730",
@@ -1792,11 +1892,12 @@
       "line": 317,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "我偶然读到了一份“棱镜”泄漏计划。<BR>他们究竟有什么目的？<BR>“棱镜”是刺激幼虫攻击本能的化学气体。<BR>若泄漏到研究所内部，所有吸入气体的<BR>生物都会成为幼虫的攻击目标。<BR>难道他们想把所有人都变成人体实验品？<BR>不，不至于有这种理由吧……",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@000068a6",
@@ -1813,11 +1914,12 @@
       "line": 323,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B1密码数据<BR><BR>密码记录 0429.16:10<BR>日期 / 密码<BR>0418-0424 [33311]<BR>0425-0501 [42356]<BR><BR>0425 更新……<BR>0502 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@0000699c",
@@ -1834,11 +1936,12 @@
       "line": 329,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B2密码数据<BR><BR>密码记录 0429.16:30<BR>日期 / 密码<BR>0426-0427 [14522]<BR>0428-0429 [53522]<BR><BR>0428 更新……<BR>0430 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006a92",
@@ -1855,11 +1958,12 @@
       "line": 335,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B3密码数据<BR><BR>密码记录 0429.16:40<BR>日期 / 密码<BR>0428 [37121]<BR>0429 [12166]<BR><BR>0429 更新……<BR>0430 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006b7e",
@@ -1876,11 +1980,12 @@
       "line": 341,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B4密码数据<BR><BR>密码记录 0429.16:50<BR>日期 / 密码<BR>0429 00:00-12:00 [56522]<BR>0429 12:00-24:00 [88121]<BR><BR>更新……<BR>0430 00:00 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006c81",
@@ -1897,11 +2002,12 @@
       "line": 347,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B5密码数据<BR><BR>密码记录 0429.17:00<BR>日期 / 密码<BR>0429 12:00-18:00 [76421]<BR>0429 18:00-24:00 [14126]<BR><BR>更新……<BR>0430 00:00 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006d84",
@@ -1918,11 +2024,12 @@
       "line": 353,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "B6密码数据<BR><BR>密码记录 0429.17:30<BR>日期 / 密码<BR>0429 14:00-16:00 [71214]<BR>0429 16:00-18:00 [42166]<BR><BR>更新……<BR>0429 18:00 [数据更新错误]",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     },
     {
       "id": "RES/UI/ITEM.RES:DOCUMENT.SCR@00006e86",
@@ -1939,11 +2046,12 @@
       "line": 360,
       "role": "display",
       "text_type": "document",
-      "target": "",
-      "status": "untranslated",
+      "target": "布鲁斯。<BR><BR>是我，老朋友！我们好久没见了。<BR>听说你不再从事生物化学研究……不知这张照片能否勾起你的兴趣。<BR>你在地球上任何地方，都没见过这样的鲸鱼吧。<BR>所以……能来这里一趟吗？有一件与鲸鱼有关的重要事情，需要你帮忙。不知你听了会怎么想，但本所顾问可不是轻易能得到的职位。<BR>啊，对了……莫妮卡让我代她问好。",
+      "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
-      ]
+      ],
+      "batch": "full-text"
     }
   ]
 }

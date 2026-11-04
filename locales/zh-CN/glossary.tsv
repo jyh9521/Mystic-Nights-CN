@@ -11,14 +11,14 @@ ui:8	옵션	选项	ui	poc.json	fixed	界面标签
 ui:9	조작 방법	操作说明	ui	poc.json	fixed	界面标签
 ui:10	설정	设置	ui	poc.json	fixed	界面标签
 ui:11	메모리 카드	记忆卡	system	poc.json	fixed	PS2 Memory Card
-id:23	회복약(소)	恢复药(小)	item	RES/SUBSYS.RES:ITEM.SCR:id:23	draft	关联译名；当前ISO保留原名称
-id:24	회복약(중)	恢复药(中)	item	RES/SUBSYS.RES:ITEM.SCR:id:24	draft	关联译名；当前ISO保留原名称
-id:25	회복약(대)	恢复药(大)	item	RES/SUBSYS.RES:ITEM.SCR:id:25	draft	关联译名；当前ISO保留原名称
-id:26	특수 회복약	特效恢复药	item	RES/SUBSYS.RES:ITEM.SCR:id:26	draft	关联译名；当前ISO保留原名称
-id:27	해독제	解毒剂	item	RES/SUBSYS.RES:ITEM.SCR:id:27	draft	关联译名；当前ISO保留原名称
-id:20	소형 방탄복	轻型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:20	draft	关联译名；当前ISO保留原名称
-id:21	중형 방탄복	中型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:21	draft	关联译名；当前ISO保留原名称
-id:22	강화 방탄복	强化防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:22	draft	关联译名；当前ISO保留原名称
+id:23	회복약(소)	恢复药(小)	item	RES/SUBSYS.RES:ITEM.SCR:id:23	draft	关联译名；全文版同时回填全部已审计引用
+id:24	회복약(중)	恢复药(中)	item	RES/SUBSYS.RES:ITEM.SCR:id:24	draft	关联译名；全文版同时回填全部已审计引用
+id:25	회복약(대)	恢复药(大)	item	RES/SUBSYS.RES:ITEM.SCR:id:25	draft	关联译名；全文版同时回填全部已审计引用
+id:26	특수 회복약	特效恢复药	item	RES/SUBSYS.RES:ITEM.SCR:id:26	draft	关联译名；全文版同时回填全部已审计引用
+id:27	해독제	解毒剂	item	RES/SUBSYS.RES:ITEM.SCR:id:27	draft	关联译名；全文版同时回填全部已审计引用
+id:20	소형 방탄복	轻型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:20	draft	关联译名；全文版同时回填全部已审计引用
+id:21	중형 방탄복	中型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:21	draft	关联译名；全文版同时回填全部已审计引用
+id:22	강화 방탄복	强化防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:22	draft	关联译名；全文版同时回填全部已审计引用
 id:1	블레이드	战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:1	draft	按韩文原名；不沿用英版武器改名
 id:2	뱀파이어 블레이드	吸血鬼战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:2	draft	按韩文原名；不沿用英版武器改名
 id:3	에인션트 블레이드	远古战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:3	draft	按韩文原名；不沿用英版武器改名
@@ -35,99 +35,99 @@ id:13	샷건	霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:13	draft	霰枪为定长名�
 id:14	뱀파이어 샷건	吸血鬼霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:14	draft	按韩文原名；不沿用英版武器改名
 id:15	에인션트 샷건	远古霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:15	draft	按韩文原名；不沿用英版武器改名
 id:16	카이져 샷건	帝王霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:16	draft	按韩文原名；不沿用英版武器改名
-id:17	핸드건 탄창	手枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:17	draft	关联译名；当前ISO保留原名称
-id:18	라이플 탄창	步枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:18	draft	关联译名；当前ISO保留原名称
-id:19	샷건 탄알	霰弹	item	RES/SUBSYS.RES:ITEM.SCR:id:19	draft	关联译名；当前ISO保留原名称
-id:28	중앙 복도 카드키	中央走廊门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:28	draft	关联译名；当前ISO保留原名称
-id:29	MEL 카드키	MEL门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:29	draft	关联译名；当前ISO保留原名称
-id:38	관리 지시서	管理指示	item	RES/SUBSYS.RES:ITEM.SCR:id:38	draft	关联译名；当前ISO保留原名称
-id:37	2F 지도	2F地图	item	RES/SUBSYS.RES:ITEM.SCR:id:37	draft	关联译名；当前ISO保留原名称
-id:39	신문 조각	报纸残片	item	RES/SUBSYS.RES:ITEM.SCR:id:39	draft	关联译名；当前ISO保留原名称
-id:43	반응 결과 프린트물	反应结果打印件	item	RES/SUBSYS.RES:ITEM.SCR:id:43	draft	关联译名；当前ISO保留原名称
-id:33	조직 세포 샘플	组织细胞样本	item	RES/SUBSYS.RES:ITEM.SCR:id:33	draft	关联译名；当前ISO保留原名称
-id:36	반응 실험 액체	反应实验液	item	RES/SUBSYS.RES:ITEM.SCR:id:36	draft	关联译名；当前ISO保留原名称
-id:32	2F 섹터 C 카드키	2F C区门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:32	draft	关联译名；当前ISO保留原名称
-id:40	월터에게 보내는 메모	给沃尔特的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:40	draft	关联译名；当前ISO保留原名称
-id:41	월터의 수첩	沃尔特手册	item	RES/SUBSYS.RES:ITEM.SCR:id:41	draft	关联译名；当前ISO保留原名称
-id:42	로완 스웰의 수첩	罗温·斯韦尔手册	item	RES/SUBSYS.RES:ITEM.SCR:id:42	draft	关联译名；当前ISO保留原名称
-id:30	알파 샘플	A样本	item	RES/SUBSYS.RES:ITEM.SCR:id:30	draft	关联译名；当前ISO保留原名称
-id:31	베타 샘플	B样本	item	RES/SUBSYS.RES:ITEM.SCR:id:31	draft	关联译名；当前ISO保留原名称
-id:34	액체 합금	液态合金	item	RES/SUBSYS.RES:ITEM.SCR:id:34	draft	关联译名；当前ISO保留原名称
-id:97	B1 메인통제실 카드키	B1主控室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:97	draft	关联译名；当前ISO保留原名称
-id:44	혈액 생성 촉진제	造血促进剂	item	RES/SUBSYS.RES:ITEM.SCR:id:44	draft	关联译名；当前ISO保留原名称
-id:45	인체 실험 보고서	人体实验报告	item	RES/SUBSYS.RES:ITEM.SCR:id:45	draft	关联译名；当前ISO保留原名称
-id:46	특수 액체	特殊液体	item	RES/SUBSYS.RES:ITEM.SCR:id:46	draft	关联译名；当前ISO保留原名称
-id:47	제인의 보안 카드	简的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:47	draft	关联译名；当前ISO保留原名称
-id:48	B1-01 지도	B1-01地图	item	RES/SUBSYS.RES:ITEM.SCR:id:48	draft	关联译名；当前ISO保留原名称
-id:111	제인의 지도 B1-02	简的B1-02地图	item	RES/SUBSYS.RES:ITEM.SCR:id:111	draft	关联译名；当前ISO保留原名称
-id:112	제인의 지도 B2	简的B2地图	item	RES/SUBSYS.RES:ITEM.SCR:id:112	draft	关联译名；当前ISO保留原名称
-id:50	연구원 사진	研究员照片	item	RES/SUBSYS.RES:ITEM.SCR:id:50	draft	关联译名；当前ISO保留原名称
-id:51	한스의 연구 일지	汉斯的研究日志	item	RES/SUBSYS.RES:ITEM.SCR:id:51	draft	关联译名；当前ISO保留原名称
-id:49	작전 보고서	行动报告	item	RES/SUBSYS.RES:ITEM.SCR:id:49	draft	关联译名；当前ISO保留原名称
-id:52	경비대원의 수첩	警卫的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:52	draft	关联译名；当前ISO保留原名称
-id:54	데이터 스틱 1	数据棒1	item	RES/SUBSYS.RES:ITEM.SCR:id:54	draft	关联译名；当前ISO保留原名称
-id:55	배수 처리실 카드키	排水处理室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:55	draft	关联译名；当前ISO保留原名称
-id:58	지미에게 남긴 메모	给吉米的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:58	draft	关联译名；当前ISO保留原名称
-id:53	무기 연구실 카드키	武器研究室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:53	draft	关联译名；当前ISO保留原名称
-id:60	데이터 스틱 2	数据棒2	item	RES/SUBSYS.RES:ITEM.SCR:id:60	draft	关联译名；当前ISO保留原名称
-id:56	알렌의 보안 카드	艾伦的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:56	draft	关联译名；当前ISO保留原名称
-id:98	피 묻은 보안 카드	染血的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:98	draft	关联译名；当前ISO保留原名称
-id:61	모니카의 편지	莫妮卡的信	item	RES/SUBSYS.RES:ITEM.SCR:id:61	draft	关联译名；当前ISO保留原名称
-id:62	데이터 스틱 3	数据棒3	item	RES/SUBSYS.RES:ITEM.SCR:id:62	draft	关联译名；当前ISO保留原名称
-id:63	군 전략 연구에 대한 편지	军事战略研究信函	item	RES/SUBSYS.RES:ITEM.SCR:id:63	draft	关联译名；当前ISO保留原名称
-id:57	육각 금속 물체	六角金属物	item	RES/SUBSYS.RES:ITEM.SCR:id:57	draft	关联译名；当前ISO保留原名称
-id:68	B3 지도	B3地图	item	RES/SUBSYS.RES:ITEM.SCR:id:68	draft	关联译名；当前ISO保留原名称
-id:113	B4 지도	B4地图	item	RES/SUBSYS.RES:ITEM.SCR:id:113	draft	关联译名；当前ISO保留原名称
-id:64	디텍팅 센서 부품	探测器零件	item	RES/SUBSYS.RES:ITEM.SCR:id:64	draft	关联译名；当前ISO保留原名称
-id:65	데이터 스틱 4	数据棒4	item	RES/SUBSYS.RES:ITEM.SCR:id:65	draft	关联译名；当前ISO保留原名称
-id:66	데이터 스틱 5	数据棒5	item	RES/SUBSYS.RES:ITEM.SCR:id:66	draft	关联译名；当前ISO保留原名称
-id:67	데이터 스틱 6	数据棒6	item	RES/SUBSYS.RES:ITEM.SCR:id:67	draft	关联译名；当前ISO保留原名称
-id:69	데이터 스틱 7	数据棒7	item	RES/SUBSYS.RES:ITEM.SCR:id:69	draft	关联译名；当前ISO保留原名称
-id:70	감사 지침문	审查指引	item	RES/SUBSYS.RES:ITEM.SCR:id:70	draft	关联译名；当前ISO保留原名称
-id:71	데이터 스틱 8	数据棒8	item	RES/SUBSYS.RES:ITEM.SCR:id:71	draft	关联译名；当前ISO保留原名称
-id:76	데이터 스틱 S	数据棒S	item	RES/SUBSYS.RES:ITEM.SCR:id:76	draft	关联译名；当前ISO保留原名称
-id:88	데이터 스틱 S1	数据棒S1	item	RES/SUBSYS.RES:ITEM.SCR:id:88	draft	关联译名；当前ISO保留原名称
-id:89	데이터 스틱 S2	数据棒S2	item	RES/SUBSYS.RES:ITEM.SCR:id:89	draft	关联译名；当前ISO保留原名称
-id:90	데이터 스틱 S3	数据棒S3	item	RES/SUBSYS.RES:ITEM.SCR:id:90	draft	关联译名；当前ISO保留原名称
-id:91	데이터 스틱 S4	数据棒S4	item	RES/SUBSYS.RES:ITEM.SCR:id:91	draft	关联译名；当前ISO保留原名称
-id:72	동력 실린더 타입 A	A型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:72	draft	关联译名；当前ISO保留原名称
-id:73	동력 실린더 타입 B	B型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:73	draft	关联译名；当前ISO保留原名称
-id:74	동력 실린더 타입 C	C型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:74	draft	关联译名；当前ISO保留原名称
-id:75	동력 실린더 타입 D	D型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:75	draft	关联译名；当前ISO保留原名称
-id:77	데이터 스틱 9	数据棒9	item	RES/SUBSYS.RES:ITEM.SCR:id:77	draft	关联译名；当前ISO保留原名称
-id:78	B5 지도	B5地图	item	RES/SUBSYS.RES:ITEM.SCR:id:78	draft	关联译名；当前ISO保留原名称
-id:80	데이터 스틱 10	数据棒10	item	RES/SUBSYS.RES:ITEM.SCR:id:80	draft	关联译名；当前ISO保留原名称
-id:81	데이터 스틱 11	数据棒11	item	RES/SUBSYS.RES:ITEM.SCR:id:81	draft	关联译名；当前ISO保留原名称
-id:82	비밀 전문	秘密电报	item	RES/SUBSYS.RES:ITEM.SCR:id:82	draft	关联译名；当前ISO保留原名称
-id:83	데이터 스틱 12	数据棒12	item	RES/SUBSYS.RES:ITEM.SCR:id:83	draft	关联译名；当前ISO保留原名称
-id:99	B5 남쪽 게이트 카드키	B5南门门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:99	draft	关联译名；当前ISO保留原名称
-id:84	TOMCAT 활성제	TOMCAT活化剂	item	RES/SUBSYS.RES:ITEM.SCR:id:84	draft	关联译名；当前ISO保留原名称
-id:85	데이터 스틱 H	数据棒H	item	RES/SUBSYS.RES:ITEM.SCR:id:85	draft	关联译名；当前ISO保留原名称
-id:86	데이터 스틱 B	数据棒B	item	RES/SUBSYS.RES:ITEM.SCR:id:86	draft	关联译名；当前ISO保留原名称
-id:87	켈리의 수첩	凯莉的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:87	draft	关联译名；当前ISO保留原名称
-id:92	동력배치 설명	动力配置说明	item	RES/SUBSYS.RES:ITEM.SCR:id:92	draft	关联译名；当前ISO保留原名称
-id:93	동력배치 설명 N	动力配置说明N	item	RES/SUBSYS.RES:ITEM.SCR:id:93	draft	关联译名；当前ISO保留原名称
-id:94	동력배치 설명 H	动力配置说明H	item	RES/SUBSYS.RES:ITEM.SCR:id:94	draft	关联译名；当前ISO保留原名称
-id:95	데이터 폰	数据终端	item	RES/SUBSYS.RES:ITEM.SCR:id:95	draft	关联译名；当前ISO保留原名称
-id:96	데이터 스틱 B1	数据棒B1	item	RES/SUBSYS.RES:ITEM.SCR:id:96	draft	关联译名；当前ISO保留原名称
-id:100	근무지 이탈 주의 메모	离岗警告便条	item	RES/SUBSYS.RES:ITEM.SCR:id:100	draft	关联译名；当前ISO保留原名称
-id:101	동력실 근무 명령서	动力室值班命令	item	RES/SUBSYS.RES:ITEM.SCR:id:101	draft	关联译名；当前ISO保留原名称
-id:102	데이터 스틱 X	数据棒X	item	RES/SUBSYS.RES:ITEM.SCR:id:102	draft	关联译名；当前ISO保留原名称
-id:103	유충 관찰 보고서	幼虫观察报告	item	RES/SUBSYS.RES:ITEM.SCR:id:103	draft	关联译名；当前ISO保留原名称
-id:104	브렉의 일지	布雷克日志	item	RES/SUBSYS.RES:ITEM.SCR:id:104	draft	关联译名；当前ISO保留原名称
-id:105	데이터 스틱 B2	数据棒B2	item	RES/SUBSYS.RES:ITEM.SCR:id:105	draft	关联译名；当前ISO保留原名称
-id:106	데이터 스틱 B3	数据棒B3	item	RES/SUBSYS.RES:ITEM.SCR:id:106	draft	关联译名；当前ISO保留原名称
-id:107	데이터 스틱 B4	数据棒B4	item	RES/SUBSYS.RES:ITEM.SCR:id:107	draft	关联译名；当前ISO保留原名称
-id:108	데이터 스틱 B5	数据棒B5	item	RES/SUBSYS.RES:ITEM.SCR:id:108	draft	关联译名；当前ISO保留原名称
-id:109	데이터 스틱 B6	数据棒B6	item	RES/SUBSYS.RES:ITEM.SCR:id:109	draft	关联译名；当前ISO保留原名称
-id:110	알렌의 편지	艾伦的信	item	RES/SUBSYS.RES:ITEM.SCR:id:110	draft	关联译名；当前ISO保留原名称
-id:114	B6 지도	B6地图	item	RES/SUBSYS.RES:ITEM.SCR:id:114	draft	关联译名；当前ISO保留原名称
-id:115	도니의 일지	唐尼的日志	item	RES/SUBSYS.RES:ITEM.SCR:id:115	draft	关联译名；当前ISO保留原名称
-id:116	지하 터미널	地下终端	item	RES/SUBSYS.RES:ITEM.SCR:id:116	draft	关联译名；当前ISO保留原名称
+id:17	핸드건 탄창	手枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:17	draft	关联译名；全文版同时回填全部已审计引用
+id:18	라이플 탄창	步枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:18	draft	关联译名；全文版同时回填全部已审计引用
+id:19	샷건 탄알	霰弹	item	RES/SUBSYS.RES:ITEM.SCR:id:19	draft	关联译名；全文版同时回填全部已审计引用
+id:28	중앙 복도 카드키	中央走廊门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:28	draft	关联译名；全文版同时回填全部已审计引用
+id:29	MEL 카드키	MEL门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:29	draft	关联译名；全文版同时回填全部已审计引用
+id:38	관리 지시서	管理指示	item	RES/SUBSYS.RES:ITEM.SCR:id:38	draft	关联译名；全文版同时回填全部已审计引用
+id:37	2F 지도	2F地图	item	RES/SUBSYS.RES:ITEM.SCR:id:37	draft	关联译名；全文版同时回填全部已审计引用
+id:39	신문 조각	报纸残片	item	RES/SUBSYS.RES:ITEM.SCR:id:39	draft	关联译名；全文版同时回填全部已审计引用
+id:43	반응 결과 프린트물	反应结果打印件	item	RES/SUBSYS.RES:ITEM.SCR:id:43	draft	关联译名；全文版同时回填全部已审计引用
+id:33	조직 세포 샘플	组织细胞样本	item	RES/SUBSYS.RES:ITEM.SCR:id:33	draft	关联译名；全文版同时回填全部已审计引用
+id:36	반응 실험 액체	反应实验液	item	RES/SUBSYS.RES:ITEM.SCR:id:36	draft	关联译名；全文版同时回填全部已审计引用
+id:32	2F 섹터 C 카드키	2F C区门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:32	draft	关联译名；全文版同时回填全部已审计引用
+id:40	월터에게 보내는 메모	给沃尔特的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:40	draft	关联译名；全文版同时回填全部已审计引用
+id:41	월터의 수첩	沃尔特手册	item	RES/SUBSYS.RES:ITEM.SCR:id:41	draft	关联译名；全文版同时回填全部已审计引用
+id:42	로완 스웰의 수첩	罗温·斯韦尔手册	item	RES/SUBSYS.RES:ITEM.SCR:id:42	draft	关联译名；全文版同时回填全部已审计引用
+id:30	알파 샘플	A样本	item	RES/SUBSYS.RES:ITEM.SCR:id:30	draft	关联译名；全文版同时回填全部已审计引用
+id:31	베타 샘플	B样本	item	RES/SUBSYS.RES:ITEM.SCR:id:31	draft	关联译名；全文版同时回填全部已审计引用
+id:34	액체 합금	液态合金	item	RES/SUBSYS.RES:ITEM.SCR:id:34	draft	关联译名；全文版同时回填全部已审计引用
+id:97	B1 메인통제실 카드키	B1主控室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:97	draft	关联译名；全文版同时回填全部已审计引用
+id:44	혈액 생성 촉진제	造血促进剂	item	RES/SUBSYS.RES:ITEM.SCR:id:44	draft	关联译名；全文版同时回填全部已审计引用
+id:45	인체 실험 보고서	人体实验报告	item	RES/SUBSYS.RES:ITEM.SCR:id:45	draft	关联译名；全文版同时回填全部已审计引用
+id:46	특수 액체	特殊液体	item	RES/SUBSYS.RES:ITEM.SCR:id:46	draft	关联译名；全文版同时回填全部已审计引用
+id:47	제인의 보안 카드	简的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:47	draft	关联译名；全文版同时回填全部已审计引用
+id:48	B1-01 지도	B1-01地图	item	RES/SUBSYS.RES:ITEM.SCR:id:48	draft	关联译名；全文版同时回填全部已审计引用
+id:111	제인의 지도 B1-02	简的B1-02地图	item	RES/SUBSYS.RES:ITEM.SCR:id:111	draft	关联译名；全文版同时回填全部已审计引用
+id:112	제인의 지도 B2	简的B2地图	item	RES/SUBSYS.RES:ITEM.SCR:id:112	draft	关联译名；全文版同时回填全部已审计引用
+id:50	연구원 사진	研究员照片	item	RES/SUBSYS.RES:ITEM.SCR:id:50	draft	关联译名；全文版同时回填全部已审计引用
+id:51	한스의 연구 일지	汉斯的研究日志	item	RES/SUBSYS.RES:ITEM.SCR:id:51	draft	关联译名；全文版同时回填全部已审计引用
+id:49	작전 보고서	行动报告	item	RES/SUBSYS.RES:ITEM.SCR:id:49	draft	关联译名；全文版同时回填全部已审计引用
+id:52	경비대원의 수첩	警卫的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:52	draft	关联译名；全文版同时回填全部已审计引用
+id:54	데이터 스틱 1	数据棒1	item	RES/SUBSYS.RES:ITEM.SCR:id:54	draft	关联译名；全文版同时回填全部已审计引用
+id:55	배수 처리실 카드키	排水处理室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:55	draft	关联译名；全文版同时回填全部已审计引用
+id:58	지미에게 남긴 메모	给吉米的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:58	draft	关联译名；全文版同时回填全部已审计引用
+id:53	무기 연구실 카드키	武器研究室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:53	draft	关联译名；全文版同时回填全部已审计引用
+id:60	데이터 스틱 2	数据棒2	item	RES/SUBSYS.RES:ITEM.SCR:id:60	draft	关联译名；全文版同时回填全部已审计引用
+id:56	알렌의 보안 카드	艾伦的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:56	draft	关联译名；全文版同时回填全部已审计引用
+id:98	피 묻은 보안 카드	染血的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:98	draft	关联译名；全文版同时回填全部已审计引用
+id:61	모니카의 편지	莫妮卡的信	item	RES/SUBSYS.RES:ITEM.SCR:id:61	draft	关联译名；全文版同时回填全部已审计引用
+id:62	데이터 스틱 3	数据棒3	item	RES/SUBSYS.RES:ITEM.SCR:id:62	draft	关联译名；全文版同时回填全部已审计引用
+id:63	군 전략 연구에 대한 편지	军事战略研究信函	item	RES/SUBSYS.RES:ITEM.SCR:id:63	draft	关联译名；全文版同时回填全部已审计引用
+id:57	육각 금속 물체	六角金属物	item	RES/SUBSYS.RES:ITEM.SCR:id:57	draft	关联译名；全文版同时回填全部已审计引用
+id:68	B3 지도	B3地图	item	RES/SUBSYS.RES:ITEM.SCR:id:68	draft	关联译名；全文版同时回填全部已审计引用
+id:113	B4 지도	B4地图	item	RES/SUBSYS.RES:ITEM.SCR:id:113	draft	关联译名；全文版同时回填全部已审计引用
+id:64	디텍팅 센서 부품	探测器零件	item	RES/SUBSYS.RES:ITEM.SCR:id:64	draft	关联译名；全文版同时回填全部已审计引用
+id:65	데이터 스틱 4	数据棒4	item	RES/SUBSYS.RES:ITEM.SCR:id:65	draft	关联译名；全文版同时回填全部已审计引用
+id:66	데이터 스틱 5	数据棒5	item	RES/SUBSYS.RES:ITEM.SCR:id:66	draft	关联译名；全文版同时回填全部已审计引用
+id:67	데이터 스틱 6	数据棒6	item	RES/SUBSYS.RES:ITEM.SCR:id:67	draft	关联译名；全文版同时回填全部已审计引用
+id:69	데이터 스틱 7	数据棒7	item	RES/SUBSYS.RES:ITEM.SCR:id:69	draft	关联译名；全文版同时回填全部已审计引用
+id:70	감사 지침문	审查指引	item	RES/SUBSYS.RES:ITEM.SCR:id:70	draft	关联译名；全文版同时回填全部已审计引用
+id:71	데이터 스틱 8	数据棒8	item	RES/SUBSYS.RES:ITEM.SCR:id:71	draft	关联译名；全文版同时回填全部已审计引用
+id:76	데이터 스틱 S	数据棒S	item	RES/SUBSYS.RES:ITEM.SCR:id:76	draft	关联译名；全文版同时回填全部已审计引用
+id:88	데이터 스틱 S1	数据棒S1	item	RES/SUBSYS.RES:ITEM.SCR:id:88	draft	关联译名；全文版同时回填全部已审计引用
+id:89	데이터 스틱 S2	数据棒S2	item	RES/SUBSYS.RES:ITEM.SCR:id:89	draft	关联译名；全文版同时回填全部已审计引用
+id:90	데이터 스틱 S3	数据棒S3	item	RES/SUBSYS.RES:ITEM.SCR:id:90	draft	关联译名；全文版同时回填全部已审计引用
+id:91	데이터 스틱 S4	数据棒S4	item	RES/SUBSYS.RES:ITEM.SCR:id:91	draft	关联译名；全文版同时回填全部已审计引用
+id:72	동력 실린더 타입 A	A型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:72	draft	关联译名；全文版同时回填全部已审计引用
+id:73	동력 실린더 타입 B	B型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:73	draft	关联译名；全文版同时回填全部已审计引用
+id:74	동력 실린더 타입 C	C型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:74	draft	关联译名；全文版同时回填全部已审计引用
+id:75	동력 실린더 타입 D	D型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:75	draft	关联译名；全文版同时回填全部已审计引用
+id:77	데이터 스틱 9	数据棒9	item	RES/SUBSYS.RES:ITEM.SCR:id:77	draft	关联译名；全文版同时回填全部已审计引用
+id:78	B5 지도	B5地图	item	RES/SUBSYS.RES:ITEM.SCR:id:78	draft	关联译名；全文版同时回填全部已审计引用
+id:80	데이터 스틱 10	数据棒10	item	RES/SUBSYS.RES:ITEM.SCR:id:80	draft	关联译名；全文版同时回填全部已审计引用
+id:81	데이터 스틱 11	数据棒11	item	RES/SUBSYS.RES:ITEM.SCR:id:81	draft	关联译名；全文版同时回填全部已审计引用
+id:82	비밀 전문	秘密电报	item	RES/SUBSYS.RES:ITEM.SCR:id:82	draft	关联译名；全文版同时回填全部已审计引用
+id:83	데이터 스틱 12	数据棒12	item	RES/SUBSYS.RES:ITEM.SCR:id:83	draft	关联译名；全文版同时回填全部已审计引用
+id:99	B5 남쪽 게이트 카드키	B5南门门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:99	draft	关联译名；全文版同时回填全部已审计引用
+id:84	TOMCAT 활성제	TOMCAT活化剂	item	RES/SUBSYS.RES:ITEM.SCR:id:84	draft	关联译名；全文版同时回填全部已审计引用
+id:85	데이터 스틱 H	数据棒H	item	RES/SUBSYS.RES:ITEM.SCR:id:85	draft	关联译名；全文版同时回填全部已审计引用
+id:86	데이터 스틱 B	数据棒B	item	RES/SUBSYS.RES:ITEM.SCR:id:86	draft	关联译名；全文版同时回填全部已审计引用
+id:87	켈리의 수첩	凯莉的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:87	draft	关联译名；全文版同时回填全部已审计引用
+id:92	동력배치 설명	动力配置说明	item	RES/SUBSYS.RES:ITEM.SCR:id:92	draft	关联译名；全文版同时回填全部已审计引用
+id:93	동력배치 설명 N	动力配置说明N	item	RES/SUBSYS.RES:ITEM.SCR:id:93	draft	关联译名；全文版同时回填全部已审计引用
+id:94	동력배치 설명 H	动力配置说明H	item	RES/SUBSYS.RES:ITEM.SCR:id:94	draft	关联译名；全文版同时回填全部已审计引用
+id:95	데이터 폰	数据终端	item	RES/SUBSYS.RES:ITEM.SCR:id:95	draft	关联译名；全文版同时回填全部已审计引用
+id:96	데이터 스틱 B1	数据棒B1	item	RES/SUBSYS.RES:ITEM.SCR:id:96	draft	关联译名；全文版同时回填全部已审计引用
+id:100	근무지 이탈 주의 메모	离岗警告便条	item	RES/SUBSYS.RES:ITEM.SCR:id:100	draft	关联译名；全文版同时回填全部已审计引用
+id:101	동력실 근무 명령서	动力室值班命令	item	RES/SUBSYS.RES:ITEM.SCR:id:101	draft	关联译名；全文版同时回填全部已审计引用
+id:102	데이터 스틱 X	数据棒X	item	RES/SUBSYS.RES:ITEM.SCR:id:102	draft	关联译名；全文版同时回填全部已审计引用
+id:103	유충 관찰 보고서	幼虫观察报告	item	RES/SUBSYS.RES:ITEM.SCR:id:103	draft	关联译名；全文版同时回填全部已审计引用
+id:104	브렉의 일지	布雷克日志	item	RES/SUBSYS.RES:ITEM.SCR:id:104	draft	关联译名；全文版同时回填全部已审计引用
+id:105	데이터 스틱 B2	数据棒B2	item	RES/SUBSYS.RES:ITEM.SCR:id:105	draft	关联译名；全文版同时回填全部已审计引用
+id:106	데이터 스틱 B3	数据棒B3	item	RES/SUBSYS.RES:ITEM.SCR:id:106	draft	关联译名；全文版同时回填全部已审计引用
+id:107	데이터 스틱 B4	数据棒B4	item	RES/SUBSYS.RES:ITEM.SCR:id:107	draft	关联译名；全文版同时回填全部已审计引用
+id:108	데이터 스틱 B5	数据棒B5	item	RES/SUBSYS.RES:ITEM.SCR:id:108	draft	关联译名；全文版同时回填全部已审计引用
+id:109	데이터 스틱 B6	数据棒B6	item	RES/SUBSYS.RES:ITEM.SCR:id:109	draft	关联译名；全文版同时回填全部已审计引用
+id:110	알렌의 편지	艾伦的信	item	RES/SUBSYS.RES:ITEM.SCR:id:110	draft	关联译名；全文版同时回填全部已审计引用
+id:114	B6 지도	B6地图	item	RES/SUBSYS.RES:ITEM.SCR:id:114	draft	关联译名；全文版同时回填全部已审计引用
+id:115	도니의 일지	唐尼的日志	item	RES/SUBSYS.RES:ITEM.SCR:id:115	draft	关联译名；全文版同时回填全部已审计引用
+id:116	지하 터미널	地下终端	item	RES/SUBSYS.RES:ITEM.SCR:id:116	draft	关联译名；全文版同时回填全部已审计引用
 person:bruce	브루스 맥켈렌	布鲁斯·麦凯伦	person	RES/SUBSYS.RES:EVENT.SCR@00005226	draft	自称布鲁斯
 person:allen	알렌 던	艾伦·德恩	person	RES/SUBSYS.RES:EVENT.SCR@0001c74d;RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4	draft	正文简称艾伦
 person:monica	모니카 델피	莫妮卡·德尔菲	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003db4	draft	正文简称莫妮卡
-person:jennifer	제니퍼	詹妮弗	person	RES/SUBSYS.RES:EVENT.SCR@0002fffd	draft	与莫妮卡区分
+person:jennifer	제니퍼	詹妮弗	person	RES/SUBSYS.RES:EVENT.SCR@0002fffd	draft	与莫妮卡区分；原ELF SCKA_200.55@00159140 的完整英文名 Jennifer Loren 译詹妮弗·劳伦，正文简称詹妮弗。
 person:jane	제인 블레어	简·布莱尔	person	RES/SUBSYS.RES:EVENT.SCR@00005150	draft	安保队中士；简称简
 person:john	존 닐슨	约翰·尼尔森	person	RES/SUBSYS.RES:EVENT.SCR@0000518b	draft	博士；简称尼尔森
 person:kelly	켈리 포스트	凯莉·波斯特	person	RES/SUBSYS.RES:EVENT.SCR@0000b874;RES/UI/ITEM.RES:DOCUMENT.SCR@000049f7	draft	简称凯莉
@@ -187,7 +187,7 @@ term:047	카이져 뱀파이어 유전자	帝王吸血鬼基因	weapon-tier	RES/
 term:048	에인션트 뱀파이어	远古吸血鬼	species	RES/UI/ITEM.RES:DOCUMENT.SCR@00003827	draft	与普通吸血鬼、吸血鬼领主、帝王区分；上游常缩成Ancient，中文不应因此自动删去吸血鬼。
 term:049	뱀파이어 로드	吸血鬼领主	species	RES/UI/ITEM.RES:DOCUMENT.SCR@000031d1	draft	数据棒7明确另起的物种名称；不是Kaiser/帝王的同义词。
 term:052	DNA 클론 프로젝트	DNA克隆计划	research-project	RES/UI/ITEM.RES:DOCUMENT.SCR@0000177f	draft	数据棒1标题；与吸血鬼/远古计划有联系但不是可以随意互换的标签。
-term:053	에너지 개발 프로젝트	能源开发计划	research-project	RES/UI/ITEM.RES:DOCUMENT.SCR@00004e8b	draft	数据棒S；幼虫/电解液/动力筒体系。
+term:053	에너지 개발 프로젝트	能源开发计划	research-project	RES/UI/ITEM.RES:DOCUMENT.SCR@00004e8b	draft	数据棒S；幼虫/电解液/动力缸体系。
 term:054	팔마타	帕尔玛塔	research-material-codename	RES/UI/ITEM.RES:DOCUMENT.SCR@00001e4e;RES/UI/ITEM.RES:DOCUMENT.SCR@000038fa	draft	原文是第三种DNA 팔마타。已审原文没有叶子/掌状叶的说明；不把上游植物化解释当作事实。
 term:055	프리즘	棱镜	chemical-gas-codename	RES/UI/ITEM.RES:DOCUMENT.SCR@000065d0	draft	原文明确命名为프리즘的化学气体，刺激幼虫感知及攻击本能。作为气体代号，初见可写“棱镜”气体。
 term:056	TOMCAT	TOMCAT	key-item	RES/SUBSYS.RES:EVENT.SCR@00039e27	draft	原文英文代号保持TOMCAT，활성제译活化剂；不要把名字当普通家猫。
@@ -208,3 +208,16 @@ term:070	생체 연구실	生物研究室	place	RES/UI/ITEM.RES:DOCUMENT.SCR@000
 term:071	팔마타 보관실	帕尔玛塔保管室	place	RES/SUBSYS.RES:EVENT.SCR@00029785	draft	EVENT754附近独立地点名，英文省略Palmata。
 term:072	메인 동력실	主动力室	place	RES/SUBSYS.RES:EVENT.SCR@0000c3ca	draft	与보조 동력실辅助动力室组成配电/幼虫动力筒谜题；左右顺序须按韩文及现场验证。
 term:073	보조 동력실	辅助动力室	place	RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe	draft	原版动力配置说明写线路A左侧主动力室、线路B右侧辅助；上游Power Guide将MAIN(R)/AUX(L)写反，需地图/实机确认。
+term:parasitism	잠식	侵蚀	term	full-text	draft	EVENT对寄生过程的称呼
+term:host	숙주	宿主	term	full-text	draft	生物学叙述
+term:detector	디텍팅 센서	探测器	term	full-text	draft	地下三层检测感染的装置
+term:activation	활성화 이론	活化理论	term	full-text	draft	剧情研究理论
+term:cylinder	동력 실린더	动力缸	term	full-text	draft	A/B/C/D型动力道具及供电谜题
+term:codegate	코드 게이트	密码门	term	full-text	draft	与密码室控制装置区分
+term:traitor	배신자	叛徒	term	full-text	draft	联网游戏角色
+term:citizen	시민	平民	term	full-text	draft	联网游戏角色
+term:macro	매크로	快捷语	term	full-text	draft	联网预设聊天句
+term:leech	LEECH	水蛭	term	full-text	draft	幼虫A型英文标识保留作对照
+term:edge	EDGE	利刃	term	full-text	draft	幼虫B型英文标识保留作对照
+term:axe	AXE	战斧	term	full-text	draft	幼虫C型英文标识保留作对照
+term:range	Range	远程	term	full-text	draft	幼虫D型英文标识保留作对照

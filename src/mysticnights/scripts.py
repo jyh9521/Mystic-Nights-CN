@@ -38,6 +38,34 @@ def protected_tokens(text: str) -> tuple[str, ...]:
     return tuple(_TOKEN.findall(text))
 
 
+def validate_script_tokens(source: str, target: str, literal_translations=()) -> None:
+    """Allow individually reviewed literal headings, never renderer commands.
+
+    Callers bind these exceptions to a source ID/hash in a versioned recipe.
+    Unknown angle-bracket text stays protected unless explicitly nominated.
+    """
+    from .executable import TAGS, validate_tokens
+    try:
+        validate_tokens(source, target)
+    except ValueError as exc:
+        raise ScriptError(f"Protected token mismatch: {exc}") from exc
+    replacements = {}
+    before, after = protected_tokens(source), protected_tokens(target)
+    for pair in literal_translations:
+        if not isinstance(pair, dict) or set(pair) != {"source", "target"}:
+            raise ScriptError("Malformed literal-token translation")
+        a, b = pair["source"], pair["target"]
+        if (not isinstance(a, str) or not isinstance(b, str) or a in replacements
+                or a not in before or b not in after
+                or re.fullmatch(r"<[^<>\r\n]+>", a) is None
+                or re.fullmatch(r"<[^<>\r\n]+>", b) is None
+                or TAGS.fullmatch(a) or TAGS.fullmatch(b)):
+            raise ScriptError("Invalid or protected literal-token translation")
+        replacements[a] = b
+    if tuple(replacements.get(token, token) for token in before) != after:
+        raise ScriptError("Protected token mismatch")
+
+
 @dataclass(frozen=True)
 class ScriptString:
     id: str
@@ -154,6 +182,7 @@ def patch_strings(
     *,
     allowed_roles: Iterable[str] = ("display",),
     padding: bytes = b"\0",
+    literal_translations: Mapping[str, list] | None = None,
 ) -> bytes:
     """Validate all edits before returning an equal-length modified script.
 
@@ -173,6 +202,9 @@ def patch_strings(
     unknown = set(replacements) - set(by_id)
     if unknown:
         raise ScriptError(f"Unknown replacement IDs: {sorted(unknown)}")
+    literal_translations = literal_translations or {}
+    if set(literal_translations) - set(replacements):
+        raise ScriptError("Literal exception without a selected translation")
     roles = set(allowed_roles)
     planned: list[tuple[ScriptString, bytes]] = []
     for identifier, target in replacements.items():
@@ -185,8 +217,10 @@ def patch_strings(
             raise ScriptError(f"Target contains script delimiter/control bytes: {identifier}")
         if record.source and not target:
             raise ScriptError(f"Unexpected empty target: {identifier}")
-        if protected_tokens(target) != record.tokens:
-            raise ScriptError(f"Protected token mismatch: {identifier}")
+        try:
+            validate_script_tokens(record.source, target, literal_translations.get(identifier, ()))
+        except ScriptError as exc:
+            raise ScriptError(f"{exc}: {identifier}") from exc
         start, end = record.offset, record.offset + record.capacity
         if start < 1 or end >= len(data) or data[start - 1 : start] != b'"' or data[end : end + 1] != b'"':
             raise ScriptError(f"Source field bounds/delimiters changed: {identifier}")

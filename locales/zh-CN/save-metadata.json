@@ -1,0 +1,19 @@
+{
+  "format": "save-metadata-catalogue",
+  "version": 1,
+  "locale": "zh-CN",
+  "original_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "entries": [
+    {
+      "id": "CNF/ICON_EN.SYS@000000c0",
+      "source": "Ｙｏｕｒ　ＮｅｔｗｏｒｋＣｏｎｆｉｇｕｒａｔｉｏｎ",
+      "source_sha256": "e0947fdc29685645468e95fb575865aa0796150372d4fb7f8026f4df88d03d96",
+      "target": "通信配置",
+      "encoding": "cp932",
+      "line_break_after": 4,
+      "text_type": "save_title",
+      "status": "draft",
+      "note": "固件可编码的简体字形；仅网络配置存档显示标题，不改游戏存档名或网络配置标识。"
+    }
+  ]
+}

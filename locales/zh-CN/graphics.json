@@ -1,0 +1,2042 @@
+{
+  "format": "graphics-translations",
+  "version": 1,
+  "locale": "zh-CN",
+  "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+  "entries": [
+    {
+      "id": "076f1530ee2a/text-01",
+      "target": "诡秘之夜",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/text-02",
+      "target": "新游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/text-03",
+      "target": "读取游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/text-04",
+      "target": "联机游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/text-05",
+      "target": "画廊",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/text-06",
+      "target": "按START键",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-01",
+      "target": "简单",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-02",
+      "target": "普通",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-03",
+      "target": "困难",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-04",
+      "target": "詹妮弗",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-05",
+      "target": "布鲁斯",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-06",
+      "target": "艾伦",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-07",
+      "target": "亨利",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-08",
+      "target": "弗兰克",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-01",
+      "target": "约翰",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-02",
+      "target": "迈克尔",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-03",
+      "target": "卢克",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-04",
+      "target": "凯莉",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-05",
+      "target": "简",
+      "status": "draft"
+    },
+    {
+      "id": "b2454bf547a1/text-01",
+      "target": "正在加载…",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/text-01",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/text-02",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/text-01",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/text-02",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "f06091dcb797/text-01",
+      "target": "行\n动",
+      "status": "draft"
+    },
+    {
+      "id": "569d71f3aa82/text-01",
+      "target": "游戏新\n领军者",
+      "status": "draft"
+    },
+    {
+      "id": "b7aaf95b21c7/text-01",
+      "target": "索尼电脑娱乐韩国\n呈献",
+      "status": "draft"
+    },
+    {
+      "id": "e898cd79e42f/text-01",
+      "target": "警告",
+      "status": "draft"
+    },
+    {
+      "id": "e898cd79e42f/text-02",
+      "target": "本游戏含有较强的暴力内容，\n不适合老年人、体弱者及孕妇。",
+      "status": "draft"
+    },
+    {
+      "id": "504e0f78b8e3/previous",
+      "target": "上一张",
+      "status": "draft"
+    },
+    {
+      "id": "504e0f78b8e3/next",
+      "target": "下一张",
+      "status": "draft"
+    },
+    {
+      "id": "504e0f78b8e3/help",
+      "target": "显示/隐藏提示",
+      "status": "draft"
+    },
+    {
+      "id": "504e0f78b8e3/title",
+      "target": "返回标题",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/game",
+      "target": "游戏",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/over",
+      "target": "结束",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/continue",
+      "target": "继续游戏？",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/yes-normal",
+      "target": "是",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/no-normal",
+      "target": "否",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/yes-selected",
+      "target": "是",
+      "status": "draft"
+    },
+    {
+      "id": "50dab06d4bb5/no-selected",
+      "target": "否",
+      "status": "draft"
+    },
+    {
+      "id": "a0797627179d/text-01",
+      "target": "选择道具",
+      "status": "draft"
+    },
+    {
+      "id": "a0797627179d/text-02",
+      "target": "重置视角",
+      "status": "draft"
+    },
+    {
+      "id": "a0797627179d/text-03",
+      "target": "地图",
+      "status": "draft"
+    },
+    {
+      "id": "a0797627179d/text-04",
+      "target": "快捷语",
+      "status": "draft"
+    },
+    {
+      "id": "2aa2938f88f1/weapon",
+      "target": "选择武器",
+      "status": "draft"
+    },
+    {
+      "id": "2aa2938f88f1/menu",
+      "target": "菜单",
+      "status": "draft"
+    },
+    {
+      "id": "2aa2938f88f1/aim",
+      "target": "瞄准",
+      "status": "draft"
+    },
+    {
+      "id": "2aa2938f88f1/transform",
+      "target": "变身",
+      "status": "draft"
+    },
+    {
+      "id": "2aa2938f88f1/action",
+      "target": "使用道具\n操作、交谈",
+      "status": "draft"
+    },
+    {
+      "id": "4aa9038fab4d/text-01",
+      "target": "移动",
+      "status": "draft"
+    },
+    {
+      "id": "4aa9038fab4d/text-02",
+      "target": "（快捷语仅在联",
+      "status": "draft"
+    },
+    {
+      "id": "eb3a98946792/text-01",
+      "target": "取消",
+      "status": "draft"
+    },
+    {
+      "id": "eb3a98946792/text-02",
+      "target": "攻击（瞄准时）",
+      "status": "draft"
+    },
+    {
+      "id": "eb3a98946792/text-03",
+      "target": "视角",
+      "status": "draft"
+    },
+    {
+      "id": "eb3a98946792/text-04",
+      "target": "机模式中使用）",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/brightness",
+      "target": "画面亮度",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/bgm",
+      "target": "背景音乐",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/sfx",
+      "target": "音效",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/vibration",
+      "target": "振动功能",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/camera",
+      "target": "自动重置视角",
+      "status": "draft"
+    },
+    {
+      "id": "6c34d8b631c7/min",
+      "target": "最低",
+      "status": "draft"
+    },
+    {
+      "id": "c316f7a8f6f4/max",
+      "target": "最高",
+      "status": "draft"
+    },
+    {
+      "id": "c316f7a8f6f4/vibration-on",
+      "target": "开启",
+      "status": "draft"
+    },
+    {
+      "id": "c316f7a8f6f4/vibration-off",
+      "target": "关闭",
+      "status": "draft"
+    },
+    {
+      "id": "c316f7a8f6f4/camera-on",
+      "target": "开启",
+      "status": "draft"
+    },
+    {
+      "id": "c316f7a8f6f4/camera-off",
+      "target": "关闭",
+      "status": "draft"
+    },
+    {
+      "id": "315a3049ad15/ok",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "315a3049ad15/back",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "3b65fbd1f3a8/ok",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "3b65fbd1f3a8/back",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "50aaf47b4ec9/end",
+      "target": "终",
+      "status": "draft"
+    },
+    {
+      "id": "5b5d9ee0a23b/line-01",
+      "target": "制作统筹",
+      "status": "draft"
+    },
+    {
+      "id": "5b5d9ee0a23b/line-02",
+      "target": "总监制",
+      "status": "draft"
+    },
+    {
+      "id": "5b5d9ee0a23b/line-03",
+      "target": "金禄允",
+      "status": "draft"
+    },
+    {
+      "id": "5b5d9ee0a23b/line-04",
+      "target": "制作人",
+      "status": "draft"
+    },
+    {
+      "id": "5b5d9ee0a23b/line-05",
+      "target": "全完镐　金泰京",
+      "status": "draft"
+    },
+    {
+      "id": "f4ba2ab763a0/line-01",
+      "target": "游戏设计",
+      "status": "draft"
+    },
+    {
+      "id": "f4ba2ab763a0/line-02",
+      "target": "玩法设计／平衡调整",
+      "status": "draft"
+    },
+    {
+      "id": "f4ba2ab763a0/line-03",
+      "target": "许南德",
+      "status": "draft"
+    },
+    {
+      "id": "f4ba2ab763a0/line-04",
+      "target": "关卡设计／剧本",
+      "status": "draft"
+    },
+    {
+      "id": "f4ba2ab763a0/line-05",
+      "target": "崔正泰",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-01",
+      "target": "程序设计",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-02",
+      "target": "主程序／渲染引擎",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-03",
+      "target": "金泰京　金正贤",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-04",
+      "target": "工具／用户界面",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-05",
+      "target": "高奉贤",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-06",
+      "target": "音频／网络引擎",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-07",
+      "target": "金钟元",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-08",
+      "target": "网络服务器",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-09",
+      "target": "金道贤",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-10",
+      "target": "网络客户端",
+      "status": "draft"
+    },
+    {
+      "id": "35c5de4206c6/line-11",
+      "target": "高奉贤　金钟元　金正贤",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-01",
+      "target": "美术",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-02",
+      "target": "概念设计／插画",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-03",
+      "target": "吴泰洙　张在旭",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-04",
+      "target": "角色／生物建模",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-05",
+      "target": "高勋　吴泰洙　李钟烨",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-06",
+      "target": "动画",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-07",
+      "target": "裴庆民",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-08",
+      "target": "场景建模",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-09",
+      "target": "吴泰洙　梁英俊　李钟云　任翠任　崔恩熙",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-10",
+      "target": "视觉特效",
+      "status": "draft"
+    },
+    {
+      "id": "2f57a143e1d6/line-11",
+      "target": "高勋",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-01",
+      "target": "音乐／音效",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-02",
+      "target": "普罗音响项目",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-03",
+      "target": "韩锡镐　赵容镇",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-04",
+      "target": "市场推广",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-05",
+      "target": "销售／公关",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-06",
+      "target": "张秀妍　金俊成　张庆元",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-07",
+      "target": "官方网站",
+      "status": "draft"
+    },
+    {
+      "id": "26b5b253fb5b/line-08",
+      "target": "李正元　姜美善",
+      "status": "draft"
+    },
+    {
+      "id": "15e4fbe163e9/line-01",
+      "target": "特别鸣谢",
+      "status": "draft"
+    },
+    {
+      "id": "15e4fbe163e9/line-02",
+      "target": "韩国软件振兴院",
+      "status": "draft"
+    },
+    {
+      "id": "15e4fbe163e9/line-03",
+      "target": "索尼电脑娱乐韩国",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/heading",
+      "target": "配音演员",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/01-left",
+      "target": "布鲁斯",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/01-right",
+      "target": "凯莉",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/02-left",
+      "target": "李周昌",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/02-right",
+      "target": "尹汝贞",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/03-left",
+      "target": "詹妮弗／莫妮卡",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/03-right",
+      "target": "简",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/04-left",
+      "target": "李智英",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/04-right",
+      "target": "金善爱",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/05-left",
+      "target": "艾伦",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/05-right",
+      "target": "亨利／约翰",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/06-left",
+      "target": "徐润善",
+      "status": "draft"
+    },
+    {
+      "id": "c94219e12e43/06-right",
+      "target": "郑承旭",
+      "status": "draft"
+    },
+    {
+      "id": "87f3f3fda8d1/text-01",
+      "target": "诡秘之夜",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-01",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-02",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-03",
+      "target": "删除",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-04",
+      "target": "保存",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-05",
+      "target": "上一页",
+      "status": "draft"
+    },
+    {
+      "id": "0f1afa0bbe82/text-06",
+      "target": "下一页",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-01",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-02",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-03",
+      "target": "删除",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-04",
+      "target": "保存",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-05",
+      "target": "上一页",
+      "status": "draft"
+    },
+    {
+      "id": "e8932d921c39/text-06",
+      "target": "下一页",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-1",
+      "target": "选择服务器",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-2",
+      "target": "快捷语设置",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-3",
+      "target": "创建账号",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-4",
+      "target": "删除账号",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-5",
+      "target": "选择频道",
+      "status": "draft"
+    },
+    {
+      "id": "08616668c06c/heading-6",
+      "target": "游戏结果",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-1",
+      "target": "网络连接",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-2",
+      "target": "用户协议",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-3",
+      "target": "大厅",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-4",
+      "target": "用户登录",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-5",
+      "target": "创建游戏",
+      "status": "draft"
+    },
+    {
+      "id": "1ed5a6821281/heading-6",
+      "target": "等候室",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-01",
+      "target": "生命创造身份卡",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-02",
+      "target": "姓名",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-03",
+      "target": "性别",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-04",
+      "target": "权限",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-05",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "60a58b8a9e2c/text-06",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "acba74ed5f65/text-01",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "acba74ed5f65/text-02",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "c6e9c6c44b4f/text-01",
+      "target": "随机",
+      "status": "draft"
+    },
+    {
+      "id": "4d5ff5857ffe/text-01",
+      "target": "已选择",
+      "status": "draft"
+    },
+    {
+      "id": "4f5e8aba7eac/text-01",
+      "target": "生命创造",
+      "status": "draft",
+      "source": "VITAL CREATIONS"
+    },
+    {
+      "id": "4f5e8aba7eac/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "db107f489be6/text-01",
+      "target": "幼虫实验室",
+      "status": "draft"
+    },
+    {
+      "id": "db107f489be6/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "c6acced11170/text-01",
+      "target": "生命创造",
+      "status": "draft",
+      "source": "VITAL CREATIONS"
+    },
+    {
+      "id": "c6acced11170/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "f5023ab71b87/text-01",
+      "target": "访问被拒绝",
+      "status": "draft"
+    },
+    {
+      "id": "7238732c834d/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "69902adfff36/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "69902adfff36/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "149bdf01bd30/text-01",
+      "target": "高压电流",
+      "status": "draft"
+    },
+    {
+      "id": "6b3da2d9f62e/text-01",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "fefc3f417e03/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "fefc3f417e03/text-02",
+      "target": "正在加载数据",
+      "status": "draft"
+    },
+    {
+      "id": "f369593e7f10/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "cb1beda20720/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "cb1beda20720/text-02",
+      "target": "请勿靠近，",
+      "status": "draft"
+    },
+    {
+      "id": "cb1beda20720/text-03",
+      "target": "设备正在运行",
+      "status": "draft"
+    },
+    {
+      "id": "819da1b90c3e/text-01",
+      "target": "主分析系统",
+      "status": "draft"
+    },
+    {
+      "id": "4306082acc14/text-01",
+      "target": "消防栓",
+      "status": "draft"
+    },
+    {
+      "id": "4306082acc14/text-02",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "2388ec1c2a38/text-01",
+      "target": "灭菌器",
+      "status": "draft"
+    },
+    {
+      "id": "2388ec1c2a38/text-02",
+      "target": "空气净化器",
+      "status": "draft"
+    },
+    {
+      "id": "cf6ffcf22d2d/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "47031bdaff24/text-01",
+      "target": "电力管理",
+      "status": "draft"
+    },
+    {
+      "id": "62d125313792/text-01",
+      "target": "仓库",
+      "status": "draft"
+    },
+    {
+      "id": "8a6c29ab840a/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "8cc33b7f3b82/text-01",
+      "target": "结果",
+      "status": "draft"
+    },
+    {
+      "id": "8fa268a3a14c/text-01",
+      "target": "纳米细胞\n实验室",
+      "status": "draft"
+    },
+    {
+      "id": "06502e4c3911/text-01",
+      "target": "员工\n休息室",
+      "status": "draft"
+    },
+    {
+      "id": "02703ecb6d4c/text-01",
+      "target": "男",
+      "status": "draft"
+    },
+    {
+      "id": "02703ecb6d4c/text-02",
+      "target": "女",
+      "status": "draft"
+    },
+    {
+      "id": "2af85bf214e5/text-01",
+      "target": "警报",
+      "status": "draft"
+    },
+    {
+      "id": "2af85bf214e5/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-01",
+      "target": "主控制\n中心",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-03",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "306887e61f4a/text-01",
+      "target": "允许访问",
+      "status": "draft"
+    },
+    {
+      "id": "3ee3c511da91/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "3ee3c511da91/text-02",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "f7f619aae3c8/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "1b6ce2753ddb/text-01",
+      "target": "血液容器",
+      "status": "draft"
+    },
+    {
+      "id": "b3ee71e54126/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "b3ee71e54126/text-02",
+      "target": "贵宾电梯",
+      "status": "draft"
+    },
+    {
+      "id": "3383eb4cdb99/text-01",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "3383eb4cdb99/text-02",
+      "target": "无视频信号",
+      "status": "draft"
+    },
+    {
+      "id": "92a89aa10b81/text-01",
+      "target": "闭路\n摄像机",
+      "status": "draft"
+    },
+    {
+      "id": "17210fa50297/text-01",
+      "target": "金属探测器",
+      "status": "draft"
+    },
+    {
+      "id": "8f8c61c41b15/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "4282dc07ec14/text-01",
+      "target": "无视频信号",
+      "status": "draft"
+    },
+    {
+      "id": "1031e39770d4/text-01",
+      "target": "无视频信号",
+      "status": "draft"
+    },
+    {
+      "id": "0d00d4ec9305/text-01",
+      "target": "警告",
+      "status": "draft"
+    },
+    {
+      "id": "0d00d4ec9305/text-02",
+      "target": "易燃物",
+      "status": "draft"
+    },
+    {
+      "id": "29b994970899/text-01",
+      "target": "紧急情况",
+      "status": "draft"
+    },
+    {
+      "id": "d55587b848f3/text-01",
+      "target": "警告",
+      "status": "draft"
+    },
+    {
+      "id": "d55587b848f3/text-02",
+      "target": "危险区域",
+      "status": "draft"
+    },
+    {
+      "id": "d55587b848f3/text-03",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "d37e08bb58cd/text-01",
+      "target": "插入电缆",
+      "status": "draft"
+    },
+    {
+      "id": "28f5c7d8051e/text-01",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "28f5c7d8051e/text-02",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "6cdc269d8c55/text-01",
+      "target": "检测结果",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/text-01",
+      "target": "幼虫培养箱",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/text-02",
+      "target": "内含有毒物质",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/text-03",
+      "target": "D.I.A",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/text-04",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/text-05",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "a652f5045b35/text-01",
+      "target": "门已锁定",
+      "status": "draft"
+    },
+    {
+      "id": "7e6a7c9d433e/text-01",
+      "target": "分离舱",
+      "status": "draft"
+    },
+    {
+      "id": "bcb5b0782d76/text-01",
+      "target": "警告",
+      "status": "draft"
+    },
+    {
+      "id": "bcb5b0782d76/text-02",
+      "target": "进程错误",
+      "status": "draft"
+    },
+    {
+      "id": "c8bf70df2972/text-01",
+      "target": "你将死去",
+      "status": "draft"
+    },
+    {
+      "id": "83433e720cc0/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "83433e720cc0/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-02",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "021fe345b2c1/text-01",
+      "target": "系统出现\n故障",
+      "status": "draft"
+    },
+    {
+      "id": "5af334c5edcb/text-01",
+      "target": "TOMCAT 滴注器",
+      "status": "draft"
+    },
+    {
+      "id": "300be638e51f/text-01",
+      "target": "武器",
+      "status": "draft"
+    },
+    {
+      "id": "9e101a56ebde/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "9e101a56ebde/text-02",
+      "target": "2层CP\n通行证",
+      "status": "draft"
+    },
+    {
+      "id": "9e101a56ebde/text-03",
+      "target": "2层MEL\n通行证",
+      "status": "draft"
+    },
+    {
+      "id": "bc4e07343f57/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "bc4e07343f57/text-02",
+      "target": "2层C区\n通行证",
+      "status": "draft"
+    },
+    {
+      "id": "bc4e07343f57/text-03",
+      "target": "地下1层\n主控室通行证",
+      "status": "draft"
+    },
+    {
+      "id": "5617fe442fdf/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "5617fe442fdf/text-02",
+      "target": "艾伦·德恩",
+      "status": "draft"
+    },
+    {
+      "id": "5617fe442fdf/text-03",
+      "target": "安保",
+      "status": "draft"
+    },
+    {
+      "id": "3174d7acccce/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "3174d7acccce/text-02",
+      "target": "地下1层排水区\n通行证",
+      "status": "draft"
+    },
+    {
+      "id": "3174d7acccce/text-03",
+      "target": "武器室\n通行证",
+      "status": "draft"
+    },
+    {
+      "id": "b4b214448de4/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "b4b214448de4/text-02",
+      "target": "简·布莱尔",
+      "status": "draft"
+    },
+    {
+      "id": "b4b214448de4/text-03",
+      "target": "安保",
+      "status": "draft"
+    },
+    {
+      "id": "a1b2c956c06b/text-01",
+      "target": "安保",
+      "status": "draft"
+    },
+    {
+      "id": "700a3f16b351/text-01",
+      "target": "行动",
+      "status": "draft"
+    },
+    {
+      "id": "c8b4f0f32aa6/text-01",
+      "target": "探测器室",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/menu-selected-1",
+      "target": "新游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/menu-selected-2",
+      "target": "读取游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/menu-selected-3",
+      "target": "联机游戏",
+      "status": "draft"
+    },
+    {
+      "id": "076f1530ee2a/menu-selected-4",
+      "target": "画廊",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-01-selected",
+      "target": "简单",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-02-selected",
+      "target": "普通",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-03-selected",
+      "target": "困难",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-04-selected",
+      "target": "詹妮弗",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-05-selected",
+      "target": "布鲁斯",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-06-selected",
+      "target": "艾伦",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-07-selected",
+      "target": "亨利",
+      "status": "draft"
+    },
+    {
+      "id": "c6e8f426b688/text-08-selected",
+      "target": "弗兰克",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-01-selected",
+      "target": "约翰",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-02-selected",
+      "target": "迈克尔",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-03-selected",
+      "target": "卢克",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-04-selected",
+      "target": "凯莉",
+      "status": "draft"
+    },
+    {
+      "id": "4a853bbf762c/text-05-selected",
+      "target": "简",
+      "status": "draft"
+    },
+    {
+      "id": "b2454bf547a1/reflection",
+      "target": "正在加载…",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/data-status",
+      "target": "数据状态－生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "6e74b32d9f25/annotation-01",
+      "target": "诡秘之夜",
+      "status": "draft"
+    },
+    {
+      "id": "4b0632d6fe6e/annotation-01",
+      "target": "诡秘之夜",
+      "status": "draft"
+    },
+    {
+      "id": "949a2ea4a097/annotation-01",
+      "target": "诡秘之夜",
+      "status": "draft"
+    },
+    {
+      "id": "9ccf90a2b2c1/annotation-01",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "9ccf90a2b2c1/annotation-02",
+      "target": "俯视图",
+      "status": "draft"
+    },
+    {
+      "id": "9ccf90a2b2c1/annotation-03",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "614835cb7d85/annotation-01",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "d0400cda6101/annotation-01",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "86028dd7143b/annotation-01",
+      "target": "正视图",
+      "status": "draft"
+    },
+    {
+      "id": "86028dd7143b/annotation-02",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "d8c7cb2e766e/annotation-01",
+      "target": "正视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-01",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-02",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-03",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-04",
+      "target": "俯视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-05",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "c1d62c98abfe/annotation-06",
+      "target": "俯视图",
+      "status": "draft"
+    },
+    {
+      "id": "4dec8fe623b6/annotation-01",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "4dec8fe623b6/annotation-02",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "4dec8fe623b6/annotation-03",
+      "target": "正视图",
+      "status": "draft"
+    },
+    {
+      "id": "3ed4a587e111/annotation-01",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "3ed4a587e111/annotation-02",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "8b6fd629bc72/annotation-01",
+      "target": "俯视图",
+      "status": "draft"
+    },
+    {
+      "id": "8b6fd629bc72/annotation-02",
+      "target": "后视图",
+      "status": "draft"
+    },
+    {
+      "id": "8b6fd629bc72/annotation-03",
+      "target": "等轴视图",
+      "status": "draft"
+    },
+    {
+      "id": "8b6fd629bc72/annotation-04",
+      "target": "人类",
+      "status": "draft"
+    },
+    {
+      "id": "8b6fd629bc72/annotation-05",
+      "target": "侧视图",
+      "status": "draft"
+    },
+    {
+      "id": "7238732c834d/text-01-small-right",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "7238732c834d/text-01-small-left",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "7238732c834d/text-01-lower-right",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "6b3da2d9f62e/text-01-status-1",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "6b3da2d9f62e/text-01-status-2",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "6b3da2d9f62e/text-01-status-3",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "fefc3f417e03/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "cb1beda20720/text-01-side",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "4306082acc14/text-02-lower",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-01-right",
+      "target": "主控制\n中心",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-02-right",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "c58c820b6113/text-03-right",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "3ee3c511da91/text-02-right",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "3ee3c511da91/text-02-lower",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "b3ee71e54126/text-01-right",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "b3ee71e54126/text-02-right",
+      "target": "贵宾电梯",
+      "status": "draft"
+    },
+    {
+      "id": "28f5c7d8051e/text-02-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "06b768f7a1bb/precaution",
+      "target": "当心火灾",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01-1",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01-2",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01-3",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01-4",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "bce96882f897/text-01-5",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "021fe345b2c1/text-01-1",
+      "target": "系统出现\n故障",
+      "status": "draft"
+    },
+    {
+      "id": "021fe345b2c1/text-01-2",
+      "target": "系统出现\n故障",
+      "status": "draft"
+    },
+    {
+      "id": "5af334c5edcb/text-01-right",
+      "target": "TOMCAT 滴注器",
+      "status": "draft"
+    },
+    {
+      "id": "9e101a56ebde/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "bc4e07343f57/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "3174d7acccce/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "a1b2c956c06b/company",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "c8b4f0f32aa6/text-01-right",
+      "target": "探测器室",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/ok-shadow-1",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/back-shadow-1",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/ok-shadow-2",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "4ef12dc04532/back-shadow-2",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/ok-shadow-1",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/back-shadow-1",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/ok-shadow-2",
+      "target": "确定",
+      "status": "draft"
+    },
+    {
+      "id": "af91ca0e0985/back-shadow-2",
+      "target": "返回",
+      "status": "draft"
+    },
+    {
+      "id": "4282dc07ec14/company",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "17210fa50297/company",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "c8b4f0f32aa6/unlock",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "63a4d2a40a1a/text-01",
+      "target": "幼虫实验室",
+      "status": "draft"
+    },
+    {
+      "id": "63a4d2a40a1a/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "44821a6e82f8/text-01",
+      "target": "生命创造",
+      "status": "draft",
+      "source": "VITAL CREATIONS"
+    },
+    {
+      "id": "44821a6e82f8/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "2703c76fa0d4/text-01",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "2703c76fa0d4/text-01-status-1",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "2703c76fa0d4/text-01-status-2",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "2703c76fa0d4/text-01-status-3",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "871db805372a/text-01",
+      "target": "生命创造",
+      "status": "draft",
+      "source": "VITAL CREATIONS"
+    },
+    {
+      "id": "871db805372a/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "a3e0b606ecef/text-01",
+      "target": "插入电缆",
+      "status": "draft"
+    },
+    {
+      "id": "28c1e7c5244e/text-01",
+      "target": "访问被拒绝",
+      "status": "draft"
+    },
+    {
+      "id": "49d3912f91b8/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "f04efd60e59c/text-01",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "f04efd60e59c/text-01-status-1",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "f04efd60e59c/text-01-status-2",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "f04efd60e59c/text-01-status-3",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "e62df7ba91ec/text-01",
+      "target": "灭菌器",
+      "status": "draft"
+    },
+    {
+      "id": "e62df7ba91ec/text-02",
+      "target": "空气净化器",
+      "status": "draft"
+    },
+    {
+      "id": "7da5e0e485ee/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "7da5e0e485ee/text-01-small-right",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "7da5e0e485ee/text-01-small-left",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "7da5e0e485ee/text-01-lower-right",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "29bfa256be57/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "d6c18161e2b5/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    },
+    {
+      "id": "133aa7eea030/text-01",
+      "target": "闭路\n摄像机",
+      "status": "draft"
+    },
+    {
+      "id": "7bfee954cdfa/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "7bfee954cdfa/text-02",
+      "target": "正在加载数据",
+      "status": "draft"
+    },
+    {
+      "id": "7bfee954cdfa/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "4051fb2bdf6c/text-01",
+      "target": "金属探测器",
+      "status": "draft"
+    },
+    {
+      "id": "4051fb2bdf6c/company",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "d6ea7fb06f87/text-01",
+      "target": "紧急情况",
+      "status": "draft"
+    },
+    {
+      "id": "a1239fdc5560/text-01",
+      "target": "生命创造",
+      "status": "draft",
+      "source": "VITAL CREATIONS"
+    },
+    {
+      "id": "a1239fdc5560/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "e05113db2385/text-01",
+      "target": "插入电缆",
+      "status": "draft"
+    },
+    {
+      "id": "7fa571208bd3/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "78e7735e27be/text-01",
+      "target": "高压电流",
+      "status": "draft"
+    },
+    {
+      "id": "5c5ccd471e15/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "5c5ccd471e15/text-02",
+      "target": "正在加载数据",
+      "status": "draft"
+    },
+    {
+      "id": "5c5ccd471e15/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "f003f9c373dc/text-01",
+      "target": "访问被拒绝",
+      "status": "draft"
+    },
+    {
+      "id": "098db272ebe3/text-01",
+      "target": "访问被拒绝",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/text-01",
+      "target": "幼虫培养箱",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/text-02",
+      "target": "内含有毒物质",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/text-03",
+      "target": "D.I.A",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/text-04",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/text-05",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "d72df6ab73f2/precaution",
+      "target": "当心火灾",
+      "status": "draft"
+    },
+    {
+      "id": "a038662342ee/text-01",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "a038662342ee/text-01-status-1",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "a038662342ee/text-01-status-2",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "a038662342ee/text-01-status-3",
+      "target": "错误",
+      "status": "draft"
+    },
+    {
+      "id": "ad363f03c5a2/text-01",
+      "target": "访问被拒绝",
+      "status": "draft"
+    },
+    {
+      "id": "89d4eec42316/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "89d4eec42316/text-02",
+      "target": "请勿靠近，",
+      "status": "draft"
+    },
+    {
+      "id": "89d4eec42316/text-03",
+      "target": "设备正在运行",
+      "status": "draft"
+    },
+    {
+      "id": "89d4eec42316/text-01-side",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "8b22f906baa7/text-01",
+      "target": "禁止入内",
+      "status": "draft"
+    }
+  ],
+  "artwork_files": [
+    "artwork/076f1530ee2a.json",
+    "artwork/2aa2938f88f1.json",
+    "artwork/4aa9038fab4d.json",
+    "artwork/a0797627179d.json",
+    "artwork/c6e8f426b688.json",
+    "artwork/e898cd79e42f.json",
+    "artwork/eb3a98946792.json"
+  ]
+}

@@ -1,21 +1,23 @@
 {
   "locale": "zh-CN",
   "font_spec": "assets/font-source.json",
-  "font_pixel_size": 13,
+  "font_pixel_size": 12,
   "font_allowed_codes": {
     "first": 42145,
     "last": 51454
   },
   "translations": "text/catalogue.json",
-  "profile": "partial",
-  "font_protection": "source-text-survey",
+  "profile": "full-text",
+  "font_protection": "retained-display-text",
   "names": "names.json",
   "preview_ids": [
     "RES/SUBSYS.RES:EVENT.SCR@00000c77",
     "RES/SUBSYS.RES:EVENT.SCR@00002378",
     "RES/SUBSYS.RES:ITEM.SCR@00000655",
     "RES/SUBSYS.RES:ITEM.SCR@000015c4",
-    "SCKA_200.55@0014d9b0"
+    "SCKA_200.55@0014d9b0",
+    "RES/SUBSYS.RES:EVENT.SCR@00023d4e",
+    "RES/UI/ITEM.RES:DOCUMENT.SCR@00005466"
   ],
   "title": "诡秘之夜",
   "punctuation": {
@@ -26,5 +28,18 @@
     "terminal_period": "。",
     "internal_punctuation": "，、；：？！…—（）「」『』“”‘’《》【】,;:?!()[]\"。",
     "alternative_endings": "？！?!…"
-  }
+  },
+  "network": "network.json",
+  "agreement": "agreement.json",
+  "extra_interface": "extra-interface.json",
+  "preview_auxiliary_lines": [
+    {
+      "id": "DATA/AGREE.TXT@00000000",
+      "lines": [
+        13
+      ]
+    }
+  ],
+  "save_metadata": "save-metadata.json",
+  "graphics": "graphics.json"
 }

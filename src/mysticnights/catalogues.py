@@ -64,7 +64,7 @@ def read_project(path: Path) -> dict:
     apply to every physical destination.
     """
     index = json.loads(path.read_text(encoding="utf-8"))
-    if (index.get("format"), index.get("version"), index.get("profile")) != ("localization-catalogue", 1, "partial"):
+    if (index.get("format"), index.get("version")) != ("localization-catalogue", 1) or index.get("profile") not in {"partial", "full-text"}:
         raise ValueError("Unsupported translation project")
     files = index.get("files")
     if not isinstance(files, list) or not files or len(set(files)) != len(files):
@@ -110,6 +110,31 @@ def read_project(path: Path) -> dict:
                 raise ValueError(f"Unverified mirror relation: {row['id']}")
             for resource in mirrors:
                 entries.append({**base, "resource": resource, "id": f"{resource}:{row['script_id']}"})
-    return {"locale": index["locale"], "profile": "partial", "entries": entries,
+    if index["profile"] == "full-text" and states["untranslated"]:
+        raise ValueError("Full-text profile contains untranslated entries")
+    return {"locale": index["locale"], "profile": index["profile"], "entries": entries,
             "coverage": {"logical_catalogue_fields": len(seen), "states": dict(states),
                          "selected_physical_fields": len(entries)}, "catalogue_files_sha256": hashes}
+
+
+def validate_literal_fields(entries, recipe, original_sha256):
+    """Source/hash-bound opt-in for literal angle-bracket display text only."""
+    from .scripts import validate_script_tokens
+    if (recipe.get("format"), recipe.get("version"), recipe.get("original_iso_sha256")) != (
+            "literal-display-fields", 1, original_sha256):
+        raise ValueError("Literal-field recipe version mismatch")
+    allowed = {r["id"]: r for r in recipe["entries"]}
+    if len(allowed) != len(recipe["entries"]):
+        raise ValueError("Duplicate literal-field recipe ID")
+    for row in entries:
+        pairs = row.get("literal_token_translations", [])
+        if pairs:
+            identifier = row["id"]
+            if row.get("resource") == "RES/UI/DOCUMENT.RES":
+                identifier = identifier.replace("RES/UI/DOCUMENT.RES:", "RES/UI/ITEM.RES:", 1)
+            definition = allowed.get(identifier)
+            if (not definition or row["source_sha256"] != definition["source_sha256"]
+                    or [p["source"] for p in pairs] != definition["literal_tokens"]):
+                raise ValueError(f"Unreviewed literal-token edit: {row['id']}")
+        if row["kind"] == "script":
+            validate_script_tokens(row["source"], row["target"], pairs)
