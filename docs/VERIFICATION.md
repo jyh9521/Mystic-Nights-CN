@@ -1,5 +1,71 @@
 # 汉化构建：离线验收
 
+## 2026-11-05 全部可读文本与图片
+
+源码提交 `165bffdbc4bb4c09bc5324799e6c192ec38abbc7`，分支 `master`。两种 G362 的 `text-02` 改为无逗号的“请勿靠近”；新增 99 张原风格场景／物品／画廊重绘，更新 `graphics.json:artwork_files`、槽的 `install/disposition/artwork_rectangles`，并添加 `config.json:raw_images` 与独立 RGB24 导入／构建／回读路径。原 37 张界面差分及对应游戏字节保持。
+
+全部正文 2164 物理槽、1422 主字形、113 名称／698 引用、270 网络字段／293 映射及完整协议继续通过。TIM2 图片累计 136 张唯一纹理、402 项可翻译文字、246 个物理成员，待重绘 0 项；2 个 D.I.A 标识保留，NETGUI 标题另计 1 项。模糊手稿与微字按用户决定保持原像素。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| 当前测试 ISO | `dd107d508af30b61f0b1a9c98edb7a8659b1c517ffaf014c858138427e03f5d9` |
+| 可逆差分 | `c3407a4a38ef9d350f710f9085205b368fe93d911f66f83a9e8df26819f2e68d` |
+| manifest | `1769d16ec9df939d38fc88206a3879abd622ec5c42b1ac0f36f86c316deba1a5` |
+| 回滚脚本 | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+
+ISO 1,696,530,432 字节；差分 8,928,251 字节，20049 个区间。四个交付文件位于 `build/full-text/`：`Mystic-Nights-zh-CN-full-text.iso`、`DIFF_FILE.mnp.zip`、`VERIFICATION.txt`、`ROLLBACK.sh`。本地 VERIFICATION 保存绝对路径、完整命令、输入、字面输出和退出码。
+
+改动前 254 项测试通过，改动后及干净源码重建均 260 项通过。以下真实命令均退出 0；公开记录的回滚输出路径转为仓库相对路径，未经缩写的原样输出保存在本地 VERIFICATION：
+
+### BASELINE
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+### MODIFIED
+
+```text
+python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json --font build/fonts/NotoSansCJKsc-Regular.otf
+GRAPHICS PASS translated=404 installed=402 pending=0 texture_members=246 save_metadata=1
+RAW_IMAGES PASS installed=1 resources=1
+FULL_PATHS PASS names=113 references=698 network_strings=270 network_glyphs=293 agreement=1 extra_interface=38
+MODIFIED PASS strings=2164 glyphs=1422 changed_files=77 unchanged_files=647 lba=unchanged
+SHA256 dd107d508af30b61f0b1a9c98edb7a8659b1c517ffaf014c858138427e03f5d9
+EXIT_STATUS 0
+```
+
+### ROLLBACK
+
+```text
+"C:/Program Files/Git/bin/bash.exe" -c "test -x build/full-text/ROLLBACK.sh && build/full-text/ROLLBACK.sh build/artwork-completion/applied.iso build/artwork-completion/restored.iso"
+{"mode": "rollback", "output": "build\\artwork-completion\\restored.iso", "ranges": 20049, "sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b", "size": 1696530432}
+EXIT_STATUS 0
+```
+
+### RESTORED_BASELINE
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso build/artwork-completion/restored.iso
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+正向补丁结果与交付 ISO 逐字节相同；实际执行可执行 ROLLBACK.sh 后，恢复副本与原盘逐字节相同并再次通过全部 2164 个源槽。交付 ISO 仍保持修改状态。
+
+原生读回 136 张纹理／246 个物理成员以及 1 张 RGB24 图；全部差分可逆，新 99 张 PNG 与 ISO 中解码像素一致。全部 TIM2 头部、CLUT、成员长度和允许区域外像素不变；原有 37 张图与上一交付逐字节相同。两种标牌的无逗号预览从最终 ISO 回读。
+
+干净 Git 归档重新跑 260 项测试、完整构建及修改版验证；ISO、补丁、manifest、两张字体预览、回滚脚本 6 项逐一同 SHA-256。重复正向、回滚、重建和上一版 ISO 共 4 份，以及源码 ZIP、重复 raw 导入差分已在路径／尺寸／哈希预检后删除，共 6,788,126,977 字节。保留原盘、当前完整测试镜像和既有 PoC；模拟器目录未动。
+
+本地原生审查辅助脚本的两次失败记录保留：一次为未使用的错误模块导入，一次为相同 JSON 的 CRLF/LF 字节差异；修正后原生回读通过。后者只规范化差分文件换行，不改变图像像素。
+
+此结果完成已提取文字和可读图片的离线翻译、写回及构建；未启动游戏或模拟器。玩家需按 [TESTING.md](TESTING.md) 验收完整流程、存读档、结局及实际画面，正式发布门槛仍保留。
+
 ## 2026-11-04 界面与职员表续作
 
 源码提交 `9f06afab6aae6b3f01fd0fe8ec3466c147c6d8a8`，分支 `master`。修改 `graphics.json:artwork_files`、图片槽的 `install` / `disposition` / `artwork_rectangles` 及其源哈希绑定差分。本轮新增30张界面贴图、146项文字、70个物理成员；累计37张、189项、77个物理成员。前7张已修正残影的图片差分逐字节保持。正文、字体、关联名称和网络文字输出保持。
