@@ -1,5 +1,80 @@
 # 汉化构建：离线验收
 
+## 2026-11-05 主菜单两态字号与白线修正
+
+源码提交 `f018cdbe58b1c365e9cca8db831d09c8dc56c5d0`，分支 `master`。`L001_004.TM2` 仅四个选中区域修改 3119 个索引；差分字段 `ranges/modified_sha256/state_checks/authoring_method` 更新。正文、字库、普通态、其余 135 张重绘纹理、UID 脚本和菜单渲染代码保持。
+
+旧 ISO 与旧差分实际一致，并非没有安装：旧字形掩码混入胶囊下框，使四项核心字高缩为 10 像素，并带 59 像素白线。原版静态布局两态 Y 缩放相同，X 仅约 1.46% 差异。修正后普通/高亮字高分别为 14/14、12/13、13/13、13/13，四条额外白线均为 0。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| Mystic-Nights-zh-CN-full-text.iso | `58aa0dd720a0265d5962f23cca812d066365d296c81b8296ef4419d4ededa90e` |
+| DIFF_FILE.mnp.zip | `f026bf2c7ff3935be459cb9f5921f5915e49eb126af444bea2035ed2d4ded9d0` |
+| manifest.json | `4a4b41f22fdbf90843ac243b77c9cda8303a4ce11076b0800bcdc75bf1c3f259` |
+| ROLLBACK.sh | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+
+原始 TIM2 SHA `076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc`；修正后为 `46209d66a054791c2dda965c8e5846118a0cb146127134bc024d55ed34e889c6`。
+
+交付四件位于 `build/full-text/`：`Mystic-Nights-zh-CN-full-text.iso`、`DIFF_FILE.mnp.zip`、`VERIFICATION.txt`、`ROLLBACK.sh`。ISO 1,696,530,432 字节；差分 8,928,361 字节、20049 个区间。原盘保持；独立回滚输出逐字节恢复原版，并通过 2164 原文槽检查；当前交付镜像仍为修改版。
+
+268 项合成测试与干净源码重建测试通过；6 件重建输出（ISO、差分、manifest、两张字库预览、回滚脚本）逐字节同哈希。最终 ISO 回读 4 对状态通过。以下命令均退出 0；公开记录仅将输出中的本机路径转为相对路径，绝对路径及未经修改的完整输出保存在本地 VERIFICATION。
+
+### BASELINE
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+### MODIFIED
+
+```text
+python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json --font build/fonts/NotoSansCJKsc-Regular.otf
+GRAPHICS PASS translated=404 installed=402 pending=0 texture_members=246 save_metadata=1
+RAW_IMAGES PASS installed=1 resources=1
+FULL_PATHS PASS names=113 references=698 network_strings=270 network_glyphs=293 agreement=1 extra_interface=38
+MODIFIED PASS strings=2164 glyphs=1422 changed_files=77 unchanged_files=647 lba=unchanged
+SHA256 58aa0dd720a0265d5962f23cca812d066365d296c81b8296ef4419d4ededa90e
+EXIT_STATUS 0
+```
+
+### ROLLBACK
+
+```text
+"C:/Program Files/Git/bin/bash.exe" -c "test -x build/full-text/ROLLBACK.sh && build/full-text/ROLLBACK.sh build/menu-state-fix/applied.iso build/menu-state-fix/restored.iso"
+{"mode": "rollback", "output": "build/menu-state-fix/restored.iso", "ranges": 20049, "sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b", "size": 1696530432}
+EXIT_STATUS 0
+```
+
+### RESTORED_BASELINE
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso build/menu-state-fix/restored.iso
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+### 原图对照、实装与回归
+
+```powershell
+python -X utf8 tools/inspect_menu_layout.py --iso "[full2]미스틱 나이츠(K).iso"
+python -X utf8 tools/verify_artwork_states.py --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --catalogue locales/zh-CN/graphics.json
+```
+
+`MENU LAYOUT PASS vertical=equal horizontal_difference=1.46% steady_state_only`；`ARTWORK STATES PASS members=1 pairs=4 installed=identical`。原版／旧版／修正的离线 UV 回读图在 `build/full-text/menu-state-readback.png`，不是游戏运行截图。
+
+红灯复现旧资源：`MENU VISUAL FAIL`，退出 1，四行核心高度 10 且额外横线 59；新配方更严格地加入行/列滤波和两态宽度检查。合成测试同时覆盖缩小、放大、缺字、白线、错误区域／阈值，以及导入检查失败不落盘。
+
+导入修正记录：布局 CLI 的 str/Path 类型错误已修复；首次从原图重新量化整幅 PNG 得到等价预乘颜色但改变额外透明 RGB 索引，未采用。改为以前版已验证 TIM2 为增量输入，严格只改四个选中字区，再编译为原盘到最终图的差分。新生成的重金边字稿因风格不合未安装。
+
+清理已核对来源的 320 个临时/重复文件，共 6,895,617,398 字节：旧交付副本、正反向验证副本、干净源码重建目录及否定稿；原盘、当前 ISO、PoC 和必要证据保留。README 未改动。
+
+没有启动游戏或模拟器、没有改动其设置/BIOS/存档。玩家截图证明上一版本中文菜单已实装，但修复后的切换动画、实际显示及其余完整流程仍由玩家验收。
+
 ## 2026-11-05 全部可读文本与图片
 
 源码提交 `165bffdbc4bb4c09bc5324799e6c192ec38abbc7`，分支 `master`。两种 G362 的 `text-02` 改为无逗号的“请勿靠近”；新增 99 张原风格场景／物品／画廊重绘，更新 `graphics.json:artwork_files`、槽的 `install/disposition/artwork_rectangles`，并添加 `config.json:raw_images` 与独立 RGB24 导入／构建／回读路径。原 37 张界面差分及对应游戏字节保持。
