@@ -12,6 +12,44 @@ def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
+def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sha256: str) -> bytes:
+    """Import reviewed RGBA artwork without typesetting or regenerating a CLUT.
+
+    Unchanged decoded pixels retain their original *index*, even when the
+    palette contains duplicate colors. Quantization compares premultiplied
+    RGB and alpha, avoiding opaque fringes around transparent lettering.
+    """
+    from .graphics import decode_tim2, _palette
+
+    if digest(source) != source_sha256:
+        raise ValueError("Artwork import source identity mismatch")
+    original, info = decode_tim2(source)
+    if info["image_type"] != 5 or artwork.mode != "RGBA" or artwork.size != original.size:
+        raise ValueError("Artwork import requires matching indexed TIM2 and RGBA dimensions")
+    allowed = validate_rectangles(rectangles, *original.size)
+    colors = _palette(source, info)
+
+    def premultiply(color):
+        return tuple(color[k] * color[3] // 255 for k in range(3)) + (color[3],)
+
+    palette = [premultiply(c) for c in colors]
+    output = bytearray(source)
+    cache = {}
+    for i, (before, after) in enumerate(zip(original.get_flattened_data(), artwork.get_flattened_data())):
+        if before == after:
+            continue
+        if i not in allowed:
+            raise ValueError(f"Artwork import changed protected pixel ({i % original.width}, {i // original.width})")
+        if premultiply(before) == premultiply(after):
+            continue
+        if after not in cache:
+            value = premultiply(after)
+            cache[after] = min(range(len(palette)), key=lambda n:
+                sum((palette[n][k] - value[k]) ** 2 * (2 if k == 3 else 1) for k in range(4)))
+        output[info["pixel_offset"] + i] = cache[after]
+    return bytes(output)
+
+
 def load_graphics_catalogue(path: Path) -> dict:
     catalogue = json.loads(path.read_text(encoding="utf8"))
     patches = []

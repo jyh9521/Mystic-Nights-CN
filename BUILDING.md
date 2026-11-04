@@ -26,7 +26,7 @@ python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스�
 
 主字库 1422 字形；保留文本保护 379 码位，从 2065 个候选分配。PF 是独立字体域，使用 293 个映射。此静态保护不证明所有动态输入均已验收。
 
-图像采用与原文字节绑定的已重绘像素差分。当前回填用户点名的 7 张贴图、43 个文字项。其他 359 项图片稿等待原风格重绘，2 个技术标识原样保留；旧方块覆盖版本已从构建撤下。`--release` 仍关闭；当前不是正式发行版。
+图像采用与原文字节绑定的已重绘像素差分。当前回填 37 张界面贴图、189 个文字项，覆盖 77 个物理成员。其他 213 项场景／画廊图片稿及 NETGUI 背景标题等待原风格重绘，2 个技术标识原样保留；旧方块覆盖版本已从构建撤下。`--release` 仍关闭；当前不是正式发行版。
 
 | 文件 | 内容 |
 |---|---|
@@ -64,6 +64,8 @@ python -X utf8 tools/inspect_graphics_text.py --iso "原版.iso" --preview-only 
 ```
 
 字体和格式细节见 `TECHNICAL.md`、`docs/FILE_FORMATS.md`、`docs/NETWORK_FONT.md`。图片重绘不在普通构建时重新调用生成模型：已审核的逐像素差分在 `locales/zh-CN/artwork/`，相同源码和原盘会生成相同文件。
+
+已完成原分辨率排版和美术复核的 RGBA PNG 可用 `tools/import_artwork.py` 转为差分；该工具不生成或排版文字。`--source` 为原 TIM2，`--source-sha256` 为配方中的原哈希，`--recipe` 提供 `allowed_rectangles` 和 `targets`，`--output` 必须是新 JSON 路径。导入只量化到原 CLUT，并立即正反向验证；没有修改的像素保留原索引。示例见 `docs/ARTWORK_REVIEW.md`。
 
 ## 验证记录与清理
 

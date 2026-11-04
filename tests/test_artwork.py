@@ -5,8 +5,8 @@ from pathlib import Path
 import tempfile
 import unittest
 from test_graphics import tim2_fixture, res_fixture, font_fixture, digest
-from mysticnights.artwork import make_artwork_delta, apply_artwork, load_graphics_catalogue
-from mysticnights.graphics import build_graphics
+from mysticnights.artwork import make_artwork_delta, apply_artwork, load_graphics_catalogue, import_indexed_pixels
+from mysticnights.graphics import build_graphics, decode_tim2
 from mysticnights.resources import parse_res
 
 
@@ -23,6 +23,50 @@ class ArtworkTests(unittest.TestCase):
         self.assertEqual(apply_artwork(self.output, self.patch, reverse=True), self.source)
         self.assertEqual(self.source[:64], self.output[:64])
         self.assertEqual(self.source[64+32*24:], self.output[64+32*24:])
+
+    def test_import_identity_keeps_duplicate_palette_indices(self):
+        source=bytearray(self.source);source[64]=7
+        source=bytes(source);image,_=decode_tim2(source)
+        self.assertEqual(import_indexed_pixels(source,image,[],source_sha256=digest(source)),source)
+
+    def test_import_exact_color_and_round_trip(self):
+        image,_=decode_tim2(self.source)
+        image.putpixel((10,10),(255,255,255,255))
+        result=import_indexed_pixels(self.source,image,[[10,10,1,1]],source_sha256=digest(self.source))
+        self.assertEqual(result[64+10*32+10],1)
+        patch=make_artwork_delta(self.source,result,[[10,10,1,1]],{"a":"A"})
+        self.assertEqual(apply_artwork(result,patch,reverse=True),self.source)
+
+    def test_import_rejects_source_and_dimensions(self):
+        image,_=decode_tim2(self.source)
+        with self.assertRaisesRegex(ValueError,"source identity"):
+            import_indexed_pixels(self.source,image,[],source_sha256="0"*64)
+        for bad in (image.convert("RGB"),image.resize((31,24))):
+            with self.assertRaisesRegex(ValueError,"dimensions"):
+                import_indexed_pixels(self.source,bad,[],source_sha256=digest(self.source))
+
+    def test_import_rejects_protected_and_bad_rectangle(self):
+        image,_=decode_tim2(self.source);image.putpixel((0,0),(255,255,255,255))
+        for rect in ([],[[1,1,1,1]],[[-1,0,2,2]],[[0,0,33,24]]):
+            with self.assertRaises(ValueError):
+                import_indexed_pixels(self.source,image,rect,source_sha256=digest(self.source))
+
+    def test_import_transparent_rgb_is_not_a_needless_delta(self):
+        source=bytearray(self.source);source[64+768:64+768+4]=bytes([120,10,20,0])
+        source=bytes(source);image,_=decode_tim2(source);image.putpixel((0,0),(0,0,0,0))
+        self.assertEqual(import_indexed_pixels(source,image,[[0,0,1,1]],source_sha256=digest(source)),source)
+
+    def test_import_premultiplied_alpha_does_not_pick_opaque_fringe(self):
+        source=bytearray(self.source)
+        # index2 is transparent cyan; index3 is opaque dark blue. Straight-RGB
+        # comparison incorrectly selects index3 for low-opacity blue edges.
+        start=64+768
+        source[start+8:start+12]=bytes([0,100,255,4])
+        source[start+12:start+16]=bytes([0,5,15,128])
+        source=bytes(source);image,_=decode_tim2(source)
+        image.putpixel((0,0),(0,5,15,8))
+        result=import_indexed_pixels(source,image,[[0,0,1,1]],source_sha256=digest(source))
+        self.assertEqual(result[64],2)
 
     def test_wrong_source_output_and_text_rejected(self):
         with self.assertRaises(ValueError): apply_artwork(self.output, self.patch)
