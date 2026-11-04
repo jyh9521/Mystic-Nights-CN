@@ -1,0 +1,29 @@
+# 来源与许可
+
+## 项目自编内容
+
+- `src/`、`tools/`、`tests/` 中本项目新编代码：MIT，见 `LICENSE`。
+- 原创简体中文译文：CC BY-SA 4.0，见 `LICENSE-translations.md`。
+- 译文表中的韩文来源、原游戏文本与资产仍归原权利人所有；译文许可不覆盖原文、商标或游戏资源。
+
+## 上游研究
+
+| 项目 | 作者 | 参考版本 | 使用方式 |
+|---|---|---|---|
+| [Mystic Nights Translation](https://github.com/jeremydecola/Mystic-Nights-Translation) | Jeremy DeCola 及其翻译协作者 | `d58734cccf29b702330d131ea981de45512d3b76` | 参考资源定位、原英对照、道具关联及文档分页陷阱；不把完整英文资源作为构建输入 |
+
+该仓库没有发现覆盖全部内容的显式开源许可证，不把上游商业二进制、图片或第三方工具重新标为 MIT。当前代码独立实现，关键格式和字体结论从本地韩版字节再次核验。现有 Git 分叉历史保留；当前源码树移除完整游戏二进制及旧工具打包材料，避免继续分发或修改提交这些完整资产。
+
+## 字体和依赖
+
+| 组件 | 许可/来源 | 分发方式 |
+|---|---|---|
+| Noto Sans CJK SC Regular | SIL OFL 1.1；[noto-cjk](https://github.com/notofonts/noto-cjk) | 按 `assets/font-source.json` 下载并校验，原许可随下载保留 |
+| Pillow | HPND；[Pillow](https://github.com/python-pillow/Pillow) | 通过固定依赖安装，不捆绑二进制 |
+| fontTools | MIT；[fonttools](https://github.com/fonttools/fonttools) | 通过固定依赖安装，不捆绑二进制 |
+
+构建输出的字体图集仍遵循字体许可，其他未改像素来自本地原盘。当前仅发布重建方法/差分，不提交完整图集或 RES。
+
+## 游戏资源
+
+《Mystic Nights》原游戏由 N-Log Soft 开发、Sony Computer Entertainment Korea 发行。ISO、ELF、RES、视频、音频、模型及原字体不作为本项目自有内容授权。原始/测试镜像和提取目录只保存在被 Git 忽略的本地区域；PCSX2、BIOS、配置和存档也不加入仓库。

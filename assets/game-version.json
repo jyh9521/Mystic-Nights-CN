@@ -1,0 +1,40 @@
+{
+  "game": "Mystic Nights",
+  "platform": "PlayStation 2",
+  "region": "Korea",
+  "serial": "SCKA-20055",
+  "iso": {
+    "size": 1696530432,
+    "sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b"
+  },
+  "files": {
+    "SCKA_200.55": {
+      "size": 3428048,
+      "sha256": "a8662cb99c7dd8abc66c6766d27e0fc15ff83fb3a04d2837001b87f88cf899c4"
+    },
+    "NETGUICD.ELF": {
+      "size": 4080440,
+      "sha256": "ca08a4638d883d8f3216a04a3b1fc28ad14c58643671407420de03f5264ea5d1"
+    },
+    "SYSTEM.CNF": {
+      "size": 57,
+      "sha256": "ac3ab2b5c76169b7f6b9e40bd066fce96b5ce0e577f036ba18058114213e92e2"
+    },
+    "RES/SYSTEM.RES": {
+      "size": 2363779,
+      "sha256": "87d5c6bea0894e11f2927ed999cce9da46d69a7951538503e70c1f30c860adce"
+    },
+    "RES/SUBSYS.RES": {
+      "size": 2558390,
+      "sha256": "e449d872cd83ffeacc0c4f15e2f92a214122eace1daf3427a80565df6dd83f07"
+    },
+    "RES/UI/ITEM.RES": {
+      "size": 1655633,
+      "sha256": "f090b86e1c528acacb71671e715dc070e33894e0b20d8dae9c8bb7430569aaed"
+    },
+    "RES/UI/DOCUMENT.RES": {
+      "size": 494453,
+      "sha256": "eee5fc7adc38cd45bfd04e9e1f8fe6601c02886092405473bf3f2a64278fdd64"
+    }
+  }
+}

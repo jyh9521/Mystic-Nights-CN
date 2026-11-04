@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mystic-nights-localization"
+version = "0.1.0"
+description = "Reproducible, locale-neutral Mystic Nights localization tools"
+requires-python = ">=3.11"
+dependencies = ["Pillow==12.2.0", "fonttools==4.63.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

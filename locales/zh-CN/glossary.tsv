@@ -1,0 +1,13 @@
+source	target	category	note
+Mystic Nights	诡秘之夜	title	用户指定中文名
+확인	确认	ui	界面标签
+예	是	ui	确认选项
+아니오	否	ui	确认选项
+무기	武器	ui	界面标签
+회복약	恢复药	ui	暂定道具类别，后续与道具名统一复核
+아이템	道具	ui	界面标签
+문서	文档	ui	界面标签
+옵션	选项	ui	界面标签
+조작 방법	操作说明	ui	界面标签
+설정	设置	ui	界面标签
+메모리 카드	记忆卡	system	PS2 Memory Card

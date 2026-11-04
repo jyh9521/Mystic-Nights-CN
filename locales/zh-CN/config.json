@@ -1,0 +1,21 @@
+{
+  "locale": "zh-CN",
+  "font_spec": "assets/font-source.json",
+  "font_pixel_size": 13,
+  "font_allowed_codes": {
+    "first": 42145,
+    "last": 42238
+  },
+  "translations": "poc.json",
+  "profile": "poc",
+  "title": "诡秘之夜",
+  "punctuation": {
+    "conditional_period_types": [
+      "system_message",
+      "item_description"
+    ],
+    "terminal_period": "。",
+    "internal_punctuation": "，、；：？！…—（）「」『』“”‘’《》【】,;:?!()[]\"。",
+    "alternative_endings": "？！?!…"
+  }
+}
