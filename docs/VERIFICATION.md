@@ -1,5 +1,34 @@
 # 汉化构建：离线验收
 
+## 2026-11-04 全文与七图重绘（残影修正）
+
+源码提交 `9ae133001157535350df15d81fe0311e7312b880`。主目录2034条非空译文全部完成；实际正文2164槽、主字形1422，113名称/698静态引用、270网络字段/293映射及完整协议。图片只安装7张原风格重绘、43项文字，359项待重绘、2个技术标识保留；旧方块覆盖输出撤下。两张菜单图最终完整重建旧英文文字底纹和透明字层，不只清除亮色笔画。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| 当前测试ISO | `452d2779b858572a05b4bf3478f7a12b8502eec9971912b9676dabb649e66412` |
+| 可逆差分 | `f4608b824e23e0e7e59faeb9121142ddc84c686704954a9dfa85dad10743d333` |
+| manifest | `17d5e650f98a09397c9278d0b269ad51514954b1a5ee04c55441fb685fdb27b3` |
+
+全部命令退出0；本地 `build/full-text/VERIFICATION.txt` 保存完整命令、输入、字面输出与退出码：
+
+```text
+Ran 248 tests
+OK
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+GRAPHICS PASS translated=404 installed=43 pending=359 texture_members=7 save_metadata=1
+FULL_PATHS PASS names=113 references=698 network_strings=270 network_glyphs=293 agreement=1 extra_interface=38
+MODIFIED PASS strings=2164 glyphs=1422 changed_files=36 unchanged_files=688 lba=unchanged
+REBUILD PASS files=6 iso=identical patch=identical manifest=identical previews=identical rollback_script=identical
+```
+
+ISO 1,696,530,432字节；差分2330553字节、4648个区间。正向补丁在独立副本得到同一修改哈希，实际执行可执行`ROLLBACK.sh`后恢复原盘哈希；恢复副本再次通过全部2164源槽检查。原盘不改，交付镜像保持修改状态。
+
+干净Git归档重新跑248项测试、构建及完整验证，ISO、差分、manifest、两种字库预览及回滚脚本6项逐一相同。已删除7个明确的重复/过时生成文件，共8485456551字节；保留当前测试镜像、原盘和已收到显示反馈的PoC。必要格式与失败研究证据保留。
+
+七张图片的差分逐项反向恢复原纹理，调色板、头部和允许文字区外像素不变。最终预览从实际TIM2回读，未将高分辨率生成稿直接当成交付图。当前仍待玩家美术/游戏流程验收，没有启动游戏或模拟器。
+
 ## 2026-11-04 首批全文版
 
 `partial`配置实际装入340个物理正文槽（328条逻辑译文）、646字形，209项名词表与113个道具译名已建立；名称修改不在本次ISO中。
