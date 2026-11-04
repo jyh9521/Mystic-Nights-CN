@@ -1,13 +1,210 @@
-source	target	category	note
-Mystic Nights	诡秘之夜	title	用户指定中文名
-확인	确认	ui	界面标签
-예	是	ui	确认选项
-아니오	否	ui	确认选项
-무기	武器	ui	界面标签
-회복약	恢复药	ui	暂定道具类别，后续与道具名统一复核
-아이템	道具	ui	界面标签
-문서	文档	ui	界面标签
-옵션	选项	ui	界面标签
-조작 방법	操作说明	ui	界面标签
-설정	设置	ui	界面标签
-메모리 카드	记忆卡	system	PS2 Memory Card
+id	source	target	category	source_id	status	note
+ui:0	Mystic Nights	诡秘之夜	title	poc.json	fixed	用户指定中文名
+ui:1	확인	确认	ui	poc.json	fixed	界面标签
+ui:2	예	是	ui	poc.json	fixed	确认选项
+ui:3	아니오	否	ui	poc.json	fixed	确认选项
+ui:4	무기	武器	ui	poc.json	fixed	界面标签
+ui:5	회복약	恢复药	ui	poc.json	fixed	暂定道具类别，后续与道具名统一复核
+ui:6	아이템	道具	ui	poc.json	fixed	界面标签
+ui:7	문서	文档	ui	poc.json	fixed	界面标签
+ui:8	옵션	选项	ui	poc.json	fixed	界面标签
+ui:9	조작 방법	操作说明	ui	poc.json	fixed	界面标签
+ui:10	설정	设置	ui	poc.json	fixed	界面标签
+ui:11	메모리 카드	记忆卡	system	poc.json	fixed	PS2 Memory Card
+id:23	회복약(소)	恢复药(小)	item	RES/SUBSYS.RES:ITEM.SCR:id:23	draft	关联译名；当前ISO保留原名称
+id:24	회복약(중)	恢复药(中)	item	RES/SUBSYS.RES:ITEM.SCR:id:24	draft	关联译名；当前ISO保留原名称
+id:25	회복약(대)	恢复药(大)	item	RES/SUBSYS.RES:ITEM.SCR:id:25	draft	关联译名；当前ISO保留原名称
+id:26	특수 회복약	特效恢复药	item	RES/SUBSYS.RES:ITEM.SCR:id:26	draft	关联译名；当前ISO保留原名称
+id:27	해독제	解毒剂	item	RES/SUBSYS.RES:ITEM.SCR:id:27	draft	关联译名；当前ISO保留原名称
+id:20	소형 방탄복	轻型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:20	draft	关联译名；当前ISO保留原名称
+id:21	중형 방탄복	中型防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:21	draft	关联译名；当前ISO保留原名称
+id:22	강화 방탄복	强化防弹衣	item	RES/SUBSYS.RES:ITEM.SCR:id:22	draft	关联译名；当前ISO保留原名称
+id:1	블레이드	战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:1	draft	按韩文原名；不沿用英版武器改名
+id:2	뱀파이어 블레이드	吸血鬼战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:2	draft	按韩文原名；不沿用英版武器改名
+id:3	에인션트 블레이드	远古战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:3	draft	按韩文原名；不沿用英版武器改名
+id:4	카이져 블레이드	帝王战刃	item	RES/SUBSYS.RES:ITEM.SCR:id:4	draft	按韩文原名；不沿用英版武器改名
+id:5	핸드건	手枪	item	RES/SUBSYS.RES:ITEM.SCR:id:5	draft	按韩文原名；不沿用英版武器改名
+id:6	뱀파이어 핸드건	吸血鬼手枪	item	RES/SUBSYS.RES:ITEM.SCR:id:6	draft	按韩文原名；不沿用英版武器改名
+id:7	에인션트 핸드건	远古手枪	item	RES/SUBSYS.RES:ITEM.SCR:id:7	draft	按韩文原名；不沿用英版武器改名
+id:8	카이져 핸드건	帝王手枪	item	RES/SUBSYS.RES:ITEM.SCR:id:8	draft	按韩文原名；不沿用英版武器改名
+id:9	라이플	步枪	item	RES/SUBSYS.RES:ITEM.SCR:id:9	draft	按韩文原名；不沿用英版武器改名
+id:10	뱀파이어 라이플	吸血鬼步枪	item	RES/SUBSYS.RES:ITEM.SCR:id:10	draft	按韩文原名；不沿用英版武器改名
+id:11	에인션트 라이플	远古步枪	item	RES/SUBSYS.RES:ITEM.SCR:id:11	draft	按韩文原名；不沿用英版武器改名
+id:12	카이져 라이플	帝王步枪	item	RES/SUBSYS.RES:ITEM.SCR:id:12	draft	按韩文原名；不沿用英版武器改名
+id:13	샷건	霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:13	draft	霰枪为定长名称槽用简称；正文用霰弹枪
+id:14	뱀파이어 샷건	吸血鬼霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:14	draft	按韩文原名；不沿用英版武器改名
+id:15	에인션트 샷건	远古霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:15	draft	按韩文原名；不沿用英版武器改名
+id:16	카이져 샷건	帝王霰枪	item	RES/SUBSYS.RES:ITEM.SCR:id:16	draft	按韩文原名；不沿用英版武器改名
+id:17	핸드건 탄창	手枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:17	draft	关联译名；当前ISO保留原名称
+id:18	라이플 탄창	步枪弹匣	item	RES/SUBSYS.RES:ITEM.SCR:id:18	draft	关联译名；当前ISO保留原名称
+id:19	샷건 탄알	霰弹	item	RES/SUBSYS.RES:ITEM.SCR:id:19	draft	关联译名；当前ISO保留原名称
+id:28	중앙 복도 카드키	中央走廊门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:28	draft	关联译名；当前ISO保留原名称
+id:29	MEL 카드키	MEL门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:29	draft	关联译名；当前ISO保留原名称
+id:38	관리 지시서	管理指示	item	RES/SUBSYS.RES:ITEM.SCR:id:38	draft	关联译名；当前ISO保留原名称
+id:37	2F 지도	2F地图	item	RES/SUBSYS.RES:ITEM.SCR:id:37	draft	关联译名；当前ISO保留原名称
+id:39	신문 조각	报纸残片	item	RES/SUBSYS.RES:ITEM.SCR:id:39	draft	关联译名；当前ISO保留原名称
+id:43	반응 결과 프린트물	反应结果打印件	item	RES/SUBSYS.RES:ITEM.SCR:id:43	draft	关联译名；当前ISO保留原名称
+id:33	조직 세포 샘플	组织细胞样本	item	RES/SUBSYS.RES:ITEM.SCR:id:33	draft	关联译名；当前ISO保留原名称
+id:36	반응 실험 액체	反应实验液	item	RES/SUBSYS.RES:ITEM.SCR:id:36	draft	关联译名；当前ISO保留原名称
+id:32	2F 섹터 C 카드키	2F C区门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:32	draft	关联译名；当前ISO保留原名称
+id:40	월터에게 보내는 메모	给沃尔特的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:40	draft	关联译名；当前ISO保留原名称
+id:41	월터의 수첩	沃尔特手册	item	RES/SUBSYS.RES:ITEM.SCR:id:41	draft	关联译名；当前ISO保留原名称
+id:42	로완 스웰의 수첩	罗温·斯韦尔手册	item	RES/SUBSYS.RES:ITEM.SCR:id:42	draft	关联译名；当前ISO保留原名称
+id:30	알파 샘플	A样本	item	RES/SUBSYS.RES:ITEM.SCR:id:30	draft	关联译名；当前ISO保留原名称
+id:31	베타 샘플	B样本	item	RES/SUBSYS.RES:ITEM.SCR:id:31	draft	关联译名；当前ISO保留原名称
+id:34	액체 합금	液态合金	item	RES/SUBSYS.RES:ITEM.SCR:id:34	draft	关联译名；当前ISO保留原名称
+id:97	B1 메인통제실 카드키	B1主控室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:97	draft	关联译名；当前ISO保留原名称
+id:44	혈액 생성 촉진제	造血促进剂	item	RES/SUBSYS.RES:ITEM.SCR:id:44	draft	关联译名；当前ISO保留原名称
+id:45	인체 실험 보고서	人体实验报告	item	RES/SUBSYS.RES:ITEM.SCR:id:45	draft	关联译名；当前ISO保留原名称
+id:46	특수 액체	特殊液体	item	RES/SUBSYS.RES:ITEM.SCR:id:46	draft	关联译名；当前ISO保留原名称
+id:47	제인의 보안 카드	简的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:47	draft	关联译名；当前ISO保留原名称
+id:48	B1-01 지도	B1-01地图	item	RES/SUBSYS.RES:ITEM.SCR:id:48	draft	关联译名；当前ISO保留原名称
+id:111	제인의 지도 B1-02	简的B1-02地图	item	RES/SUBSYS.RES:ITEM.SCR:id:111	draft	关联译名；当前ISO保留原名称
+id:112	제인의 지도 B2	简的B2地图	item	RES/SUBSYS.RES:ITEM.SCR:id:112	draft	关联译名；当前ISO保留原名称
+id:50	연구원 사진	研究员照片	item	RES/SUBSYS.RES:ITEM.SCR:id:50	draft	关联译名；当前ISO保留原名称
+id:51	한스의 연구 일지	汉斯的研究日志	item	RES/SUBSYS.RES:ITEM.SCR:id:51	draft	关联译名；当前ISO保留原名称
+id:49	작전 보고서	行动报告	item	RES/SUBSYS.RES:ITEM.SCR:id:49	draft	关联译名；当前ISO保留原名称
+id:52	경비대원의 수첩	警卫的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:52	draft	关联译名；当前ISO保留原名称
+id:54	데이터 스틱 1	数据棒1	item	RES/SUBSYS.RES:ITEM.SCR:id:54	draft	关联译名；当前ISO保留原名称
+id:55	배수 처리실 카드키	排水处理室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:55	draft	关联译名；当前ISO保留原名称
+id:58	지미에게 남긴 메모	给吉米的便条	item	RES/SUBSYS.RES:ITEM.SCR:id:58	draft	关联译名；当前ISO保留原名称
+id:53	무기 연구실 카드키	武器研究室门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:53	draft	关联译名；当前ISO保留原名称
+id:60	데이터 스틱 2	数据棒2	item	RES/SUBSYS.RES:ITEM.SCR:id:60	draft	关联译名；当前ISO保留原名称
+id:56	알렌의 보안 카드	艾伦的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:56	draft	关联译名；当前ISO保留原名称
+id:98	피 묻은 보안 카드	染血的安保卡	item	RES/SUBSYS.RES:ITEM.SCR:id:98	draft	关联译名；当前ISO保留原名称
+id:61	모니카의 편지	莫妮卡的信	item	RES/SUBSYS.RES:ITEM.SCR:id:61	draft	关联译名；当前ISO保留原名称
+id:62	데이터 스틱 3	数据棒3	item	RES/SUBSYS.RES:ITEM.SCR:id:62	draft	关联译名；当前ISO保留原名称
+id:63	군 전략 연구에 대한 편지	军事战略研究信函	item	RES/SUBSYS.RES:ITEM.SCR:id:63	draft	关联译名；当前ISO保留原名称
+id:57	육각 금속 물체	六角金属物	item	RES/SUBSYS.RES:ITEM.SCR:id:57	draft	关联译名；当前ISO保留原名称
+id:68	B3 지도	B3地图	item	RES/SUBSYS.RES:ITEM.SCR:id:68	draft	关联译名；当前ISO保留原名称
+id:113	B4 지도	B4地图	item	RES/SUBSYS.RES:ITEM.SCR:id:113	draft	关联译名；当前ISO保留原名称
+id:64	디텍팅 센서 부품	探测器零件	item	RES/SUBSYS.RES:ITEM.SCR:id:64	draft	关联译名；当前ISO保留原名称
+id:65	데이터 스틱 4	数据棒4	item	RES/SUBSYS.RES:ITEM.SCR:id:65	draft	关联译名；当前ISO保留原名称
+id:66	데이터 스틱 5	数据棒5	item	RES/SUBSYS.RES:ITEM.SCR:id:66	draft	关联译名；当前ISO保留原名称
+id:67	데이터 스틱 6	数据棒6	item	RES/SUBSYS.RES:ITEM.SCR:id:67	draft	关联译名；当前ISO保留原名称
+id:69	데이터 스틱 7	数据棒7	item	RES/SUBSYS.RES:ITEM.SCR:id:69	draft	关联译名；当前ISO保留原名称
+id:70	감사 지침문	审查指引	item	RES/SUBSYS.RES:ITEM.SCR:id:70	draft	关联译名；当前ISO保留原名称
+id:71	데이터 스틱 8	数据棒8	item	RES/SUBSYS.RES:ITEM.SCR:id:71	draft	关联译名；当前ISO保留原名称
+id:76	데이터 스틱 S	数据棒S	item	RES/SUBSYS.RES:ITEM.SCR:id:76	draft	关联译名；当前ISO保留原名称
+id:88	데이터 스틱 S1	数据棒S1	item	RES/SUBSYS.RES:ITEM.SCR:id:88	draft	关联译名；当前ISO保留原名称
+id:89	데이터 스틱 S2	数据棒S2	item	RES/SUBSYS.RES:ITEM.SCR:id:89	draft	关联译名；当前ISO保留原名称
+id:90	데이터 스틱 S3	数据棒S3	item	RES/SUBSYS.RES:ITEM.SCR:id:90	draft	关联译名；当前ISO保留原名称
+id:91	데이터 스틱 S4	数据棒S4	item	RES/SUBSYS.RES:ITEM.SCR:id:91	draft	关联译名；当前ISO保留原名称
+id:72	동력 실린더 타입 A	A型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:72	draft	关联译名；当前ISO保留原名称
+id:73	동력 실린더 타입 B	B型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:73	draft	关联译名；当前ISO保留原名称
+id:74	동력 실린더 타입 C	C型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:74	draft	关联译名；当前ISO保留原名称
+id:75	동력 실린더 타입 D	D型动力缸	item	RES/SUBSYS.RES:ITEM.SCR:id:75	draft	关联译名；当前ISO保留原名称
+id:77	데이터 스틱 9	数据棒9	item	RES/SUBSYS.RES:ITEM.SCR:id:77	draft	关联译名；当前ISO保留原名称
+id:78	B5 지도	B5地图	item	RES/SUBSYS.RES:ITEM.SCR:id:78	draft	关联译名；当前ISO保留原名称
+id:80	데이터 스틱 10	数据棒10	item	RES/SUBSYS.RES:ITEM.SCR:id:80	draft	关联译名；当前ISO保留原名称
+id:81	데이터 스틱 11	数据棒11	item	RES/SUBSYS.RES:ITEM.SCR:id:81	draft	关联译名；当前ISO保留原名称
+id:82	비밀 전문	秘密电报	item	RES/SUBSYS.RES:ITEM.SCR:id:82	draft	关联译名；当前ISO保留原名称
+id:83	데이터 스틱 12	数据棒12	item	RES/SUBSYS.RES:ITEM.SCR:id:83	draft	关联译名；当前ISO保留原名称
+id:99	B5 남쪽 게이트 카드키	B5南门门卡	item	RES/SUBSYS.RES:ITEM.SCR:id:99	draft	关联译名；当前ISO保留原名称
+id:84	TOMCAT 활성제	TOMCAT活化剂	item	RES/SUBSYS.RES:ITEM.SCR:id:84	draft	关联译名；当前ISO保留原名称
+id:85	데이터 스틱 H	数据棒H	item	RES/SUBSYS.RES:ITEM.SCR:id:85	draft	关联译名；当前ISO保留原名称
+id:86	데이터 스틱 B	数据棒B	item	RES/SUBSYS.RES:ITEM.SCR:id:86	draft	关联译名；当前ISO保留原名称
+id:87	켈리의 수첩	凯莉的手册	item	RES/SUBSYS.RES:ITEM.SCR:id:87	draft	关联译名；当前ISO保留原名称
+id:92	동력배치 설명	动力配置说明	item	RES/SUBSYS.RES:ITEM.SCR:id:92	draft	关联译名；当前ISO保留原名称
+id:93	동력배치 설명 N	动力配置说明N	item	RES/SUBSYS.RES:ITEM.SCR:id:93	draft	关联译名；当前ISO保留原名称
+id:94	동력배치 설명 H	动力配置说明H	item	RES/SUBSYS.RES:ITEM.SCR:id:94	draft	关联译名；当前ISO保留原名称
+id:95	데이터 폰	数据终端	item	RES/SUBSYS.RES:ITEM.SCR:id:95	draft	关联译名；当前ISO保留原名称
+id:96	데이터 스틱 B1	数据棒B1	item	RES/SUBSYS.RES:ITEM.SCR:id:96	draft	关联译名；当前ISO保留原名称
+id:100	근무지 이탈 주의 메모	离岗警告便条	item	RES/SUBSYS.RES:ITEM.SCR:id:100	draft	关联译名；当前ISO保留原名称
+id:101	동력실 근무 명령서	动力室值班命令	item	RES/SUBSYS.RES:ITEM.SCR:id:101	draft	关联译名；当前ISO保留原名称
+id:102	데이터 스틱 X	数据棒X	item	RES/SUBSYS.RES:ITEM.SCR:id:102	draft	关联译名；当前ISO保留原名称
+id:103	유충 관찰 보고서	幼虫观察报告	item	RES/SUBSYS.RES:ITEM.SCR:id:103	draft	关联译名；当前ISO保留原名称
+id:104	브렉의 일지	布雷克日志	item	RES/SUBSYS.RES:ITEM.SCR:id:104	draft	关联译名；当前ISO保留原名称
+id:105	데이터 스틱 B2	数据棒B2	item	RES/SUBSYS.RES:ITEM.SCR:id:105	draft	关联译名；当前ISO保留原名称
+id:106	데이터 스틱 B3	数据棒B3	item	RES/SUBSYS.RES:ITEM.SCR:id:106	draft	关联译名；当前ISO保留原名称
+id:107	데이터 스틱 B4	数据棒B4	item	RES/SUBSYS.RES:ITEM.SCR:id:107	draft	关联译名；当前ISO保留原名称
+id:108	데이터 스틱 B5	数据棒B5	item	RES/SUBSYS.RES:ITEM.SCR:id:108	draft	关联译名；当前ISO保留原名称
+id:109	데이터 스틱 B6	数据棒B6	item	RES/SUBSYS.RES:ITEM.SCR:id:109	draft	关联译名；当前ISO保留原名称
+id:110	알렌의 편지	艾伦的信	item	RES/SUBSYS.RES:ITEM.SCR:id:110	draft	关联译名；当前ISO保留原名称
+id:114	B6 지도	B6地图	item	RES/SUBSYS.RES:ITEM.SCR:id:114	draft	关联译名；当前ISO保留原名称
+id:115	도니의 일지	唐尼的日志	item	RES/SUBSYS.RES:ITEM.SCR:id:115	draft	关联译名；当前ISO保留原名称
+id:116	지하 터미널	地下终端	item	RES/SUBSYS.RES:ITEM.SCR:id:116	draft	关联译名；当前ISO保留原名称
+person:bruce	브루스 맥켈렌	布鲁斯·麦凯伦	person	RES/SUBSYS.RES:EVENT.SCR@00005226	draft	自称布鲁斯
+person:allen	알렌 던	艾伦·德恩	person	RES/SUBSYS.RES:EVENT.SCR@0001c74d;RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4	draft	正文简称艾伦
+person:monica	모니카 델피	莫妮卡·德尔菲	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003db4	draft	正文简称莫妮卡
+person:jennifer	제니퍼	詹妮弗	person	RES/SUBSYS.RES:EVENT.SCR@0002fffd	draft	与莫妮卡区分
+person:jane	제인 블레어	简·布莱尔	person	RES/SUBSYS.RES:EVENT.SCR@00005150	draft	安保队中士；简称简
+person:john	존 닐슨	约翰·尼尔森	person	RES/SUBSYS.RES:EVENT.SCR@0000518b	draft	博士；简称尼尔森
+person:kelly	켈리 포스트	凯莉·波斯特	person	RES/SUBSYS.RES:EVENT.SCR@0000b874;RES/UI/ITEM.RES:DOCUMENT.SCR@000049f7	draft	简称凯莉
+person:walter	월터	沃尔特	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00000691	draft	研究员
+person:rowan	로완 스웰	罗温·斯韦尔	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000008ef	draft	Rowan Swell
+person:gray	그레이 윌슨	格雷·威尔逊	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00000478	draft	Gray Wilson
+person:hugo	휴고 루벤	雨果·鲁本	person	RES/UI/ITEM.RES:DOCUMENT.SCR@0000005f	draft	管理所长
+person:peter	피터	彼得	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe	draft	Peter
+person:hans	한스	汉斯	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00000f8d	draft	Hans
+person:michael	마이클 아이삭	迈克尔·艾萨克	person	RES/SUBSYS.RES:EVENT.SCR@000150a0	draft	上尉
+person:luke	루크 윌슨	卢克·威尔逊	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00000d4c	draft	中尉
+org:misr	군 전략 연구소	军事战略研究所	organization	EVENT.SCR@00000fe3	draft	英版缩写MISR保留
+lab:mel	제조 공학 연구실	制造工程研究室	location	EVENT.SCR@0000306f	draft	标识M.E.L./MEL按原文保持
+term:vampire	뱀파이어	吸血鬼	creature	ITEM.SCR:id:2	draft	Vampire
+term:ancient	에인션트	远古	creature	ITEM.SCR:id:3	draft	Ancient；用于远古吸血鬼和远古计划
+term:kaiser	카이져	帝王	creature	RES/UI/ITEM.RES:DOCUMENT.SCR@000038fa;RES/UI/ITEM.RES:DOCUMENT.SCR@00002c8a	draft	数据棒9明说“取名为카이져的新个体”，为30米级巨型实验生物，不是人的皇帝头衔。可把帝王作为生物代号；与武器前缀保持一致。
+project:vampire	뱀파이어 프로젝트	吸血鬼计划	project	RES/UI/ITEM.RES:DOCUMENT.SCR@0000177f	draft	韩文分别出现吸血鬼计划和远古计划。上游多次统一成Project Ancient，原文区别应保留。
+project:ancient	에인션트 프로젝트	远古计划	project	RES/UI/ITEM.RES:DOCUMENT.SCR@00003cd3	draft	一阶/二阶、1次/2次实验在原文明确；英文多个标题合并成Project Ancient，不应抹去阶段。
+term:health	체력	生命值	system	ITEM.SCR:id:23	draft	恢复比例严格保持原值
+term:keycard	카드키	门卡	item_class	ITEM.SCR:id:28	draft	短名称统一门卡
+term:securitycard	보안 카드	安保卡	item_class	ITEM.SCR:id:47	draft	与普通门卡区分
+term:datastick	데이터 스틱	数据棒	item_class	ITEM.SCR:id:54	draft	编号/字母保持
+term:dataphone	데이터 폰	数据终端	item_class	ITEM.SCR:id:95	draft	腕表形读取与无线电设备
+term:reactor	합성반응기	合成反应器	device	EVENT.SCR@00003bd8	draft	用于样本合成
+term:007	헨리 앤더슨	亨利·安德森	person	RES/SUBSYS.RES:EVENT.SCR@0000c634	draft	EVENT204自介；后续艾伦解释其感染情况。
+term:008	프랭크 피셔	弗兰克·费舍尔	person	RES/SUBSYS.RES:EVENT.SCR@0000c9aa	draft	EVENT209自介；姓与名分别出现在凶案对话。
+term:010	베니 번	本尼·伯恩	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00001868;RES/SUBSYS.RES:EVENT.SCR@00017764	draft	数据棒1署名。对话仅称번博士，英文分别拼作Burn/Byrne；疑为同人但源文本未明确展开全名，不据英文异拼另造人物。
+term:018	리차드 레이	理查德·雷	person	RES/UI/ITEM.RES:DOCUMENT.SCR@0000145b	draft	人体实验报告署名。
+term:019	도니	唐尼	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000019b4	draft	原版文档标题有完整名字，英文D只是空间压缩缩写。
+term:020	지미	吉米	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00001ca5	draft	便条收信人。
+term:021	제임스	詹姆斯	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00001cdd	draft	给吉米的便条署名为詹姆斯博士；英文末署省去了博士头衔。
+term:022	그렉	格雷格	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00002637	draft	军方战略研究来信的收信人，英文标题Letter for Greg不是原题直译。
+term:023	래리	拉里	person	RES/UI/ITEM.RES:DOCUMENT.SCR@0000279c	draft	军方战略研究来信的署名。
+term:024	짐 에카트	吉姆·埃卡特	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00002327	draft	数据棒3记录人。
+term:025	버스터 맥	巴斯特·麦克	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003bda	draft	数据棒4署名；原版研究名单领域为生物工程，不是上游Technical Research Lead。
+term:026	로버트 덴버	罗伯特·丹佛	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00002c8a	draft	数据棒5记录人。
+term:027	커크 베이커	柯克·贝克	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000031d1	draft	数据棒7记录人。
+term:028	그랜트	格兰特	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003609	draft	原文只给그랜트及国防部战略委员会委员长。McDavid与Minister of National Defense均为上游添加/改写，当前未找到原文支持。
+term:029	로날드 베이너	罗纳德·贝纳	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000036cc	draft	数据棒8记录人。
+term:030	조쉬 포그	乔什·福格	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000038fa	draft	数据棒9记录人。
+term:031	닉 레인	尼克·莱恩	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003cd3	draft	原版研究名单含括号英文；遗传工程领域，数据棒11记录人。
+term:032	댄 포트만	丹·波特曼	person	RES/UI/ITEM.RES:DOCUMENT.SCR@0000443b	draft	原版研究名单含括号英文；遗传工程领域，数据棒H记录人。
+term:033	드웨인 더그	德韦恩·道格	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4	draft	韩文더그与原版括号Doig并不完全一致。暂按韩文音译，保留原版括号英文，不擅自校改为Doug；最终拼写需审校确认。
+term:034	베니 코빈	伯尼·科尔宾	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4	draft	原版名单明确括号Bernie Corbin；与베니 번（本尼·伯恩）分开。
+term:035	빈스 본	文斯·沃恩	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003ab4	draft	原版名单化学工程研究人员。
+term:036	베키 키튼	贝姬·基顿	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003bda	draft	韩文베키与括号Vecchi存在音译差异；保留原版英文，不擅自改成Becky。
+term:037	카일 하스겔	凯尔·哈斯克尔	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00003bda	draft	原版名单生物工程研究人员，数据棒B记录人。
+term:038	스틸 밀러	斯蒂尔·米勒	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00004078	draft	秘密电报末署为蓝队斯蒂尔·米勒。
+term:039	길 페리	吉尔·费里	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000041aa	draft	数据棒12记录人。
+term:040	루카스	卢卡斯	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00004d35	draft	凯莉手册中记载五个月前在研究所失踪；当前片段没有直接确认与凯莉的亲属关系。
+term:041	에린 셰퍼	艾琳·谢弗	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00004e8b	draft	数据棒S记录人。
+term:042	에드 허쉬	埃德·赫希	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe	draft	原版动力室值班命令给出括号英文；主动力室。
+term:043	피터 헌터	彼得·亨特	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe	draft	原版动力室值班命令给出括号英文；辅助动力室。
+term:044	레슬리 렌프로	莱斯利·伦弗鲁	person	RES/UI/ITEM.RES:DOCUMENT.SCR@00006470	draft	幼虫观察报告记录人；英文拼作Renfrew，不应自行写成Renfro。
+term:045	브렉	布雷克	person	RES/UI/ITEM.RES:DOCUMENT.SCR@000066fd	draft	《布雷克的日志》作者，英文标题Brak's Note改变了文类但不提供全名。
+term:047	카이져 뱀파이어 유전자	帝王吸血鬼基因	weapon-tier	RES/SUBSYS.RES:ITEM.SCR@00001491	draft	四系武器原版说明均明确带카이져 뱀파이어 유전자；英文武器Reaper/Venom/Black Widow/Envy是上游压缩槽位改名，不替代原体系。
+term:048	에인션트 뱀파이어	远古吸血鬼	species	RES/UI/ITEM.RES:DOCUMENT.SCR@00003827	draft	与普通吸血鬼、吸血鬼领主、帝王区分；上游常缩成Ancient，中文不应因此自动删去吸血鬼。
+term:049	뱀파이어 로드	吸血鬼领主	species	RES/UI/ITEM.RES:DOCUMENT.SCR@000031d1	draft	数据棒7明确另起的物种名称；不是Kaiser/帝王的同义词。
+term:052	DNA 클론 프로젝트	DNA克隆计划	research-project	RES/UI/ITEM.RES:DOCUMENT.SCR@0000177f	draft	数据棒1标题；与吸血鬼/远古计划有联系但不是可以随意互换的标签。
+term:053	에너지 개발 프로젝트	能源开发计划	research-project	RES/UI/ITEM.RES:DOCUMENT.SCR@00004e8b	draft	数据棒S；幼虫/电解液/动力筒体系。
+term:054	팔마타	帕尔玛塔	research-material-codename	RES/UI/ITEM.RES:DOCUMENT.SCR@00001e4e;RES/UI/ITEM.RES:DOCUMENT.SCR@000038fa	draft	原文是第三种DNA 팔마타。已审原文没有叶子/掌状叶的说明；不把上游植物化解释当作事实。
+term:055	프리즘	棱镜	chemical-gas-codename	RES/UI/ITEM.RES:DOCUMENT.SCR@000065d0	draft	原文明确命名为프리즘的化学气体，刺激幼虫感知及攻击本能。作为气体代号，初见可写“棱镜”气体。
+term:056	TOMCAT	TOMCAT	key-item	RES/SUBSYS.RES:EVENT.SCR@00039e27	draft	原文英文代号保持TOMCAT，활성제译活化剂；不要把名字当普通家猫。
+term:057	Cop사	COP公司	organization	RES/UI/ITEM.RES:DOCUMENT.SCR@00004078	draft	秘密电报原文Cop사和회장（公司董事长/会长）；上游president不代表国家总统。
+term:058	MPA	MPA	organization-acronym	RES/UI/ITEM.RES:DOCUMENT.SCR@00003827	draft	数据棒8只出现缩写，没有原文展开；保留字母，不猜机构全名。
+term:059	국방부	国防部	organization	RES/UI/ITEM.RES:DOCUMENT.SCR@00003827	draft	与국방 위원회（国防委员会）分别译出，不把委员会长升格为国防部长。
+term:060	국방 위원회	国防委员会	organization	RES/UI/ITEM.RES:DOCUMENT.SCR@0000347d	draft	审计后决定停止帝王培育实验的机构。
+term:061	그린피스	绿色和平组织	organization	RES/UI/ITEM.RES:DOCUMENT.SCR@000001ed	draft	新闻剪报提及北太平洋发现死亡巨鲸。
+term:062	블루 소대	蓝队	military-unit	RES/UI/ITEM.RES:DOCUMENT.SCR@00000d4c	draft	与红队、白队并列。秘密电报的블루팀同为蓝色队名，但组织同一性未单独运行验证。
+term:063	MEL	MEL	place-acronym	RES/SUBSYS.RES:ITEM.SCR@000029f1	draft	原版MEL卡钥说明为制造工程研究区域；保留缩写，不能按字母擅自展开为机械实验室。
+term:064	중앙 복도	中央走廊	place	RES/SUBSYS.RES:EVENT.SCR@00036f78	draft	道具钥匙及使用提示相连；与中央大厅不是同一个词。
+term:065	중앙 로비 홀	中央大厅	place	RES/UI/ITEM.RES:DOCUMENT.SCR@00000d4c	draft	作战报告描述因爆炸封闭；与连接C区的车辆机库区分。
+term:066	차량 격납고	车辆库	place	RES/UI/ITEM.RES:DOCUMENT.SCR@00000d4c	draft	作战报告明确车库/机库供车辆使用，不应因英文hangar擅加飞机。
+term:067	냉동 보관실	冷冻储藏室	place	RES/UI/ITEM.RES:DOCUMENT.SCR@00000478	draft	给沃尔特的便条：C区内保存细胞组织的房间。
+term:068	코드실	密码室	place	RES/SUBSYS.RES:EVENT.SCR@0000f3bd	draft	韩文直称code室；原文涉及解除安保密码。英版Server Room是解释性改写，最终地图图文核对前建议保留“密码室”。
+term:069	지하 유적	地下遗迹	place	RES/SUBSYS.RES:EVENT.SCR@00006d32	draft	剧情明确存在古代遗迹；英版某些同槽文本改写成电梯消息，不应用英文覆盖地点信息。
+term:070	생체 연구실	生物研究室	place	RES/UI/ITEM.RES:DOCUMENT.SCR@00004d35	draft	凯莉手册原文是생체，不是유전（遗传）；不要与遗传工程研究区域自动合并。
+term:071	팔마타 보관실	帕尔玛塔保管室	place	RES/SUBSYS.RES:EVENT.SCR@00029785	draft	EVENT754附近独立地点名，英文省略Palmata。
+term:072	메인 동력실	主动力室	place	RES/SUBSYS.RES:EVENT.SCR@0000c3ca	draft	与보조 동력실辅助动力室组成配电/幼虫动力筒谜题；左右顺序须按韩文及现场验证。
+term:073	보조 동력실	辅助动力室	place	RES/UI/ITEM.RES:DOCUMENT.SCR@000060fe	draft	原版动力配置说明写线路A左侧主动力室、线路B右侧辅助；上游Power Guide将MAIN(R)/AUX(L)写反，需地图/实机确认。

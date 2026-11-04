@@ -79,6 +79,16 @@ Header：12字节`31 2e 33 30 00 00 00 00 42 75 69 6c`（`1.30\0\0\0\0Buil`）�
 
 已发现99个`68 00 + name[32] + GEO名称[32]`模式，名称均在113个规范道具名中。匹配必须核对完整NUL终止名称、前缀及后继GEO字段；原NUL后的旧填充值保持。最小可改容量以原字符串长度为准，不扩成32字节。
 
+## 关联名清单与正文目录 — 本项目定义
+
+`mystic-nights-linked-names` v1保存源范围hash、113组规范ID和698引用；字段`capacity`是写入span，SCN/ELF含原NUL，SCR不含引号；`max_encoded_bytes`统一不含终止符。核心清单重建后必须完全相同，删掉一处引用也会拒绝修改。脚本/SCN/ELF的引用数组是静态闭包，不意味着所有计算型引用已证实。
+
+`localization-catalogue` v1索引引用同一目录下的JSON文件。源ID、偏移、容量、控制符和上下文不可变；仅`draft`/`reviewed`进入partial构建。文档逻辑页携带强制镜像声明，同一target生成两份资源；原版92页与英文107页不按偏移混配。
+
+## 辅助文本 — Verified编码，编辑路径未接入
+
+NETGUICD.ELF现有270个UTF-8 NUL韩文候选，另有多语言段，配套NETGUI/KOREAN.PF。DATA/AGREE.TXT为8180字节CP949纯文本。`assets/auxiliary-text-sources.json`另锁定主ELF通关/商标文字两个NUL槽，提取时核对完整原字节；不把候选长度直接当已验证可扩展容量。
+
 ## 稀疏补丁 v1 — 本项目定义
 
 ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压其中任何路径。清单记录format/version、原/新全文件size及SHA-256、升序不重叠offset/size、before/after成员名和SHA-256。

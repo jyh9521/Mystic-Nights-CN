@@ -1,0 +1,16 @@
+{
+  "locale": "zh-CN",
+  "rules": [
+    {"source": "브루스", "targets": ["布鲁斯"]},
+    {"source": "맥켈렌", "targets": ["麦凯伦"]},
+    {"source": "제니퍼", "targets": ["詹妮弗"]},
+    {"source": "모니카", "targets": ["莫妮卡"]},
+    {"source": "알렌", "targets": ["艾伦"]},
+    {"source": "뱀파이어", "targets": ["吸血鬼"]},
+    {"source": "카이져", "targets": ["帝王"]},
+    {"source": "에인션트", "targets": ["远古"]},
+    {"source": "30%", "targets": ["30%"]},
+    {"source": "60%", "targets": ["60%"]},
+    {"source": "100%", "targets": ["100%"]}
+  ]
+}

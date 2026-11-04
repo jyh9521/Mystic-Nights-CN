@@ -5,6 +5,7 @@ from collections import defaultdict
 import json
 from pathlib import Path
 
+from .catalogues import read_project
 from .executable import patch_strings as patch_executable
 from .font import build_font, decode_text, encode_text
 from .resources import parse_res
@@ -14,8 +15,10 @@ from .typography import validate_text
 
 def load_catalogue(path: Path) -> dict:
     catalogue = json.loads(path.read_text(encoding="utf-8"))
-    if catalogue.get("profile") != "poc":
-        raise ValueError("Only the reviewed poc profile is currently implemented")
+    if catalogue.get("format") == "localization-catalogue":
+        catalogue = read_project(path)
+    if catalogue.get("profile") not in {"poc", "partial"}:
+        raise ValueError("Only explicitly selected poc/partial profiles are implemented")
     entries = catalogue.get("entries")
     if not isinstance(entries, list) or not entries:
         raise ValueError("Translation catalogue is empty")
@@ -49,7 +52,7 @@ def load_catalogue(path: Path) -> dict:
             raise ValueError(f"Non-canonical translation ID: {row['id']}")
         if row.get("status") not in {"draft", "reviewed"}:
             raise ValueError(f"Invalid translation status: {row['id']}")
-        if row.get("text_type") not in {"ui_label", "system_message", "item_description", "dialogue", "cutscene"}:
+        if row.get("text_type") not in {"ui_label", "system_message", "item_description", "dialogue", "cutscene", "document"}:
             raise ValueError(f"Missing or unknown text type: {row['id']}")
         if not isinstance(row.get("target"), str) or not row["target"].strip():
             raise ValueError(f"Missing translation: {row['id']}")
@@ -79,7 +82,7 @@ def retained_codes(image, elf_recipe: dict) -> set[int]:
 
 
 def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
-                        font_path: Path, elf_recipe: dict):
+                        font_path: Path, elf_recipe: dict, *, version: dict | None = None):
     """Build equal-sized replacement payloads; do not write any disc files."""
     entries = catalogue["entries"]
     for row in entries:
@@ -87,7 +90,16 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
     original_font = parse_res(image.read("RES/SYSTEM.RES"))
     fnt = original_font.read("FONT.FNT")
     textures = {f"FONT_{n}.TM2": original_font.read(f"FONT_{n}.TM2") for n in range(1, 9)}
-    protected = retained_codes(image, elf_recipe)
+    protection_policy = config.get("font_protection", "poc-source-text")
+    if protection_policy == "source-text-survey":
+        if version is None:
+            raise ValueError("Font survey requires the supported original version")
+        from .font_usage import collect_protected_codes
+        protected, _usage_report = collect_protected_codes(image.path, version)
+    elif protection_policy == "poc-source-text":
+        protected = retained_codes(image, elf_recipe)
+    else:
+        raise ValueError(f"Unknown font protection policy: {protection_policy}")
     code_range = config["font_allowed_codes"]
     allowed = range(code_range["first"], code_range["last"] + 1)
     font = build_font(fnt, textures, [row["target"] for row in entries], font_path,
@@ -136,4 +148,4 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
     for name, payload in replacement.items():
         if len(payload) != image.get(name).size:
             raise ValueError(f"Resource changed size: {name}")
-    return replacement, font, sorted(protected & set(allowed))
+    return replacement, font, sorted(protected)

@@ -4,6 +4,7 @@ import hashlib
 import json
 from pathlib import Path
 import tempfile
+import textwrap
 
 from _bootstrap import ROOT
 from mysticnights.font import render_preview
@@ -14,19 +15,19 @@ from mysticnights.versions import load_version, verify_original
 
 
 def write_json(path: Path, value) -> None:
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--iso", required=True, type=Path)
     parser.add_argument("--locale", default="zh-CN")
-    parser.add_argument("--output", type=Path, default=ROOT / "build/poc")
+    parser.add_argument("--output", type=Path, default=ROOT / "build/partial")
     parser.add_argument("--font", type=Path)
     parser.add_argument("--release", action="store_true")
     args = parser.parse_args()
     if args.release:
-        parser.error("Full-release generation is not enabled: the current profile is a runtime proof of concept")
+        parser.error("Full-release generation is not enabled: translation coverage and gameplay QA are incomplete")
     if not args.locale or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-" for c in args.locale):
         parser.error("Invalid locale identifier")
     locale_dir = ROOT / "locales" / args.locale
@@ -35,15 +36,20 @@ def main() -> None:
     catalogue = load_catalogue(catalogue_path)
     if catalogue["locale"] != args.locale or config["locale"] != args.locale:
         raise ValueError("Locale configuration/catalogue mismatch")
+    if config.get("profile", catalogue["profile"]) != catalogue["profile"]:
+        raise ValueError("Build profile/catalogue mismatch")
     version = load_version(ROOT / "assets/game-version.json")
     elf_recipe = json.loads((ROOT / "assets/elf-text-slots.json").read_text(encoding="utf-8"))
     font_spec = json.loads((ROOT / config["font_spec"]).read_text(encoding="utf-8"))
     font_path = args.font or ROOT / "build/fonts" / font_spec["filename"]
-    iso_name = f"Mystic-Nights-{args.locale}-poc.iso"
+    iso_name = f"Mystic-Nights-{args.locale}-{catalogue['profile']}.iso"
     if args.output.exists():
         raise FileExistsError(f"Use a new output directory: {args.output}")
     image = verify_original(args.iso, version)
-    replacements, font, protected = localized_resources(image, catalogue, config, font_spec, font_path, elf_recipe)
+    if catalogue["profile"] == "partial":
+        from validate_translations import validate_project
+        validate_project(locale_dir, image)
+    replacements, font, protected = localized_resources(image, catalogue, config, font_spec, font_path, elf_recipe, version=version)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     parent = args.output.parent.resolve()
     # Only a newly allocated sibling directory is ever cleaned on failure.
@@ -55,17 +61,29 @@ def main() -> None:
         result = replace_files(args.iso, work / iso_name, replacements,
                                expected_sha256=version["iso"]["sha256"], expected_size=version["iso"]["size"])
         patch = build_patch(args.iso, work / iso_name, work / "DIFF_FILE.mnp.zip")
-        manifest = {"profile": "poc", "status": "awaiting-user-runtime-test", "locale": args.locale,
+        manifest = {"profile": catalogue["profile"], "status": "awaiting-user-runtime-test", "locale": args.locale,
                 "localized_title": config.get("title", "Mystic Nights"),
                 "original": version["iso"], "modified": {"size": result["size"], "sha256": result["sha256"]},
                 "changed_files": result["replacements"], "entries": catalogue["entries"],
                 "font": {"name": font_spec["name"], "sha256": font.font_sha256,
                          "pixel_size": config["font_pixel_size"], "mapping": font.mapping,
-                         "protected_jamo_codes": protected},
+                         "protection_policy": config.get("font_protection", "poc-source-text"),
+                         "protected_codes": protected},
                 "catalogue_sha256": hashlib.sha256(catalogue_path.read_bytes()).hexdigest(),
+                "catalogue_files_sha256": catalogue.get("catalogue_files_sha256", {}),
+                "coverage": catalogue.get("coverage", {}),
                 "sparse_ranges": len(patch["ranges"])}
         write_json(work / "manifest.json", manifest)
-        preview_text = "\n".join(row["target"] for row in catalogue["entries"])
+        by_id = {row["id"]: row for row in catalogue["entries"]}
+        preview_ids = config.get("preview_ids", list(by_id))
+        if not preview_ids or len(set(preview_ids)) != len(preview_ids) or any(i not in by_id for i in preview_ids):
+            raise ValueError("Preview must select existing translated IDs")
+        # Preview wrapping affects only this image, never the runtime strings.
+        preview_lines = []
+        for identifier in preview_ids:
+            for line in by_id[identifier]["target"].replace("<BR>", "\n").splitlines():
+                preview_lines.extend(textwrap.wrap(line, width=36, break_long_words=True, break_on_hyphens=False) or [""])
+        preview_text = "\n".join(preview_lines)
         preview = render_preview(font.fnt, font.textures, preview_text, font.mapping, scale=3)
         from PIL import Image
         background = Image.new("RGBA", preview.size, (24, 28, 32, 255))
@@ -76,7 +94,7 @@ def main() -> None:
         if args.output.exists():
             raise FileExistsError(f"Output appeared during build: {args.output}")
         work.rename(args.output)
-    print(f"BUILD profile=poc strings={len(catalogue['entries'])} glyphs={len(font.mapping)} changed_files={len(replacements)}")
+    print(f"BUILD profile={catalogue['profile']} strings={len(catalogue['entries'])} glyphs={len(font.mapping)} changed_files={len(replacements)}")
     print(f"OUTPUT sha256={result['sha256']} size={result['size']}")
     print(f"ISO {args.output.resolve() / iso_name}")
 

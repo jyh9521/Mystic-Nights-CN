@@ -1,4 +1,32 @@
-# 中文技术验证版：离线验收
+# 汉化构建：离线验收
+
+## 2026-11-04 首批全文版
+
+`partial`配置实际装入340个物理正文槽（328条逻辑译文）、646字形，209项名词表与113个道具译名已建立；名称修改不在本次ISO中。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离副本回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| 首批ISO | `a40878eac2a5645b810d13ed69c8f8d8317ca8d3652f584765e120ced2907e95` |
+| 差分 | `b8fde390baeb53bbce8cf592dc4a88a87efe064bd2c9d215d04bcb5967af5ff6` |
+| 实际图集预览 | `a0ed8c21e0fa04ba8a4a77f3a2c90716d3624f06278914239565346d95bb63ce` |
+
+ISO为1,696,530,432字节；差分1,364,389字节，3367个区间。
+
+实际命令均退出0，完整输入/输出保存在本地`build/partial/VERIFICATION.txt`：
+
+```text
+Ran 142 tests
+OK
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=340
+MODIFIED PASS strings=340 glyphs=646 changed_files=6 unchanged_files=718 lba=unchanged
+```
+
+正向差分在隔离副本上得到同一修改哈希；交付`ROLLBACK.sh`反向产生原盘哈希，恢复副本再次通过340源槽基线检查。仍保留修改镜像，未把交付版回滚。字体保护1356码位，重算集合与manifest相同；英文资源不参与构建。
+
+菜单中文已有玩家反馈；本批对白推进、分页、存读档与完整流程仍待手动验收，没有启动游戏/模拟器。
+
+## 历史：14条PoC
 
 日期：2026-11-04（Asia/Tokyo）。代码验证提交：`44c303f7393c49de8f9946b2f75459d36d445f2d`。
 

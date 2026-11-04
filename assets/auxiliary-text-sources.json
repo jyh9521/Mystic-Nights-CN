@@ -1,0 +1,10 @@
+{
+  "sources": [
+    {"resource": "NETGUICD.ELF", "encoding": "utf-8", "layout": "nul-candidates", "unicode_ranges": [[44032, 55203]], "font": "NETGUI/KOREAN.PF"},
+    {"resource": "DATA/AGREE.TXT", "encoding": "cp949", "layout": "plain"},
+    {"resource": "SCKA_200.55", "encoding": "cp949", "layout": "explicit-slots", "slots": [
+      {"offset": 1385992, "source": "게임 클리어"},
+      {"offset": 1417680, "source": "DNAS logotype는 Sony Computer Entertainment Inc.의 상표입니다."}
+    ]}
+  ]
+}

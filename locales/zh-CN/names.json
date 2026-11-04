@@ -1,0 +1,1022 @@
+{
+  "locale": "zh-CN",
+  "entries": [
+    {
+      "id": "id:23",
+      "source": "회복약(소)",
+      "target": "恢复药(小)",
+      "status": "draft",
+      "minimum_res_capacity": 10,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:24",
+      "source": "회복약(중)",
+      "target": "恢复药(中)",
+      "status": "draft",
+      "minimum_res_capacity": 10,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:25",
+      "source": "회복약(대)",
+      "target": "恢复药(大)",
+      "status": "draft",
+      "minimum_res_capacity": 10,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:26",
+      "source": "특수 회복약",
+      "target": "特效恢复药",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:27",
+      "source": "해독제",
+      "target": "解毒剂",
+      "status": "draft",
+      "minimum_res_capacity": 6,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:20",
+      "source": "소형 방탄복",
+      "target": "轻型防弹衣",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:21",
+      "source": "중형 방탄복",
+      "target": "中型防弹衣",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:22",
+      "source": "강화 방탄복",
+      "target": "强化防弹衣",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:1",
+      "source": "블레이드",
+      "target": "战刃",
+      "status": "draft",
+      "minimum_res_capacity": 8,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:2",
+      "source": "뱀파이어 블레이드",
+      "target": "吸血鬼战刃",
+      "status": "draft",
+      "minimum_res_capacity": 17,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:3",
+      "source": "에인션트 블레이드",
+      "target": "远古战刃",
+      "status": "draft",
+      "minimum_res_capacity": 17,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:4",
+      "source": "카이져 블레이드",
+      "target": "帝王战刃",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:5",
+      "source": "핸드건",
+      "target": "手枪",
+      "status": "draft",
+      "minimum_res_capacity": 6,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:6",
+      "source": "뱀파이어 핸드건",
+      "target": "吸血鬼手枪",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:7",
+      "source": "에인션트 핸드건",
+      "target": "远古手枪",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:8",
+      "source": "카이져 핸드건",
+      "target": "帝王手枪",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:9",
+      "source": "라이플",
+      "target": "步枪",
+      "status": "draft",
+      "minimum_res_capacity": 6,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:10",
+      "source": "뱀파이어 라이플",
+      "target": "吸血鬼步枪",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:11",
+      "source": "에인션트 라이플",
+      "target": "远古步枪",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:12",
+      "source": "카이져 라이플",
+      "target": "帝王步枪",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:13",
+      "source": "샷건",
+      "target": "霰枪",
+      "status": "draft",
+      "minimum_res_capacity": 4,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:14",
+      "source": "뱀파이어 샷건",
+      "target": "吸血鬼霰枪",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:15",
+      "source": "에인션트 샷건",
+      "target": "远古霰枪",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:16",
+      "source": "카이져 샷건",
+      "target": "帝王霰枪",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:17",
+      "source": "핸드건 탄창",
+      "target": "手枪弹匣",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:18",
+      "source": "라이플 탄창",
+      "target": "步枪弹匣",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:19",
+      "source": "샷건 탄알",
+      "target": "霰弹",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:28",
+      "source": "중앙 복도 카드키",
+      "target": "中央走廊门卡",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:29",
+      "source": "MEL 카드키",
+      "target": "MEL门卡",
+      "status": "draft",
+      "minimum_res_capacity": 10,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:38",
+      "source": "관리 지시서",
+      "target": "管理指示",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:37",
+      "source": "2F 지도",
+      "target": "2F地图",
+      "status": "draft",
+      "minimum_res_capacity": 7,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:39",
+      "source": "신문 조각",
+      "target": "报纸残片",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:43",
+      "source": "반응 결과 프린트물",
+      "target": "反应结果打印件",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:33",
+      "source": "조직 세포 샘플",
+      "target": "组织细胞样本",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:36",
+      "source": "반응 실험 액체",
+      "target": "反应实验液",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:32",
+      "source": "2F 섹터 C 카드키",
+      "target": "2F C区门卡",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:40",
+      "source": "월터에게 보내는 메모",
+      "target": "给沃尔特的便条",
+      "status": "draft",
+      "minimum_res_capacity": 20,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:41",
+      "source": "월터의 수첩",
+      "target": "沃尔特手册",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:42",
+      "source": "로완 스웰의 수첩",
+      "target": "罗温·斯韦尔手册",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:30",
+      "source": "알파 샘플",
+      "target": "A样本",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:31",
+      "source": "베타 샘플",
+      "target": "B样本",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:34",
+      "source": "액체 합금",
+      "target": "液态合金",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:97",
+      "source": "B1 메인통제실 카드키",
+      "target": "B1主控室门卡",
+      "status": "draft",
+      "minimum_res_capacity": 20,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:44",
+      "source": "혈액 생성 촉진제",
+      "target": "造血促进剂",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:45",
+      "source": "인체 실험 보고서",
+      "target": "人体实验报告",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:46",
+      "source": "특수 액체",
+      "target": "特殊液体",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:47",
+      "source": "제인의 보안 카드",
+      "target": "简的安保卡",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:48",
+      "source": "B1-01 지도",
+      "target": "B1-01地图",
+      "status": "draft",
+      "minimum_res_capacity": 10,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:111",
+      "source": "제인의 지도 B1-02",
+      "target": "简的B1-02地图",
+      "status": "draft",
+      "minimum_res_capacity": 17,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:112",
+      "source": "제인의 지도 B2",
+      "target": "简的B2地图",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:50",
+      "source": "연구원 사진",
+      "target": "研究员照片",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:51",
+      "source": "한스의 연구 일지",
+      "target": "汉斯的研究日志",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:49",
+      "source": "작전 보고서",
+      "target": "行动报告",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:52",
+      "source": "경비대원의 수첩",
+      "target": "警卫的手册",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:54",
+      "source": "데이터 스틱 1",
+      "target": "数据棒1",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:55",
+      "source": "배수 처리실 카드키",
+      "target": "排水处理室门卡",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:58",
+      "source": "지미에게 남긴 메모",
+      "target": "给吉米的便条",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:53",
+      "source": "무기 연구실 카드키",
+      "target": "武器研究室门卡",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:60",
+      "source": "데이터 스틱 2",
+      "target": "数据棒2",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:56",
+      "source": "알렌의 보안 카드",
+      "target": "艾伦的安保卡",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:98",
+      "source": "피 묻은 보안 카드",
+      "target": "染血的安保卡",
+      "status": "draft",
+      "minimum_res_capacity": 17,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:61",
+      "source": "모니카의 편지",
+      "target": "莫妮卡的信",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:62",
+      "source": "데이터 스틱 3",
+      "target": "数据棒3",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:63",
+      "source": "군 전략 연구에 대한 편지",
+      "target": "军事战略研究信函",
+      "status": "draft",
+      "minimum_res_capacity": 24,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:57",
+      "source": "육각 금속 물체",
+      "target": "六角金属物",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:68",
+      "source": "B3 지도",
+      "target": "B3地图",
+      "status": "draft",
+      "minimum_res_capacity": 7,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:113",
+      "source": "B4 지도",
+      "target": "B4地图",
+      "status": "draft",
+      "minimum_res_capacity": 7,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:64",
+      "source": "디텍팅 센서 부품",
+      "target": "探测器零件",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:65",
+      "source": "데이터 스틱 4",
+      "target": "数据棒4",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:66",
+      "source": "데이터 스틱 5",
+      "target": "数据棒5",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:67",
+      "source": "데이터 스틱 6",
+      "target": "数据棒6",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:69",
+      "source": "데이터 스틱 7",
+      "target": "数据棒7",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:70",
+      "source": "감사 지침문",
+      "target": "审查指引",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:71",
+      "source": "데이터 스틱 8",
+      "target": "数据棒8",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:76",
+      "source": "데이터 스틱 S",
+      "target": "数据棒S",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:88",
+      "source": "데이터 스틱 S1",
+      "target": "数据棒S1",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:89",
+      "source": "데이터 스틱 S2",
+      "target": "数据棒S2",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:90",
+      "source": "데이터 스틱 S3",
+      "target": "数据棒S3",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:91",
+      "source": "데이터 스틱 S4",
+      "target": "数据棒S4",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:72",
+      "source": "동력 실린더 타입 A",
+      "target": "A型动力缸",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:73",
+      "source": "동력 실린더 타입 B",
+      "target": "B型动力缸",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:74",
+      "source": "동력 실린더 타입 C",
+      "target": "C型动力缸",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:75",
+      "source": "동력 실린더 타입 D",
+      "target": "D型动力缸",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:77",
+      "source": "데이터 스틱 9",
+      "target": "数据棒9",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:78",
+      "source": "B5 지도",
+      "target": "B5地图",
+      "status": "draft",
+      "minimum_res_capacity": 7,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:80",
+      "source": "데이터 스틱 10",
+      "target": "数据棒10",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:81",
+      "source": "데이터 스틱 11",
+      "target": "数据棒11",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:82",
+      "source": "비밀 전문",
+      "target": "秘密电报",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:83",
+      "source": "데이터 스틱 12",
+      "target": "数据棒12",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:99",
+      "source": "B5 남쪽 게이트 카드키",
+      "target": "B5南门门卡",
+      "status": "draft",
+      "minimum_res_capacity": 21,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:84",
+      "source": "TOMCAT 활성제",
+      "target": "TOMCAT活化剂",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:85",
+      "source": "데이터 스틱 H",
+      "target": "数据棒H",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:86",
+      "source": "데이터 스틱 B",
+      "target": "数据棒B",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:87",
+      "source": "켈리의 수첩",
+      "target": "凯莉的手册",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:92",
+      "source": "동력배치 설명",
+      "target": "动力配置说明",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:93",
+      "source": "동력배치 설명 N",
+      "target": "动力配置说明N",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:94",
+      "source": "동력배치 설명 H",
+      "target": "动力配置说明H",
+      "status": "draft",
+      "minimum_res_capacity": 15,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:95",
+      "source": "데이터 폰",
+      "target": "数据终端",
+      "status": "draft",
+      "minimum_res_capacity": 9,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:96",
+      "source": "데이터 스틱 B1",
+      "target": "数据棒B1",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:100",
+      "source": "근무지 이탈 주의 메모",
+      "target": "离岗警告便条",
+      "status": "draft",
+      "minimum_res_capacity": 21,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:101",
+      "source": "동력실 근무 명령서",
+      "target": "动力室值班命令",
+      "status": "draft",
+      "minimum_res_capacity": 18,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:102",
+      "source": "데이터 스틱 X",
+      "target": "数据棒X",
+      "status": "draft",
+      "minimum_res_capacity": 13,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:103",
+      "source": "유충 관찰 보고서",
+      "target": "幼虫观察报告",
+      "status": "draft",
+      "minimum_res_capacity": 16,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:104",
+      "source": "브렉의 일지",
+      "target": "布雷克日志",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:105",
+      "source": "데이터 스틱 B2",
+      "target": "数据棒B2",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:106",
+      "source": "데이터 스틱 B3",
+      "target": "数据棒B3",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:107",
+      "source": "데이터 스틱 B4",
+      "target": "数据棒B4",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:108",
+      "source": "데이터 스틱 B5",
+      "target": "数据棒B5",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:109",
+      "source": "데이터 스틱 B6",
+      "target": "数据棒B6",
+      "status": "draft",
+      "minimum_res_capacity": 14,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:110",
+      "source": "알렌의 편지",
+      "target": "艾伦的信",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:114",
+      "source": "B6 지도",
+      "target": "B6地图",
+      "status": "draft",
+      "minimum_res_capacity": 7,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:115",
+      "source": "도니의 일지",
+      "target": "唐尼的日志",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    },
+    {
+      "id": "id:116",
+      "source": "지하 터미널",
+      "target": "地下终端",
+      "status": "draft",
+      "minimum_res_capacity": 11,
+      "source_context": "RES/SUBSYS.RES:ITEM.SCR",
+      "note": "原子关联名；最终容量以含ELF的引用清单校验为准"
+    }
+  ]
+}

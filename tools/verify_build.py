@@ -93,9 +93,18 @@ def modified(original, image, manifest):
     require(system.read("FONT.FNT") == patched_system.read("FONT.FNT"), "FNT mapping/metrics changed")
     glyphs = {g.code: g for g in parse_fnt(system.read("FONT.FNT"))}
     textures = {resource_hash(f"FONT_{n}.TM2"): system.get(f"FONT_{n}.TM2") for n in range(1, 9)}
-    protected = set(manifest["font"]["protected_jamo_codes"])
+    policy = manifest["font"].get("protection_policy", "poc-source-text")
+    protected = set(manifest["font"].get("protected_codes", manifest["font"].get("protected_jamo_codes", [])))
+    if policy == "source-text-survey":
+        from mysticnights.font_usage import collect_protected_codes
+        actual_protected, _ = collect_protected_codes(original.path, load_version(ROOT / "assets/game-version.json"))
+        require(protected == set(actual_protected), "Font protection survey mismatch")
+    elif policy != "poc-source-text":
+        raise ValueError(f"Unknown font protection policy: {policy}")
     for code in mapping.values():
-        require(0xA4A1 <= code <= 0xA4FE and code not in protected, "PoC overwrote a protected or non-Jamo glyph")
+        require(type(code) is int and code in glyphs and code > 127 and code not in protected, "Overwrote protected or unknown font glyph")
+        if policy == "poc-source-text":
+            require(0xA4A1 <= code <= 0xA4FE, "Legacy PoC overwrote a non-Jamo glyph")
         glyph = glyphs[code]
         member = textures[glyph.texture_hash]
         texture = system.read(member)

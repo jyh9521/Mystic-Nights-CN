@@ -1,0 +1,12 @@
+{
+  "format": "localization-catalogue",
+  "version": 1,
+  "locale": "zh-CN",
+  "profile": "partial",
+  "files": [
+    "dialogue.json",
+    "items.json",
+    "documents.json",
+    "interface.json"
+  ]
+}

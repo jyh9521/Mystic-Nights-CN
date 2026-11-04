@@ -22,7 +22,7 @@
 这还是头一回。
 ```
 
-`poc.json` 用 `text_type` 区分 `ui_label`、`system_message`、`item_description`、`dialogue` 和 `cutscene`。对应规则保存在 `config.json`，不可只在人工备注中执行。
+`text/*.json`用`text_type`区分`ui_label`、`system_message`、`item_description`、`dialogue`、`cutscene`和`document`。日记、书信等文档正常使用书面标点，表头/配方保留原换行；系统提示与道具说明遵守上述规则。对应规则保存在`config.json`，构建和独立校验同时执行。
 
 ## 措辞
 
