@@ -1,5 +1,41 @@
 # 汉化构建：离线验收
 
+## 2026-11-04 界面与职员表续作
+
+源码提交 `9f06afab6aae6b3f01fd0fe8ec3466c147c6d8a8`，分支 `master`。修改 `graphics.json:artwork_files`、图片槽的 `install` / `disposition` / `artwork_rectangles` 及其源哈希绑定差分。本轮新增30张界面贴图、146项文字、70个物理成员；累计37张、189项、77个物理成员。前7张已修正残影的图片差分逐字节保持。正文、字体、关联名称和网络文字输出保持。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| 当前测试ISO | `b6631d64f19363bb90e916ad71fcfb3f6515ebda495e1f36f08f5ed22d4c3948` |
+| 可逆差分 | `1bac6066d46be0b48cf51d50baea912140117015e646a485a1db74f7250961ac` |
+| manifest | `c9d6bda4b7d4ccdb8f7f5a4fd728ee8bef76dfd6958249449ca4fe1ca5294e3a` |
+| 回滚脚本 | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+
+ISO为1,696,530,432字节；差分6,260,043字节、13825个区间。完整命令、输入、字面输出、退出码及绝对交付路径保存于本地 `build/full-text/VERIFICATION.txt`。
+
+全部下列检查退出0：
+
+```text
+Ran 254 tests in 1.428s
+OK
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2164
+GRAPHICS PASS translated=404 installed=189 pending=213 texture_members=77 save_metadata=1
+FULL_PATHS PASS names=113 references=698 network_strings=270 network_glyphs=293 agreement=1 extra_interface=38
+MODIFIED PASS strings=2164 glyphs=1422 changed_files=52 unchanged_files=672 lba=unchanged
+NATIVE PREVIEW PASS new_textures=30 source_palette_readback=identical
+REBUILD PASS files=6 iso=identical patch=identical manifest=identical previews=identical rollback_script=identical
+CLEANUP PASS files=6 bytes=6789551696
+```
+
+正向差分在隔离副本得到相同修改哈希；实际执行可执行 `ROLLBACK.sh` 后恢复原盘哈希，恢复副本再次通过全部2164源槽基线检查。原盘未改，交付镜像保留修改状态。仅做离线验证，没有启动游戏或模拟器。
+
+干净Git归档再次跑254项测试、构建和完整资源验证；ISO、差分、manifest、两种字库预览和回滚脚本6项逐一同哈希。本轮30张原生PNG与正式构建中的差分回读逐像素相同；37份图片差分可逆，调色板、头部和允许文字区之外保持不变。新增通用图片导入器另用真实纹理跑命令行验证，6个新测试覆盖原盘身份、尺寸、允许区域、透明像素和重复调色板颜色索引。
+
+清理前逐一核对路径、尺寸、哈希，删除正向/回滚/重建副本和上一版ISO共4份、重建源码ZIP及1张未采用的生成稿，共6,789,551,696字节。保留原盘、当前测试ISO、已有显示反馈的PoC和必要研究记录；没有清理模拟器目录。
+
+目前仍有213项场景／画廊文字及NETGUI背景标题待原风格重绘，模糊微字按既定决定保留。原生预览不等于玩家美术或完整流程验收；手动检查项见 [TESTING.md](TESTING.md)。
+
 ## 2026-11-04 全文与七图重绘（残影修正）
 
 源码提交 `9ae133001157535350df15d81fe0311e7312b880`。主目录2034条非空译文全部完成；实际正文2164槽、主字形1422，113名称/698静态引用、270网络字段/293映射及完整协议。图片只安装7张原风格重绘、43项文字，359项待重绘、2个技术标识保留；旧方块覆盖输出撤下。两张菜单图最终完整重建旧英文文字底纹和透明字层，不只清除亮色笔画。
