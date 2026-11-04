@@ -187,6 +187,21 @@ def verify_full_paths(original, image, manifest, ranges, *, font_path: Path | No
                         start = ref["offset"] + info["pixel_offset"] + row * info["width"] + x
                         ranges.setdefault(ref["resource"], []).append((start, start + width))
         print(f"GRAPHICS PASS translated={len(graphics['catalogue']['entries'])} installed={len(actual_report['installed_slots'])} pending={len(actual_report['pending_art_restoration_slots'])} texture_members={actual_report['changed_texture_members']} save_metadata={len(full.get('save_metadata', {}).get('catalogue', {}).get('entries', []))}")
+    if full.get("raw_images"):
+        from mysticnights.raw_images import build_raw_images
+        raw = full["raw_images"]
+        expected_raw, raw_report = build_raw_images(original, raw["recipe"], raw["catalogue"])
+        require(raw_report == raw["report"], "Raw image coverage/report mismatch")
+        for row in raw["recipe"]["images"]:
+            resource = row["resource"]
+            require(image.read(resource) == expected_raw[resource], f"Raw image replay mismatch: {resource}")
+            width = row["profile"][0]
+            for slot in row["slots"]:
+                x, y, w, h = slot["rect"]
+                for yy in range(y, y + h):
+                    start = (yy * width + x) * 3
+                    ranges.setdefault(resource, []).append((start, start + w * 3))
+        print(f"RAW_IMAGES PASS installed={len(raw_report['installed_slots'])} resources={len(expected_raw)}")
     print(f"FULL_PATHS PASS names={len(targets)} references={count} network_strings={len(auxiliary['network'])} network_glyphs={len(network['mapping'])} agreement=1 extra_interface={len(auxiliary['extra_interface'])}")
 
 

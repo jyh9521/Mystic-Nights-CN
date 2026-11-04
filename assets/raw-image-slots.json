@@ -1,0 +1,13 @@
+{
+  "format": "raw-image-slots",
+  "version": 1,
+  "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "images": [
+    {
+      "resource": "NETGUI/BG.RGB",
+      "sha256": "b23b8757334972d171fac4bc49d0550003150dca177322d8400007a754536eb8",
+      "profile": [640, 448, 3],
+      "slots": [{"id": "NETGUI/BG.RGB/title", "source": "MYSTIC NIGHTS", "rect": [7, 195, 225, 29]}]
+    }
+  ]
+}

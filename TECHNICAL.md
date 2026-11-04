@@ -41,6 +41,7 @@ Jeremy DeCola 的 [Mystic Nights Translation](https://github.com/jeremydecola/My
 | `NETGUICD.ELF`、`NETGUI/KOREAN.PF` | 网络设置 | 270字段与所需PF中文字形同步生成 |
 | `DATA/AGREE.TXT` | 服务协议 | 全部5章17条及结束标记 |
 | TIM2图片文字 | 贴图显示路径 | 独立图像清单，不混入正文条数 |
+| `NETGUI/BG.RGB` | 640×448 RGB24 联网背景 | 独立 raw-image 配方和可逆像素差分，标题已写入 |
 
 原盘有724个文件，其中209个 RES 严格解析到文件末尾；179个 SCR 的显示原文提取后原样回填可做到逐字节一致。
 

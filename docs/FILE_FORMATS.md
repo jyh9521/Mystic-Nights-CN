@@ -105,7 +105,15 @@ PF不是TTF。KOREAN.PF为4,251,264字节，47个子字体；韩文部分为26×
 
 游戏贴图由三种已观察到的单图、线性TIM2配置组成：RGBA32，以及8bit索引配16bit/32bit CLUT。`graphics.py`只对配方明确支持的配置回填；每张原纹理和每个编辑矩形均绑定hash。清单保存所有物理副本，等长重建保留原尺寸、头部、调色板及矩形外像素。完整图像覆盖与背景处理方式见[图像文字](GRAPHICS_TEXT.md)。
 
-## 稀疏补丁 v1 — 本项目定义
+## NETGUI 原始背景与 RGB24 图像差分 — Verified / 本项目定义
+
+`NETGUI/BG.RGB` 为 640×448、逐行 RGB24，无文件头，860160 字节；原 SHA-256 为 `b23b8757334972d171fac4bc49d0550003150dca177322d8400007a754536eb8`。像素 `(x,y)` 的 RGB 位于 `(y*640+x)*3`。离线按该布局解码得到完整联网背景；标题位置 `[7,195,225,29]`，不是 TIM2，也不经过 CLUT。
+
+`assets/raw-image-slots.json` 保存来源、尺寸、文字 ID 与允许矩形；`locales/<locale>/raw-images.json` 保存目标文字和差分文件。`rgb24-artwork-delta` v1 保存完整源/新 SHA、长度、`profile=[width,height,3]`、译文绑定和升序不重叠的 `byte_offset/before/after` 数组。工具拒绝改写矩形外字节、未知来源、越界/重叠、译文漂移、空差分和错误输出哈希。反向交换 before/after 并复验原哈希。
+
+普通构建重放已提交差分，不读取本机创作 PNG；修改版验证从原盘独立重放，并检查所有其他像素、文件长度及 ISO LBA。与 U508 系列图像的亮度/缩放关系仅为近似观察，不作为精确背景重建依据。
+
+## 整盘稀疏补丁 v1 — 本项目定义
 
 ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压其中任何路径。清单记录format/version、原/新全文件size及SHA-256、升序不重叠offset/size、before/after成员名和SHA-256。
 

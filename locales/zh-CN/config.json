@@ -41,5 +41,6 @@
     }
   ],
   "save_metadata": "save-metadata.json",
-  "graphics": "graphics.json"
+  "graphics": "graphics.json",
+  "raw_images": "raw-images.json"
 }

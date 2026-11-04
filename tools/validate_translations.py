@@ -56,6 +56,7 @@ def validate_project(locale_dir: Path, image=None) -> dict:
     auxiliary_counts = {}
     extra_targets = []
     graphics_coverage = {}
+    raw_coverage = {}
     if catalogue["profile"] == "full-text":
         from mysticnights.auxiliary import read_auxiliary
         auxiliary = read_auxiliary(locale_dir, config, json.loads((ROOT / "assets/auxiliary-text-sources.json").read_text(encoding="utf8")), image)
@@ -92,6 +93,15 @@ def validate_project(locale_dir: Path, image=None) -> dict:
         graphics_coverage = {"translated": len(graphic_ids), "selected_for_insertion": sum(bool(r.get("install")) for r in slots),
                              "retained_identifiers": sum(r.get("disposition") == "retain-identifier" for r in slots),
                              "pending_art_review": sum(not r.get("install") and r.get("disposition") != "retain-identifier" for r in slots)}
+        if config.get("raw_images"):
+            from mysticnights.raw_images import validate_raw_images, build_raw_images
+            raw_recipe = json.loads((ROOT / "assets/raw-image-slots.json").read_text(encoding="utf8"))
+            raw_catalogue = load_graphics_catalogue(locale_dir / config["raw_images"])
+            if raw_catalogue["locale"] != config["locale"]:
+                raise ValueError("Raw image locale mismatch")
+            raw_coverage = validate_raw_images(raw_recipe, raw_catalogue)
+            if image is not None:
+                build_raw_images(image, raw_recipe, raw_catalogue)
     if image is not None:
         recipe = json.loads((ROOT / "assets/elf-text-slots.json").read_text(encoding="utf-8"))
         expected = prepare_catalogues(image, recipe, config["locale"])
@@ -122,6 +132,7 @@ def validate_project(locale_dir: Path, image=None) -> dict:
     return {**catalogue["coverage"], "glossary_terms": len(glossary), "canonical_item_names": len(identifiers),
             "auxiliary_translated_fields": auxiliary_counts,
             "graphics_text": graphics_coverage,
+            "raw_images": raw_coverage,
             "source_metadata_checked": source_count,
             "required_main_glyphs": len({c for r in catalogue["entries"] + names["entries"] + extra_targets for c in r["target"] if ord(c) >= 128}),
             "required_glyphs_with_names": len({c for r in catalogue["entries"] + names["entries"] for c in r["target"] if ord(c) >= 128})}

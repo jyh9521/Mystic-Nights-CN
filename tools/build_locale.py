@@ -98,6 +98,14 @@ def main() -> None:
             raise ValueError("Graphics locale/original version mismatch")
         replacements, graphics_report = build_graphics(image, graphics_recipe, graphics_catalogue, font_path, replacements)
         full_details["graphics"] = {"recipe": graphics_recipe, "catalogue": graphics_catalogue, "report": graphics_report}
+        if config.get("raw_images"):
+            from mysticnights.raw_images import build_raw_images
+            raw_recipe = json.loads((ROOT / "assets/raw-image-slots.json").read_text(encoding="utf8"))
+            raw_catalogue = load_graphics_catalogue(locale_dir / config["raw_images"])
+            if raw_catalogue["locale"] != args.locale or raw_recipe["source_iso_sha256"] != version["iso"]["sha256"]:
+                raise ValueError("Raw image locale/original version mismatch")
+            replacements, raw_report = build_raw_images(image, raw_recipe, raw_catalogue, replacements)
+            full_details["raw_images"] = {"recipe": raw_recipe, "catalogue": raw_catalogue, "report": raw_report}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     parent = args.output.parent.resolve()
     # Only a newly allocated sibling directory is ever cleaned on failure.

@@ -1,0 +1,7 @@
+{
+  "format": "raw-image-translations",
+  "version": 1,
+  "locale": "zh-CN",
+  "artwork_files": ["artwork/netgui-bg-rgb.json"],
+  "entries": [{"id": "NETGUI/BG.RGB/title", "source": "MYSTIC NIGHTS", "target": "诡秘之夜", "status": "reviewed"}]
+}
