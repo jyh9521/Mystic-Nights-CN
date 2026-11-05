@@ -41,3 +41,7 @@ python -X utf8 tools/install_texture_pack.py --rollback --receipt build/hd-font-
 - PNG 使用原始 PS2 RGBA 语义，不把 alpha 乘二。主字体白色峰值为页1..7的 `(148,148,148,106)` 和页8的 `(170,170,170,110)`。预览合成才采用 PS2 显示 alpha；预览不冒充游戏截图。
 
 依据固定版本的 [替换加载与导出](https://github.com/PCSX2/pcsx2/blob/v2.9.155/pcsx2/GS/Renderers/HW/GSTextureReplacements.cpp)、[纹理 hash](https://github.com/PCSX2/pcsx2/blob/v2.9.155/pcsx2/GS/Renderers/HW/GSTextureCache.cpp)、[排列查表](https://github.com/PCSX2/pcsx2/blob/v2.9.155/pcsx2/GS/GSTables.cpp)。代码独立实现，不复制模拟器源文件。
+
+### 后续完整内床修正
+
+主菜单前景12层保持旧字稿不变，完整119×16内床恢复为无字玻璃。新原生索引产生新的texture hash，因此必须安装新菜单PNG；只替换预览不够。旧菜单PNG由此前安装收据做受保护撤销，再安装新键；8页主字库与其他游戏贴图不动。

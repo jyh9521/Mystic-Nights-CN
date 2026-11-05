@@ -309,6 +309,18 @@
       "tool": "built-in imagegen",
       "prompt": "Use case: precise-object-edit / restoration clean plate. Edit target: the exact supplied original PS2 industrial door texture atlas. Remove ONLY the white word CAUTION near the center of the cyan-lit door (approximately x45..84,y62..77 of the 128x128 source), reconstructing the ORIGINAL softly cyan-lit metallic door shading underneath those letters. Keep the tiny unreadable white microprint to its right/below exactly as original; keep door frames, black recesses, the dark red side panel, small vent above the word, blue horizontal status light below, upper red lamp and all other atlas regions exactly unchanged. No new wording is needed: this output is a clean plate only. IMPORTANT: no flat black/blue rectangle, no new inset plaque, no slab, no border behind where CAUTION was. The original continuous elliptical cyan illumination must flow naturally through the removed lettering. Preserve native worn low-resolution material and soft original illumination, not a clean modern redesign. Output the original atlas with only CAUTION removed.",
       "selection": "Original-material old/new-ink masks only; not a full rectangular panel replacement; exact source CLUT and alpha preserved"
+    },
+    {
+      "id": "menu-complete-letter-free-interior-beds",
+      "tool": "built-in imagegen",
+      "prompt": "Precise restoration clean plate for the EXACT four original PS2 red metal/glass menu capsules. Remove ALL text and all pale/gold/dark outlines, drop shadows and typographic-looking dark underprinting. Restore continuous red/amber illuminated textured glass with a narrow smoky gray upper ledge and dark lower band; no recognizable letters and no flat rectangle. Preserve silver perimeter, pointed end caps, lower rim, positions and each row lighting. Output four clean blank capsules only.",
+      "selected_output_sha256": "5b972a8d64416c80937ff1b4f7d7f984917a09b29a17fb92c01db2612d635d47",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ],
+      "registration": "Complete4x119x16interior beds; source text-free donor row alpha, no old glyph alpha. New generation used only inside beds. 123456 outside indices, originalCLUT/header and all12approvedforegroundRLElayers unchanged. Original pattern existing is not an excuse to retain unwanted letter-shaped residue.",
+      "supersedes_material_policy": "bright-face-only original-material masking",
+      "hd_recipe": "locales/zh-CN/hd-artwork.json"
     }
   ]
 }
