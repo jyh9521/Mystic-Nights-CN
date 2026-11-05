@@ -11,6 +11,7 @@ Python 3.11+；依赖锁定在 `requirements.txt`。字体为按 revision、URL 
 ```powershell
 python -m pip install -r requirements.txt
 python -X utf8 tools/fetch_font.py
+$env:PYTHONPATH = 'src'
 python -X utf8 -m unittest discover -s tests
 python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
 python -X utf8 tools/validate_translations.py --iso "[full2]미스틱 나이츠(K).iso"

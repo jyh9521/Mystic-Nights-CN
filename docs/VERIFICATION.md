@@ -13,6 +13,8 @@
 
 四件仍是build/full-text中的ISO、DIFF_FILE.mnp.zip、VERIFICATION.txt、可执行ROLLBACK.sh。350测试、源/修改版全盘验证、隔离正反向与干净源码重建的原样命令/输出、四个绝对路径及当前推送身份写入本地VERIFICATION。后文保留历史状态，f4e6bfbc不再是当前交付。
 
+干净归档源码 `bddc245dc5d1fe10580d3ec4c5dd7ae451a1a05d`：350测试通过，26件输出（11核心、13字体包、2菜单包）与交付件逐字节一致。正向副本与修改版、回滚副本与原盘均完整字节比较一致。清理463件重复/临时文件、6,914,795,017字节；当前镜像、原盘、安装撤销包和全部验证日志保留。
+
 ## 2026-11-05：恢复既有字稿与反馈修正（历史，完整内床随后修正）
 
 分支 `master`。原盘SHA `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b`，ISO长度1,696,530,432，差分24021区间。当前四件为 `build/full-text/Mystic-Nights-zh-CN-full-text.iso`、`DIFF_FILE.mnp.zip`、`VERIFICATION.txt`、可执行 `ROLLBACK.sh`。
