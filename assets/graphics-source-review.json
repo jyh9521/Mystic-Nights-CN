@@ -2,7 +2,7 @@
   "format": "graphics-source-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "review_basis": "Closed original TIM2 inventory plus feedback c7 source-bound revision; two explicit original restorations; offline artwork proof, not game acceptance.",
+  "review_basis": "Closed original TIM2 inventory plus bounded feedback e004 revision:28 text-bearing TIM2s modified,2 prior explicit original restorations unchanged. Offline source/decoded-native evidence, not game/user artistic acceptance.",
   "summary": {
     "unique_textures": 1140,
     "physical_members": 2634,

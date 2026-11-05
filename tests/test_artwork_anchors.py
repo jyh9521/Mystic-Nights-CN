@@ -59,6 +59,34 @@ class AnchorGapTests(unittest.TestCase):
         with self.assertRaises(ValueError): check_anchor_gaps(Image.new('RGBA', self.im.size), [self.check])
         with self.assertRaises(ValueError): check_anchor_gaps(self.im, [self.check, self.check])
 
+    def test_cross_axis_alignment_is_measured_separately_from_gap(self):
+        c = deepcopy(self.check)
+        c['max_cross_axis_center_error_twice'] = 1
+        r = check_anchor_gaps(self.im, [c])[0]
+        self.assertEqual([m['cross_axis_center_error_twice'] for m in r['members']], [0, 0])
+
+    def test_equal_gaps_and_sizes_do_not_hide_vertical_misalignment(self):
+        c = deepcopy(self.check)
+        c['max_cross_axis_center_error_twice'] = 1
+        c['members'][1]['anchor'][1] += 1
+        with self.assertRaisesRegex(ValueError, 'cross-axis center'):
+            check_anchor_gaps(self.im, [c])
+
+    def test_vertical_spacing_can_check_horizontal_alignment(self):
+        c = deepcopy(self.check); c['axis'] = 'y'
+        c['max_cross_axis_center_error_twice'] = 1
+        for m, x in zip(c['members'], [5, 55]):
+            m['anchor'] = [x, 21, 20, 8]
+        self.assertEqual(check_anchor_gaps(self.im, [c])[0]['gaps'], [3, 3])
+        c['members'][1]['anchor'][0] += 1
+        with self.assertRaisesRegex(ValueError, 'cross-axis center'):
+            check_anchor_gaps(self.im, [c])
+
+    def test_invalid_cross_axis_alignment_tolerance_is_rejected(self):
+        for value in [True, -1, 201, '1', None]:
+            c = deepcopy(self.check); c['max_cross_axis_center_error_twice'] = value
+            with self.assertRaises(ValueError): check_anchor_gaps(self.im, [c])
+
 
 if __name__ == '__main__':
     unittest.main()

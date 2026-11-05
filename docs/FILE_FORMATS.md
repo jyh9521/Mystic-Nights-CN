@@ -164,3 +164,6 @@ ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压�
 `assets/image-review-order.json`以原盘SHA绑定1140个唯一TIM2源hash；必须与闭合源清单完全相等且无重复。恢复原图只改变分类，不改变编号。筛查构建器按成员序号读写重复名称，避免同名成员错误回读。
 
 图片质量清单的`material_regressions`可声明`expectation: preserved|changed`，默认保留旧`changed`语义；源样本hash始终先验。页脚/复选框差分可声明`anchor_gap_groups`：轴、源图图标矩形、字面RGBA选择器、前后关系、最小间距和差异容差；正向构建及最终ISO回读均检查，反向恢复仍按源/新hash和范围验证。
+## 图片锚点的跨轴对齐补充
+
+`anchor_gap_groups` 可选 `max_cross_axis_center_error_twice`，为非负整数，单位是半像素。每项既按 `axis` 检查文字与原图标边缘间距，也比较另一轴的文字实测边界中心与 `anchor=[x,y,w,h]` 中心。省略此字段保持旧配方行为；显式 null、布尔和越界值拒绝。锚点坐标来自源图，非 OCR 推测，不改变图标像素。此规则属于通用像素核验，文字颜色、区域、允许误差仍归 locale 美术数据。

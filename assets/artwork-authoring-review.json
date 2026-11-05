@@ -544,6 +544,112 @@
       "registration": "91 rows in assets/artwork-feedback-c7.json; shared native faces, continuous palette color changes, footer/checkbox anchor checks; glyph raster for three ID labels uses the locked project font at one common10px em",
       "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
       "important_alpha_rule": "RGBA master must be composited before quantization to an opaque CLUT; hidden RGB under alpha0 is not visible ink and must not become black/Latin residues."
+    },
+    {
+      "id": "feedback-e004-menu-material",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target: attached original PS2 game menu capsule texture, enlarged nearest-neighbor for inspection. Produce the SAME three horizontal red/orange illuminated chrome capsule buttons at exactly the same framing and relative locations. Remove ALL NEW GAME / LOAD GAME / NETWORK GAME lettering AND their bevel, cast shadow, dark reflections or traces. Also clean any letter-like dark forms from the inside glass so no writing or fragments remain anywhere inside a button. Reconstruct continuous richly detailed orange/red glowing glass: nuanced refracted gradients, ember-like mottling, subtle horizontal luminous streaks. Keep the precise original thin lavender/chrome border, angular silver corner endcaps, dark lower glass, orange horizontal outside glow, and original per-row lighting. Not flat fills, not black rectangles, no labels, no new symbols. Preserve original 2005 science-fiction horror material and restrained old-game texture detail; no redesign. Entire output is a blank text-free restoration donor, no captions, no grid, no margin. Restore interiors naturally without changing outer button silhouettes.",
+      "transparent_background": false,
+      "selected_output_sha256": "fad4fe529dbea5a2440cc5d9d8cb766ca0cf5cdfa17c76eac2abec78a7bad900",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-capsule-material",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target: original game texture sheet with 8 rows, 2 columns of science-fiction capsule buttons. ONLY remove ALL writing and letter shadows and all letter-like dark reflection fragments throughout the glass interior of every capsule. Left column cold cobalt/azure glass and steel border, right column hot vermilion/orange glass and copper chrome border. Reconstruct text-free glass with natural luminous gradients, restrained abstract fine refraction and irregular mottling, brighter upper glass and darker lower glass. There MUST be no EASY NORMAL HARD character names or any other letters, no dark ghost-letter shapes anywhere. Preserve exact two-column eight-row arrangement, black/transparent outside backdrop, precise capsule silhouettes, slim chrome rims, angular triangular silver/orange endcaps, horizontal top highlights, color/lighting and proportions. Original 2005 horror-game visual style. No redesign, no flat patch rectangle. Full canvas tightly framed to original sheet. Each interior should be completely blank of typography, not a blurred remnant.",
+      "transparent_background": false,
+      "selected_output_sha256": "3003227ccbb6885a28fd8e2728685f63b97dfa9991f71cf1f1e50dbb3a20d35e",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json",
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-capsule-words",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization / background-extraction. Supporting style reference: original PS2 capsule-button typography, NOT an edit to the glass. Create ONLY eight separate Chinese word sprites, in one vertically stacked column, one phrase per row, on a genuinely TRANSPARENT alpha background, no buttons and no rectangles. Exact texts top to bottom: 简单, 普通, 困难, 詹妮弗, 布鲁斯, 艾伦, 亨利, 弗兰克. Source style: crisp condensed bold Chinese industrial lettering with narrow 3D chamfer, silver/ivory face, steel-gray side bevel and fine near-black outer keyline, like original EASY/NORMAL labels. Small restrained metallic highlight at top; no glow. Every word uses the SAME character height and same width per em; three-character names must simply be 1.5 times the width of two-character names. All strokes complete and clearly readable, generous interior counters: 易, 普, 困, 詹, 妮, 弗, 布, 鲁, 斯, 艾, 伦, 亨, 利, 兰, 克 must each be correct, no distressed missing strokes. Do not make a chunky thick outline or blurry drop shadow. Uniform face weight. Center each phrase horizontally on its row, evenly spaced eight rows with ample transparent padding between words. Letterforms faithful to source screenshot's beveled condensed display type, not flat system-font labels. Output only text cutouts with actual alpha transparency, no checkerboard, no white/black canvas, no guide lines, no extra letters, no punctuation.",
+      "transparent_background": true,
+      "selected_output_sha256": "0789d38852fe54ed39a3a9bdb585fc761672e1005db2655bae0339fc87df7934",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-capsule-names",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Style reference is original 2005 PS2 industrial menu typography in attached sheet. Create a typography asset ONLY: five separate phrase cutouts vertically stacked in ONE column. Exact text, top to bottom: 约翰, 迈克尔, 卢克, 凯莉, 简. All characters correct and complete (简 has 竹 on top and 间 below). Same em size, uniform face height for every character; three-character 迈克尔 is 1.5 times the width of two-character words, 简 is one em. Condensed bold but fully open clear counters, silver/ivory face with subtle small steel-gray chamfer and thin near-black keyline, restrained source-game metallic bevel. No gigantic chunky outlines. No glow, no drop shadow cloud, no pedestal, no material background. Each phrase centered horizontally with generous row spacing. IMPORTANT genuinely TRANSPARENT alpha background everywhere except exact letter silhouettes and thin bevel, including all interior holes. No black or gradient backdrop and no checkerboard. Preserve this as separate crisp letter sprites for compositing onto the original capsule UI. No capsules, icons, captions, other words or punctuation.",
+      "transparent_background": true,
+      "selected_output_sha256": "2f3eb75ff86d79a9a056f43f5de162ac821e5d9193386ec94ac8aab0eb3ac1ca",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-detector-material",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target is the attached close-up of original game sci-fi door label material, a warm dark maroon/black metal slab with two side-by-side rectangular plaques on top and small label in lower left. Remove ALL the text DETECTOR ROOM in both plaques and UNLOCK in the lower left, together with their shadows, tiny fragments and reflections. Leave completely blank dark warm metal surfaces under the text. Preserve source color, very subtle texture grain, original red edge lighting, center vertical seam and horizontal brace exactly where they are. No new shapes, no new frame, no letters, no writing. No flat black rectangle pasted on top. A natural restoration of this exact material, not a redesign. Full-bleed original crop, no added margins.",
+      "transparent_background": false,
+      "selected_output_sha256": "49d65bf1a7d3370cd32978959ef2da51e532282109c79945f12b9fb3e0010c42",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c8b4f0f32aa6.json",
+        "locales/zh-CN/artwork/07073c970232.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-random-material",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target: original square PS2 game thumbnail showing four photographs of dim cyan/red science-fiction laboratory corridors, a thin luminous white vertical ellipse, and blue 3D word RANDOM across the center. Remove ONLY the word RANDOM, its dark edge and bevel and shadow completely. Restore the ORIGINAL laboratory architecture naturally behind all letter silhouettes, using continuity with visible source surroundings: tiled floor, door, control panels. Keep all four room photographs, the red and cyan lighting, original perspective, every visible wall, light, floor tile and equipment identity, and the thin white ellipse in EXACT same position. No invented text or panels, no blur smear, no pasted rectangle, no doubled equipment, no new doors. Restore occluded parts of the ellipse with smooth continuation where letters covered it. No lettering anywhere. Preserve old 2005 gritty low-resolution game art, don't modernize or change composition. Tight full-bleed original 1:1 square framing.",
+      "transparent_background": false,
+      "selected_output_sha256": "465c6c2006a4b431cb33fa4a73819b7615813ef1c1918f458ef01934f8bc2de4",
+      "usage": "Rejected silhouette-only photo donor; coherent localized bed used instead",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "feedback-e004-random-word",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: background-extraction / text-localization. Target reference: game thumbnail with Chinese word 随机 in large cyan-blue extruded lettering. Extract and redraw ONLY this exact two-character word 随机 as a complete clean text sprite on genuinely TRANSPARENT background. Retain original lettering design: tall condensed industrial Chinese, luminous flat cyan face at top fading to saturated electric blue at bottom, thin steel-blue bevel, dark navy side extrusion slightly to lower-right, subtle bright edge. Both glyphs have equal height and stroke weight and legible open internal counters. Text verbatim: 随机. No other text. Preserve character design, proportions and clean cool-blue palette from reference; no huge black outline, no blur, no glow cloud. Remove every bit of the photographic laboratory background and white ellipse. Transparent alpha outside exact typography including all holes between strokes, no checkerboard or gradient backdrop. Center word with generous transparent padding on all sides.",
+      "transparent_background": true,
+      "selected_output_sha256": "602e22b5c22fe8ebe001feb4e19d27aad282249b75d41a882827a9a8a114dd08",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e9c6c44b4f.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-caution-material",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target: small enlarged original game wall light crop. Remove ONLY the word CAUTION on the left, including every old letter edge and shadow. Restore the same softly lit cyan/steel-blue wall material underneath, with smooth continuous original spotlight falloff and subtle original grain. Keep the two right/bottom white microprint marks unchanged, same positions, size, color, and the original lamp illumination and framing. No rectangle, no new lettering, no glow added, no new objects. The crop must remain identical outside the original CAUTION word bed. Full original framing with no margins.",
+      "transparent_background": false,
+      "selected_output_sha256": "eef1a98d385a561471da93c849885c5025c0b65709872fe2c64d05ac1f661a22",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/f369593e7f10.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-random-localized",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit target Image1 is ORIGINAL square 2005 PS2 game thumbnail: four exact photographs of laboratory corridors, white vertical ellipse, and old blue word RANDOM. Supporting insert Image2 is only the desired Chinese 随机 typography cutout. Replace RANDOM with exact Chinese 随机 using Image2's cool cyan-to-blue 3D display style, around the same original 65px-equivalent height, horizontally centered. Fully remove old Latin word, dark outline, shadow and fragments. IMPORTANT restore the laboratory photograph behind the old word as a coherent seamless continuous scene; no rectangle, smears, dark leftover Latin forms, isolated panels, random white bars, duplicate door handles or abrupt seams. Preserve the original four photographs, wall/floor/equipment layout and perspective, original cyan/red illumination, and exact narrow white ellipse. Do not invent new rooms or move the ellipse. New Chinese word must be clearly legible, clean and complete, with open counters and restrained navy bevel. Two Chinese glyphs use consistent height and weight. Nothing else changes. Full-bleed original square framing, no guides, no added margins.",
+      "transparent_background": false,
+      "selected_output_sha256": "8375c23876407098278eb3c755cc9b1954ebad13ae3be894ea92b9b340d18703",
+      "usage": "Targeted source-bound material/glyph registration; only reversible indexed deltas are distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e9c6c44b4f.json"
+      ]
+    },
+    {
+      "id": "feedback-e004-native-registration",
+      "tool": "native UV/palette/alpha registration and complete outline rasterization",
+      "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "registration": "28 targeted rows in assets/artwork-feedback-e004.json; full outline print for plain industrial labels; genuine-alpha imagegen sprites for stylized capsules; per-variant source lamps/blood/chrome preserved",
+      "important_alpha_rule": "No color threshold/dilation of composited glyphs. Full em masks and continuous alpha survive scaling. Source palette/headers stay exact. Icon gaps and cross-axis centers are separate checks."
     }
   ]
 }

@@ -1,0 +1,238 @@
+{
+  "format": "artwork-feedback-resolution",
+  "version": 1,
+  "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "feedback_iso_sha256": "e004382f45ae9c9a5a4d2b076db16e819102946aa53cba3b157e3a112aebfce3",
+  "feedback_file_sha256": "576aa60d674aea1568b23be75d23f29c9711aea9025968c27311888a445573d0",
+  "opinions": 28,
+  "localized_revisions": 28,
+  "unchanged_approvals": 153,
+  "other_localized_tim2_unchanged": 163,
+  "user_approval": "Pending for28 revised images;153 exact unchanged approvals retained",
+  "items": [
+    {
+      "number": 13,
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "before_sha256": "1e0804feadc7fba595e84bf3cb51e56f0bb07163968b5b86003e129ca762eb50",
+      "after_sha256": "38523617f222d4c4dd64e59759ec1c87db640e4a2e7a8c6b733350d90bd70e78",
+      "changed_indices": 5473,
+      "note": "Complete selected glass interiors restored from new text-free imagegen donor, including dark reflections; accepted12HD glyph layers and all normal/title/START native bytes retained, original chrome/endcaps protected"
+    },
+    {
+      "number": 14,
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "before_sha256": "3038b2a667908f4f1b5954d45422921613dcea230e36204c4c28139c96b042f3",
+      "after_sha256": "fc9b4c570e9e87c524ee030a8dffb26d87e8fe7677a6f27bd20209583d77d0fc",
+      "changed_indices": 18621,
+      "note": "Entire glass aperture text-free; exact original chrome/endcaps retained; complete alpha metallic Chinese word sprites with shared15px height/13px character em and identical selected-state geometry, no threshold/dilation/clipped native crops"
+    },
+    {
+      "number": 15,
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "before_sha256": "3a35a2256606d47c6dc24b00bb56e0d0f2a5478573d9092b620abbb82c4b08ad",
+      "after_sha256": "7bbedcc954c825d7ccc579faf70e3ee8f84c7051e6accebea5dad1929de67a73",
+      "changed_indices": 11625,
+      "note": "Entire glass aperture text-free; exact original chrome/endcaps retained; complete alpha metallic Chinese word sprites with shared15px height/13px character em and identical selected-state geometry, no threshold/dilation/clipped native crops"
+    },
+    {
+      "number": 44,
+      "source_sha256": "300be638e51ff5b990c49332c7c859cbfaf67734f7661a100948a3b4484ba439",
+      "before_sha256": "07e2e2b43d783c640c118c11f4ad878f6515cc4af9de2503cd87a76456c8d1e9",
+      "after_sha256": "35447fa49c0d2a3078be6f6aea9097c5d23e58c57da0518d45d2ac8809f1dd20",
+      "changed_indices": 731,
+      "note": "武 and 器 are upright complete gold print on one x=116 centerline with common16px em; original glowing red sign outside word bed retained"
+    },
+    {
+      "number": 58,
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "before_sha256": "0c27562714b9ab6050e2e11be16264ddcd9d3b9941aec6c389d4af1b77969931",
+      "after_sha256": "5a71e4d1a0addb4d4205db415802e3e1105e33fb68d4ce09b919f608bdf51a99",
+      "changed_indices": 329,
+      "note": "Exact own-source red lamp and spill restored; accepted Chinese labels above the lamp unchanged"
+    },
+    {
+      "number": 61,
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "before_sha256": "7384e0b99ecee35b9d6a99da85afccebd07eb7c63b9f013cdade3ff616ee330c",
+      "after_sha256": "d5e54a8d04ccf4becc329d3e89b94fed703fccf5d0e5d5fdb7c5a7ad8f623a92",
+      "changed_indices": 6310,
+      "note": "All six old word/shadow beds removed; complete shared cyan/red outlined print; source center seam, lamps, braces and source-specific illumination retained outside word beds"
+    },
+    {
+      "number": 78,
+      "source_sha256": "f369593e7f10b239aa51cabdc1320a7cfd8e21f1fd3b9f87295690524e105a57",
+      "before_sha256": "357bd02c781d42cfb330da795ae273664ff467b68e6cf081d758ef7a36b79491",
+      "after_sha256": "5b226cc4224957a1ff5463831029b8190aeb4862a35648f65e398fe1f89b0680",
+      "changed_indices": 323,
+      "note": "Complete original-scale 注意 ends x82 beside source fine-print edge85; actual top/bottom microprint source pixels restored; new blank cyan material has continuous spotlight falloff, no repeated-row rectangle"
+    },
+    {
+      "number": 79,
+      "source_sha256": "3ee3c511da911a9a8748bdb15062d3cfd714ed13bf085cd1c7cb8025692a4dbc",
+      "before_sha256": "75f8a435566fd62c0ba7fa2910f82234b1b7b8a52c07a0f1a62d5b15e0aeb982",
+      "after_sha256": "2f21017bec17eb02f0aec904d1cbc7725511043c96c965360ae7a6db55464906",
+      "changed_indices": 1271,
+      "note": "Exact own-source exterior restored outside actual red plate[154,38,80,21], including lower-left static-noise corner; complete earlier Chinese artwork retained only inside original plate, no broad constant fill"
+    },
+    {
+      "number": 85,
+      "source_sha256": "8b22f906baa7fc29eb454028d96def442a9691d3c341ed242def71a0a6f8ca02",
+      "before_sha256": "a5fc3c995b12ccfe8664602b20ffc67b20517b0fc9ad8608e96cc92721b43b49",
+      "after_sha256": "0680dd2b52a3486ac195de8795bd66dacf3582a939e4120612589f18b1c9222a",
+      "changed_indices": 857,
+      "note": "Complete four-character outline mask shared across four own-palette plaque variants; no low-contrast glyph threshold or sibling material copy"
+    },
+    {
+      "number": 86,
+      "source_sha256": "d6c18161e2b52d3adac40a4392caa82ce4b9ee5b39a8de343a5fe4b942e0e415",
+      "before_sha256": "47e42dc05c88050168b8dc08f04223890c16669521b9ccd91e1313824f29788f",
+      "after_sha256": "fd282753b1db27118962872ab1debd8191b826d03cc7d184ac84348040b5510a",
+      "changed_indices": 1005,
+      "note": "Complete four-character outline mask shared across four own-palette plaque variants; no low-contrast glyph threshold or sibling material copy"
+    },
+    {
+      "number": 87,
+      "source_sha256": "f7f619aae3c83b839ba845cbe584125d776ff7200c5e89346233b05e21c39470",
+      "before_sha256": "75dc9d8fba518c1e3af488fe352a65d61a134eb590902ee2d1c155708de2a0ca",
+      "after_sha256": "f52a1a59baabb6eb724de97dd10c099ebf0a6e6ea2377db8a945d91ea9ad0130",
+      "changed_indices": 1004,
+      "note": "Complete four-character outline mask shared across four own-palette plaque variants; no low-contrast glyph threshold or sibling material copy"
+    },
+    {
+      "number": 93,
+      "source_sha256": "89d4eec42316b14339cff7e3481db2326350e19966233e13787acedf5f1d635d",
+      "before_sha256": "0f097410de35dc3e53e46422053d95e37f51d00227366513265bb693bd39d21e",
+      "after_sha256": "893cc2d31ef6f19bb5a6ca427acd15f6d66f6f156aa4d9b234862d57eda4160b",
+      "changed_indices": 3904,
+      "note": "Own rust-paper donor; full stem-complete words including rotated side 注意; identical typography and placement in both variants, no bbox-clipped top row"
+    },
+    {
+      "number": 94,
+      "source_sha256": "cb1beda20720e40ddf0c73c46894a7573c931959ffb296c58f7148ebcfa64f58",
+      "before_sha256": "e7742abd43780958311dc6fdee17aec7baa6060f9982d2c181c5a7906c5bfdc2",
+      "after_sha256": "f01b38adf5569959bf3c38dfae7f921b703135667d35c369640f5beab33262d9",
+      "changed_indices": 4958,
+      "note": "Own rust-paper donor; full stem-complete words including rotated side 注意; identical typography and placement in both variants, no bbox-clipped top row"
+    },
+    {
+      "number": 101,
+      "source_sha256": "c8b4f0f32aa6d1853384644686145888f3afde5ecd6d380ca66c3602ab005bbb",
+      "before_sha256": "7b8bd4f63040825f7cce14c1aa87f25f4643304ee88322532fdc9ed8682d55c4",
+      "after_sha256": "24798ce8ce7305a9cef904292fd3aff84273160bbd8b262fab03b9e3e9f21204",
+      "changed_indices": 2849,
+      "note": "New blank detector-plaque material and complete shared four-character mask; identical y position and height on both leaves; exact original seam/brace retained"
+    },
+    {
+      "number": 112,
+      "source_sha256": "ad7931dc54e9e7a790fff20a3fbe12fb22947d9f8f29cb581c1a071081eb90c0",
+      "before_sha256": "d6aaea6c94ec4b48c38744081c604513a8a3db6cc5f5ddddfcccc97c062fa9c6",
+      "after_sha256": "336a24a6b9fc608a92d409675082e241010baed7fc3b4557baa47aa22b3b90de",
+      "changed_indices": 240,
+      "note": "Complete pre-c7 电池 heading including top stem recovered and moved down exactly2px as one sprite, no glyph threshold/rescale"
+    },
+    {
+      "number": 147,
+      "source_sha256": "2af85bf214e5c7a78d23acccc84c949379baf2de9dafbd76012bb688c62f6744",
+      "before_sha256": "00da37bb53a2cb3d0c0497e8853009b060e459192a3b00d3fc41def62f7ffbf5",
+      "after_sha256": "4a030000bed777d2d6901f30a205e0ced6e59b332291f2ef7b57e01e240a3e4b",
+      "changed_indices": 3645,
+      "note": "Own red metal lighting with complete rotated 警报/限制区域 masks; no retained old English fragments, frame and fine-print outside beds preserved"
+    },
+    {
+      "number": 152,
+      "source_sha256": "49d3912f91b8b1d58cc9e4f87d1b5818c80070293f948346d51aa3c8b07a3e40",
+      "before_sha256": "826a52cfb264a28b59d12698a77aa1c6130208233bbb46cc78e63f4177dd83f0",
+      "after_sha256": "64d7c3b7ae4d380f3e29ceb44196b46bb5a0370c23ae112132ba10105c9dbb19",
+      "changed_indices": 932,
+      "note": "Complete four-character outline mask shared across four own-palette plaque variants; no low-contrast glyph threshold or sibling material copy"
+    },
+    {
+      "number": 154,
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "before_sha256": "ecc84b235e8e658de2096130e8c4236951c4d01ec7448c18cf18f6fd96803456",
+      "after_sha256": "700d2402e1142bc58bd9e17be6eae58934028c98887b4996c55ddf26ca88f191",
+      "changed_indices": 6621,
+      "note": "All six old word/shadow beds removed; complete shared cyan/red outlined print; source center seam, lamps, braces and source-specific illumination retained outside word beds"
+    },
+    {
+      "number": 163,
+      "source_sha256": "a1239fdc55604c87df9c14dff247928a40f28889042b91087baf60bfd8014a0c",
+      "before_sha256": "abd92aca55298b62a3e60c708f619308e144003febec7c7aa6b2c0145ced99ef",
+      "after_sha256": "971d3fba734970ed5900c31846cf502049681d399227dcfb42c7e548eb5b69ad",
+      "changed_indices": 1176,
+      "note": "Own-source blood, full badge rim and middle microprint pixel-exact; only two translated word bands reconstructed, no clean-sibling rectangle copied over blood"
+    },
+    {
+      "number": 165,
+      "source_sha256": "c6acced11170f4350dbea83668b0a0e1407f33c12e9039631cd151b6240617ad",
+      "before_sha256": "84b2645f0fdafbc1af0dcf9041402146556ec056ba5bf13ea3aa950684e84ac6",
+      "after_sha256": "3262741ffe3b5442e5ca6da32e096a23476b5695a81cdbeda15f427c33b488d5",
+      "changed_indices": 1173,
+      "note": "Own-source blood, full badge rim and middle microprint pixel-exact; only two translated word bands reconstructed, no clean-sibling rectangle copied over blood"
+    },
+    {
+      "number": 166,
+      "source_sha256": "07073c97023291748c72e78d7d5bb2e8bd5e394f048d8eb8eddfc234e0f7d642",
+      "before_sha256": "3ec3461f7443bb53ec0d327aee25a91085ce53880c1c3c0ecaee42fc6de12c89",
+      "after_sha256": "cebb7d116945a35333b217e1d6615781c94061d6fc96ea5ab76bcfde6fbce8f9",
+      "changed_indices": 3064,
+      "note": "New blank detector-plaque material and complete shared four-character mask; identical y position and height on both leaves; exact original seam/brace retained"
+    },
+    {
+      "number": 180,
+      "source_sha256": "1a0cdaaf037ff144f2f1eb5d08ba327c2c0e9c3c1fe05ed0f61407197974114f",
+      "before_sha256": "e8e8fabdc045c303c32e3a472f0f3287a1264df2389456579e5799de767e7c5a",
+      "after_sha256": "fc25adff24d3c5dfab1ea88df4186c6b6d1e25c850f2b8eda943837f12254561",
+      "changed_indices": 2680,
+      "note": "Clean own red plaque material; complete three-line centered print without thresholding background remnants or cropping the top line"
+    },
+    {
+      "number": 182,
+      "source_sha256": "4ef12dc045324effd49667e8fdd802bedecc18e92e09f4ed0bd72f61a86d253b",
+      "before_sha256": "f6ad961506bec76046565e2fcc526a75a2d2f9552a8fccdb0f70c5a901785e43",
+      "after_sha256": "bbbf7f348652752ba409b131f83fbfca9377962937a8b1b5507ffb0e7f091efd",
+      "changed_indices": 180,
+      "note": "Complete existing 确定/返回 sprites aligned individually to actual O/X centerlines: 确定 stays at y90, 返回 moves up1px to y89; both retain25x13 geometry, source icons and lower shadow states unchanged"
+    },
+    {
+      "number": 183,
+      "source_sha256": "af91ca0e09852b68bcc2f6a80834c6c362b2b4771316b585b79ea77bef3ae268",
+      "before_sha256": "1c2f13642fbbc4400e752238ce32901fca85400d3538c6285ed34a5d732d2c95",
+      "after_sha256": "3b54f3c8a0048f86f908fbe039cce8cc767912f4410164020ab566317d4fd05d",
+      "changed_indices": 123,
+      "note": "Complete existing 确定/返回 sprites aligned individually to actual O/X centerlines: 确定 stays at y90, 返回 moves up1px to y89; both retain25x13 geometry, source icons and lower shadow states unchanged"
+    },
+    {
+      "number": 185,
+      "source_sha256": "0f1afa0bbe823df6d302638ed9318dba8117447a8fd5462393f793f055e2fd86",
+      "before_sha256": "df45e7890489cfa661e5815ead9354c935758a2521b60a8f0a899c9403282e3c",
+      "after_sha256": "a2aa3bdc711268ded177f93e5c2b88e21c31411c4af3f0afbbfcc7fb59468919",
+      "changed_indices": 2220,
+      "note": "Full existing 删除/保存/上一页/下一页 alpha sprites moved to3px before actual △/□/L1/R1 icons and centered vertically; no clipping/font replacement or icon changes"
+    },
+    {
+      "number": 186,
+      "source_sha256": "e8932d921c392b46c887dc3520cda6396061dd13040ea33d48ce967565033294",
+      "before_sha256": "3f09c789550fd5de13bb9875a612dc44a220e0b833821edca423fd530027a05e",
+      "after_sha256": "2ed8bb06afb3cd751a58dc08edb3da46bb8dcb5b2f8c4ef9aa4f3b8c01e219a8",
+      "changed_indices": 2220,
+      "note": "Full existing 删除/保存/上一页/下一页 alpha sprites moved to3px before actual △/□/L1/R1 icons and centered vertically; no clipping/font replacement or icon changes"
+    },
+    {
+      "number": 191,
+      "source_sha256": "c6e9c6c44b4f06d425b03a57994169937759ca636cd068cc2d0d1d2202876589",
+      "before_sha256": "907dcc5ddde0d526d51f89f162ebad8ba8352cbb48fd56e6902f25dd556c3ac7",
+      "after_sha256": "cbad84f10846175c943a3d0fb5a1d57fef4180397068876ab3d8dcece0f43d45",
+      "changed_indices": 13362,
+      "note": "One coherent imagegen localized photographic word bed, source-bound3px perimeter blend; no thresholded old Chinese/photo fragments or letter-shaped fill seams; source photographs and ellipse outside bed byte-identical"
+    },
+    {
+      "number": 192,
+      "source_sha256": "4d5ff5857ffe65f512649eda1567bf61f05981dfaebc4f4800821bdaca4c90bf",
+      "before_sha256": "a009609d0f3b40416e68b644384bbe159382482fb77ef405ad7840eed4c143bf",
+      "after_sha256": "69c165dfb787f4e8a9a9425b8f2010a33eba903b940c38be65cf5abf43d86d8b",
+      "changed_indices": 1421,
+      "note": "User-requested continuous four-edge original-angle red stamp border completed and corner joins closed; existing 已选择 face retained, original distressed gaps no longer copied blindly"
+    }
+  ]
+}

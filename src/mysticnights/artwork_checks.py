@@ -179,6 +179,8 @@ def check_anchor_gaps(image, checks):
     Anchor rectangles are explicit source-verified artwork geometry. Their
     pixels remain protected by the indexed delta; this check is not icon OCR.
     A label may be before or after its anchor, along either image axis.
+    Optional cross-axis alignment uses twice the pixel-edge center, so a
+    half-pixel tolerance is exact and is independent of size or edge spacing.
     """
     if image.mode != 'RGBA' or not isinstance(checks, list):
         raise ValueError('Invalid artwork anchor-gap input')
@@ -193,6 +195,9 @@ def check_anchor_gaps(image, checks):
         axis = 0 if check['axis'] == 'x' else 1
         minimum = _integer(check['min_gap'], 0, max(image.size))
         tolerance = _integer(check['max_gap_difference'], 0, max(image.size))
+        center_tolerance = check.get('max_cross_axis_center_error_twice')
+        if 'max_cross_axis_center_error_twice' in check:
+            _integer(center_tolerance, 0, max(image.size) * 2)
         members = check['members']
         if not isinstance(members, list) or len(members) < 2:
             raise ValueError('Artwork anchor-gap needs at least two members')
@@ -217,7 +222,16 @@ def check_anchor_gaps(image, checks):
             if gap < minimum:
                 raise ValueError(f'Artwork anchor-gap {identifier}: gap={gap}, minimum={minimum}')
             gaps.append(gap)
-            rows.append({'label': label, 'anchor': anchor, 'side': side, 'gap': gap})
+            row = {'label': label, 'anchor': anchor, 'side': side, 'gap': gap}
+            if center_tolerance is not None:
+                cross = 1 - axis
+                center_error = abs(label['bbox'][cross] + label['bbox'][cross + 2]
+                                   - (anchor[cross] * 2 + anchor[cross + 2]))
+                if center_error > center_tolerance:
+                    raise ValueError(f'Artwork anchor-gap {identifier}: cross-axis center '
+                                     f'error_twice={center_error}, tolerance={center_tolerance}')
+                row['cross_axis_center_error_twice'] = center_error
+            rows.append(row)
         if max(gaps) - min(gaps) > tolerance:
             raise ValueError(f'Artwork anchor-gap {identifier}: gaps={gaps}, tolerance={tolerance}')
         reports.append({'id': identifier, 'axis': check['axis'], 'gaps': gaps, 'members': rows})
