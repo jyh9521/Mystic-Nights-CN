@@ -59,6 +59,21 @@ EXIT_STATUS 0
 
 手工下一步：冷启动新 ISO、不加载旧即时存档，检查 START 闪烁边缘与实际背景混色；到本游戏属性选择所需金手指。所有开关实际玩法效果仍待玩家验收。
 
+### 干净重建、安装回读与清理
+
+工程源码提交 **`d1f1ac2e05e1f7628b413a4748264a82a2ee75c3`**，分支 `master`。从该提交 `git archive` 到新目录，仅只读使用原盘和锁定字体；297 项单元、完整构建、整盘验证及运行指令夹具重跑通过。ISO、差分、manifest、两张字库预览、可执行回滚脚本及 5 件 runtime 输出全部同尺寸/同 SHA。
+
+```text
+REBUILD PASS files=11 iso=identical patch=identical manifest=identical previews=identical rollback_script=identical runtime=identical
+EXIT_STATUS 0
+INSTALLED READBACK PASS pnach=2 game_ini=1 crc=634DBCA7 wide=selected cheat_groups=0 global_ini=unchanged emulator=not-started
+EXIT_STATUS 0
+CLEANUP PASS files=388 bytes=6853855575 original=preserved modified=retained runtime_receipt=retained
+EXIT_STATUS 0
+```
+
+清理前解析/限定绝对目标路径、拒绝重解析点，核对旧 ISO、隔离正反向副本和重建 ISO 的已知 SHA，并保存每个删除文件的路径、长度和 SHA。删除旧 `aae84a…` ISO、正反向副本和干净重建临时目录，共 388 文件、6,853,855,575 字节；保留原盘、当前修改版、研究/原样命令记录和实际安装 receipt。实际安装的三个文件逐一重新打开，其 hash 与生成包/本游戏 INI 一致；全局 PCSX2.ini 与安装前 hash 一致。README 保持原样。本小节和状态页是对已验证源码提交的纯文档收尾。
+
 ## 2026-11-05 全盘复核与运行补丁
 
 以下是当前交付；后续章节保留历史哈希与当时统计。原盘保持不变，当前 `build/full-text/` 留存的是修改版。未启动游戏、模拟器，也未改动 PCSX2、BIOS、设置或存档。
