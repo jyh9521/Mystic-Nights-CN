@@ -16,6 +16,12 @@
 
 `assets/runtime-patches.json` 记录十个 EE 虚拟地址及原/新 32 位指令。生成器从受支持 ELF 的 PT_LOAD 算文件偏移，同时核验中文 ELF 头、加载映射和各处原指令。补丁与金手指分目录，按实际 ELF 全文件小端 u32 XOR 命名。配置、描述译文在 `locales/<locale>/runtime-patches.json`；十处指令不写入默认 ISO。来源、开关及人工验收步骤见 [RUNTIME_PATCHES.md](RUNTIME_PATCHES.md)。
 
+`runtime-install-receipt` v1 是显式文件安装的本地记录，包含 profile、已解析的 patches/cheats/gamesettings 目录、CRC 文件名、安装前备份和前后 hash。它不是模拟器格式，也不放入正常构建包或 Git。只有目标仍匹配安装后 hash、备份仍匹配安装前 hash 才撤销。
+
+## 透明精灵槽边 — Verified offline
+
+`indexed-artwork-delta` 可选 `clear_regions` 为 `{id,rect:[x,y,w,h],max_alpha}` 列表。检测作用于原 CLUT 解码得到的 alpha，不是 RGB 颜色阈值；alpha 为 0 的隐藏 RGB 不当作可见残留。START 的四条槽边设 max_alpha=0，新增暗色/低透明阴影也会被拒绝。该检查不判断文字语义或代替美术验收。
+
 ## ISO9660 — Verified
 
 2048字节扇区，Primary Volume标识`MN`；724文件、51目录（含根）。目录记录中的LBA、长度和卷号双端副本须一致。解析器拒绝越界、多extent、交错文件、重复路径、目录环和文件/元数据重叠。

@@ -2,7 +2,7 @@
 from copy import deepcopy
 import unittest
 from PIL import Image, ImageDraw
-from mysticnights.artwork_checks import check_state_pairs
+from mysticnights.artwork_checks import check_state_pairs, check_clear_regions
 
 
 class StateCheckTests(unittest.TestCase):
@@ -54,6 +54,24 @@ class StateCheckTests(unittest.TestCase):
             c=deepcopy(self.check);c[key]=value
             with self.assertRaises(ValueError):check_state_pairs(self.image,[c])
         with self.assertRaises(ValueError):check_state_pairs(self.image,[self.check,self.check])
+
+    def test_transparent_gutters_reject_even_a_dim_old_halo(self):
+        check={"id":"gutter","rect":[0,24,80,8],"max_alpha":0}
+        self.assertEqual(check_clear_regions(self.image,[check])[0]["nontransparent_pixels"],0)
+        self.image.putpixel((3,25),(60,2,8,1))
+        with self.assertRaisesRegex(ValueError,"gutter: nontransparent pixels=1"):
+            check_clear_regions(self.image,[check])
+
+    def test_clear_region_validation(self):
+        check={"id":"edge","rect":[0,24,80,8],"max_alpha":0}
+        self.image.putpixel((3,25),(200,40,20,4))
+        with self.assertRaises(ValueError):check_clear_regions(self.image,[check])
+        check["max_alpha"]=4
+        self.assertEqual(len(check_clear_regions(self.image,[check])),1)
+        for key,value in (("max_alpha",255),("max_alpha",True),("id",""),("rect",[0,31,80,2])):
+            bad=deepcopy(check);bad[key]=value
+            with self.assertRaises(ValueError):check_clear_regions(self.image,[bad])
+        with self.assertRaises(ValueError):check_clear_regions(self.image,[check,check])
 
 
 if __name__=="__main__":unittest.main()

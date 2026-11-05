@@ -2,6 +2,23 @@
 
 构建生成 `build/full-text/runtime/`，不改 PCSX2、BIOS、配置、存档，也不自动启动游戏。
 
+普通构建只生成文件，**生成不等于已安装**。实际安装需显式运行以下命令，或按后面的手工步骤放置；不要把没有 portable 模式的程序目录误认为用户数据目录。
+
+## 显式安装与撤销
+
+```powershell
+python -X utf8 tools/install_runtime_patches.py --package build/full-text/runtime --data-dir "PCSX2用户目录" --receipt build/runtime-install --enable-patch "16比9宽屏" --allow-cheats
+python -X utf8 tools/install_runtime_patches.py --rollback --receipt build/runtime-install
+```
+
+`--data-dir` 必须是已有 `inis/PCSX2.ini` 的用户目录。安装器按该文件的 `[Folders] Patches/Cheats` 解析实际目录，并校验输出包 manifest 中的长度、SHA、序列号及 CRC。只安装选定原版/中文版的两份 PNACH；普通构建不调用安装器。
+
+示例还创建本游戏独立 `gamesettings/SERIAL_CRC.ini`：仅勾选 16:9，开启本游戏金手指总开关，但三个金手指组默认均不勾选，可在游戏属性中自行选择。全局 PCSX2.ini、其他游戏设置、BIOS 和存档不改。已有不同的本游戏设置时拒绝覆盖，可去掉配置选项仅放置 PNACH 后在界面选择。
+
+receipt 目录保存原文件备份、目标路径和安装后 hash。撤销前一次性核验全部目标与备份，再只还原原文件或删除此次新建的文件；用户后来改过目标时停止，不覆盖新改动。安装/撤销均不启动 PCSX2；隔离文件夹正反向验证不冒充游戏加载成功。
+
+分组选择来自 `[Patches] Enable` 与 `[Cheats] Enable`，金手指还需 EnableCheats；依据 [PCSX2 v2.9.155 的加载实现](https://github.com/PCSX2/pcsx2/blob/v2.9.155/pcsx2/Patch.cpp#L539) 独立实现 INI 输出，不复制模拟器源码。
+
 ## 使用
 
 1. 中文镜像使用 `runtime/localized/`，原盘使用 `runtime/original/`；不要混用。

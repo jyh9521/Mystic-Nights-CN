@@ -208,6 +208,7 @@ def main() -> None:
             'if [ "$#" -ne 2 ]; then echo "usage: ROLLBACK.sh modified-copy.iso restored-new.iso" >&2; exit 2; fi\n'
             'python -X utf8 "$ROOT/tools/apply_patch.py" --reverse --input "$1" --patch "$HERE/DIFF_FILE.mnp.zip" --output "$2"\n',
             encoding="utf8", newline="\n")
+        (work / "ROLLBACK.sh").chmod(0o755)
         # The target is checked again after generation to avoid replacing a
         # concurrently created output directory, even an empty one.
         if args.output.exists():

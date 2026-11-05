@@ -31,6 +31,11 @@ class ArtworkTests(unittest.TestCase):
                                       "max_width_difference":0,"max_height_difference":0}]
         self.assertEqual(apply_artwork(self.source,self.patch),self.output)
         self.assertEqual(apply_artwork(self.output,self.patch,reverse=True),self.source)
+        self.patch["clear_regions"]=[{"id":"outer","rect":[10,10,3,1],"max_alpha":0}]
+        with self.assertRaisesRegex(ValueError,"clear-region.*nontransparent pixels=3"):
+            apply_artwork(self.source,self.patch)
+        self.assertEqual(apply_artwork(self.output,self.patch,reverse=True),self.source)
+        self.patch.pop("clear_regions")
         self.patch["state_checks"][0]["selected"]["rect"]=[0,0,3,1]
         with self.assertRaisesRegex(ValueError,"no measurable ink"):
             apply_artwork(self.source,self.patch)
@@ -136,6 +141,10 @@ class ArtworkTests(unittest.TestCase):
         output,report=self.run_build(image,manifest,locale,font)
         self.assertEqual(parse_res(output["A.RES"]).read("A.TM2"),self.output)
         self.assertEqual(report["installed_slots"],["label"])
+        self.patch["clear_regions"]=[{"id":"dirty","rect":[10,10,3,1],"max_alpha":0}]
+        with self.assertRaisesRegex(ValueError,"clear-region"):
+            self.run_build(image,manifest,locale,font)
+        self.patch.pop("clear_regions")
         duplicate=deepcopy(manifest["textures"][0]);duplicate["slots"]=[{"id":"second","install":True}]
         manifest["textures"].append(duplicate)
         locale["entries"].append({"id":"second","status":"draft","target":"B"})

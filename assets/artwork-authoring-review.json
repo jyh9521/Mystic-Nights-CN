@@ -253,6 +253,17 @@
         "locales/zh-CN/artwork/9e62c3226d47.json",
         "locales/zh-CN/artwork/e27b23d37455.json"
       ]
+    },
+    {
+      "id": "start-prompt-clean-gutters",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit target: the supplied original PS2 PRESS START BUTTON sprite strip. Replace the entire English wording with exactly 按START键 on one line, using the SAME original condensed heavy arcade lettering, ivory/golden upper face, burnt-orange lower gradient, subtle dark bevel and very small red/orange glow. Preserve the original typography style and original cap-height, not a normal flat typeset font. The new shorter wording should be centered and occupy about half the original wording's total width. IMPORTANT: completely remove the ENTIRE old text footprint, including old bevels, all old dark shadows, red edge halos, wide top/bottom glow bands, frame-like silhouettes and old alpha, across the whole original strip. The result must be a clean transparent game sprite: only the new letters plus their very tight 1–2-native-pixel outline/glow may have opacity. Every far-left, far-right, top and bottom margin must have zero alpha. NO rectangular backing of any color, NO wide red strip or plaque, NO frame, NO shadow box. Do not retain the source's long old glow field. Match original letter height; avoid excessive Chinese weight, added decoration, thick gold frames or changing START into another word. Output only the single horizontal Chinese/START sprite on true transparency, no comparison, captions, guide lines or other objects. Text exactly: 按START键.",
+      "selected_output_sha256": "db6d53dafae7445a54108c7c84aac702f1f974e9e76c2ee782e156823eaeea74",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ],
+      "registration": "Original 14px core at native UV; full [0,225,214,31] sprite footprint including all former glow replaced; four zero-alpha gutters required",
+      "verification": "Old top gutter reproduces 781 nontransparent pixels; corrected four gutters all zero; other atlas pixels and CLUT byte-identical"
     }
   ]
 }

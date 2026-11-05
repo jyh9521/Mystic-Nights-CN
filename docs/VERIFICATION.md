@@ -1,5 +1,64 @@
 # 汉化构建：离线验收
 
+## 2026-11-05 START 外缘修正与 PCSX2 实际安装
+
+当前交付为本节，后面各节是历史记录。之前 `aae84a…` 确为当时最新输出，但图自身仍留有 START 外缘光晕；没有把“文件已安装/同哈希”等同于“画面干净”。已有用户启动日志的路径和 ELF CRC 与该交付一致，本次工具没有启动游戏。
+
+### 变更和实际目录
+
+- `L001_004.TM2` 字段 `076f1530ee2a/text-06`、完整字床 `[0,225,214,31]` 及 `clear_regions`。旧上沿检测 `START BACKGROUND FAIL ... nontransparent pixels=781`，退出 1；新四边全部为 0，退出 0。新字由内置 imagegen 重绘，14px 核心注册，不复制旧字 alpha。完整提示词见 `assets/artwork-authoring-review.json` 的 `start-prompt-clean-gutters`。
+- 新旧 ISO 相比只变 `RES/LOGO.RES:L001_004.TM2` 的 2813 个索引；另外 723 个文件、该图其他字区、CLUT/UV/头/长度和另外 186 张汉化纹理不变。正文、字库和 ELF 没变，中文 CRC 仍为 `634DBCA7`。
+- 显式安装器读取现有用户目录 `inis/PCSX2.ini` 的 Folders 设置，实际安装 `patches/SCKA-20055_634DBCA7.pnach`、`cheats/SCKA-20055_634DBCA7.pnach` 及 `gamesettings/SCKA-20055_634DBCA7.ini`。程序目录不是此实例的数据目录。16:9 预选；本游戏 EnableCheats=true，但三项作弊组默认均不选。全局 INI、其他游戏、BIOS 与存档保持。
+- 先在只含相关目标状态的隔离 profile 安装再撤销，3 个文件恢复到初态；随后实际安装。安装 receipt 和前后 hash 保存在本地 `build/start-prompt-fix/runtime-installed/`，撤销须显式运行安装器 `--rollback`，不随 ISO 回滚擅自操作模拟器。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| 当前 ISO | `9e166e6f9aec5574ee72a2219691cde500d3d6e07239c006c166ea8298b3c858` |
+| DIFF_FILE.mnp.zip | `9f26fe50384ab49d239f862c1ef62a1f8cb6c351a8543c491abb13a1bd74749d` |
+| manifest.json | `cf6cb3bd010c2ebe2c6daf452fd6b1cee4bb0bfc4e42374a1ef80df29bd02818` |
+| ROLLBACK.sh | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+| 新 L001_004 | `0427965abaf88f9b58601b06cc52b9cb6f7238d5542cf8c2513529ffc27fb82a` |
+
+交付四件仍为 `build/full-text/Mystic-Nights-zh-CN-full-text.iso`、`DIFF_FILE.mnp.zip`、`VERIFICATION.txt`、可执行 `ROLLBACK.sh`。ISO 1,696,530,432 字节；差分 10,444,679 字节、23772 个区间。所有下列命令退出 0；阴影红灯复现单列为预期退出 1。完整绝对路径、原样输出和退出码在本地 VERIFICATION，公开记录只规范化输出中的本机路径。
+
+### BASELINE / MODIFIED / ROLLBACK
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json --font build/fonts/NotoSansCJKsc-Regular.otf
+MODIFIED PASS strings=2306 glyphs=1433 changed_files=77 unchanged_files=647 lba=unchanged
+SHA256 9e166e6f9aec5574ee72a2219691cde500d3d6e07239c006c166ea8298b3c858
+EXIT_STATUS 0
+python -X utf8 tools/apply_patch.py --input "[full2]미스틱 나이츠(K).iso" --patch build/full-text/DIFF_FILE.mnp.zip --output build/start-prompt-fix/applied.iso
+{"mode": "apply", "output": "build/start-prompt-fix/applied.iso", "ranges": 23772, "sha256": "9e166e6f9aec5574ee72a2219691cde500d3d6e07239c006c166ea8298b3c858", "size": 1696530432}
+EXIT_STATUS 0
+"C:/Program Files/Git/bin/bash.exe" -c "test -x build/full-text/ROLLBACK.sh && build/full-text/ROLLBACK.sh build/start-prompt-fix/applied.iso build/start-prompt-fix/restored.iso"
+{"mode": "rollback", "output": "build/start-prompt-fix/restored.iso", "ranges": 23772, "sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b", "size": 1696530432}
+EXIT_STATUS 0
+python -X utf8 tools/verify_build.py --kind baseline --iso build/start-prompt-fix/restored.iso
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+BYTE_COMPARE PASS forward=identical rollback=identical original=preserved modified=retained
+EXIT_STATUS 0
+```
+
+恢复的是隔离副本的全部原盘字节/字段/资源结构，交付 ISO 仍为修改版；不是运行游戏的恢复证据。297 项单元通过，包含低透明残影、错误边界、安装中途失败自动恢复、已有 INI 不覆盖、包损坏与撤销目标被用户修改等回归。16 组合运行指令夹具、1792 轴/角度及 50 存储案例仍通过。
+
+实际安装命令如下；数据目录应以本机 profile 为准，而不是照抄程序路径。
+
+```text
+python -X utf8 tools/install_runtime_patches.py --package build/full-text/runtime --data-dir "C:/Users/noway/Documents/PCSX2" --receipt build/start-prompt-fix/runtime-installed --enable-patch 16比9宽屏 --allow-cheats
+RUNTIME INSTALL PASS files=3 crc=634DBCA7 state=installed
+EXIT_STATUS 0
+```
+
+手工下一步：冷启动新 ISO、不加载旧即时存档，检查 START 闪烁边缘与实际背景混色；到本游戏属性选择所需金手指。所有开关实际玩法效果仍待玩家验收。
+
 ## 2026-11-05 全盘复核与运行补丁
 
 以下是当前交付；后续章节保留历史哈希与当时统计。原盘保持不变，当前 `build/full-text/` 留存的是修改版。未启动游戏、模拟器，也未改动 PCSX2、BIOS、设置或存档。

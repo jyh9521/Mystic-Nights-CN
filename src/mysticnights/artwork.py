@@ -127,6 +127,10 @@ def apply_artwork(data: bytes, patch: dict, *, targets: dict | None = None, reve
         from .artwork_checks import check_state_pairs
         rendered, _ = decode_tim2(bytes(output))
         check_state_pairs(rendered, patch["state_checks"])
+    if not reverse and "clear_regions" in patch:
+        from .artwork_checks import check_clear_regions
+        rendered, _ = decode_tim2(bytes(output))
+        check_clear_regions(rendered, patch["clear_regions"])
     return bytes(output)
 
 

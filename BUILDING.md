@@ -45,6 +45,8 @@ python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나�
 
 宽屏与三项金手指不烘焙进 ISO，也不自动安装。补丁、金手指各为独立 PNACH 文件，金手指有三个独立开关；使用见 [RUNTIME_PATCHES.md](docs/RUNTIME_PATCHES.md)。普通构建不需要图像生成服务、OpenCV 或本机创作中间文件；原风格成稿以可逆像素差分重放。
 
+需要实际安装时，显式使用 `tools/install_runtime_patches.py --package build/full-text/runtime --data-dir 用户目录 --receipt 新记录目录`。安装器读取现有 `inis/PCSX2.ini` 的 Folders/Patches、Folders/Cheats，不假定程序目录就是用户目录。它不启动模拟器；可选创建本游戏 CRC 专属 INI，拒绝覆盖不同的既有游戏设置，并保存原 PNACH 的逐字节备份和可验证撤销记录。
+
 手工验收不由工具执行。`pcsx2/`、BIOS、配置、记忆卡和存档均不属于构建或清理对象。
 
 ## 差分和回滚
@@ -76,6 +78,8 @@ python -X utf8 tools/inspect_graphics_text.py --iso "原版.iso" --preview-only 
 已完成原分辨率排版和美术复核的 RGBA PNG 可用 `tools/import_artwork.py` 转为差分；该工具不生成或排版文字。`--source` 为原 TIM2，`--source-sha256` 为配方中的原哈希，`--recipe` 提供 `allowed_rectangles` 和 `targets`，`--output` 必须是新 JSON 路径。导入只量化到原 CLUT，并立即正反向验证；没有修改的像素保留原索引。示例见 `docs/ARTWORK_REVIEW.md`。
 
 已声明 `state_checks` 的像素差分在正向重放时额外检查成对状态的笔画核心尺寸及不应出现的连续横线；参数属于 locale 美术数据，不硬编码中文字体。上述独立回读命令核对实装哈希后执行同一规则。规则只覆盖明确声明的错误类型，不替代实际美术审校。
+
+透明精灵还可声明 `clear_regions`（id、rect、max_alpha），在导入、普通构建和实际 ISO 回读时检查完整字区外缘。START 提示四个透明槽边要求 alpha 全为 0；不是只检查亮色文字尺寸，也不复用原英文的阴影/光晕。`ROLLBACK.sh` 输出在构建时设为可执行。
 
 无头 RGB24 图像使用 `tools/import_raw_artwork.py`，参数同上，recipe 另外声明 `profile=[width,height,3]`，PNG 必须为原尺寸 RGB。原图格式清单位于 `assets/raw-image-slots.json`；目标文字与像素差分放在 `locales/<locale>/raw-images.json` 和 `artwork/`。该路径不经过 TIM2 或字体渲染器，源 hash、允许区域、译文绑定和反向恢复均独立验证。
 

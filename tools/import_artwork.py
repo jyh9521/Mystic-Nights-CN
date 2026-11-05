@@ -24,6 +24,9 @@ def main():
     if "state_checks" in recipe:
         patch["state_checks"] = recipe["state_checks"]
         apply_artwork(source, patch)  # Reject failed visual checks before publishing the delta.
+    if "clear_regions" in recipe:
+        patch["clear_regions"] = recipe["clear_regions"]
+        apply_artwork(source, patch)
     serialized = json.dumps(patch, ensure_ascii=False, separators=(",", ":")) + "\n"
     with args.output.open("x", encoding="utf8", newline="\n") as output:
         output.write(serialized)

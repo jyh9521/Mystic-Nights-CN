@@ -77,3 +77,28 @@ def check_state_pairs(image, checks):
         reports.append({"id": identifier, "normal": states[0], "selected": states[1],
                         "horizontal_runs": run_report})
     return reports
+
+
+def check_clear_regions(image, checks):
+    """Require reviewed sprite gutters to stay transparent, including dark halos.
+
+    Glyph size checks alone miss old lettering/glow outside a replacement's
+    ink bounds. Regions are explicit locale artwork data, not inferred/OCR.
+    """
+    if image.mode != "RGBA" or not isinstance(checks, list):
+        raise ValueError("Invalid artwork clear-region input")
+    reports = []; seen = set()
+    for check in checks:
+        identifier = check["id"]
+        if not isinstance(identifier, str) or not identifier or identifier in seen:
+            raise ValueError("Invalid/duplicate artwork clear-region ID")
+        seen.add(identifier)
+        maximum = _integer(check["max_alpha"], 0, 254)
+        selector = {"rect": check["rect"], "rgba_min": [0, 0, 0, maximum + 1],
+                    "rgba_max": [255, 255, 255, 255]}
+        dirty = _points(image, selector)
+        if dirty:
+            raise ValueError(f"Artwork clear-region {identifier}: nontransparent pixels={len(dirty)}")
+        reports.append({"id": identifier, "rect": check["rect"], "max_alpha": maximum,
+                        "nontransparent_pixels": 0})
+    return reports

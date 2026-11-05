@@ -1,5 +1,11 @@
 # 全盘图字、标点与字形复核
 
+## START 提示反馈后的补充修正
+
+用户打开的路径/ELF CRC 与当时交付一致；磁盘最新 ISO `aae84a…` 自身仍有 START 上下/两侧旧光晕，不能把 hash 一致当作“美术已经干净”。原差分仅清理内字床，漏掉外缘。已完整替换 `[0,225,214,31]` 精灵范围：2813 个索引相对此前版改变，四个透明边界为零 alpha，原 14px 核心字号保持。主菜单其余区域及另外 186 张已登记图、CLUT/UV/结构保持。
+
+新增第 26 条内置 imagegen 编辑及完整提示词记录在 `assets/artwork-authoring-review.json`，id 为 `start-prompt-clean-gutters`。原图/旧交付/修正图以棋盘底和原生 alpha 核对；最终交付还独立从 ISO 读回检查，而不是只看创作 PNG。玩家画面的混色/动画验收仍开放。
+
 ## 审查范围
 
 **Verified offline**：支持原盘中 209 个 RES 的 1140 张唯一 TIM2、2634 个物理成员全部纳入 `assets/graphics-source-review.json`，不再把已登记的汉化图数量当作全盘数量。
