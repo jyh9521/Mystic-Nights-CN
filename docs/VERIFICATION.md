@@ -12,6 +12,10 @@ PCSX2当前配置路径下9张PNG已缺失，按原路径补回8字库页与1菜
 
 标准四件为 `build/full-text/` 下最新ISO、DIFF_FILE.mnp.zip、VERIFICATION.txt、可执行ROLLBACK.sh；网页为 `build/image-review/index.html`。完整原样命令、输入、字面输出、退出码、正反向和清理/推送身份记录在本地VERIFICATION.txt，不添加到README。
 
+干净源码 `6ca1fbcb4151e4b680e16c35d22435c190b1f1bf` 独立构建357项Python测试、两组JavaScript测试通过；1371件交付文件（26核心、1345网页）逐字节一致。标准路径复验：`ARTWORK MATERIAL PASS retained_source_patterns=0/64`、`ARTWORK REVIEW PASS unique=193 physical=361 ledger=closed provenance=offline-not-game-approval`。空轮廓对明确输出`NOT_DECLARED pairs=0`，不称作居中证明。正向副本与当前ISO、回滚副本与原盘均完整字节一致，恢复原版状态，当前修改版保留。
+
+清理1841件重复构建/隔离副本、临时测试文件，共8,725,286,608字节，删除前逐文件SHA登记并检查绝对路径；原盘、当前交付、网页和实际安装/撤销证据保留。源归档、正反向ISO副本已完成验证后清理，不要求保留大体积重复游戏数据。实际9张PNG与两份既有PNACH再次读回，当前全局/游戏INI字节不变。所有完整日志和文件身份保存在本地构建证据目录。
+
 ## 2026-11-05：完整菜单无字内床（后续全量复核已替代）
 
 主菜单的字形状残留没有因“原盘已有”而满足玩家要求。当前只重建4个完整119×16内床，共7616像素；先独立检查无字材质，再叠回相同彩色前景。不是再次更换字体，也不是拿新中文盖住旧字。
