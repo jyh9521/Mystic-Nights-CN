@@ -242,7 +242,8 @@ def build_font(fnt: bytes, textures: Mapping[str, bytes], texts: Iterable[str],
                font_path: str | Path, expected_font_sha256: str, *,
                pixel_size: int = 13, forbidden_codes: Iterable[int] = (),
                allowed_codes: Iterable[int] | None = None,
-               existing_mapping: Mapping[str, int] | None = None) -> FontBuild:
+               existing_mapping: Mapping[str, int] | None = None,
+               raster_policy: dict | None = None) -> FontBuild:
     """Build a subset overlay using a hash-pinned, coverage-checked outline font."""
     from fontTools.ttLib import TTFont
     from PIL import Image, ImageDraw, ImageFont
@@ -294,12 +295,31 @@ def build_font(fnt: bytes, textures: Mapping[str, bytes], texts: Iterable[str],
             raise FontError(f"outline glyph exceeds existing cell: {char!r} (bbox={box})")
         large = Image.new("L", (cell_width, cell_height))
         ImageDraw.Draw(large).text((x, y), char, font=face, fill=255, anchor="ls")
-        mask = large.resize((glyph.width, glyph.height - 1), Image.Resampling.LANCZOS)
+        mask = downsample_coverage(large, (glyph.width, glyph.height - 1), raster_policy)
         if not mask.getbbox() and not char.isspace():
             raise FontError(f"blank rendered glyph: {char!r}")
         masks[char] = mask
     patched = patch_glyphs(fnt, textures, mapping, masks)
     return FontBuild(fnt, patched, mapping, digest)
+
+
+def downsample_coverage(large, size, policy=None):
+    """Positive-area filtering avoids Lanczos sidelobes around small glyphs.
+
+    Explicit edge thresholds are locale/build data. No JPEG, sharpening kernel,
+    per-glyph baseline movement or palette replacement is involved.
+    """
+    from PIL import Image
+    if policy is None:
+        return large.resize(size, Image.Resampling.LANCZOS)
+    if (set(policy) != {"filter", "edge_floor", "edge_ceiling"}
+            or policy["filter"] != "box"
+            or type(policy["edge_floor"]) is not int or type(policy["edge_ceiling"]) is not int
+            or not 0 <= policy["edge_floor"] < policy["edge_ceiling"] <= 255):
+        raise FontError("Invalid font raster policy")
+    low, high = policy["edge_floor"], policy["edge_ceiling"]
+    lut = [max(0, min(255, round((v-low)*255/(high-low)))) for v in range(256)]
+    return large.resize(size, Image.Resampling.BOX).point(lut)
 
 
 def render_preview(fnt: bytes, textures: Mapping[str, bytes], text: str,

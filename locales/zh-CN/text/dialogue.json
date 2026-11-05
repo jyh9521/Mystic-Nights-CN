@@ -737,7 +737,7 @@
       "line": 235,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁着。）",
+      "target": "（锁着）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -756,7 +756,7 @@
       "line": 236,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（开门似乎需要门卡。）",
+      "target": "（开门似乎需要门卡）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -775,7 +775,7 @@
       "line": 271,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源关着。）",
+      "target": "（电源关着）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -813,7 +813,7 @@
       "line": 273,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（找找附近有没有电力室。）",
+      "target": "（找找附近有没有电力室）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -870,7 +870,7 @@
       "line": 297,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（发电机开始运转了。）",
+      "target": "（发电机开始运转了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -889,7 +889,7 @@
       "line": 298,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（看来已经恢复供电了。）",
+      "target": "（看来已经恢复供电了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -908,7 +908,7 @@
       "line": 308,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（门好像锁着。）",
+      "target": "（门好像锁着）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -927,7 +927,7 @@
       "line": 309,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（似乎需要钥匙才能打开。）",
+      "target": "（似乎需要钥匙才能打开）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -946,7 +946,7 @@
       "line": 310,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（去别处看看吧。）",
+      "target": "（去别处看看吧）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1611,7 +1611,7 @@
       "line": 582,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（已经供电了。）",
+      "target": "（已经供电了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1630,7 +1630,7 @@
       "line": 583,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（那扇锁住的门好像能动了。）",
+      "target": "（那扇锁住的门好像能动了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1649,7 +1649,7 @@
       "line": 592,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（研究员死了。）",
+      "target": "（研究员死了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1744,7 +1744,7 @@
       "line": 640,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（这扇门坏了。）",
+      "target": "（这扇门坏了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1763,7 +1763,7 @@
       "line": 641,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（看来得强行打开。）",
+      "target": "（看来得强行打开）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1934,7 +1934,7 @@
       "line": 739,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（毫无反应。）",
+      "target": "（毫无反应）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1953,7 +1953,7 @@
       "line": 740,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（还缺什么材料。）",
+      "target": "（还缺什么材料）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -1972,7 +1972,7 @@
       "line": 749,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（四种物质合成的样本溶液已经拿到了。）",
+      "target": "（四种物质合成的样本溶液已经拿到了）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -2048,7 +2048,7 @@
       "line": 805,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（先解决那些怪物再说。）",
+      "target": "（先解决那些怪物再说）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -2105,7 +2105,7 @@
       "line": 913,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁着。）",
+      "target": "（锁着）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -2124,7 +2124,7 @@
       "line": 914,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（开门似乎需要门卡。）",
+      "target": "（开门似乎需要门卡）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -2143,7 +2143,7 @@
       "line": 923,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁着。）",
+      "target": "（锁着）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -2162,7 +2162,7 @@
       "line": 924,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（这扇门似乎通往别的区域。）",
+      "target": "（这扇门似乎通往别的区域）",
       "status": "draft",
       "batch": "opening-2f"
     },
@@ -3897,7 +3897,7 @@
       "line": 1524,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源接通了。）",
+      "target": "（电源接通了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -3954,7 +3954,7 @@
       "line": 1565,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（快看看屏幕能不能用。）",
+      "target": "（快看看屏幕能不能用）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4239,7 +4239,7 @@
       "line": 1705,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（对面的房间里有声音。）",
+      "target": "（对面的房间里有声音）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4258,7 +4258,7 @@
       "line": 1706,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（快去看看。）",
+      "target": "（快去看看）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4277,7 +4277,7 @@
       "line": 1739,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（简有危险。）",
+      "target": "（简有危险）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4790,7 +4790,7 @@
       "line": 2063,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源接通了。）",
+      "target": "（电源接通了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4809,7 +4809,7 @@
       "line": 2077,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源接通了。）",
+      "target": "（电源接通了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4828,7 +4828,7 @@
       "line": 2095,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁住的门好像能开了。）",
+      "target": "（锁住的门好像能开了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -4885,7 +4885,7 @@
       "line": 2121,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（这扇门好像坏了。）",
+      "target": "（这扇门好像坏了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -5873,7 +5873,7 @@
       "line": 2582,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（得带大家到这里来。）",
+      "target": "（得带大家到这里来）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -6519,7 +6519,7 @@
       "line": 2948,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁住了。）",
+      "target": "（锁住了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -6538,7 +6538,7 @@
       "line": 2949,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（得去地下一层的密码室解锁。）",
+      "target": "（得去地下一层的密码室解锁）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -6633,7 +6633,7 @@
       "line": 3001,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（先把大家带过来吧。）",
+      "target": "（先把大家带过来吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -7393,7 +7393,7 @@
       "line": 3341,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（看来得先回去一趟。）",
+      "target": "（看来得先回去一趟）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -7412,7 +7412,7 @@
       "line": 3356,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（先回大家那里看看。）",
+      "target": "（先回大家那里看看）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -7773,7 +7773,7 @@
       "line": 3443,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（确实有些疑点说不通。）",
+      "target": "（确实有些疑点说不通）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8134,7 +8134,7 @@
       "line": 3635,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源接通了。）",
+      "target": "（电源接通了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8172,7 +8172,7 @@
       "line": 3657,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（那边的门好像也锁着。）",
+      "target": "（那边的门好像也锁着）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8875,7 +8875,7 @@
       "line": 3925,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（启动试试。）",
+      "target": "（启动试试）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8894,7 +8894,7 @@
       "line": 3942,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（去看看先前经过的装置吧。）",
+      "target": "（去看看先前经过的装置吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8913,7 +8913,7 @@
       "line": 3956,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（通电了。）",
+      "target": "（通电了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8976,7 +8976,7 @@
       "line": 3974,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（现在回那扇门看看吧。）",
+      "target": "（现在回那扇门看看吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -8995,7 +8995,7 @@
       "line": 3996,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（没通电。）",
+      "target": "（没通电）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -9014,7 +9014,7 @@
       "line": 3997,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（毫无反应。）",
+      "target": "（毫无反应）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -9033,7 +9033,7 @@
       "line": 4020,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁住了。）",
+      "target": "（锁住了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -9976,7 +9976,7 @@
       "line": 4410,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁住了。）",
+      "target": "（锁住了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -11534,7 +11534,7 @@
       "line": 5103,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（把大家叫来吧。）",
+      "target": "（把大家叫来吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -11553,7 +11553,7 @@
       "line": 5149,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（蓝色指示灯亮着。）",
+      "target": "（蓝色指示灯亮着）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -11572,7 +11572,7 @@
       "line": 5150,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（已经通电了。）",
+      "target": "（已经通电了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -12769,7 +12769,7 @@
       "line": 5514,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（得先启动探测器。）",
+      "target": "（得先启动探测器）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -14536,7 +14536,7 @@
       "line": 6384,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（是根六角柱。）",
+      "target": "（是根六角柱）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -14555,7 +14555,7 @@
       "line": 6385,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（中央插着一个六角金属物体。）",
+      "target": "（中央插着一个六角金属物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -14574,7 +14574,7 @@
       "line": 6394,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（是和对面一样的六角柱。）",
+      "target": "（是和对面一样的六角柱）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -14593,7 +14593,7 @@
       "line": 6395,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（中央有个六角凹槽。）",
+      "target": "（中央有个六角凹槽）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -15448,7 +15448,7 @@
       "line": 6838,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（现在还是先去追凯莉吧。）",
+      "target": "（现在还是先去追凯莉吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16873,7 +16873,7 @@
       "line": 7367,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（詹妮弗有危险。）",
+      "target": "（詹妮弗有危险）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16892,7 +16892,7 @@
       "line": 7368,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（得赶紧干掉这些怪物。）",
+      "target": "（得赶紧干掉这些怪物）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16911,7 +16911,7 @@
       "line": 7377,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（毫无反应。）",
+      "target": "（毫无反应）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16930,7 +16930,7 @@
       "line": 7386,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（好像是大门的启动装置。）",
+      "target": "（好像是大门的启动装置）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16949,7 +16949,7 @@
       "line": 7387,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（六角凹槽里插着金属物体。）",
+      "target": "（六角凹槽里插着金属物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16968,7 +16968,7 @@
       "line": 7406,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（门变色了。）",
+      "target": "（门变色了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -16987,7 +16987,7 @@
       "line": 7407,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（锁好像开了。）",
+      "target": "（锁好像开了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17031,7 +17031,7 @@
       "line": 7474,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（装置启动了。）",
+      "target": "（装置启动了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17050,7 +17050,7 @@
       "line": 7483,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（圆筒内装着蓝色溶液和其他物体。）",
+      "target": "（圆筒内装着蓝色溶液和其他物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17069,7 +17069,7 @@
       "line": 7493,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（圆筒内装着红色溶液和其他物体。）",
+      "target": "（圆筒内装着红色溶液和其他物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17088,7 +17088,7 @@
       "line": 7503,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（圆筒内装着黄色溶液和其他物体。）",
+      "target": "（圆筒内装着黄色溶液和其他物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17107,7 +17107,7 @@
       "line": 7513,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（圆筒内装着绿色溶液和其他物体。）",
+      "target": "（圆筒内装着绿色溶液和其他物体）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17145,7 +17145,7 @@
       "line": 7544,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（像是主动力机。）",
+      "target": "（像是主动力机）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17392,7 +17392,7 @@
       "line": 7744,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（主动力机启动了。）",
+      "target": "（主动力机启动了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -17411,7 +17411,7 @@
       "line": 7745,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（大门似乎恢复供电了。）",
+      "target": "（大门似乎恢复供电了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -20052,7 +20052,7 @@
       "line": 8922,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（不能再让凶手这样耍弄我们了。）",
+      "target": "（不能再让凶手这样耍弄我们了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -20223,7 +20223,7 @@
       "line": 9046,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（一定是他俩中的一个干的。）",
+      "target": "（一定是他俩中的一个干的）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -22047,7 +22047,7 @@
       "line": 9403,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（回去找找吧。）",
+      "target": "（回去找找吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -22142,7 +22142,7 @@
       "line": 9449,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（愿我们在更好的世界重逢。）",
+      "target": "（愿我们在更好的世界重逢）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -23643,7 +23643,7 @@
       "line": 9961,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（一定是他俩中的一个干的。）",
+      "target": "（一定是他俩中的一个干的）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24441,7 +24441,7 @@
       "line": 10123,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（她也许也留下了临终留言。）",
+      "target": "（她也许也留下了临终留言）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24460,7 +24460,7 @@
       "line": 10124,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（检查一下尸体吧。）",
+      "target": "（检查一下尸体吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24612,7 +24612,7 @@
       "line": 10165,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源被切断了。）",
+      "target": "（电源被切断了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24650,7 +24650,7 @@
       "line": 10167,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（找找附近有没有电力室。）",
+      "target": "（找找附近有没有电力室）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24669,7 +24669,7 @@
       "line": 10176,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电源被切断了。）",
+      "target": "（电源被切断了）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24707,7 +24707,7 @@
       "line": 10178,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（找找附近有没有电力室。）",
+      "target": "（找找附近有没有电力室）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24726,7 +24726,7 @@
       "line": 10226,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（电力室好像在走廊对面。）",
+      "target": "（电力室好像在走廊对面）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24783,7 +24783,7 @@
       "line": 10258,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（去调查那些研究室吧。）",
+      "target": "（去调查那些研究室吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24802,7 +24802,7 @@
       "line": 10482,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（是奇怪的东西。）",
+      "target": "（是奇怪的东西）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24821,7 +24821,7 @@
       "line": 10483,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（先收着吧。）",
+      "target": "（先收着吧）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24935,7 +24935,7 @@
       "line": 10589,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（门好像锁着。）",
+      "target": "（门好像锁着）",
       "status": "draft",
       "batch": "full-text"
     },
@@ -24954,7 +24954,7 @@
       "line": 10590,
       "role": "display",
       "text_type": "dialogue",
-      "target": "（用门卡试试吧。）",
+      "target": "（用门卡试试吧）",
       "status": "draft",
       "batch": "full-text"
     },

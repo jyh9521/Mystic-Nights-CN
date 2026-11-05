@@ -17,17 +17,20 @@ python -X utf8 tools/validate_translations.py --iso "[full2]미스틱 나이츠(
 python -X utf8 tools/build_locale.py --iso "[full2]미스틱 나이츠(K).iso" --locale zh-CN --output build/full-text
 python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json
 python -X utf8 tools/verify_artwork_states.py --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --catalogue locales/zh-CN/graphics.json
+python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json
 ```
 
 输出目录必须尚不存在。构建在新的同级事务目录中完成后才发布，不覆盖已有镜像。构建和修改版验证均支持 `--font` 指定同哈希字体；未指定时使用 `build/fonts/` 的锁定字体。
 
 ## 当前配置和输出
 
-`full-text` 要求全部非空正文有译文：2034 条逻辑正文、2 条原始空白；文档镜像展开后 2126 槽，加 38 个补充 ELF 槽，共 2164。113 个道具名称的 698 处静态引用原子回填。270 条网络设置、完整服务协议和网络记忆卡标题同步构建。
+`full-text` 要求全部非空正文有译文：2176 条逻辑正文（含 142 个场景房间显示名）、2 条原始空白；文档镜像展开后 2268 槽，加 38 个补充 ELF 槽，共 2306。113 个道具名称的 698 处静态引用原子回填。270 条网络设置、完整服务协议和网络记忆卡标题同步构建。
 
-主字库 1422 字形；保留文本保护 379 码位，从 2065 个候选分配。PF 是独立字体域，使用 293 个映射。此静态保护不证明所有动态输入均已验收。
+主字库 1433 字形；保留文本保护 379 码位，从 2065 个候选分配。主字形采用 4 倍栅格、正面积 BOX 缩小与覆盖阈值，原 metrics、CLUT 和 ASCII 不变。PF 是独立字体域。此静态保护不证明所有动态输入均已验收。
 
-图像采用与原文字节绑定的已重绘像素差分。402 个可翻译文字项全部写入 136 张 TIM2 贴图，覆盖 246 个物理成员；2 个 D.I.A 技术标识和已确认模糊微字原样保留。NETGUI/BG.RGB 的 1 个标题使用独立 RGB24 差分写入。无待重绘条目，旧方块覆盖方案不参与构建。`--release` 仍关闭，完整流程和游戏内美术由玩家验收后再发布。
+图像采用与原文字节绑定的已重绘像素差分。原盘 1140 张唯一 TIM2、2634 个物理成员均有审查分类；492 个可翻译文字项写入 187 张贴图、343 个物理成员，另保留 2 个 D.I.A 标识及模糊微字。`assets/graphics-source-review.json` 的全盘闭包防止再次遗漏同名、调色及 `_C` 变体。NETGUI/BG.RGB 的 1 个标题使用独立 RGB24 差分。旧方块覆盖方案不参与构建。`--release` 仍关闭，完整流程和游戏内美术由玩家验收后再发布。
+
+正文还构建源绑定的中文禁行首标点 lookahead；144 字节原指令块与 46 字节只读表均有精确锚点。只读表在一条已译 C 字符串的首个 NUL 之后，不扩展 ELF，不改变可见文本。修改版验证独立回放指令、所有实际字码、原生字体像素与全盘图片闭包。
 
 | 文件 | 内容 |
 |---|---|
@@ -37,6 +40,10 @@ python -X utf8 tools/verify_artwork_states.py --iso build/full-text/Mystic-Night
 | `font-preview.png` | 主字库实际 TIM2 回读预览 |
 | `network-font-preview.png` | PF 实际字形回读预览 |
 | `ROLLBACK.sh` | Git Bash 反向应用入口 |
+| `runtime/original/` | 按本盘原 ELF CRC 生成的可选补丁及金手指 |
+| `runtime/localized/` | 按本次中文 ELF CRC 生成的可选补丁及金手指 |
+
+宽屏与三项金手指不烘焙进 ISO，也不自动安装。补丁、金手指各为独立 PNACH 文件，金手指有三个独立开关；使用见 [RUNTIME_PATCHES.md](docs/RUNTIME_PATCHES.md)。普通构建不需要图像生成服务、OpenCV 或本机创作中间文件；原风格成稿以可逆像素差分重放。
 
 手工验收不由工具执行。`pcsx2/`、BIOS、配置、记忆卡和存档均不属于构建或清理对象。
 

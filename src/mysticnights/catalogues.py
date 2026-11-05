@@ -27,7 +27,7 @@ def prepare_catalogues(image, recipe: dict, locale: str) -> dict:
                 if record.role != "display":
                     continue
                 group = {"EVENT.SCR": "dialogue", "ITEM.SCR": "items", "DOCUMENT.SCR": "documents"}.get(member.name, "other")
-                text_type = "dialogue" if group == "dialogue" else "document" if group == "documents" else "item_description" if record.command == "DESCRIPTION" else "system_message"
+                text_type = "ui_label" if record.command == "ALIAS" else "dialogue" if group == "dialogue" else "document" if group == "documents" else "item_description" if record.command == "DESCRIPTION" else "system_message"
                 row = {"id": f"{name}:{record.id}", "resource": name, "member": member.name,
                        "kind": "script", "script_id": record.id, "offset": record.offset,
                        "capacity": record.capacity, "source": record.source,

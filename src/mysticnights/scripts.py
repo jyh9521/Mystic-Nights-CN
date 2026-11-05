@@ -152,6 +152,11 @@ def extract_strings(data: bytes, member_name: str = "SCRIPT.SCR") -> list[Script
                 raise ScriptError(f"Invalid CP949 in {member_name}:{line_number}") from exc
             if command in DISPLAY_COMMANDS:
                 role = "display"
+            elif (command == "ALIAS" and member_type == b"SCENEDEF"
+                  and re.match(rb'ALIAS\s+ROOM[0-9]+\s+"', stripped)):
+                # ROOMxx stays the lookup key. Its quoted ALIAS is a visible
+                # room label, not an object/resource identifier.
+                role = "display"
             elif command == "NAME" and member_type in {b"ITEM", b"DOC"}:
                 role = "display_identifier"
             elif command in ITEM_REFERENCE_COMMANDS or (

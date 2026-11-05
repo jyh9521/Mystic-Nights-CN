@@ -114,7 +114,8 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
     font_texts += [row["target"] for row in (plaintext_replacements or {}).values()]
     font = build_font(fnt, textures, font_texts, font_path,
                       font_spec["sha256"], pixel_size=config["font_pixel_size"],
-                      forbidden_codes=protected, allowed_codes=allowed)
+                      forbidden_codes=protected, allowed_codes=allowed,
+                      raster_policy=config.get("font_raster"))
     encode = lambda text: encode_text(text, font.mapping)
     for row in entries:
         if decode_text(encode(row["target"]), font.mapping) != row["target"]:

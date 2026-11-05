@@ -1,0 +1,28 @@
+{
+  "format": "mips-runtime-patches",
+  "version": 1,
+  "serial": "SCKA-20055",
+  "resource": "SCKA_200.55",
+  "source_size": 3428048,
+  "source_sha256": "a8662cb99c7dd8abc66c6766d27e0fc15ff83fb3a04d2837001b87f88cf899c4",
+  "source_crc": "2383B74A",
+  "upstream_reference_crc": "83B9AE36",
+  "groups": [
+    {"id":"widescreen-16-9","kind":"patches","author":"Arapapa",
+     "upstream":"https://github.com/PCSX2/pcsx2_patches/blob/93300862caa6498bfbadcd21a5857e458828360d/patches/SCKA-20055_83B9AE36.pnach",
+     "writes":[
+       {"address":"0016AA5C","before":"3C024400","after":"3C0243C0","field":"InitCamera projection horizontal focal scale"},
+       {"address":"0016AA74","before":"3C023F08","after":"3C023F36","field":"InitCamera vertical compensation high half"},
+       {"address":"0016AA78","before":"3442F5C3","after":"34429CFE","field":"InitCamera vertical compensation low half"}]},
+    {"id":"right-stick-horizontal","kind":"cheats","writes":[
+       {"address":"0016871C","before":"3C02BD4C","after":"3C023D4C","field":"UpdateCamera right-axis positive branch yaw step"},
+       {"address":"00168CAC","before":"3C023D4C","after":"3C02BD4C","field":"UpdateCamera right-axis negative branch yaw step"}]},
+    {"id":"infinite-ammo","kind":"cheats","writes":[
+       {"address":"001F7F94","before":"A6E20030","after":"00000000","field":"CheckAttack magazine bullet decrement store"},
+       {"address":"001F8824","before":"A0830004","after":"00000000","field":"ReloadBullet reserve magazine decrement store"},
+       {"address":"001F884C","before":"A4C30002","after":"00000000","field":"ReloadBullet reserve bullet decrement store in branch delay slot"}]},
+    {"id":"infinite-health","kind":"cheats","writes":[
+       {"address":"001F98F4","before":"A4C30012","after":"00000000","field":"SetPlayerDamage current HP damage store"},
+       {"address":"001FA54C","before":"A6420012","after":"00000000","field":"PreUpdatePlayer current HP periodic damage store"}]}
+  ]
+}

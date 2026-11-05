@@ -27,7 +27,18 @@
     ],
     "terminal_period": "。",
     "internal_punctuation": "，、；：？！…—（）「」『』“”‘’《》【】,;:?!()[]\"。",
-    "alternative_endings": "？！?!…"
+    "alternative_endings": "？！?!…",
+    "conditional_parentheticals": true,
+    "enclosure_pairs": [
+      [
+        "（",
+        "）"
+      ],
+      [
+        "(",
+        ")"
+      ]
+    ]
   },
   "network": "network.json",
   "agreement": "agreement.json",
@@ -42,5 +53,19 @@
   ],
   "save_metadata": "save-metadata.json",
   "graphics": "graphics.json",
-  "raw_images": "raw-images.json"
+  "graphics_review": "assets/graphics-source-review.json",
+  "raw_images": "raw-images.json",
+  "font_raster": {
+    "filter": "box",
+    "edge_floor": 24,
+    "edge_ceiling": 224
+  },
+  "text_layout": {
+    "recipe": "assets/text-layout.json",
+    "no_line_start": "，。！？；：、）］｝》〉」』】’”…—,.;:!?)]}%"
+  },
+  "runtime_patches": {
+    "recipe": "assets/runtime-patches.json",
+    "labels": "runtime-patches.json"
+  }
 }

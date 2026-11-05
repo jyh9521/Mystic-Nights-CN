@@ -16,6 +16,10 @@
 
 ## 字体和依赖
 
+### 可选运行补丁研究
+
+16:9 的三个地址/常量参考 Arapapa 的公开结果，来源为 [PCSX2 patches 锁定文件](https://github.com/PCSX2/pcsx2_patches/blob/93300862caa6498bfbadcd21a5857e458828360d/patches/SCKA-20055_83B9AE36.pnach)。该参考仓库根目录未见显式 LICENSE，不把上游补丁内容重标为本项目 MIT；保留作者与固定提交，逐条独立核验本盘原指令。分组工具、版本校验、CRC 计算实现和其余三项金手指由本项目独立编写；不复制上游完整补丁合集或模拟器代码。CRC 算法依据 [PCSX2 官方实现](https://github.com/PCSX2/pcsx2/blob/master/pcsx2/Elfheader.cpp) 的公开行为独立实现。
+
 | 组件 | 许可/来源 | 分发方式 |
 |---|---|---|
 | Noto Sans CJK SC Regular | SIL OFL 1.1；[noto-cjk](https://github.com/notofonts/noto-cjk) | 按 `assets/font-source.json` 下载并校验，原许可随下载保留 |

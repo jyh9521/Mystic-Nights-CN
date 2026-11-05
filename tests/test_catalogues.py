@@ -90,11 +90,18 @@ class TranslationDataTests(unittest.TestCase):
     def test_locale_is_consistent(self):
         report = validate_project(ROOT / "locales/zh-CN")
         self.assertEqual(report["canonical_item_names"], 113)
-        self.assertEqual(report["logical_catalogue_fields"], 2036)
+        self.assertEqual(report["logical_catalogue_fields"], 2178)
         self.assertGreaterEqual(report["selected_physical_fields"], 340)
-        self.assertEqual(report["states"], {"draft": 2034, "non_text": 2})
-        self.assertEqual(report["selected_physical_fields"], 2126)
+        self.assertEqual(report["states"], {"draft": 2176, "non_text": 2})
+        self.assertEqual(report["selected_physical_fields"], 2268)
         self.assertEqual(report["auxiliary_translated_fields"], {"network": 270, "agreement": 1, "extra_interface": 38})
+
+    def test_all_room_aliases_have_translations(self):
+        rows = json.loads((ROOT / 'locales/zh-CN/text/other.json').read_text('utf8'))['entries']
+        self.assertEqual(len(rows), 142)
+        self.assertEqual(len({r['id'] for r in rows}), 142)
+        self.assertTrue(all(r['text_type'] == 'ui_label' and r['target'] and r['status'] in ('draft', 'reviewed') for r in rows))
+        self.assertTrue(all(not any('\uac00' <= c <= '\ud7a3' for c in r['target']) for r in rows))
 
     def test_opening_and_item_batch_not_fragmented(self):
         directory = ROOT / "locales/zh-CN/text"

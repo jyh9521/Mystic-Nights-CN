@@ -38,13 +38,13 @@ def contact_sheets(entries: list[dict], output: Path, label: str, *, columns=8, 
         draw = ImageDraw.Draw(canvas)
         for index, entry in enumerate(page):
             image = Image.open(output / entry["preview"]).convert("RGBA")
-            small = ImageOps.contain(image, (156, 132), Image.Resampling.LANCZOS)
+            small = ImageOps.contain(image, (156, 132), Image.Resampling.NEAREST)
             left, top = (index % columns) * 160, (index // columns) * 160
             canvas.paste(small, (left, top + 26), small)
             draw.text((left + 1, top), f"#{entry['index']:04d} {entry['references'][0]['member'][:19]}", fill="white")
             draw.text((left + 1, top + 12), f"{entry['width']}x{entry['height']}", fill="#cccccc")
-        name = f"{label}-{first // per_page + 1:02d}.jpg"
-        canvas.save(output / name, quality=94)
+        name = f"{label}-{first // per_page + 1:02d}.png"
+        canvas.save(output / name)
         pages.append({"path": name, "texture_indices": [x["index"] for x in page]})
     return pages
 

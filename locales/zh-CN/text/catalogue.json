@@ -7,6 +7,7 @@
     "dialogue.json",
     "items.json",
     "documents.json",
-    "interface.json"
+    "interface.json",
+    "other.json"
   ]
 }

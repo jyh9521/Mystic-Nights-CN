@@ -24,7 +24,9 @@ def validate_project(locale_dir: Path, image=None) -> dict:
         target = row["target"]
         if any(c in target for c in ('\0', '\r', '\n', '"')):
             raise ValueError(f"Forbidden literal character: {row['id']}")
-        validate_text(target, row["text_type"], config["punctuation"])
+        typography = {**config["punctuation"],
+                      "no_line_start": config.get("text_layout", {}).get("no_line_start", "")}
+        validate_text(target, row["text_type"], typography)
         validate_tokens(row["source"], target)
         if row["kind"] == "script":
             validate_script_tokens(row["source"], target, row.get("literal_token_translations", []))
@@ -72,6 +74,12 @@ def validate_project(locale_dir: Path, image=None) -> dict:
         if image is not None:
             build_save_metadata(image, json.loads((ROOT / "assets/save-metadata-slots.json").read_text(encoding="utf8")), metadata)
         graphics_recipe = json.loads((ROOT / "assets/graphics-text-slots.json").read_text(encoding="utf8"))
+        if config.get("graphics_review"):
+            from mysticnights.graphics_review import validate_review
+            review_path = (ROOT / config["graphics_review"]).resolve()
+            if not review_path.is_relative_to(ROOT.resolve()):
+                raise ValueError("Graphics review path escapes repository")
+            validate_review(json.loads(review_path.read_text("utf8")), graphics_recipe, image)
         from mysticnights.artwork import load_graphics_catalogue
         graphics = load_graphics_catalogue(locale_dir / config["graphics"])
         slots = [slot for texture in graphics_recipe["textures"] for slot in texture["slots"]]

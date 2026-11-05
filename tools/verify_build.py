@@ -167,6 +167,16 @@ def verify_full_paths(original, image, manifest, ranges, *, font_path: Path | No
     if full.get("graphics"):
         from mysticnights.graphics import build_graphics, decode_tim2
         graphics = full["graphics"]
+        if graphics.get("source_review"):
+            from mysticnights.graphics_review import validate_review
+            record = graphics["source_review"]
+            path = (ROOT / record["path"]).resolve()
+            require(path.is_relative_to(ROOT.resolve()), "Graphics review path escapes repository")
+            data = path.read_bytes()
+            require(hashlib.sha256(data).hexdigest() == record["sha256"], "Graphics source review identity mismatch")
+            summary = validate_review(json.loads(data), graphics["recipe"], original)
+            require(summary == record["summary"], "Graphics source review summary mismatch")
+            print(f"GRAPHICS_SOURCE_REVIEW PASS unique={summary['unique_textures']} physical={summary['physical_members']} member_name_variant_closure=complete")
         require(graphics["catalogue"]["font_sha256"] == manifest["font"]["sha256"], "Graphics/manifest font hash mismatch")
         font_path = verification_font_path(manifest, font_path)
         expected_graphics, actual_report = build_graphics(original, graphics["recipe"], graphics["catalogue"], font_path)
@@ -214,6 +224,42 @@ def modified(original, image, manifest, *, font_path: Path | None = None):
     mapping = manifest["font"]["mapping"]
     require(len(mapping) == len(set(mapping.values())), "Duplicate glyph assignments")
     ranges = {"RES/SYSTEM.RES": []}
+    layout = manifest.get("full_text", {}).get("text_layout")
+    if layout:
+        from mysticnights.text_layout import build_text_layout
+        resource = layout["resource"]
+        actual = image.read(resource)
+        pre_layout = bytearray(actual)
+        for write in layout["writes"]:
+            start = write["offset"]
+            before, after = bytes.fromhex(write["before"]), bytes.fromhex(write["after"])
+            require(len(before) == len(after) and actual[start:start + len(after)] == after,
+                    "Text layout instruction/table readback mismatch")
+            pre_layout[start:start + len(before)] = before
+            ranges.setdefault(resource, []).append((start, start + len(before)))
+        expected, report = build_text_layout(original.read(resource), bytes(pre_layout), entries,
+                                             mapping, layout["recipe"], layout["policy"])
+        require(report == layout and expected == actual, "Text layout independent replay mismatch")
+        from mysticnights.text_layout import replay_lookahead
+        code_write = layout["writes"][0]
+        code = bytes.fromhex(code_write["after"])
+        keys = set(mapping.values()) | set(range(128))
+        for key in keys:
+            encoded = bytes([key]) if key < 128 else key.to_bytes(2, 'big')
+            keep = key in layout["table_codes"] or (key < 128 and chr(key).isascii() and chr(key).isalnum())
+            require(replay_lookahead(code, layout["code_start"], layout["code_stop"], layout["table_address"], layout["table_codes"], encoded) == keep,
+                    f"Text layout instruction fixture mismatch at glyph key {key:04x}")
+        explicit = 0
+        from mysticnights.typography import _visible
+        for row in entries:
+            lines = row["target"].replace('<BR>', '\n').splitlines()
+            for line in lines[1:]:
+                visible = _visible(line)
+                require(not visible or visible[0] not in layout["policy"]["no_line_start"],
+                        f"Explicit line-start punctuation: {row['id']}")
+                explicit += 1
+        print(f"TEXT_LAYOUT_REPLAY PASS glyph_keys={len(keys)} explicit_breaks={explicit} no_line_head_punctuation=pass")
+        print(f"TEXT_LAYOUT PASS punctuation_codes={len(layout['table_codes'])} code_bytes={layout['code_stop']-layout['code_start']} owner={layout['padding_owner_id']}")
     for row in entries:
         data = image.read(row["resource"])
         member_base = 0
@@ -223,8 +269,17 @@ def modified(original, image, manifest, *, font_path: Path | None = None):
             member_base = member.offset
             data = archive.read(member)
         slot = data[row["offset"]:row["offset"] + row["capacity"]]
-        require(slot == encode_text(row["target"], mapping).ljust(row["capacity"], b"\0"), f"Target readback mismatch: {row['id']}")
-        require(decode_text(slot.rstrip(b"\0"), mapping) == row["target"], f"Text decoding mismatch: {row['id']}")
+        wanted = bytearray(encode_text(row["target"], mapping).ljust(row["capacity"], b"\0"))
+        if layout and row["id"] == layout["padding_owner_id"]:
+            # The visible C string and its first NUL stay intact. Only the
+            # separately source-bound, independently replayed padding holds data.
+            table_write = layout["writes"][1]
+            begin = table_write["offset"] - row["offset"]
+            table = bytes.fromhex(table_write["after"])
+            wanted[begin:begin + len(table)] = table
+        require(slot == wanted, f"Target readback mismatch: {row['id']}")
+        visible = slot.split(b"\0", 1)[0] if row["kind"] == "elf" else slot.rstrip(b"\0")
+        require(decode_text(visible, mapping) == row["target"], f"Text decoding mismatch: {row['id']}")
         begin = member_base + row["offset"]
         ranges.setdefault(row["resource"], []).append((begin, begin + row["capacity"]))
     if manifest.get("full_text"):
@@ -250,6 +305,17 @@ def modified(original, image, manifest, *, font_path: Path | None = None):
         require(protected == set(actual_protected), "Font protection survey mismatch")
     elif policy != "poc-source-text":
         raise ValueError(f"Unknown font protection policy: {policy}")
+    if "raster_policy" in manifest["font"]:
+        from mysticnights.font import build_font
+        original_textures = {f"FONT_{n}.TM2": system.read(f"FONT_{n}.TM2") for n in range(1, 9)}
+        expected_font = build_font(system.read("FONT.FNT"), original_textures, list(mapping),
+                                  verification_font_path(manifest, font_path), manifest["font"]["sha256"],
+                                  pixel_size=manifest["font"]["pixel_size"], forbidden_codes=protected,
+                                  existing_mapping=mapping, raster_policy=manifest["font"]["raster_policy"])
+        require(expected_font.mapping == mapping, "Rebuilt font codebook mismatch")
+        for name, data in expected_font.textures.items():
+            require(patched_system.read(name) == data, f"Native font raster replay mismatch: {name}")
+        print(f"FONT_RASTER PASS glyphs={len(mapping)} policy={manifest['font']['raster_policy']} original_metrics_cluts=unchanged")
     for code in mapping.values():
         require(type(code) is int and code in glyphs and code > 127 and code not in protected, "Overwrote protected or unknown font glyph")
         if policy == "poc-source-text":
@@ -313,6 +379,19 @@ def main():
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         require(manifest["original"] == version["iso"], "Manifest original identity mismatch")
         modified(verify_original(args.original, version), IsoImage(args.iso), manifest, font_path=args.font)
+        if manifest.get("full_text", {}).get("runtime_patches"):
+            from mysticnights.runtime_patches import render_package
+            runtime = manifest["full_text"]["runtime_patches"]
+            resource = runtime["report"]["recipe"]["resource"]
+            expected, report = render_package(IsoImage(args.original).read(resource), IsoImage(args.iso).read(resource),
+                                              runtime["report"]["recipe"], runtime["labels"])
+            require(report == runtime["report"], "Runtime patch manifest replay mismatch")
+            directory = args.manifest.parent / "runtime"
+            actual_names = {p.relative_to(directory).as_posix() for p in directory.rglob("*") if p.is_file()}
+            require(actual_names == set(expected), "Runtime patch file set mismatch")
+            for name, data in expected.items():
+                require((directory / name).read_bytes() == data, f"Runtime patch file readback mismatch: {name}")
+            print(f"RUNTIME_PATCHES PASS files={len(expected)} groups=4 crc={report['identities'][1]['crc']} disc_features=optional")
 
 
 if __name__ == "__main__":

@@ -98,6 +98,11 @@ def main() -> None:
             raise ValueError("Graphics locale/original version mismatch")
         replacements, graphics_report = build_graphics(image, graphics_recipe, graphics_catalogue, font_path, replacements)
         full_details["graphics"] = {"recipe": graphics_recipe, "catalogue": graphics_catalogue, "report": graphics_report}
+        if config.get("graphics_review"):
+            review_path = ROOT / config["graphics_review"]
+            review = json.loads(review_path.read_text("utf8"))
+            full_details["graphics"]["source_review"] = {"path": config["graphics_review"],
+                "sha256": hashlib.sha256(review_path.read_bytes()).hexdigest(), "summary": review["summary"]}
         if config.get("raw_images"):
             from mysticnights.raw_images import build_raw_images
             raw_recipe = json.loads((ROOT / "assets/raw-image-slots.json").read_text(encoding="utf8"))
@@ -106,6 +111,18 @@ def main() -> None:
                 raise ValueError("Raw image locale/original version mismatch")
             replacements, raw_report = build_raw_images(image, raw_recipe, raw_catalogue, replacements)
             full_details["raw_images"] = {"recipe": raw_recipe, "catalogue": raw_catalogue, "report": raw_report}
+    if config.get("text_layout"):
+        from mysticnights.text_layout import build_text_layout
+        layout_policy = config["text_layout"]
+        recipe_path = (ROOT / layout_policy["recipe"]).resolve()
+        if not recipe_path.is_relative_to(ROOT.resolve()):
+            raise ValueError("Text layout recipe escapes repository")
+        layout_recipe = json.loads(recipe_path.read_text("utf8"))
+        resource = layout_recipe["resource"]
+        replacements[resource], layout_report = build_text_layout(
+            image.read(resource), replacements[resource], catalogue["entries"], font.mapping,
+            layout_recipe, {"no_line_start": layout_policy["no_line_start"]})
+        full_details["text_layout"] = layout_report
     args.output.parent.mkdir(parents=True, exist_ok=True)
     parent = args.output.parent.resolve()
     # Only a newly allocated sibling directory is ever cleaned on failure.
@@ -117,12 +134,26 @@ def main() -> None:
         result = replace_files(args.iso, work / iso_name, replacements,
                                expected_sha256=version["iso"]["sha256"], expected_size=version["iso"]["size"])
         patch = build_patch(args.iso, work / iso_name, work / "DIFF_FILE.mnp.zip")
+        if config.get("runtime_patches"):
+            from mysticnights.runtime_patches import render_package, write_package
+            runtime = config["runtime_patches"]
+            recipe_path = (ROOT / runtime["recipe"]).resolve()
+            labels_path = (locale_dir / runtime["labels"]).resolve()
+            if not recipe_path.is_relative_to(ROOT.resolve()) or not labels_path.is_relative_to(locale_dir.resolve()):
+                raise ValueError("Runtime patch configuration escapes repository/locale")
+            runtime_recipe = json.loads(recipe_path.read_text("utf8"))
+            runtime_labels = json.loads(labels_path.read_text("utf8"))
+            elf_name = runtime_recipe["resource"]
+            runtime_files, runtime_report = render_package(image.read(elf_name), replacements[elf_name], runtime_recipe, runtime_labels)
+            write_package(work / "runtime", runtime_files)
+            full_details["runtime_patches"] = {"report": runtime_report, "labels": runtime_labels}
         art_pending = bool(full_details.get("graphics", {}).get("report", {}).get("pending_art_restoration_slots", []))
         manifest = {"profile": catalogue["profile"], "status": "awaiting-art-review-and-runtime-test" if art_pending else "awaiting-user-runtime-test", "locale": args.locale,
                 "localized_title": config.get("title", "Mystic Nights"),
                 "original": version["iso"], "modified": {"size": result["size"], "sha256": result["sha256"]},
                 "changed_files": result["replacements"], "entries": catalogue["entries"],
                 "font": {"name": font_spec["name"], "sha256": font.font_sha256,
+                         "raster_policy": config.get("font_raster"),
                          "pixel_size": config["font_pixel_size"], "mapping": font.mapping,
                          "protection_policy": config.get("font_protection", "poc-source-text"),
                          "protected_codes": protected},

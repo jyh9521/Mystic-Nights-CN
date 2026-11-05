@@ -522,7 +522,7 @@
       "line": 96,
       "role": "display",
       "text_type": "document",
-      "target": "<密码系统设置><BR><BR>B1密码每周自动重设。<BR>B2密码每隔一天自动重设。<BR>B3密码每天自动重设。<BR>B4密码每12小时自动重设。<BR>B5密码每6小时自动重设。<BR>B6密码每2小时自动重设。<BR>（数据棒等级以No.楼层数表示。）",
+      "target": "<密码系统设置><BR><BR>B1密码每周自动重设。<BR>B2密码每隔一天自动重设。<BR>B3密码每天自动重设。<BR>B4密码每12小时自动重设。<BR>B5密码每6小时自动重设。<BR>B6密码每2小时自动重设。<BR>（数据棒等级以No.楼层数表示）",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
@@ -814,7 +814,7 @@
       "line": 149,
       "role": "display",
       "text_type": "document",
-      "target": "<BR><BR>它尚处于不稳定的生长期，目前只能勉强靠电刺激控制。<BR>以下是帝王对电刺激的反应……<BR>……错误……",
+      "target": "<BR><BR>它尚处于不稳定的生长期，目前只能勉强靠电刺激控制。<BR>以下是帝王对电刺激的反应……<BR>错误……",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
@@ -836,7 +836,7 @@
       "line": 155,
       "role": "display",
       "text_type": "document",
-      "target": "远古计划日志<BR><BR>-> 08.12 23:12<BR>-> 记录人 艾伦·德恩<BR>-> <吸血鬼凶暴性报告> 读取中……<BR>……<BR>随着实验推进，吸血鬼凶暴的本能开始变得难以控制。",
+      "target": "远古计划日志<BR><BR>-> 08.12 23:12<BR>-> 记录人 艾伦·德恩<BR>-> <吸血鬼凶暴性报告> 读取中……<BR><BR>随着实验推进，吸血鬼凶暴的本能开始变得难以控制。",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
@@ -892,7 +892,7 @@
       "line": 157,
       "role": "display",
       "text_type": "document",
-      "target": "<BR><BR>-> <吸血鬼计划> 读取中……<BR>……<BR>为制衡因本能凶暴而难以控制的吸血鬼，我们利用其始祖远古吸血鬼，开始研究新的个体。<BR>我们期待远古吸血鬼能从精神上控制吸血鬼和帝王。 <略>",
+      "target": "<BR><BR>-> <吸血鬼计划> 读取中……<BR><BR>为制衡因本能凶暴而难以控制的吸血鬼，我们利用其始祖远古吸血鬼，开始研究新的个体。<BR>我们期待远古吸血鬼能从精神上控制吸血鬼和帝王。 <略>",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
@@ -946,7 +946,7 @@
       "line": 164,
       "role": "display",
       "text_type": "document",
-      "target": "<BR><BR>其智力也高于一般种类，并有绝不放弃既定目标的执着。由于这类实验体极难控制，生体实验受到严格限制。我们决定将这一新种命名为“吸血鬼领主”。<BR><BR>-> 远古吸血鬼<BR>……数据检索错误。<BR>已于04.20删除。",
+      "target": "<BR><BR>其智力也高于一般种类，并有绝不放弃既定目标的执着。由于这类实验体极难控制，生体实验受到严格限制。我们决定将这一新种命名为“吸血鬼领主”。<BR><BR>-> 远古吸血鬼<BR>数据检索错误。<BR>已于04.20删除。",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"
@@ -1760,7 +1760,7 @@
       "line": 296,
       "role": "display",
       "text_type": "document",
-      "target": "时间：24日20:00至30日08:00<BR>（动力室运行时间：当日20:00至次日07:00）<BR>地点：动力室（主动力室／辅助动力室）<BR><BR>内容<BR>命令埃德·赫希(Ed Hirsch)与彼得·亨特(Peter Hunter)，<BR>自24日20:00至30日08:00，负责主动力室与辅助动力室<BR>的管理工作。<BR>（仅在动力室运行时值班。）",
+      "target": "时间：24日20:00至30日08:00<BR>（动力室运行时间：当日20:00至次日07:00）<BR>地点：动力室（主动力室／辅助动力室）<BR><BR>内容<BR>命令埃德·赫希(Ed Hirsch)与彼得·亨特(Peter Hunter)，<BR>自24日20:00至30日08:00，负责主动力室与辅助动力室<BR>的管理工作。<BR>（仅在动力室运行时值班）",
       "status": "draft",
       "mirrored_resources": [
         "RES/UI/DOCUMENT.RES"

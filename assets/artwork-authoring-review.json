@@ -1,0 +1,258 @@
+{
+  "format": "artwork-authoring-review",
+  "version": 1,
+  "method": "Source-style image edits followed by reviewed native UV/palette registration; deterministic builds consume only committed source-bound pixel deltas",
+  "not_distributed": "Full original or derived game textures; rejected draft generations",
+  "records": [
+    {
+      "id": "buttons006",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit target: original 8-row, two-column PS2 capsule-button texture. Replace ONLY the sixteen English words, accurately preserving the exact blue/orange industrial metal capsule frames, angular blue highlights, mechanical texture, original row spacing and transparent outside. In BOTH columns, rows top to bottom must read exactly: 简单 / 普通 / 困难 / 詹妮弗 / 布鲁斯 / 艾伦 / 亨利 / 弗兰克. Match the original condensed bold font, slight metallic bevel, small dark outline and face color: silver-white on blue, warm pale gold on orange. All rows and both states MUST use visually identical Chinese glyph height (about the original letter height), and matching word width for the same word. Remove ALL original letter strokes, dark shadows and halos, including behind and above/below the new characters; restore the natural textured button material seamlessly underneath, not a flat blue/orange rectangle. Crisp legible lettering, no speckled JPEG noise, no extraneous lines or glowing plaques. Do not redesign, enlarge, simplify, move or replace the original frames or corner highlights. Keep 8 rows, not 7 or 9. Output the edited atlas only, no comparison or captions. True transparency outside the capsules.",
+      "selected_output_sha256": "a8dd05b7a1532a0304116d55bbbcc6d3ff1c419734c943e4653849aecac7ce6f",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json"
+      ]
+    },
+    {
+      "id": "buttons007",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit target: this exact PS2 game texture atlas, enlarged 4x. Preserve all positions, shapes, palette, metal/glass gradients, frame edges and upper blank bars. Replace the five English names in BOTH blue and orange columns, top to bottom, with these exact Chinese names: 约翰, 迈克尔, 卢克, 凯莉, 简. Same heavy condensed beveled metallic original font style: blue state silver-white with dark steel edge, orange state yellow-gold with dark bronze edge. SAME glyph core height in both states (about 52 image pixels), same text width and centered position. Remove ALL old English strokes, dark outlines, halos behind Chinese; reconstruct continuous original blue/orange translucent metal texture underneath, not a solid rectangle. Keep the visible patterned button interiors and all original borders. No other text. Output 1024x1024 atlas, transparency outside buttons as in source.",
+      "selected_output_sha256": "7105e12e2d27b518a95a4a0487a9b5bf59014eff1b550983d1a0ffbc09bbdc4a",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "loading",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit target: supplied original two-frame PS2 LOADING eye texture. Replace only LOADING... in BOTH eye images with exactly 正在加载… (one ellipsis character). The TOP is the clear/open frame and BOTTOM is the intentionally horizontally motion-blurred transition frame. Both MUST depict the SAME base Chinese lettering at exactly the same visual height and character width, same center, same thin upright sans-serif style as original, pale pink-white light with subtle red glow; the lower frame may have horizontal smear but not be enlarged or reduced. Fully remove the English letter silhouettes, dark shadows and red text glow by restoring the organic eye/iris ridges naturally and seamlessly; do not paint any black rectangle or flat black strip. Preserve original eye outline, lid folds, all non-text pixels, muted organic texture and red peripheral glow. No box, plaque, new border, opaque backing, heavy Chinese serif, bevel or metallic effect. Keep both frames in their original atlas halves and preserve black/transparent surroundings. Output atlas only with both frames, no captions or comparison.",
+      "selected_output_sha256": "49088f2bea27edfaa17091fc01ef55372cbff3b933b7d4ccdd7ed6047fac10ea",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/b2454bf547a1.json"
+      ]
+    },
+    {
+      "id": "nosignal_upright",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit only the cyan illuminated rectangular sign at BOTTOM LEFT of this texture atlas. The sign is already rotated upright for editing. Replace NO SIGANAL with exact horizontal Chinese 无信号 and its smaller subtitle with horizontal 警报：紧急状态. Keep BOTH lines HORIZONTAL, not vertically stacked. Same modest dark gray stencil ink, lower contrast where cyan bloom shines through, same large headline and very small subtitle proportions, matching source positions. Fully remove all English strokes and restore the continuous cyan glow behind Chinese without any flat panel or rectangle. Preserve all pixels outside the sign, all original seams, lighting and UV geometry. Output same square atlas.",
+      "selected_output_sha256": "9ba9b0fb4b8489e75ef59fb6e8e5c35c2f642e70b6ff12a574c3158687046b2a",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/3cdf7f68dbec.json",
+        "locales/zh-CN/artwork/ca6e1f00f5ea.json"
+      ]
+    },
+    {
+      "id": "battery",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. In this exact PS2 texture atlas, replace ONLY the dark red printed word BATTERY in the bordered label at upper middle-left with exact Chinese 电池. Match the subdued dark red industrial stencil weight and existing aging, same label scale and baseline. Preserve the small unreadable lines below and all frame borders. Remove all BATTERY letter ghosts and restore original teal metal texture continuously, no backing rectangle. Preserve every other vent, panel, seam, highlight, color and UV geometry.",
+      "selected_output_sha256": "006ddc80a2e9e362503fc130ee6e2c62aa27aeb2b9d299139773e2f12727afba",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/ad7931dc54e9.json"
+      ]
+    },
+    {
+      "id": "keepout",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. In this exact dark PS2 texture atlas, edit ONLY the three clearly readable red label lines in the lower right: KEEP OUT -> 禁止入内 ; UNKNOWN DNA -> 未知DNA ; OBJECT INSIDE -> 内有物体. Three lines in these exact words. Match original narrow red stencil print, subdued low contrast, aged dark red metal, source text block position and font proportions. Do not brighten the asset. Remove every original letter and outline and preserve continuous existing red gradient/patina underneath with no patch seam. Preserve tiny unreadable upper-left label, all doors, seams, dark panels, lights and every other original detail unchanged.",
+      "selected_output_sha256": "fa3add1ad2d4ddbf979e5c0f5a9b2b48f65330edf26b999b96bab82aeda5091d",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/e78c1934d0da.json"
+      ]
+    },
+    {
+      "id": "exitglass",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the small cyan EXIT sign on the left side at x35..226,y584..680 of this exact 1024px PS2 texture atlas. Replace VITAL CREATIONS with 生命创造 and EXIT with 出口. Preserve the tiny unreadable middle manufacturer line rather than inventing words. Match original narrow white-cyan industrial sans-serif stencil lettering, restrained glow, small header/large lower word proportions. Reconstruct source cyan gradient under ALL old Latin strokes so there are no ghost letters, no rectangles. Keep exact atlas UV geometry, sign perimeter, wall texture, lighting, reflections, doors, tiny door microprint and every pixel outside the sign unchanged. Output same square atlas.",
+      "selected_output_sha256": "4fe6cc5ae33c7eeb45cf2bb2f49946128f28016e0d28fcab2db69f4b3096f3b7",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4f5e8aba7eac.json",
+        "locales/zh-CN/artwork/4b4153df3b8b.json",
+        "locales/zh-CN/artwork/2d73154cccc0.json",
+        "locales/zh-CN/artwork/3b08c3cd5b4d.json",
+        "locales/zh-CN/artwork/c06a1378e931.json",
+        "locales/zh-CN/artwork/0d18baa138df.json",
+        "locales/zh-CN/artwork/518a12e3768e.json",
+        "locales/zh-CN/artwork/6f6acbe2aa58.json",
+        "locales/zh-CN/artwork/d7c78a1b81d5.json",
+        "locales/zh-CN/artwork/bad47b8ddfb3.json",
+        "locales/zh-CN/artwork/9ece5b6e3dd5.json",
+        "locales/zh-CN/artwork/ee493ac1c4a9.json",
+        "locales/zh-CN/artwork/db909841bba1.json"
+      ]
+    },
+    {
+      "id": "graffiti",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the dark red English handwritten blood message on the right door in this exact PS2 texture atlas. Replace the message with exact three Chinese lines: 敌人就在 / 我们 / 之中. Match original irregular hand-painted red blood strokes, subtle dark saturation, uneven organic brush, source scribble scale and line placement; do not use a clean print font. Completely remove original Latin letters and reconstruct door's dark blue metal shading under them with no solid backing rectangle, no sharp seam. Keep broken glass silhouette, blood stains outside lettering, cyan top lights, chrome frames, damaged metal and all UV layout exactly. Output same 1024x1024 atlas.",
+      "selected_output_sha256": "463757f5f5b3ec210395732ffc37f7f86560398ad95fda1664cfb1e02cca3823",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/7a93f6958aa8.json"
+      ]
+    },
+    {
+      "id": "biohazard",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Replace ONLY the heading BIOHAZARD AREA on the red sign in this exact dark PS2 texture atlas with Chinese 生物危险区域. Match original low-contrast red industrial stencil print, same height, block position and aged substrate. Preserve all unreadable fine print below exactly rather than inventing words. Erase the original heading completely and restore its continuous dark red texture, without a solid cover rectangle or obvious seam. Do not brighten scene. Preserve the rest of the atlas, pipes, vents, grime, seams and UV geometry unchanged.",
+      "selected_output_sha256": "56ba912d56593d8a7508013e5b15c148c33bfc488a1ee6c64ef896c4f331ff87",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c537848a1c90.json"
+      ]
+    },
+    {
+      "id": "dripper",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. In the small label near top-left-center of this exact PS2 texture atlas, replace ONLY the white model word DRIPPER (right of the hyphen) with Chinese 滴注器. Match original white narrow industrial stencil lettering, same font height and baseline. Leave the red TOMCAT brand, hyphen and ALL tiny unreadable fine print below untouched. Completely remove Latin DRIPPER letters and outlines, restore existing dark green-gray metal texture seamlessly without rectangles. Preserve all panel seams, shading and atlas UV geometry.",
+      "selected_output_sha256": "a6983cd9649c27297caf8b5ea8a4d7bffa27f136681c9794df9f9fc216a4697f",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/f806c5ebec1b.json"
+      ]
+    },
+    {
+      "id": "notice",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the red heading NOTICE at the top of the pale paper notice at lower right in this exact PS2 game texture atlas. Replace that heading with Chinese 告示, matching the same small dark-red block print weight, approximate occupied height and baseline. Preserve all smaller unreadable red lines below exactly; don't invent body copy. Remove every letter of the original heading including fringes, restore the same weathered pale paper behind it without flat white rectangles. Preserve everything else, including shadows, grunge, torn paper edges, blue metal, panel lines and UV layout.",
+      "selected_output_sha256": "88c2ce449d09f77850306682ad9655128a50c817715db91451457b29d521a51f",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/b700f49436f1.json"
+      ]
+    },
+    {
+      "id": "notice2",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the small light-gray NOTICE heading on the label at TOP RIGHT of this exact PS2 texture atlas. Replace it with Chinese 告示 in matching small gray block stencil print, same height/baseline. Preserve its unreadable microprint below exactly; do not invent text. Completely remove old NOTICE letter outlines and reconstruct the same blue-gray label substrate without a flat patch. Preserve all other pipes, blue highlights, black panels, grunge and atlas geometry.",
+      "selected_output_sha256": "12240a07ac7290b009e0ce79682fa3299a8210b109dc0c3c7cb72698df5b82c6",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/96b77b854a90.json",
+        "locales/zh-CN/artwork/646dd6d4a6a9.json",
+        "locales/zh-CN/artwork/e10ecf9cea50.json"
+      ]
+    },
+    {
+      "id": "powerwatch",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the two-line instruction label on the cyan-lit panel at BOTTOM RIGHT of this exact upright-rotated PS2 texture atlas. Replace POWER WATCH with 电源监控 and PUSH DOWN with 向下按. Keep both lines horizontal, same dark-gray industrial stencil ink, same font height and position; match subdued contrast under cyan bloom. Completely erase original Latin letters and restore continuous local cyan gradient, no backing rectangle or visible seam. Preserve all other vents, panels, seams, lights, colors and UV geometry.",
+      "selected_output_sha256": "9d9e20bb963e46d6228758dd51b7734f22dca90cd505f803cf80d88a6882d266",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/6a2034752e22.json",
+        "locales/zh-CN/artwork/16c04c38c46c.json"
+      ]
+    },
+    {
+      "id": "food_upright",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. On the pale food package label at UPPER RIGHT of this exact upright-rotated PS2 texture atlas, replace BOTH occurrences of the large word FOOD with exact Chinese 食品. Upper word is horizontal upright; lower repeated word must keep its original 180-degree upside-down orientation. Use the same dark gray bold industrial stencil, same height and baseline footprint. Keep all smaller unreadable print unchanged. Erase all Latin strokes and outlines fully and preserve the existing cream gradient, patina and lamp highlights without a flat cover patch. Keep every other panel and all original atlas geometry unchanged.",
+      "selected_output_sha256": "11199b6ab796cb429e8a2d661627a7cada5d32db9c746b2089b31bf5d4fbb5f7",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/240290704a70.json",
+        "locales/zh-CN/artwork/76d695a96659.json"
+      ]
+    },
+    {
+      "id": "mainsystem",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the clearly readable diagonal MAIN SYSTEM heading printed across the curved metallic fan shroud at center of this exact PS2 game texture atlas. Replace with Chinese 主系统. Keep exactly the original -45-degree line angle, small bold dark industrial stencil weight, occupied height, curved illuminated metal beneath the lettering and subdued contrast. Preserve both smaller unreadable print lines below unchanged. Remove ALL original heading strokes and dark fringes, reconstruct continuous teal metallic shading without rectangles. Preserve fans, chrome edges, reflections, grime and every other pixel/UV geometry.",
+      "selected_output_sha256": "f9977b3edfbeabb93b0fe2f40ef9758bc8aca79a3c7fffa3c77beee7b9f56379",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/3c67f32d1d7f.json",
+        "locales/zh-CN/artwork/79739eabd611.json",
+        "locales/zh-CN/artwork/aed422709a04.json"
+      ]
+    },
+    {
+      "id": "navy_field",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. This is a tightly cropped source texture word field. Replace ONLY NAVY SUBMARINE with Chinese 海军潜艇, centered in the OLD WORD'S footprint, using the same small narrow cyan-white industrial stencil, EXACTLY the same baseline/height as Latin lettering and source contrast under cyan lamp. Preserve the existing hyphen fragment at far right unchanged; do not add codes, Latin letters or a new hyphen. Erase every old NAVY SUBMARINE stroke and fringe; preserve continuous blue-metal gradient and no rectangle seam. Keep the two unreadable fine-print lines below and all other texture unchanged. Same square crop framing.",
+      "selected_output_sha256": "3f86877145631b70a61b81c1d593beb2bae0a57a62d8725774b386baba325c13",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/dd5bb524061b.json"
+      ]
+    },
+    {
+      "id": "lockedpassword",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. On this exact PS2 sci-fi terminal texture, replace ALL THREE large repeated status lines LOCKED-PASSWORD with exact Chinese 已锁定—密码. Same horizontal placement, equal font heights in the three rows, original orange-yellow/white glowing segmented digital type and red scanline/light-bloom effect. Completely erase ALL old Latin strokes/ghost outlines and retain continuous glowing red hologram behind Chinese, not flat black backing rectangles. Preserve each thin frame outline, underlying small changing diagnostic microtext, lower central THE CELL DOOR header and unreadable body exactly; don't invent new fine print. Preserve all other source geometry and illumination.",
+      "selected_output_sha256": "e15c04115b43bdc6ccb6c9b497477b7a437906977e2e49bcfd16105dda299bd4",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/1e107b7767a6.json",
+        "locales/zh-CN/artwork/d42365b79e18.json",
+        "locales/zh-CN/artwork/de535ff9da31.json"
+      ]
+    },
+    {
+      "id": "warningkeepout",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. In this exact PS2 blood-stained wall texture, edit ONLY the two readable heading lines on the pale sign at upper left: WARNING - KEEP OUT -> 警告—禁止入内 ; RESTRICTED AREA -> 限制区域. Match small dark red first line, dark black second line, source block stencil weight and exact source text block scale and placement. Preserve the unreadable smaller lower print and all blood stains, paper edges, wire-mesh pattern, wall grime, red stripes and original UV layout. Fully remove all Latin heading strokes and restore original local paper shading with no cover rectangles or seams.",
+      "selected_output_sha256": "de6d36d23718d9bcbe3fe46a80609a07b45d5dd56259a37b16e87e85c54ce97e",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/8ce2737319c9.json"
+      ]
+    },
+    {
+      "id": "army",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the clearly readable US ARMY heading on the dark red ammunition-box label at lower left of this exact small PS2 item texture atlas. Replace US ARMY with Chinese 美军, matching the small faded dark-red stencil-print lettering, same height and baseline, and existing red metal patina/flashlight glow. Preserve all technical caliber numbers, lot codes, unreadable fine print, black triangular ammunition icons and every other surface unchanged. Erase ALL original US ARMY strokes and restore continuous background with no flat cover patch. Preserve exact atlas geometry.",
+      "selected_output_sha256": "9161c4094e69269603fefcf386b4c4c33b04fc8a6a1a384bae755e02f807aed9",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/6e3520e05810.json"
+      ]
+    },
+    {
+      "id": "controlvariant",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the printed labels on BOTH halves of this exact metallic double-door game texture. Replace MAIN CONTROL CENTER (two lines) with 主控制 / 中心 (two lines), RESTRICTED AREA with 限制区域, and the small UNLOCK with 解锁, on BOTH doors. Match each source color: teal-cyan titles and tiny unlock, dark red restriction line. Keep original industrial stencil style, each font's source height and positions, equal sizes on the two door halves. Completely erase ALL old Latin strokes and edge halos, reconstruct metallic gradient seamlessly with no cover rectangles. Preserve all door hardware, horizontal frames, reflections, side panel, blood/grime and UV layout exactly.",
+      "selected_output_sha256": "aa57922a68c47632df8d19eacd32f36d53fc0df537121962161dd3a2d415fd6b",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/f4a11c596ef6.json"
+      ]
+    },
+    {
+      "id": "noticevariant",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the small red NOTICE heading on the pale notice attached to the LEFT door in this exact game texture atlas. Replace NOTICE with 告示, matching original small dark red block print font height and baseline. Preserve every smaller unreadable red line below, all paper edges, weathering, door reflections, pasted images on the right, all their microprint and UV geometry. Fully erase original heading letters/halos and reconstruct the same weathered paper beneath, no flat cover rectangle or seam.",
+      "selected_output_sha256": "6534bae8dd2ce553d89a902c3e0fb0499ed8335ee0fcdf1828fe2d944ddc4548",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/3cc709932dc1.json"
+      ]
+    },
+    {
+      "id": "warningunknown",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY two clearly readable gray headings on the two dark signs at LEFT in this exact red-grunge game texture atlas: WARNING -> 警告 on upper sign; UNKNOWN AREA -> 未知区域 on lower sign. Preserve the original small trailing hyphen on each heading. Match original subdued gray narrow industrial stencil print, same height, baseline and positions. Keep ALL unreadable fine print below both headings unchanged. Remove all original Latin heading strokes and fringes and restore continuous original dark panel texture, no new backing rectangles. Keep rusty wall, shadows, seams, mesh and all original UV geometry.",
+      "selected_output_sha256": "e390ab978cdb89e9b0b39860b201b6fdce9c0a070551bc8c14bd9efee12f6016",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/f1e0ae776410.json",
+        "locales/zh-CN/artwork/1dcaca3a44d2.json"
+      ]
+    },
+    {
+      "id": "keepoutvariant",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the three red label lines at LOWER RIGHT of this exact game texture atlas: KEEP OUT -> 禁止入内 ; UNKNOWN DNA -> 未知DNA ; OBJECT INSIDE -> 内有物体. Exactly three lines. Match the source dark-red small narrow stencil lettering, same line heights and positions, subtle glow under red light; don't brighten the scene. Completely remove all Latin letters and ghost fringes, preserve continuous original red/black sign patina with no cover rectangles. Keep all other panels, tiny unreadable upper label, round vents, seams, lights and original atlas geometry unchanged.",
+      "selected_output_sha256": "7b70f102a2a009f0582702627b96ac90fe20ae69a08cbf52ed70671b3ed3d326",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/1a0cdaaf037f.json"
+      ]
+    },
+    {
+      "id": "terminalerror",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit ONLY the small readable TIPICAL ERROR heading at the top of the LOWER central diagnostics box in this exact PS2 terminal texture. Replace it with 典型错误, same very small font height (about half height of the big LOCKED labels), original white-pink glowing narrow digital font and scanline pattern, same baseline and text-block footprint. Do not change any of the three large status labels or their frames. Keep every smaller unreadable diagnostic line below exactly. Erase old heading letters and halos completely and preserve continuous original hologram backdrop; no flat backing rectangle. All other geometry, colors, noise and lighting unchanged.",
+      "selected_output_sha256": "ae1a70621282ef2fd25a796bd46f6ef94eb7e985e1ebbdf65f98b2b3eeb89703",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/1e107b7767a6.json",
+        "locales/zh-CN/artwork/d42365b79e18.json",
+        "locales/zh-CN/artwork/de535ff9da31.json"
+      ]
+    },
+    {
+      "id": "fragile",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. The two low-contrast industrial labels on the LOWER cabinet doors in this exact texture read FRAGILE (not FREEZER). Replace BOTH FRAGILE labels with exact Chinese 易碎. Keep the original very dark yellow stencil ink on left, very dark red stencil ink on right, same tiny letter height and source baselines. Erase every original Latin stroke, fringe and outline; reconstruct continuous original dark glass/metal shading, no flat cover rectangles. Preserve all other pixels, cream upper label, unreadable microprint, glass reflections, frames, equipment, lighting and exact atlas UV geometry. Do not add text elsewhere. Do not brighten scene.",
+      "selected_output_sha256": "1204c936780ac7fb2425ff625244947ea013cf4a71626a63cce10dada0fd6aff",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/9e62c3226d47.json",
+        "locales/zh-CN/artwork/e27b23d37455.json"
+      ]
+    }
+  ]
+}

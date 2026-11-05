@@ -2,6 +2,20 @@
 
 本文件的 Verified 均限定于 `assets/game-version.json` 中的韩版原盘。
 
+## SCENEDEF 房间显示名 — Verified
+
+`ROOM_SPECIFIC` 段形如 `ALIAS ROOM03 "극나노 세포 연구실"`。`ROOM03` 是键，后面的 CP949 引号内容可翻译；不是把整条 ALIAS 视作资源标识。当前 142 个引号字段用原成员偏移、原字节 hash 和原容量锁定，单独存入 locale 的 `text/other.json`。非 SCENEDEF 或非 ROOM 键的 ALIAS 仍按标识保留。
+
+## 主字体标点 lookahead — Verified offline
+
+原指令虚拟地址 `0x155EB0..0x155F40`（文件偏移 `0x55F30` 起，144 字节）改为标准标量 MIPS 就地查表块。下一非 ASCII 字符按原游戏规则合成大端两字节键；查表自身采用小端 u16，以 0 结束。原有 v0 glyph 指针及保存寄存器不被临时计算覆盖。
+
+表容量由一条源绑定 C 字符串的译后余量确定：所有可见目标字节、首个 NUL、对齐及现有 154 字节槽总长保持合法，表位于 NUL 之后。源字码分配改变时重算表；译文变长占用余量时构建拒绝，不挪用其他字符串/机器码。整盘验证对该唯一 owner 显式覆盖表字节，并验证首个 NUL 前的译文；不把所有 ELF 字符串的非零 padding 一概放行。
+
+## 可选 PNACH — Verified offline
+
+`assets/runtime-patches.json` 记录十个 EE 虚拟地址及原/新 32 位指令。生成器从受支持 ELF 的 PT_LOAD 算文件偏移，同时核验中文 ELF 头、加载映射和各处原指令。补丁与金手指分目录，按实际 ELF 全文件小端 u32 XOR 命名。配置、描述译文在 `locales/<locale>/runtime-patches.json`；十处指令不写入默认 ISO。来源、开关及人工验收步骤见 [RUNTIME_PATCHES.md](RUNTIME_PATCHES.md)。
+
 ## ISO9660 — Verified
 
 2048字节扇区，Primary Volume标识`MN`；724文件、51目录（含根）。目录记录中的LBA、长度和卷号双端副本须一致。解析器拒绝越界、多extent、交错文件、重复路径、目录环和文件/元数据重叠。

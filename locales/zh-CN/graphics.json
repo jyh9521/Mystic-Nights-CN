@@ -815,17 +815,6 @@
       "status": "draft"
     },
     {
-      "id": "4f5e8aba7eac/text-01",
-      "target": "生命创造",
-      "status": "draft",
-      "source": "VITAL CREATIONS"
-    },
-    {
-      "id": "4f5e8aba7eac/text-02",
-      "target": "出口",
-      "status": "draft"
-    },
-    {
       "id": "db107f489be6/text-01",
       "target": "幼虫实验室",
       "status": "draft"
@@ -2028,6 +2017,466 @@
       "id": "8b22f906baa7/text-01",
       "target": "禁止入内",
       "status": "draft"
+    },
+    {
+      "id": "3cdf7f68dbec/text-01",
+      "target": "无信号\n警报：紧急状态",
+      "status": "draft"
+    },
+    {
+      "id": "3b08c3cd5b4d/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "3b08c3cd5b4d/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "ad7931dc54e9/text-01",
+      "target": "电池",
+      "status": "draft"
+    },
+    {
+      "id": "3c67f32d1d7f/text-01",
+      "target": "主系统",
+      "status": "draft"
+    },
+    {
+      "id": "240290704a70/text-01",
+      "target": "食品",
+      "status": "draft"
+    },
+    {
+      "id": "240290704a70/text-02",
+      "target": "食品",
+      "status": "draft"
+    },
+    {
+      "id": "b700f49436f1/text-01",
+      "target": "告示",
+      "status": "draft"
+    },
+    {
+      "id": "7a93f6958aa8/text-01",
+      "target": "敌人就在\n我们\n之中",
+      "status": "draft"
+    },
+    {
+      "id": "96b77b854a90/text-01",
+      "target": "告示",
+      "status": "draft"
+    },
+    {
+      "id": "c537848a1c90/text-01",
+      "target": "生物危险区域",
+      "status": "draft"
+    },
+    {
+      "id": "e78c1934d0da/text-01",
+      "target": "禁止入内\n未知DNA\n内有物体",
+      "status": "draft"
+    },
+    {
+      "id": "6a2034752e22/text-01",
+      "target": "电源监控\n向下按",
+      "status": "draft"
+    },
+    {
+      "id": "f806c5ebec1b/text-01",
+      "target": "滴注器",
+      "status": "draft"
+    },
+    {
+      "id": "8ce2737319c9/text-01",
+      "target": "警告—禁止入内\n限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "6e3520e05810/text-01",
+      "target": "美军",
+      "status": "draft"
+    },
+    {
+      "id": "dd5bb524061b/text-01",
+      "target": "海军潜艇",
+      "status": "draft"
+    },
+    {
+      "id": "058347acc5da/text-01",
+      "target": "电力管理",
+      "status": "draft"
+    },
+    {
+      "id": "826d39ddb48d/text-01",
+      "target": "仓库",
+      "status": "draft"
+    },
+    {
+      "id": "77ce09726266/text-01",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "77ce09726266/text-02",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "77ce09726266/text-03",
+      "target": "安全监视器",
+      "status": "draft"
+    },
+    {
+      "id": "aa01c58ae3ce/text-01",
+      "target": "无视频信号",
+      "status": "draft"
+    },
+    {
+      "id": "07073c970232/text-01",
+      "target": "探测器室",
+      "status": "draft"
+    },
+    {
+      "id": "07073c970232/text-02",
+      "target": "探测器室",
+      "status": "draft"
+    },
+    {
+      "id": "07073c970232/text-03",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "4b4153df3b8b/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "4b4153df3b8b/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "4f5e8aba7eac/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "4f5e8aba7eac/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "c06a1378e931/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "c06a1378e931/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "0d18baa138df/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "0d18baa138df/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "518a12e3768e/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "518a12e3768e/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "6f6acbe2aa58/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "6f6acbe2aa58/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "d7c78a1b81d5/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "d7c78a1b81d5/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "bad47b8ddfb3/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "bad47b8ddfb3/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "9ece5b6e3dd5/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "9ece5b6e3dd5/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "ee493ac1c4a9/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "ee493ac1c4a9/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "db909841bba1/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "db909841bba1/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "ca6e1f00f5ea/text-01",
+      "target": "无信号\n警报：紧急状态",
+      "status": "draft"
+    },
+    {
+      "id": "79739eabd611/text-01",
+      "target": "主系统",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-01",
+      "target": "主控制\n中心",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-03",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-04",
+      "target": "主控制\n中心",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-05",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "f4a11c596ef6/text-06",
+      "target": "解锁",
+      "status": "draft"
+    },
+    {
+      "id": "3cc709932dc1/text-01",
+      "target": "告示",
+      "status": "draft"
+    },
+    {
+      "id": "f1e0ae776410/text-01",
+      "target": "警告—",
+      "status": "draft"
+    },
+    {
+      "id": "f1e0ae776410/text-02",
+      "target": "未知区域—",
+      "status": "draft"
+    },
+    {
+      "id": "1a0cdaaf037f/text-01",
+      "target": "禁止入内\n未知DNA\n内有物体",
+      "status": "draft"
+    },
+    {
+      "id": "a57fe417957b/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "a57fe417957b/text-02",
+      "target": "正在加载数据",
+      "status": "draft"
+    },
+    {
+      "id": "a57fe417957b/text-01-lower",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "9e62c3226d47/text-01",
+      "target": "易碎",
+      "status": "draft"
+    },
+    {
+      "id": "9e62c3226d47/text-02",
+      "target": "易碎",
+      "status": "draft"
+    },
+    {
+      "id": "1e107b7767a6/text-01",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "1e107b7767a6/text-02",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "1e107b7767a6/text-03",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "1e107b7767a6/text-04",
+      "target": "典型错误",
+      "status": "draft"
+    },
+    {
+      "id": "e27b23d37455/text-01",
+      "target": "易碎",
+      "status": "draft"
+    },
+    {
+      "id": "e27b23d37455/text-02",
+      "target": "易碎",
+      "status": "draft"
+    },
+    {
+      "id": "d42365b79e18/text-01",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "d42365b79e18/text-02",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "d42365b79e18/text-03",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "d42365b79e18/text-04",
+      "target": "典型错误",
+      "status": "draft"
+    },
+    {
+      "id": "de535ff9da31/text-01",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "de535ff9da31/text-02",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "de535ff9da31/text-03",
+      "target": "已锁定—密码",
+      "status": "draft"
+    },
+    {
+      "id": "de535ff9da31/text-04",
+      "target": "典型错误",
+      "status": "draft"
+    },
+    {
+      "id": "6fb062166a55/text-01",
+      "target": "武器",
+      "status": "draft"
+    },
+    {
+      "id": "646dd6d4a6a9/text-01",
+      "target": "告示",
+      "status": "draft"
+    },
+    {
+      "id": "e10ecf9cea50/text-01",
+      "target": "告示",
+      "status": "draft"
+    },
+    {
+      "id": "2d73154cccc0/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "2d73154cccc0/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "16c04c38c46c/text-01",
+      "target": "电源监控\n向下按",
+      "status": "draft"
+    },
+    {
+      "id": "76d695a96659/text-01",
+      "target": "食品",
+      "status": "draft"
+    },
+    {
+      "id": "76d695a96659/text-02",
+      "target": "食品",
+      "status": "draft"
+    },
+    {
+      "id": "1dcaca3a44d2/text-01",
+      "target": "警告—",
+      "status": "draft"
+    },
+    {
+      "id": "1dcaca3a44d2/text-02",
+      "target": "未知区域—",
+      "status": "draft"
+    },
+    {
+      "id": "aed422709a04/text-01",
+      "target": "主系统",
+      "status": "draft"
+    },
+    {
+      "id": "55b23003c6eb/text-01",
+      "target": "幼虫实验室",
+      "status": "draft"
+    },
+    {
+      "id": "55b23003c6eb/text-02",
+      "target": "限制区域",
+      "status": "draft"
     }
   ],
   "artwork_files": [
@@ -2166,6 +2615,57 @@
     "artwork/f4ba2ab763a0.json",
     "artwork/f5023ab71b87.json",
     "artwork/f7f619aae3c8.json",
-    "artwork/fefc3f417e03.json"
+    "artwork/fefc3f417e03.json",
+    "artwork/3cdf7f68dbec.json",
+    "artwork/3b08c3cd5b4d.json",
+    "artwork/ad7931dc54e9.json",
+    "artwork/3c67f32d1d7f.json",
+    "artwork/240290704a70.json",
+    "artwork/b700f49436f1.json",
+    "artwork/7a93f6958aa8.json",
+    "artwork/96b77b854a90.json",
+    "artwork/c537848a1c90.json",
+    "artwork/e78c1934d0da.json",
+    "artwork/6a2034752e22.json",
+    "artwork/f806c5ebec1b.json",
+    "artwork/1e107b7767a6.json",
+    "artwork/8ce2737319c9.json",
+    "artwork/6e3520e05810.json",
+    "artwork/dd5bb524061b.json",
+    "artwork/058347acc5da.json",
+    "artwork/826d39ddb48d.json",
+    "artwork/f4a11c596ef6.json",
+    "artwork/77ce09726266.json",
+    "artwork/aa01c58ae3ce.json",
+    "artwork/07073c970232.json",
+    "artwork/4b4153df3b8b.json",
+    "artwork/c06a1378e931.json",
+    "artwork/0d18baa138df.json",
+    "artwork/518a12e3768e.json",
+    "artwork/6f6acbe2aa58.json",
+    "artwork/d7c78a1b81d5.json",
+    "artwork/bad47b8ddfb3.json",
+    "artwork/9ece5b6e3dd5.json",
+    "artwork/ee493ac1c4a9.json",
+    "artwork/db909841bba1.json",
+    "artwork/ca6e1f00f5ea.json",
+    "artwork/79739eabd611.json",
+    "artwork/d42365b79e18.json",
+    "artwork/de535ff9da31.json",
+    "artwork/3cc709932dc1.json",
+    "artwork/f1e0ae776410.json",
+    "artwork/1a0cdaaf037f.json",
+    "artwork/9e62c3226d47.json",
+    "artwork/a57fe417957b.json",
+    "artwork/e27b23d37455.json",
+    "artwork/646dd6d4a6a9.json",
+    "artwork/e10ecf9cea50.json",
+    "artwork/2d73154cccc0.json",
+    "artwork/16c04c38c46c.json",
+    "artwork/76d695a96659.json",
+    "artwork/1dcaca3a44d2.json",
+    "artwork/aed422709a04.json",
+    "artwork/6fb062166a55.json",
+    "artwork/55b23003c6eb.json"
   ]
 }

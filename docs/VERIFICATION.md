@@ -1,5 +1,80 @@
 # 汉化构建：离线验收
 
+## 2026-11-05 全盘复核与运行补丁
+
+以下是当前交付；后续章节保留历史哈希与当时统计。原盘保持不变，当前 `build/full-text/` 留存的是修改版。未启动游戏、模拟器，也未改动 PCSX2、BIOS、设置或存档。
+
+### 修改范围和实装
+
+- 原盘全部 1140 张唯一 TIM2 / 2634 个物理引用分类；187 张汉化纹理、343 个物理成员、492 项图字写入，2 项 D.I.A 标识保留。51 张新覆盖，4 张旧成稿修订，132 张旧成稿逐字节不变。全盘范围见 [ARTWORK_AUDIT.md](ARTWORK_AUDIT.md)。
+- 补译 142 个 SCENEDEF 房间 ALIAS；正文 2178 条逻辑字段（2176 非空、2 源空白），加文档镜像和 38 个补充 ELF 共 2306 个物理字段。ROOM 键、占位符、换行数量及游戏数值保持。
+- 91 条括号单句、4 页文档显式换行和 1 条网络引号行修订；RenderString `0x155EB0..0x155F40` 的 144 字节原位扩展阻止禁行首标点自动换行。22 个标点字码表位于 `SCKA_200.55@001522a0` 首个 NUL 后的已验证空余容量。
+- 1433 个字形采用 BOX / 24 / 224 覆盖策略；原度量、CLUT 与 ASCII 保持。两个原生字库预览及最终 ISO 八张字库回读一致。
+- 独立输出 16:9、水平轴反转、无限子弹、无限生命四组 PNACH，不把十处可选写入烘焙进 ISO。原版 CRC `2383B74A`、本中文版本 CRC `634DBCA7`；来源与关闭后冷启动方法见 [RUNTIME_PATCHES.md](RUNTIME_PATCHES.md)。
+
+| 对象 | SHA-256 |
+|---|---|
+| 原盘 / 隔离回滚结果 | `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b` |
+| Mystic-Nights-zh-CN-full-text.iso | `aae84a054389d481f1bf735038b532f9d81bb4558d49f3adc28696ed59ff4746` |
+| DIFF_FILE.mnp.zip | `6292198955a1e501650b67d7b69199f63f3192b2e7ad04bd96ece81cb417244b` |
+| manifest.json | `d34f50d62785f88695bc7839955d6585f7647f4a81f574d41d4b08e6841280e5` |
+| ROLLBACK.sh | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+
+四件交付：`build/full-text/Mystic-Nights-zh-CN-full-text.iso`、`build/full-text/DIFF_FILE.mnp.zip`、`build/full-text/VERIFICATION.txt`、`build/full-text/ROLLBACK.sh`。ISO 1,696,530,432 字节；差分 10,442,604 字节、23767 区间。完整本机绝对路径、未经改写的命令及输出保存在本地 VERIFICATION；公开记录将输出中的本机路径转为相对路径。
+
+### BASELINE
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+### MODIFIED
+
+```text
+python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json --font build/fonts/NotoSansCJKsc-Regular.otf
+TEXT_LAYOUT_REPLAY PASS glyph_keys=1561 explicit_breaks=804 no_line_head_punctuation=pass
+TEXT_LAYOUT PASS punctuation_codes=22 code_bytes=144 owner=SCKA_200.55@001522a0
+GRAPHICS_SOURCE_REVIEW PASS unique=1140 physical=2634 member_name_variant_closure=complete
+GRAPHICS PASS translated=494 installed=492 pending=0 texture_members=343 save_metadata=1
+RAW_IMAGES PASS installed=1 resources=1
+FULL_PATHS PASS names=113 references=698 network_strings=270 network_glyphs=293 agreement=1 extra_interface=38
+FONT_RASTER PASS glyphs=1433 policy={'filter': 'box', 'edge_floor': 24, 'edge_ceiling': 224} original_metrics_cluts=unchanged
+MODIFIED PASS strings=2306 glyphs=1433 changed_files=77 unchanged_files=647 lba=unchanged
+SHA256 aae84a054389d481f1bf735038b532f9d81bb4558d49f3adc28696ed59ff4746
+RUNTIME_PATCHES PASS files=5 groups=4 crc=634DBCA7 disc_features=optional
+EXIT_STATUS 0
+```
+
+### ROLLBACK / 恢复状态
+
+隔离正向应用先生成 `build/full-audit/applied.iso`，SHA 与交付相同，随后运行可执行回滚脚本；交付镜像本身没有被回滚。
+
+```text
+python -X utf8 tools/apply_patch.py --input "[full2]미스틱 나이츠(K).iso" --patch build/full-audit/delivery/DIFF_FILE.mnp.zip --output build/full-audit/applied.iso
+{"mode": "apply", "output": "build/full-audit/applied.iso", "ranges": 23767, "sha256": "aae84a054389d481f1bf735038b532f9d81bb4558d49f3adc28696ed59ff4746", "size": 1696530432}
+EXIT_STATUS 0
+"C:/Program Files/Git/bin/bash.exe" -c "test -x build/full-text/ROLLBACK.sh && build/full-text/ROLLBACK.sh build/full-audit/applied.iso build/full-audit/release-restored.iso"
+{"mode": "rollback", "output": "build/full-audit/release-restored.iso", "ranges": 23767, "sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b", "size": 1696530432}
+EXIT_STATUS 0
+python -X utf8 tools/verify_build.py --kind baseline --iso build/full-audit/release-restored.iso
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+```
+
+正向执行时路径为暂存 `delivery/`，核对哈希后整目录晋升到标准 `build/full-text/`；命令记录保留原执行路径。隔离正向结果与交付、隔离回滚结果与原盘均逐字节一致。原版全部 2306 字段及资源结构检查恢复；这证明文件恢复，不把它描述成运行游戏的行为测试。
+
+### 单元、原生回读及开关夹具
+
+286 项单元测试通过。最终 ISO 四张状态成员共 18 对：`ARTWORK STATES PASS members=4 pairs=18 installed=identical`。最终 ISO 的 187 对原生原图/中文回读、26 张无损 PNG 和主字体预览已打开核查；图片大小/调色板/区外像素及原文控制符纳入机器验证。
+
+运行夹具 16 种组合正向后逐字节撤销；1792 组轴/角度输入、50 个实际 SB/SH/NOP 存储案例通过，宽屏投影水平 512→384、垂直乘积误差约 0.5ppm。它们属于有界指令及数据检查，不是 PCSX2 执行证据。
+
+待玩家冷启动验收：按钮和加载的实际混色/动画、字体清晰度、房间名显示、全剧情换行、宽屏/HUD、三项金手指的所有玩法路径。模糊手稿及无法可靠辨认的装饰微字按既定要求保持。
+
 ## 2026-11-05 主菜单两态字号与白线修正
 
 源码提交 `f018cdbe58b1c365e9cca8db831d09c8dc56c5d0`，分支 `master`。`L001_004.TM2` 仅四个选中区域修改 3119 个索引；差分字段 `ranges/modified_sha256/state_checks/authoring_method` 更新。正文、字库、普通态、其余 135 张重绘纹理、UID 脚本和菜单渲染代码保持。

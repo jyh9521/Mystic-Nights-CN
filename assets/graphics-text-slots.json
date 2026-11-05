@@ -741,100 +741,100 @@
       "rendering": "authored-delta",
       "artwork_rectangles": [
         [
-          26,
-          13,
-          64,
-          17
+          24,
+          11,
+          72,
+          20
         ],
         [
-          26,
-          43,
-          64,
-          17
+          24,
+          41,
+          72,
+          20
         ],
         [
-          26,
-          73,
-          64,
-          17
+          24,
+          71,
+          72,
+          20
         ],
         [
-          26,
-          103,
-          64,
-          17
+          24,
+          101,
+          72,
+          20
         ],
         [
-          26,
-          133,
-          64,
-          17
+          24,
+          131,
+          72,
+          20
         ],
         [
-          26,
-          163,
-          64,
-          17
+          24,
+          161,
+          72,
+          20
         ],
         [
-          26,
-          193,
-          64,
-          17
+          24,
+          191,
+          72,
+          20
         ],
         [
-          26,
-          223,
-          64,
-          17
+          24,
+          221,
+          72,
+          20
         ],
         [
-          136,
-          13,
-          64,
-          17
+          134,
+          11,
+          72,
+          20
         ],
         [
-          136,
-          43,
-          64,
-          17
+          134,
+          41,
+          72,
+          20
         ],
         [
-          136,
-          73,
-          64,
-          17
+          134,
+          71,
+          72,
+          20
         ],
         [
-          136,
-          103,
-          64,
-          17
+          134,
+          101,
+          72,
+          20
         ],
         [
-          136,
-          133,
-          64,
-          17
+          134,
+          131,
+          72,
+          20
         ],
         [
-          136,
-          163,
-          64,
-          17
+          134,
+          161,
+          72,
+          20
         ],
         [
-          136,
-          193,
-          64,
-          17
+          134,
+          191,
+          72,
+          20
         ],
         [
-          136,
-          223,
-          64,
-          17
+          134,
+          221,
+          72,
+          20
         ]
       ]
     },
@@ -1100,64 +1100,64 @@
       "rendering": "authored-delta",
       "artwork_rectangles": [
         [
-          26,
-          103,
-          64,
-          17
+          24,
+          101,
+          72,
+          20
         ],
         [
-          26,
-          133,
-          64,
-          17
+          24,
+          131,
+          72,
+          20
         ],
         [
-          26,
-          163,
-          64,
-          17
+          24,
+          161,
+          72,
+          20
         ],
         [
-          26,
-          193,
-          64,
-          17
+          24,
+          191,
+          72,
+          20
         ],
         [
-          26,
-          223,
-          64,
-          17
+          24,
+          221,
+          72,
+          20
         ],
         [
-          136,
-          103,
-          64,
-          17
+          134,
+          101,
+          72,
+          20
         ],
         [
-          136,
-          133,
-          64,
-          17
+          134,
+          131,
+          72,
+          20
         ],
         [
-          136,
-          163,
-          64,
-          17
+          134,
+          161,
+          72,
+          20
         ],
         [
-          136,
-          193,
-          64,
-          17
+          134,
+          191,
+          72,
+          20
         ],
         [
-          136,
-          223,
-          64,
-          17
+          134,
+          221,
+          72,
+          20
         ]
       ]
     },
@@ -1231,16 +1231,16 @@
       "rendering": "authored-delta",
       "artwork_rectangles": [
         [
-          77,
-          49,
-          89,
-          23
+          72,
+          46,
+          100,
+          27
         ],
         [
-          74,
-          162,
-          93,
-          20
+          70,
+          159,
+          105,
+          29
         ]
       ]
     },
@@ -6964,21 +6964,11 @@
             8,
             146,
             49,
-            14
+            8
           ],
-          "source_pixels_sha256": "8b11ea8790e9f20d575c348473598cbf0247346bdf4d8ed86ceb722050c3d32d",
-          "background_index": 0,
-          "foreground_rgba": [
-            220,
-            235,
-            235,
-            255
-          ],
-          "font_size": 5,
-          "minimum_font_size": 5,
+          "source_pixels_sha256": "1e83e2d1d0fd5064dc606a7f6e29b6677f10a0e31e1e52c66e84d5bbe94ba573",
           "background_mode": "authored-pixel-restoration",
-          "disposition": "authored-redraw",
-          "retained_unreadable_note": "The tiny line below the company name is not transcribed or replaced."
+          "disposition": "authored-redraw"
         },
         {
           "id": "4f5e8aba7eac/text-02",
@@ -6986,21 +6976,12 @@
           "install": true,
           "evidence": "verified-visible",
           "rect": [
-            14,
-            160,
-            38,
-            11
+            12,
+            159,
+            42,
+            13
           ],
-          "source_pixels_sha256": "d49045e4a1a0b80db6ae34e5d99f0cffc1bab74933131324207cf10a6a2bfec2",
-          "background_index": 0,
-          "foreground_rgba": [
-            220,
-            235,
-            235,
-            255
-          ],
-          "font_size": 8,
-          "minimum_font_size": 5,
+          "source_pixels_sha256": "4e42b99a5131a88752a3ff39c34684390c826c85f4df90764edb110f7ad2d8ec",
           "background_mode": "authored-pixel-restoration",
           "disposition": "authored-redraw"
         }
@@ -7011,13 +6992,13 @@
           8,
           146,
           49,
-          14
+          8
         ],
         [
-          14,
-          160,
-          38,
-          11
+          12,
+          159,
+          42,
+          13
         ]
       ]
     },
@@ -17190,6 +17171,3418 @@
           18,
           45,
           17
+        ]
+      ]
+    },
+    {
+      "sha256": "3cdf7f68dbec5eb3a8f48af293476493a0a4d011aaf2db4a65a9659a4324f8d7",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_041.TM2",
+          "offset": 2385940,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "3cdf7f68dbec/text-01",
+          "source": "NO SIGANAL / ALERT-STATE OF EMERGENCY",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            208,
+            137,
+            35,
+            113
+          ],
+          "source_pixels_sha256": "61dadb40533c8fda30198d177be30912f4c595e4c960891f0633f26903119d64",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          208,
+          137,
+          35,
+          113
+        ]
+      ]
+    },
+    {
+      "sha256": "3b08c3cd5b4d62481406636ef895fabbeb692adc4b2243f1e6f33759a687e8ae",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_701.TM2",
+          "offset": 2752208,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "3b08c3cd5b4d/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "3cf49804ab99f63f936fed9a80852475e1a5facefe55f5655c155df6ad463004",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "3b08c3cd5b4d/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "04e2c07aafd279077103cb54fdbd6934af99b08fb8fd01c603abe5344c2dc7c7",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "ad7931dc54e9e7a790fff20a3fbe12fb22947d9f8f29cb581c1a071081eb90c0",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "G459.TM2",
+          "offset": 892208,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_2.RES",
+          "resource_sha256": "39a35b16c09496ed632faef0b5641b221b40df1e05ce03c0125bf36d78850d68",
+          "member": "G459.TM2",
+          "offset": 1065264,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0404_1.RES",
+          "resource_sha256": "7368fa428a5afc61d6e97b5c87f7b3c5dd165107318b051781871cccb159fd06",
+          "member": "G459.TM2",
+          "offset": 1179852,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0501_1.RES",
+          "resource_sha256": "9344e615b03afe30416892d4a82cbceb4b24020cee9bf335e0974c0edbfb3ddc",
+          "member": "G459.TM2",
+          "offset": 1294840,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0502_1.RES",
+          "resource_sha256": "027374664f925b0afe15749c66c7042372d213c61118e1c1c8dab1285d9d4bf5",
+          "member": "G459.TM2",
+          "offset": 1069360,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "G459.TM2",
+          "offset": 1301372,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "ad7931dc54e9/text-01",
+          "source": "BATTERY",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            100,
+            41,
+            44,
+            12
+          ],
+          "source_pixels_sha256": "8c6d6858770e0c3a6800e7095200ea2b176ed9a2e7eaf0f6e14b7d1ebafa20c3",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          100,
+          41,
+          44,
+          12
+        ]
+      ]
+    },
+    {
+      "sha256": "3c67f32d1d7f8e68877a2f9ce14ecb7d6e9cb7e75fb3199a4039d65908151e8b",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "G337.TM2",
+          "offset": 990300,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "3c67f32d1d7f/text-01",
+          "source": "MAIN SYSTEM",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            88,
+            94,
+            59,
+            59
+          ],
+          "source_pixels_sha256": "5b999ec6839a5d05ee3a7bc8e246242c850f9afdfc3ed8a4ec6baa05e8e22088",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          88,
+          94,
+          59,
+          59
+        ]
+      ]
+    },
+    {
+      "sha256": "240290704a70ca89025945e4808260992835c0ec1ac6b070cc8e0e5fe766e0c9",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
+          "resource_sha256": "07de0cca866624fc88503644f89a428a1fdfa90b9db2a3a21a2769e190710ffb",
+          "member": "G371.TM2",
+          "offset": 490512,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "240290704a70/text-01",
+          "source": "FOOD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            5,
+            18,
+            15,
+            47
+          ],
+          "source_pixels_sha256": "7b6da56e850b58f51c6a922073fe331ab8f4f5d255d22f8039fcf25f2d1a54b9",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "240290704a70/text-02",
+          "source": "FOOD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            61,
+            4,
+            11,
+            28
+          ],
+          "source_pixels_sha256": "508af1be3551e351fc835764388790fb2782b812bf456220a78ac8b14d181247",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          5,
+          18,
+          15,
+          47
+        ],
+        [
+          61,
+          4,
+          11,
+          28
+        ]
+      ]
+    },
+    {
+      "sha256": "b700f49436f11c1083db02c8f228f896c2c3b9b650961cfefa05a7c4ce74c90b",
+      "profile": [
+        128,
+        128,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_1.RES",
+          "resource_sha256": "7cb9dc0c99157e2b03584be0d02ce1de07e12cc6050b724ef42b02c8aa66e5f8",
+          "member": "ST0303_028.TM2",
+          "offset": 645848,
+          "size": 17472
+        }
+      ],
+      "slots": [
+        {
+          "id": "b700f49436f1/text-01",
+          "source": "NOTICE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            49,
+            93,
+            24,
+            8
+          ],
+          "source_pixels_sha256": "0e9b2b525508cf2be24a53b9a59b22b12aa591409236e13b7a62fa73f6178705",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          49,
+          93,
+          24,
+          8
+        ]
+      ]
+    },
+    {
+      "sha256": "7a93f6958aa8dbec57e4c045ec1336b74b228350b10ddb41675dcc918ced2bf4",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
+          "resource_sha256": "345db9ea24bb08c1d9c94497a6ee3d04694408bac0f5dbdbfad65b3748e3e907",
+          "member": "ST0401_019.TM2",
+          "offset": 2669724,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "7a93f6958aa8/text-01",
+          "source": "The enemy lives among us",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            137,
+            96,
+            111,
+            73
+          ],
+          "source_pixels_sha256": "b4a5fd2d16525d5dc4370ec475b7048fdd5779455dd41ce874e07123e68ce1e4",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          137,
+          96,
+          111,
+          73
+        ]
+      ]
+    },
+    {
+      "sha256": "96b77b854a9087ed84d7482f7cdd09e7e143c3e43592c592854e7fa4f0e9b67b",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0403_1.RES",
+          "resource_sha256": "3e97fa07b0c9194237c093bb23d6b45c300363872b11869e41a01989931b45e0",
+          "member": "G275.TM2",
+          "offset": 83196,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "96b77b854a90/text-01",
+          "source": "NOTICE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            72,
+            6,
+            24,
+            7
+          ],
+          "source_pixels_sha256": "01428538a76ce72bcfe3c53f3eae2faa75413e376e6e173ca2ee7a75b24314b6",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          72,
+          6,
+          24,
+          7
+        ]
+      ]
+    },
+    {
+      "sha256": "c537848a1c90360e6f25079d707da27d231943375626c09fab121929e5cb9fde",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "G415.TM2",
+          "offset": 958444,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "c537848a1c90/text-01",
+          "source": "BIOHAZARD AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            144,
+            101,
+            69,
+            12
+          ],
+          "source_pixels_sha256": "118d0fd4473913d80b6927353031f20de88a3273ae62fb89496b93daa72bf005",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          144,
+          101,
+          69,
+          12
+        ]
+      ]
+    },
+    {
+      "sha256": "e78c1934d0da4adac6f9a422b5bfc45a53957e66102567d24e52a115567f03b4",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "G421.TM2",
+          "offset": 1001252,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "e78c1934d0da/text-01",
+          "source": "KEEP OUT / UNKNOWN DNA / OBJECT INSIDE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            148,
+            172,
+            91,
+            26
+          ],
+          "source_pixels_sha256": "482ebf98e5e3cc1bf95b6ac2238298051aa3c02fc0b13dc7be8133f075e4ea30",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          148,
+          172,
+          91,
+          26
+        ]
+      ]
+    },
+    {
+      "sha256": "6a2034752e224e37c0f172bd7c712b6368854dd1322ac0c8f571f49e688af9d2",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "G021.TM2",
+          "offset": 66200,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "G021.TM2",
+          "offset": 52,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "G021.TM2",
+          "offset": 52,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "G021.TM2",
+          "offset": 66200,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0501_1.RES",
+          "resource_sha256": "9344e615b03afe30416892d4a82cbceb4b24020cee9bf335e0974c0edbfb3ddc",
+          "member": "G021.TM2",
+          "offset": 66200,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "6a2034752e22/text-01",
+          "source": "POWER WATCH / PUSH DOWN",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            28,
+            43,
+            16
+          ],
+          "source_pixels_sha256": "6d764bb1e8f1bd32a2e78eb8469644e609c2103fda857b513eb66b7b38bd9f56",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          12,
+          28,
+          43,
+          16
+        ]
+      ]
+    },
+    {
+      "sha256": "f806c5ebec1b2d21b6fc93e82053ab2a82ec0ad087cabf17d7d57daf9a51b76a",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0701.RES",
+          "resource_sha256": "61814e70a0e7e5e101e73c2e10e02753f652171e21b517037f0cf0ba21411784",
+          "member": "G425.TM2",
+          "offset": 328332,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0702.RES",
+          "resource_sha256": "ea39b9fe828a169742c14c7db07b3c82046099a5a076c84980082dea7e84d1dc",
+          "member": "G425.TM2",
+          "offset": 497056,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "f806c5ebec1b/text-01",
+          "source": "DRIPPER",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            60,
+            69,
+            40,
+            8
+          ],
+          "source_pixels_sha256": "dc9c57df96553168899e24af6adf680351d57397555cd24d6efca34069c06f64",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          60,
+          69,
+          40,
+          8
+        ]
+      ]
+    },
+    {
+      "sha256": "1e107b7767a6d4887fca31753aabd34b5d8fd24e6383941f3d1d5dc0c94b0c6c",
+      "profile": [
+        128,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0501_1.RES",
+          "resource_sha256": "9344e615b03afe30416892d4a82cbceb4b24020cee9bf335e0974c0edbfb3ddc",
+          "member": "ST0501_006.TM2",
+          "offset": 1992248,
+          "size": 33856
+        }
+      ],
+      "slots": [
+        {
+          "id": "1e107b7767a6/text-01",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            46,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "7cd4dc458f387d32f06df0cf4b4ffc04433ef4b0bc94712bc32f7f14ff924d2a",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "1e107b7767a6/text-02",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            84,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "30350f3b42d7897e5a8d36023b112522a96e912f3033b3c6526eba3dbbc0e2a8",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "1e107b7767a6/text-03",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            122,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "4a3778c5c9b53ae765c78cf467a15bc1fe66e017984557d0e1eebce7256ab86c",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "1e107b7767a6/text-04",
+          "source": "TIPICAL ERROR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            37,
+            148,
+            49,
+            10
+          ],
+          "source_pixels_sha256": "e2002ec4e1df16084e1e061ff92d8b3d7bf41dac6a245e1c9f107508dce621bb",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          13,
+          46,
+          99,
+          18
+        ],
+        [
+          13,
+          84,
+          99,
+          18
+        ],
+        [
+          13,
+          122,
+          99,
+          18
+        ],
+        [
+          37,
+          148,
+          49,
+          10
+        ]
+      ]
+    },
+    {
+      "sha256": "8ce2737319c96a76a51155e1f46360d702747ca881d16a7cfccb9a3a85710943",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0502_1.RES",
+          "resource_sha256": "027374664f925b0afe15749c66c7042372d213c61118e1c1c8dab1285d9d4bf5",
+          "member": "ST0502_014.TM2",
+          "offset": 2086756,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "8ce2737319c9/text-01",
+          "source": "WARNING - KEEP OUT / RESTRICTED AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            24,
+            77,
+            86,
+            16
+          ],
+          "source_pixels_sha256": "74f01de1c5b069418117caf1dbf21c645fc7e892fcee1a2d551507edc7294777",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          24,
+          77,
+          86,
+          16
+        ]
+      ]
+    },
+    {
+      "sha256": "6e3520e05810ed119138e2075acf97e3771033c228c0a4792a50239efa554be2",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/NETSUB.RES",
+          "resource_sha256": "21a55a4b05d28797f1fceda7eccf274ad08f5ae6dce187fd15c0f11fcf4f70ff",
+          "member": "I003.TM2",
+          "offset": 34044,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SUBSYS.RES",
+          "resource_sha256": "e449d872cd83ffeacc0c4f15e2f92a214122eace1daf3427a80565df6dd83f07",
+          "member": "I003.TM2",
+          "offset": 34044,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "6e3520e05810/text-01",
+          "source": "US ARMY",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            11,
+            90,
+            36,
+            9
+          ],
+          "source_pixels_sha256": "ca5c84823fbab3649d216addf5bb719e07e081d56615a6e61f1599a0d83a3c27",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          11,
+          90,
+          36,
+          9
+        ]
+      ]
+    },
+    {
+      "sha256": "dd5bb524061b57f6dd1fd6934daa5e2afe9a6ecaad4af030d4551bf77442f59c",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0502_1.RES",
+          "resource_sha256": "027374664f925b0afe15749c66c7042372d213c61118e1c1c8dab1285d9d4bf5",
+          "member": "G483.TM2",
+          "offset": 1433480,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "dd5bb524061b/text-01",
+          "source": "NAVY SUBMARINE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            45,
+            103,
+            12,
+            91
+          ],
+          "source_pixels_sha256": "bc14768cef809c9d75bb4953deeca18b3998c8edd40fe979f5dc4d1d8a66e8ac",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          45,
+          103,
+          12,
+          91
+        ]
+      ]
+    },
+    {
+      "sha256": "058347acc5da4edcb9fae0469c16956605b243d3eb6e7c893c3bfd73392f1f5b",
+      "profile": [
+        128,
+        128,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "ST0102_003.TM2",
+          "offset": 1274960,
+          "size": 17472
+        }
+      ],
+      "slots": [
+        {
+          "id": "058347acc5da/text-01",
+          "source": "POWER MANAGEMENT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            48,
+            63,
+            66,
+            18
+          ],
+          "source_pixels_sha256": "1fc78210dca23cb57db387a623cddcad507f334e5f02355d791958a80063ec30",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          48,
+          63,
+          66,
+          18
+        ]
+      ]
+    },
+    {
+      "sha256": "826d39ddb48de209a53dc45b9affe7f62b5c319a41a281d974f3365b1285fe51",
+      "profile": [
+        128,
+        128,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
+          "resource_sha256": "07de0cca866624fc88503644f89a428a1fdfa90b9db2a3a21a2769e190710ffb",
+          "member": "ST0301_015.TM2",
+          "offset": 1539128,
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "ST0302_012.TM2",
+          "offset": 2139592,
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT03_1.RES",
+          "resource_sha256": "d86cbc3d7a05cd2e83fc8d0fda20f838b0cd0afc49b126a3d1b8ff9df99edbd5",
+          "member": "ST0301_015.TM2",
+          "offset": 922004,
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT03_1.RES",
+          "resource_sha256": "d86cbc3d7a05cd2e83fc8d0fda20f838b0cd0afc49b126a3d1b8ff9df99edbd5",
+          "member": "ST0302_012.TM2",
+          "offset": 1680028,
+          "size": 17472
+        }
+      ],
+      "slots": [
+        {
+          "id": "826d39ddb48d/text-01",
+          "source": "WAREHOUSE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            38,
+            62,
+            76,
+            18
+          ],
+          "source_pixels_sha256": "a523fc53adb0433b178e82042028e6a5243d6e6018eeffbd7ae8d9cde31e4d84",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          38,
+          62,
+          76,
+          18
+        ]
+      ]
+    },
+    {
+      "sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
+          "resource_sha256": "4b965f8228ae21f906722c21f01dd9b1fe8529dc507840295483e1654dff6239",
+          "member": "ST0201_023.TM2",
+          "offset": 2274024,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "f4a11c596ef6/text-01",
+          "source": "MAIN CONTROL CENTER",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            77,
+            89,
+            61,
+            27
+          ],
+          "source_pixels_sha256": "e46df31682820f93c46cfcaf0015bcb34dcc6e3f361e33278237cacfd6861608",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f4a11c596ef6/text-02",
+          "source": "RESTRICTED AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            78,
+            116,
+            60,
+            12
+          ],
+          "source_pixels_sha256": "d770f6ee0c2a1ea41f64ddd7444811d3ebf89370e29830fc356108129a0f9ac5",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f4a11c596ef6/text-03",
+          "source": "UNLOCK",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            78,
+            144,
+            35,
+            12
+          ],
+          "source_pixels_sha256": "7d0c57182f804c7fab48036585fad22ee2cffa115f799b52f64dafa786039ca9",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f4a11c596ef6/text-04",
+          "source": "MAIN CONTROL CENTER",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            140,
+            89,
+            61,
+            27
+          ],
+          "source_pixels_sha256": "752fc63484268e2b0c073787aa84fadf9f75ea45e7251b6ff957871e8bcc8c4f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f4a11c596ef6/text-05",
+          "source": "RESTRICTED AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            141,
+            116,
+            60,
+            12
+          ],
+          "source_pixels_sha256": "6ff325205af647efbfaec6dcb02cca47094945d5fa113a6780c0400bba9e2529",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f4a11c596ef6/text-06",
+          "source": "UNLOCK",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            141,
+            144,
+            35,
+            12
+          ],
+          "source_pixels_sha256": "f4e4e63dbc415640463855d88c4bfdc6feea576eb0410cd4220a800bc64e49b2",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          77,
+          89,
+          61,
+          27
+        ],
+        [
+          78,
+          116,
+          60,
+          12
+        ],
+        [
+          78,
+          144,
+          35,
+          12
+        ],
+        [
+          140,
+          89,
+          61,
+          27
+        ],
+        [
+          141,
+          116,
+          60,
+          12
+        ],
+        [
+          141,
+          144,
+          35,
+          12
+        ]
+      ]
+    },
+    {
+      "sha256": "77ce097262668282370c34d53d5db037343352bdc418c45a1b8bfc0e05681410",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "ST0202_016.TM2",
+          "offset": 2026640,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0402.RES",
+          "resource_sha256": "a5ebf84d7112903e102f18546576ca493bf99e71258d1949ea07acf4dcc9807b",
+          "member": "ST0402_011.TM2",
+          "offset": 1671548,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "77ce09726266/text-01",
+          "source": "SECURITY MONITOR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            70,
+            97,
+            55,
+            10
+          ],
+          "source_pixels_sha256": "370ff4c3a809f639b1ff4b4c513e1055d73b66989645fcbee6bc461405d57d55",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "77ce09726266/text-02",
+          "source": "SECURITY MONITOR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            197,
+            97,
+            57,
+            10
+          ],
+          "source_pixels_sha256": "2bdadea22a6308885d8db92271585ca55dcac792bbe56d5638331736dab14056",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "77ce09726266/text-03",
+          "source": "SECURITY MONITOR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            69,
+            204,
+            57,
+            11
+          ],
+          "source_pixels_sha256": "3f0985afdb4dfa758a35f13c21c5c7c91abd4c9efaeeef8ff1950d97a384ed22",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          70,
+          97,
+          55,
+          10
+        ],
+        [
+          197,
+          97,
+          57,
+          10
+        ],
+        [
+          69,
+          204,
+          57,
+          11
+        ]
+      ]
+    },
+    {
+      "sha256": "aa01c58ae3ce696ff28cd1c07407185dcd15c97c0477e7b3ab9309f78e6dd310",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "G321.TM2",
+          "offset": 268928,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "aa01c58ae3ce/text-01",
+          "source": "NO VIDEO SIGNAL",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            27,
+            87,
+            88,
+            17
+          ],
+          "source_pixels_sha256": "1cd86a98baf5eea3a2f6fe6544655676d5493958bc587342f6607c74a0aa1d8f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          27,
+          87,
+          88,
+          17
+        ]
+      ]
+    },
+    {
+      "sha256": "07073c97023291748c72e78d7d5bb2e8bd5e394f048d8eb8eddfc234e0f7d642",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
+          "resource_sha256": "345db9ea24bb08c1d9c94497a6ee3d04694408bac0f5dbdbfad65b3748e3e907",
+          "member": "ST0401_017.TM2",
+          "offset": 2536404,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0402.RES",
+          "resource_sha256": "a5ebf84d7112903e102f18546576ca493bf99e71258d1949ea07acf4dcc9807b",
+          "member": "ST0402_015.TM2",
+          "offset": 1838348,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "07073c970232/text-01",
+          "source": "DETECTING SENSOR ROOM",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            80,
+            130,
+            57,
+            23
+          ],
+          "source_pixels_sha256": "773beef44f6df75775001ba2f1e04753aec779994919b49ae0d37ffa4df6b661",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "07073c970232/text-02",
+          "source": "DETECTING SENSOR ROOM",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            143,
+            130,
+            63,
+            23
+          ],
+          "source_pixels_sha256": "dd4262b082355ddb9a47816cd07475c1ded3245a7c03e98885e8e497a996ebd1",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "07073c970232/text-03",
+          "source": "UNLOCK",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            78,
+            154,
+            29,
+            12
+          ],
+          "source_pixels_sha256": "076381b541eec00a6d4e52415ddee2024331e710469549dd90a57167577f52b0",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          80,
+          130,
+          57,
+          23
+        ],
+        [
+          143,
+          130,
+          63,
+          23
+        ],
+        [
+          78,
+          154,
+          29,
+          12
+        ]
+      ]
+    },
+    {
+      "sha256": "4b4153df3b8bbb8f7efb37bffe73df3392b2bf44153ff93f613ad769a4749d17",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/CUTSCENE/C001-010/C004.RES",
+          "resource_sha256": "3383b2f133eb64135296dfd0d347dcddc422ae766800626e67db8ebc577d2052",
+          "member": "G334_C.TM2",
+          "offset": 66200,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "4b4153df3b8b/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "d5e73025169ac07890dffdc4123b0e271e0b6b231e82232bb78587f99e13a213",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "4b4153df3b8b/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "5f70ce5b500b90cc646e66eab100aa096198a8a634c32ee4bca395067a867a0a",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "c06a1378e931e2794b9f0502d7d417aea9c15e8d9468f804d401a050de550c8c",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_702.TM2",
+          "offset": 2818868,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "c06a1378e931/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "8f4dc548d361538e1fa31ff44bbc7d60c0834059746b93ed98f6ddb8c62a77a1",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "c06a1378e931/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "2b719fd32c1c4c111b796e66585fc164f8f4478e0d96e96561610e1652307efe",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "0d18baa138df407878e8f4c8a9cc0b919b0662823465041e7f8ca929ee2c9a8b",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_703.TM2",
+          "offset": 2885528,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "0d18baa138df/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "98d256cc08c12b34d1dc8d4db2b53db0b29b667ad5a5c0151e947228d7991c71",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "0d18baa138df/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "3bd2eb44edaab1a6ad4a41b49ca0d073cebee6ab6aad38eae9b0c283f7cb49fa",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "518a12e3768ebc276c11d0a0f0e24d0aacb246db3a81863e9223e11932f5d909",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_704.TM2",
+          "offset": 2952188,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "518a12e3768e/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "e92245ce4571956c2e2e348efc9e9b7bcadc224a6862a1312e53000a0104542e",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "518a12e3768e/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "108ba7b127102f26c1976937efebf0a98d473702c473c0bbfd42d818460e3b49",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "6f6acbe2aa58c061cfafe94f526c4ee3aba6b4f692daab37bad0c74d48f57c23",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_705.TM2",
+          "offset": 3018848,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "6f6acbe2aa58/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "8e7fba021f0b9a2ea8ea6dd7de6be741f829e2f16db15941cec476ff2cd14dff",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "6f6acbe2aa58/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "4af36095460613ce500641c5b39761a0398d735fbb2f5ff931e87149cb6276f6",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "d7c78a1b81d51ff9b4a71cf7ac2e74e774365f75d516550d4d9f4dcb8ab7e3e3",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_706.TM2",
+          "offset": 3085508,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "d7c78a1b81d5/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "ef8ebf135e7d7343a67ea1ee3b47481f4a0039ee015b9d1418e24e1bc545643b",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "d7c78a1b81d5/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "b79322c16aeda07095b3cdac0bf911a3ea57aad9d6a3fa9b5701d656aa411891",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "bad47b8ddfb3f4f6dc0d0a8308bc8d4a297ddfce40d42aa893094ac42ee4f0b6",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_707.TM2",
+          "offset": 3152168,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "bad47b8ddfb3/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "ee4cda483c7307b45628a6ec0288d1b835ea4938c0102bf6f4761d4eecc809e0",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "bad47b8ddfb3/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "21cfbb258b3124bae3565b85a52439bc5adce534bbda75ce08a140392a7daffb",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "9ece5b6e3dd5a34a988427ddf4071e2ae6810369321df783bb34a666177b2412",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_708.TM2",
+          "offset": 3218828,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "9ece5b6e3dd5/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "1fcef4c443b73e902d735ce21416b107d37dc7c0e7e9086f61a42128e02830ba",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "9ece5b6e3dd5/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "42c3bcdff948a3a19b5bbff299935a11ac06c54ad2d819a515d70b87197ef52e",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "ee493ac1c4a9009d2f518081f9794341bd2f6f0c5da1d2171514c33a041d40a8",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_709.TM2",
+          "offset": 3285488,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "ee493ac1c4a9/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "a34541a5bf54e0f47b51f90fe01227609fc5dbb67d8f5a1ef032191bd818ab9c",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "ee493ac1c4a9/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "84d9b12bbff759963c46c3e5974b1cd9b33a6ac674ab8269c28980adf65bccea",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "db909841bba11a856b4ff412258c85fa46a0f5b60f03adbfc98780312138f8ed",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_710.TM2",
+          "offset": 3352148,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "db909841bba1/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "5db878138089bf593e09639f385723ae25d93c69ac2202a0a0b208a889e938c1",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "db909841bba1/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "bd82c1c25c2222d93e6793ce05473b71498a6c0572f5141436b006c4c21cce68",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "ca6e1f00f5ea0fc9a3aac7666b7dc443539a8f9a43e5893e6913b59b56ed4d19",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "ST0101_904.TM2",
+          "offset": 3518948,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "ca6e1f00f5ea/text-01",
+          "source": "NO SIGANAL / ALERT-STATE OF EMERGENCY",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            208,
+            137,
+            35,
+            113
+          ],
+          "source_pixels_sha256": "6621ac39199dd8fe7ccc232bf6acee83b892a6f10699d8576fe82dd7ef86910f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          208,
+          137,
+          35,
+          113
+        ]
+      ]
+    },
+    {
+      "sha256": "79739eabd611a96209a5b16a1a059d8931205f555e45046232dc621c53c1b37f",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "G337.TM2",
+          "offset": 744964,
+          "size": 66112
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0501_1.RES",
+          "resource_sha256": "9344e615b03afe30416892d4a82cbceb4b24020cee9bf335e0974c0edbfb3ddc",
+          "member": "G337.TM2",
+          "offset": 961240,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "79739eabd611/text-01",
+          "source": "MAIN SYSTEM",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            88,
+            94,
+            59,
+            59
+          ],
+          "source_pixels_sha256": "99583470a14feaf3f5749e7e676ed51117c041c3c9a258f8291db73dde7344af",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          88,
+          94,
+          59,
+          59
+        ]
+      ]
+    },
+    {
+      "sha256": "d42365b79e18948c4287f19e826d23b8ef90933312c9a9ba8ed17fd1cf875dd6",
+      "profile": [
+        128,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "ST0601_023.TM2",
+          "offset": 2666492,
+          "size": 33856
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "ST0602_023.TM2",
+          "offset": 3033084,
+          "size": 33856
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT02_1.RES",
+          "resource_sha256": "587287c092e667626ffa6e01c419ff405cef7cfbecb55306bda3a48d4269cc02",
+          "member": "ST0602_023.TM2",
+          "offset": 2526428,
+          "size": 33856
+        }
+      ],
+      "slots": [
+        {
+          "id": "d42365b79e18/text-01",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            46,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "e0e7559a9047ea017eeca4e2e95b4c3a60819e9650f0b69a117397f3ee18a420",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "d42365b79e18/text-02",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            84,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "8b75ce6c18c491d6317a56d59b35c581ff49b950703f6da729853d097fa4feca",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "d42365b79e18/text-03",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            122,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "5cc1dd2e4f5fbdb6ba122ac9ee153e0e91a6e89045ec37c151fc3664b3187b7f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "d42365b79e18/text-04",
+          "source": "TIPICAL ERROR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            37,
+            148,
+            49,
+            10
+          ],
+          "source_pixels_sha256": "71c5641b756d5dec5f50955e884b98d0e8093dd5e76056ed7ea62ec204ba67fa",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          13,
+          46,
+          99,
+          18
+        ],
+        [
+          13,
+          84,
+          99,
+          18
+        ],
+        [
+          13,
+          122,
+          99,
+          18
+        ],
+        [
+          37,
+          148,
+          49,
+          10
+        ]
+      ]
+    },
+    {
+      "sha256": "de535ff9da31d043b8fff144cd961ba8d83e5f56bc7bb7663d7223fb2d443e65",
+      "profile": [
+        128,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/STNT/STNT02_1.RES",
+          "resource_sha256": "587287c092e667626ffa6e01c419ff405cef7cfbecb55306bda3a48d4269cc02",
+          "member": "ST0601_023.TM2",
+          "offset": 1488352,
+          "size": 33344
+        }
+      ],
+      "slots": [
+        {
+          "id": "de535ff9da31/text-01",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            46,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "e0e7559a9047ea017eeca4e2e95b4c3a60819e9650f0b69a117397f3ee18a420",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "de535ff9da31/text-02",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            84,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "8b75ce6c18c491d6317a56d59b35c581ff49b950703f6da729853d097fa4feca",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "de535ff9da31/text-03",
+          "source": "LOCKED-PASSWORD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            13,
+            122,
+            99,
+            18
+          ],
+          "source_pixels_sha256": "5cc1dd2e4f5fbdb6ba122ac9ee153e0e91a6e89045ec37c151fc3664b3187b7f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "de535ff9da31/text-04",
+          "source": "TIPICAL ERROR",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            37,
+            148,
+            49,
+            10
+          ],
+          "source_pixels_sha256": "71c5641b756d5dec5f50955e884b98d0e8093dd5e76056ed7ea62ec204ba67fa",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          13,
+          46,
+          99,
+          18
+        ],
+        [
+          13,
+          84,
+          99,
+          18
+        ],
+        [
+          13,
+          122,
+          99,
+          18
+        ],
+        [
+          37,
+          148,
+          49,
+          10
+        ]
+      ]
+    },
+    {
+      "sha256": "3cc709932dc17b18938c01883909c02788c2463b8b24ac36f785cb2a21a78e52",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_1.RES",
+          "resource_sha256": "7cb9dc0c99157e2b03584be0d02ce1de07e12cc6050b724ef42b02c8aa66e5f8",
+          "member": "ST0303_051.TM2",
+          "offset": 963888,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT01_1.RES",
+          "resource_sha256": "eebe3af7cba8f29e2d84f024eaa20effb348758e7f6ca9dd93f8ce76547ef631",
+          "member": "ST0303_051.TM2",
+          "offset": 1670512,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "3cc709932dc1/text-01",
+          "source": "NOTICE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            19,
+            102,
+            41,
+            10
+          ],
+          "source_pixels_sha256": "404df615990a3531dd10d012cf70f1512ef207976190410740ac1a1741489c01",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          19,
+          102,
+          41,
+          10
+        ]
+      ]
+    },
+    {
+      "sha256": "f1e0ae7764101d1a5dbfcb8c97a02cdec818f33aa8a381f7560ae28a9accf30f",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "ST0601_006.TM2",
+          "offset": 1785688,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "f1e0ae776410/text-01",
+          "source": "WARNING -",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            24,
+            91,
+            45,
+            10
+          ],
+          "source_pixels_sha256": "77a678b657eb0ed102635f415bb2e150d75207a4fbf1cb1ef627ed12b3dede1d",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "f1e0ae776410/text-02",
+          "source": "UNKNOWN AREA -",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            24,
+            129,
+            67,
+            11
+          ],
+          "source_pixels_sha256": "af03a8b0b70ca7e894bdfeac8e1132cc6fe86bbf1d44e830ec617bb0bdc58a83",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          24,
+          91,
+          45,
+          10
+        ],
+        [
+          24,
+          129,
+          67,
+          11
+        ]
+      ]
+    },
+    {
+      "sha256": "1a0cdaaf037ff144f2f1eb5d08ba327c2c0e9c3c1fe05ed0f61407197974114f",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "ST0602_008.TM2",
+          "offset": 2463464,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT02_1.RES",
+          "resource_sha256": "587287c092e667626ffa6e01c419ff405cef7cfbecb55306bda3a48d4269cc02",
+          "member": "ST0602_008.TM2",
+          "offset": 1956808,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "1a0cdaaf037f/text-01",
+          "source": "KEEP OUT / UNKNOWN DNA / OBJECT INSIDE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            148,
+            172,
+            91,
+            26
+          ],
+          "source_pixels_sha256": "4e7975d212e446e3a4b3bdc8dab9cf88d34601d745162a8b797acfa53905a22c",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          148,
+          172,
+          91,
+          26
+        ]
+      ]
+    },
+    {
+      "sha256": "9e62c3226d47b94dac4321c4dd25c6934ac4d733d24a6338621d08f21d39a312",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
+          "resource_sha256": "07de0cca866624fc88503644f89a428a1fdfa90b9db2a3a21a2769e190710ffb",
+          "member": "G376.TM2",
+          "offset": 524504,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "9e62c3226d47/text-01",
+          "source": "FRAGILE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            6,
+            79,
+            40,
+            11
+          ],
+          "source_pixels_sha256": "754abf16f2b9ca09cd416306f6879a047abc4c6e7f5a163c0f39aef10eb9c5d6",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "9e62c3226d47/text-02",
+          "source": "FRAGILE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            64,
+            79,
+            40,
+            11
+          ],
+          "source_pixels_sha256": "38253cbc8bed0b6500706e895e50894e9ddc63eeb7f5ffde6c9cd95b71c3e2c0",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          6,
+          79,
+          40,
+          11
+        ],
+        [
+          64,
+          79,
+          40,
+          11
+        ]
+      ]
+    },
+    {
+      "sha256": "a57fe417957b7de3949837a3614728d17802172068a37c39cb735bb63df054ae",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0402.RES",
+          "resource_sha256": "a5ebf84d7112903e102f18546576ca493bf99e71258d1949ea07acf4dcc9807b",
+          "member": "ST0402_007.TM2",
+          "offset": 1503724,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "a57fe417957b/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            70,
+            49,
+            54,
+            10
+          ],
+          "source_pixels_sha256": "9707560c3a64b7d9aa9e3b3951b50af7b412656e537bfb0608d0f5acd36471f2",
+          "background_index": 4,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 7,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "a57fe417957b/text-02",
+          "source": "DATA LOADING",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            103,
+            162,
+            60,
+            12
+          ],
+          "source_pixels_sha256": "a17fe99cbab2399ddf107efdc0aa78e22e3ec66696e52a441e151f2931c4594b",
+          "background_index": 4,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 8,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "a57fe417957b/text-01-lower",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            1,
+            198,
+            38,
+            14
+          ],
+          "source_pixels_sha256": "0ad36c3c9083a9a488c96c37b9df7a6355f200e6433f4d4abfd2a0fbd177cc05",
+          "background_index": 4,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 6,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          70,
+          49,
+          54,
+          10
+        ],
+        [
+          103,
+          162,
+          60,
+          12
+        ],
+        [
+          1,
+          198,
+          38,
+          14
+        ]
+      ]
+    },
+    {
+      "sha256": "e27b23d37455198a215c8c3a98c32229d7855b094bab723d705bde2e2f126d48",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "G376.TM2",
+          "offset": 845104,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "G376.TM2",
+          "offset": 741780,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "e27b23d37455/text-01",
+          "source": "FRAGILE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            6,
+            79,
+            40,
+            11
+          ],
+          "source_pixels_sha256": "f984f928c0cde03efb2ccd0b738b6ac86d3b2f685f097665d841447928f77369",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "e27b23d37455/text-02",
+          "source": "FRAGILE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            64,
+            79,
+            40,
+            11
+          ],
+          "source_pixels_sha256": "026cd0ff55e661b05500369579f2b309cc8e149c0d63512b2ff4cd5645b08909",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          6,
+          79,
+          40,
+          11
+        ],
+        [
+          64,
+          79,
+          40,
+          11
+        ]
+      ]
+    },
+    {
+      "sha256": "646dd6d4a6a93f58c986f770c92bcbeb2ae5aed9b3c77e5db7c8901ede5c5fae",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "G275.TM2",
+          "offset": 478736,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "G275.TM2",
+          "offset": 290844,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "646dd6d4a6a9/text-01",
+          "source": "NOTICE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            72,
+            6,
+            24,
+            7
+          ],
+          "source_pixels_sha256": "b58fa346d8ee317fa1882b6b8d08f47c51932eaf0e8e5bb4ee12bec2305c7b78",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          72,
+          6,
+          24,
+          7
+        ]
+      ]
+    },
+    {
+      "sha256": "e10ecf9cea50ae66d1f6daab7eb247d74b79d49c06364f3220461659e00de916",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
+          "resource_sha256": "4b965f8228ae21f906722c21f01dd9b1fe8529dc507840295483e1654dff6239",
+          "member": "G275.TM2",
+          "offset": 391708,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "e10ecf9cea50/text-01",
+          "source": "NOTICE",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            72,
+            6,
+            24,
+            7
+          ],
+          "source_pixels_sha256": "7194bbcadeacf03766659c1fdf8a55c391ba9a5016f36a0fad021ec431362f9d",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          72,
+          6,
+          24,
+          7
+        ]
+      ]
+    },
+    {
+      "sha256": "2d73154cccc012f6a2f2be64ac23ed70e4c5c915585ff4b4682ded161db063c1",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "G334_C.TM2",
+          "offset": 813360,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "G334_C.TM2",
+          "offset": 541812,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
+          "resource_sha256": "4b965f8228ae21f906722c21f01dd9b1fe8529dc507840295483e1654dff6239",
+          "member": "G334_C.TM2",
+          "offset": 1132424,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "G334_C.TM2",
+          "offset": 906132,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
+          "resource_sha256": "07de0cca866624fc88503644f89a428a1fdfa90b9db2a3a21a2769e190710ffb",
+          "member": "G334_C.TM2",
+          "offset": 336000,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "G334_C.TM2",
+          "offset": 678304,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_2.RES",
+          "resource_sha256": "39a35b16c09496ed632faef0b5641b221b40df1e05ce03c0125bf36d78850d68",
+          "member": "G334_C.TM2",
+          "offset": 650868,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
+          "resource_sha256": "345db9ea24bb08c1d9c94497a6ee3d04694408bac0f5dbdbfad65b3748e3e907",
+          "member": "G334_C.TM2",
+          "offset": 386900,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "G334_C.TM2",
+          "offset": 469108,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/STNT/STNT03_1.RES",
+          "resource_sha256": "d86cbc3d7a05cd2e83fc8d0fda20f838b0cd0afc49b126a3d1b8ff9df99edbd5",
+          "member": "G334_C.TM2",
+          "offset": 152716,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "2d73154cccc0/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            8,
+            146,
+            49,
+            8
+          ],
+          "source_pixels_sha256": "3db80da3ef83913aac916a5cc76a81dc277013532f71155474db65dbdd974b61",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "2d73154cccc0/text-02",
+          "source": "EXIT",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            159,
+            42,
+            13
+          ],
+          "source_pixels_sha256": "68d8e05b0d7c22621ae202bb47fe59dae6624bbd8bd21a69167a636bdb6f724b",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          8,
+          146,
+          49,
+          8
+        ],
+        [
+          12,
+          159,
+          42,
+          13
+        ]
+      ]
+    },
+    {
+      "sha256": "16c04c38c46c4ba4c652964de12ac13e8b67bd90cbf03c3c77159cac48475f08",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_2.RES",
+          "resource_sha256": "39a35b16c09496ed632faef0b5641b221b40df1e05ce03c0125bf36d78850d68",
+          "member": "G021.TM2",
+          "offset": 17048,
+          "size": 66624
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0502_1.RES",
+          "resource_sha256": "027374664f925b0afe15749c66c7042372d213c61118e1c1c8dab1285d9d4bf5",
+          "member": "G021.TM2",
+          "offset": 17048,
+          "size": 66624
+        }
+      ],
+      "slots": [
+        {
+          "id": "16c04c38c46c/text-01",
+          "source": "POWER WATCH / PUSH DOWN",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            12,
+            28,
+            43,
+            16
+          ],
+          "source_pixels_sha256": "7ae1b99795a7b3c09a0940488f0b31c8f30d2a372eff479faf99207cf8b9a664",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          12,
+          28,
+          43,
+          16
+        ]
+      ]
+    },
+    {
+      "sha256": "76d695a9665980deec309c0f73e3cb63fff387424775ad1f38d089fdb745a46b",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "G371.TM2",
+          "offset": 707788,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "76d695a96659/text-01",
+          "source": "FOOD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            5,
+            18,
+            15,
+            47
+          ],
+          "source_pixels_sha256": "d6aa8af857f4187d230f049bb80a98436365f4ec4b4c6addac7ce834513e950f",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "76d695a96659/text-02",
+          "source": "FOOD",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            61,
+            4,
+            11,
+            28
+          ],
+          "source_pixels_sha256": "5d8ea28e72c97180b85317583eda0d9dc67e3f2a09f70787ec051c502d622059",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          5,
+          18,
+          15,
+          47
+        ],
+        [
+          61,
+          4,
+          11,
+          28
+        ]
+      ]
+    },
+    {
+      "sha256": "1dcaca3a44d2afa7267bf719f3b5339863deb36a6a4c4f545ec7f59320010e5b",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/STNT/STNT02_1.RES",
+          "resource_sha256": "587287c092e667626ffa6e01c419ff405cef7cfbecb55306bda3a48d4269cc02",
+          "member": "ST0601_006.TM2",
+          "offset": 613692,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "1dcaca3a44d2/text-01",
+          "source": "WARNING -",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            24,
+            91,
+            45,
+            10
+          ],
+          "source_pixels_sha256": "77a678b657eb0ed102635f415bb2e150d75207a4fbf1cb1ef627ed12b3dede1d",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "1dcaca3a44d2/text-02",
+          "source": "UNKNOWN AREA -",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            24,
+            129,
+            67,
+            11
+          ],
+          "source_pixels_sha256": "af03a8b0b70ca7e894bdfeac8e1132cc6fe86bbf1d44e830ec617bb0bdc58a83",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          24,
+          91,
+          45,
+          10
+        ],
+        [
+          24,
+          129,
+          67,
+          11
+        ]
+      ]
+    },
+    {
+      "sha256": "aed422709a044719c7aa1703c7f058f8c79e60e8c7c20ac9edff41547c6b1e72",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/STNT/STNT03_1.RES",
+          "resource_sha256": "d86cbc3d7a05cd2e83fc8d0fda20f838b0cd0afc49b126a3d1b8ff9df99edbd5",
+          "member": "G337.TM2",
+          "offset": 224084,
+          "size": 66112
+        }
+      ],
+      "slots": [
+        {
+          "id": "aed422709a04/text-01",
+          "source": "MAIN SYSTEM",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            88,
+            94,
+            59,
+            59
+          ],
+          "source_pixels_sha256": "d9fc9b83b0c7c1d15080b355974251a781e42be5712395ccb0863922373433e8",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          88,
+          94,
+          59,
+          59
+        ]
+      ]
+    },
+    {
+      "sha256": "6fb062166a55a3bcfd55b0bcc80934cd5e16d6c957fdb6a9b1dd8eb00fbed41e",
+      "profile": [
+        128,
+        128,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "member": "G206.TM2",
+          "offset": 210160,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "member": "G206.TM2",
+          "offset": 139304,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
+          "resource_sha256": "4b965f8228ae21f906722c21f01dd9b1fe8529dc507840295483e1654dff6239",
+          "member": "G206.TM2",
+          "offset": 225420,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "G206.TM2",
+          "offset": 167976,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
+          "resource_sha256": "07de0cca866624fc88503644f89a428a1fdfa90b9db2a3a21a2769e190710ffb",
+          "member": "G206.TM2",
+          "offset": 117188,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0302_1.RES",
+          "resource_sha256": "55ac1b8254bb688c07b6aed11deedfc19b7c4c640887f665385561bba6433b68",
+          "member": "G206.TM2",
+          "offset": 224808,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0303_2.RES",
+          "resource_sha256": "39a35b16c09496ed632faef0b5641b221b40df1e05ce03c0125bf36d78850d68",
+          "member": "G206.TM2",
+          "offset": 317268,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0402.RES",
+          "resource_sha256": "a5ebf84d7112903e102f18546576ca493bf99e71258d1949ea07acf4dcc9807b",
+          "member": "G206.TM2",
+          "offset": 66812,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0403_1.RES",
+          "resource_sha256": "3e97fa07b0c9194237c093bb23d6b45c300363872b11869e41a01989931b45e0",
+          "member": "G206.TM2",
+          "offset": 66200,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0404_1.RES",
+          "resource_sha256": "7368fa428a5afc61d6e97b5c87f7b3c5dd165107318b051781871cccb159fd06",
+          "member": "G206.TM2",
+          "offset": 66200,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0501_1.RES",
+          "resource_sha256": "9344e615b03afe30416892d4a82cbceb4b24020cee9bf335e0974c0edbfb3ddc",
+          "member": "G206.TM2",
+          "offset": 331304,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0502_1.RES",
+          "resource_sha256": "027374664f925b0afe15749c66c7042372d213c61118e1c1c8dab1285d9d4bf5",
+          "member": "G206.TM2",
+          "offset": 83708,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0601_1.RES",
+          "resource_sha256": "1dd90b8a4ef6f37b1594790e04e8ff6ac9b29099a8c110f4dc66f2fae795f6fa",
+          "member": "G206.TM2",
+          "offset": 236160,
+          "size": 16960
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0602_1.RES",
+          "resource_sha256": "ac153d8a6f83b017a0b307218344436a4b379f9b6aaf5e042581ca2901e2265a",
+          "member": "G206.TM2",
+          "offset": 119636,
+          "size": 16960
+        }
+      ],
+      "slots": [
+        {
+          "id": "6fb062166a55/text-01",
+          "source": "WEAPONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            103,
+            74,
+            8,
+            23
+          ],
+          "source_pixels_sha256": "1b0ed3b0ac9f5a2c2a65f23e53753ef973f41e7200957a56952768557cf77fa8",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          103,
+          74,
+          8,
+          23
+        ]
+      ]
+    },
+    {
+      "sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "profile": [
+        128,
+        128,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "member": "G282_C.TM2",
+          "offset": 285624,
+          "size": 17472
+        }
+      ],
+      "slots": [
+        {
+          "id": "55b23003c6eb/text-01",
+          "source": "LARVA LABORATORY.",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            48,
+            64,
+            65,
+            13
+          ],
+          "source_pixels_sha256": "6a89867674d11b582289acf7fc262a60c0ee46aef1aa368b155a7fa32143ec77",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "55b23003c6eb/text-02",
+          "source": "RESTRICTED AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            49,
+            77,
+            61,
+            12
+          ],
+          "source_pixels_sha256": "6fd6b0c2ef738dd52b4de56801f95baa577d4543a214f77017afc6cf8d3da6b2",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          48,
+          64,
+          65,
+          13
+        ],
+        [
+          49,
+          77,
+          61,
+          12
         ]
       ]
     }

@@ -13,6 +13,17 @@ SOURCE = ('SCR_TYPE ITEM\r\n; TEXT "comment"\r\nITEM {\r\n ID 23\r\n'
 
 
 class ScriptTests(unittest.TestCase):
+    def test_scene_room_alias_is_display_but_key_is_protected(self):
+        data = 'SCR_TYPE SCENEDEF\nROOM_SPECIFIC {\n ALIAS ROOM17 "연구실"\n ALIAS MONSTER1 "연구실"\n}\n'.encode('cp949')
+        rows = extract_strings(data, 'SCENE.SCR')
+        self.assertEqual([r.role for r in rows], ['display', 'identifier'])
+        changed = patch_strings(data, rows, {rows[0].id: 'Lab'})
+        self.assertIn(b'ALIAS ROOM17 "Lab', changed)
+        self.assertIn(b'ALIAS MONSTER1', changed)
+        self.assertEqual(len(data), len(changed))
+        other = extract_strings(data.replace(b'SCENEDEF', b'EVENT'), 'EVENT.SCR')
+        self.assertEqual(other[0].role, 'identifier')
+
     def test_extract_byte_offsets_and_roles(self):
         records = extract_strings(SOURCE, "ITEM.SCR")
         self.assertEqual(len(records), 3)

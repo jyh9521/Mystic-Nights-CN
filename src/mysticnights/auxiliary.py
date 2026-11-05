@@ -105,14 +105,16 @@ def read_auxiliary(locale_dir: Path, config, recipe, image=None):
                 raise ValueError(f"Auxiliary text is not translated/reviewed for insertion: {identifier}")
             target = row["target"]
             validate_tokens(row["source"], target)
+            typography = {**config["punctuation"],
+                          "no_line_start": config.get("text_layout", {}).get("no_line_start", "")}
+            text_type = "system_message" if row.get("text_type") == "network_dialog" else row.get("text_type", "ui_label")
+            validate_text(target, text_type, typography)
             if key == "network":
                 if target.count("\n") != row["source"].count("\n") or "\r" in target:
                     raise ValueError(f"Network dialog line structure changed: {identifier}")
                 # The PF alias encoder emits three UTF-8 bytes for every
                 # non-ASCII glyph, including symbols originally using two.
                 size = sum(1 if ord(c) < 128 else 3 for c in target)
-                if row.get("text_type") == "network_dialog":
-                    validate_text(target, "system_message", config["punctuation"])
             else:
                 size = sum(1 if ord(c) < 128 else 2 for c in target)
             padding = row.get("padding_bytes", 0)

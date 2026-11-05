@@ -514,7 +514,7 @@
       "source_bytes": 124,
       "source_sha256": "4bd19ba57a78cd89750438158ea2f3baf6d475af8f8bad8bc354a2856648bbec",
       "source": "DHCP용 호스트명은 현재\"\n%s\n\"로 설정되어 있습니다. 변경할 경우는 세부설정에서 해 주십시오. ",
-      "target": "DHCP主机名当前为“\n%s\n”，如需更改请进入详细设置。",
+      "target": "DHCP主机名当前为\n“%s”\n如需更改请进入详细设置。",
       "status": "draft",
       "encoding": "utf-8",
       "role": "display",
