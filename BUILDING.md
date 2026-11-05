@@ -64,6 +64,12 @@ python -X utf8 tools/apply_patch.py --input "[full2]미스틱 나이츠(K).iso" 
 build/full-text/ROLLBACK.sh build/full-verification/applied.iso build/full-verification/restored.iso
 ```
 
+Windows PowerShell 如将 `bash` 解析为系统WSL入口，请显式使用实际Git Bash程序，不改全局PATH：
+
+```powershell
+& 'C:\Program Files\Git\bin\bash.exe' build/full-text/ROLLBACK.sh build/full-verification/applied.iso build/full-verification/restored.iso
+```
+
 反向工具验证全文件哈希、各段原/新字节和最终恢复哈希。恢复输出与原盘逐字节一致，原测试镜像保持修改状态。也可用 `tools/apply_patch.py --reverse` 显式指定补丁。存档不随镜像回滚。
 
 ## 可重放调查
