@@ -5,7 +5,7 @@ const $ = id => document.getElementById(id), items = data.items, notes = new Map
 const namespace = 'disc-image-review:' + data.revision + ':';
 let persistent = true, order = [], pos = 0, current = null, filterKind = 'localized', zoom = 'fit';
 for (const item of items) {
-  let note = {comment: '', status: 'unreviewed'};
+  let note = {comment: '', status: item.initial_status || 'unreviewed'};
   try { const value = JSON.parse(localStorage.getItem(namespace + item.id) || 'null'); if (value && typeof value.comment === 'string' && ['unreviewed', 'ok', 'issue'].includes(value.status)) note = value; }
   catch { persistent = false; }
   notes.set(item.id, note);
@@ -38,7 +38,7 @@ function render(focus = true) {
     for (const id of ['original','localized']) $(id).removeAttribute('src');
     for (const id of ['original-link','localized-link']) $(id).removeAttribute('href');
     $('jump').value = '';
-    for (const id of ['meta','note','text-list','refs','stale','saved']) $(id).textContent = '';
+    for (const id of ['meta','note','text-list','refs','stale','saved','previous-opinion']) $(id).textContent = '';
     return;
   }
   pos = Math.max(0, Math.min(pos, order.length - 1)); current = items[order[pos]];
@@ -48,6 +48,9 @@ function render(focus = true) {
   $('name').textContent = current.references[0].member || current.references[0].resource;
   $('meta').textContent = `#${current.number} · ${current.width}×${current.height} · ${current.references.length} 处引用 · ${current.id}`;
   $('note').textContent = current.review_note;
+  const previous = current.previous_feedback;
+  $('previous-opinion').textContent = previous ?
+    `上次意见${previous.changed ? '（图片已修改，待重新确认）' : '（图片未变）'}：\n${previous.comment || (previous.status === 'ok' ? '这张认可' : '需要修改（未填写文字）')}` : '';
   $('count').textContent = `${pos + 1} / ${order.length} · 编号 ${current.number}`;
   $('jump').value = current.number; $('jump').max = items.length;
   $('text-list').textContent = current.texts.map(t => `${t.source} → ${t.target}`).join('\n') || '无可靠可译正文，或运行时字体图集；原像素/标识按清单保留。';
@@ -64,7 +67,8 @@ function applyFilter() {
   save(); const q = $('search').value.toLowerCase();
   order = items.flatMap((i, n) => {
     const note = notes.get(i.id), hay = [i.id, ...i.references.map(r => r.resource + ':' + r.member), ...i.texts.map(t => t.source + t.target)].join(' ').toLowerCase();
-    const selected = filterKind === 'all' || filterKind === 'localized' && i.localized || filterKind === 'unreviewed' && i.localized && note.status === 'unreviewed' || filterKind === 'issue' && (note.comment.trim() || note.status === 'issue') || filterKind === 'fixed' && i.fixed || filterKind === 'retained' && !i.localized;
+    const reviewable = i.localized || i.restored;
+    const selected = filterKind === 'all' || filterKind === 'localized' && reviewable || filterKind === 'unreviewed' && reviewable && note.status === 'unreviewed' || filterKind === 'issue' && (note.comment.trim() || note.status === 'issue') || filterKind === 'fixed' && i.fixed || filterKind === 'retained' && !i.localized;
     return selected && hay.includes(q) ? [n] : [];
   });
   pos = 0; render(false);

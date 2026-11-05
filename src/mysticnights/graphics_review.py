@@ -11,7 +11,8 @@ from .resources import parse_res
 
 
 DISPOSITIONS = {'localized-readable-text', 'runtime-font-atlas',
-                'retain-unreadable-or-identifier', 'no-readable-localizable-prose'}
+                'retain-unreadable-or-identifier', 'no-readable-localizable-prose',
+                'retain-original-user-request'}
 
 
 def validate_review(review, graphics, image=None):

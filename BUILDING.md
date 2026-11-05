@@ -23,7 +23,7 @@ python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나�
 
 输出目录必须尚不存在。构建在新的同级事务目录中完成后才发布，不覆盖已有镜像。构建和修改版验证均支持 `--font` 指定同哈希字体；未指定时使用 `build/fonts/` 的锁定字体。
 
-完整图片/按钮复核见 `docs/ARTWORK_SWEEP.md`；本地左右图筛查网页与意见 JSON/CSV 回传见 `docs/IMAGE_REVIEW.md`。网页由 `tools/build_image_review.py` 从最终 ISO 重建，输出完整图片不提交 Git。
+最新91张意见修订见 `docs/IMAGE_FEEDBACK_C7.md`，历史完整图片/按钮复核见 `docs/ARTWORK_SWEEP.md`；本地左右图筛查网页与意见 JSON/CSV 回传见 `docs/IMAGE_REVIEW.md`。网页由 `tools/build_image_review.py` 从最终 ISO 重建，输出完整图片不提交 Git。
 
 ## 当前配置和输出
 
@@ -31,7 +31,7 @@ python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나�
 
 主字库 1433 字形；保留文本保护 379 码位，从 2065 个候选分配。主字形采用 4 倍栅格、正面积 BOX 缩小与覆盖阈值，原 metrics、CLUT 和 ASCII 不变。PF 是独立字体域。此静态保护不证明所有动态输入均已验收。
 
-图像采用与原文字节绑定的已重绘像素差分。原盘 1140 张唯一 TIM2、2634 个物理成员均有审查分类；504 个可翻译文字项写入 193 张贴图、361 个物理成员，另保留 2 个 D.I.A 标识及模糊微字。`assets/graphics-source-review.json` 的全盘闭包防止再次遗漏同名、调色及 `_C` 变体。NETGUI/BG.RGB 的 1 个标题使用独立 RGB24 差分。旧方块覆盖方案不参与构建。`--release` 仍关闭，完整流程和游戏内美术由玩家验收后再发布。
+图像采用与原文字节绑定的已重绘像素差分。原盘 1140 张唯一 TIM2、2634 个物理成员均有审查分类；502 个可翻译文字项写入 191 张贴图、359 个物理成员，另按意见恢复 2 张原图，保留 2 个 D.I.A 标识及模糊微字。`assets/graphics-source-review.json` 的全盘闭包防止再次遗漏同名、调色及 `_C` 变体。NETGUI/BG.RGB 的 1 个标题使用独立 RGB24 差分。旧方块覆盖方案不参与构建。`--release` 仍关闭，完整流程和游戏内美术由玩家验收后再发布。
 
 正文还构建源绑定的中文禁行首标点 lookahead；144 字节原指令块与 46 字节只读表均有精确锚点。只读表在一条已译 C 字符串的首个 NUL 之后，不扩展 ELF，不改变可见文本。修改版验证独立回放指令、所有实际字码、原生字体像素与全盘图片闭包。
 

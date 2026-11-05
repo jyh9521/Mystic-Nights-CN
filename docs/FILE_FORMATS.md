@@ -158,3 +158,9 @@ ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压�
 - `rgba-mask`：A 为覆盖率，同时按 `alpha_peak` 混合原始 A；覆盖255时精确返回 alpha_peak，不把 PS2 原始 A 当普通255制不透明度再次合成。
 
 构建验证最终 ISO、原生 member、base 差分、受保护像素、PNG 和完整清单。`pcsx2-hd-main-font-pack` / `pcsx2-hd-artwork-pack` v1 的 `textures[]` 逐项记录精确 texture/CLUT/bits 文件名、源 SHA 和 PNG size/hash/dimensions。安装器只接受一个匹配格式的清单，按所有权列表预检和可逆替换。
+
+## 图片审查稳定顺序与源材质预期
+
+`assets/image-review-order.json`以原盘SHA绑定1140个唯一TIM2源hash；必须与闭合源清单完全相等且无重复。恢复原图只改变分类，不改变编号。筛查构建器按成员序号读写重复名称，避免同名成员错误回读。
+
+图片质量清单的`material_regressions`可声明`expectation: preserved|changed`，默认保留旧`changed`语义；源样本hash始终先验。页脚/复选框差分可声明`anchor_gap_groups`：轴、源图图标矩形、字面RGBA选择器、前后关系、最小间距和差异容差；正向构建及最终ISO回读均检查，反向恢复仍按源/新hash和范围验证。

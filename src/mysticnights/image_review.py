@@ -88,7 +88,38 @@ def read_feedback(path, review):
             'entries': result, 'opinion_entries': sum(bool(r['comment'].strip()) or r['status'] == 'issue' for r in result)}
 
 
-def build_review(root, original_path, modified_path, manifest_path, locale, output, *, audit_path=None):
+def stable_order(unique, recipe, source_sha256):
+    """A retained image must not renumber every later feedback entry."""
+    if (recipe.get('format') != 'disc-image-review-order' or recipe.get('version') != 1
+            or recipe.get('source_iso_sha256') != source_sha256):
+        raise ValueError('Review order source/format mismatch')
+    keys = recipe['tim2']
+    if len(keys) != len(set(keys)) or set(keys) != set(unique):
+        raise ValueError('Review order source inventory mismatch')
+    return keys
+
+
+def attach_previous_feedback(payload, path):
+    """Keep old opinions separate from a new round of acceptance/feedback."""
+    validated = read_feedback(path, {**payload, 'revision': 'prepublication'})
+    by_id = {row['id']: row for row in validated['entries']}
+    counts = {'carried_confirmations': 0, 'changed_for_recheck': 0}
+    for item in payload['items']:
+        row = by_id.get(item['id'])
+        if not row:
+            continue
+        item['previous_feedback'] = {
+            'comment': row['comment'], 'status': row['reported_status'],
+            'localized_sha256': row['feedback_localized_sha256'], 'changed': row['stale']}
+        if row['stale']:
+            counts['changed_for_recheck'] += 1
+        elif row['reported_status'] == 'ok':
+            item['initial_status'] = 'ok'
+            counts['carried_confirmations'] += 1
+    payload['previous_feedback_summary'] = counts
+
+
+def build_review(root, original_path, modified_path, manifest_path, locale, output, *, audit_path=None, feedback_path=None):
     from PIL import Image
     root = Path(root).resolve()
     output = Path(output).resolve()
@@ -108,7 +139,7 @@ def build_review(root, original_path, modified_path, manifest_path, locale, outp
     patches = {p['source_sha256']: p for p in catalogue['artwork_patches']}
     targets = {e['id']: e['target'] for e in catalogue['entries']}
     audit = json.loads(Path(audit_path).read_text('utf8')) if audit_path else {'textures': []}
-    audit_by = {t['source_sha256']: t for t in audit['textures']}
+    audit_by = {t['source_sha256']: t for t in audit['textures'] + audit.get('restored_images', [])}
     unique = {}
     refs = 0
     resources = 0
@@ -118,10 +149,12 @@ def build_review(root, original_path, modified_path, manifest_path, locale, outp
         before = parse_res(original.read(name))
         after = parse_res(modified.read(name))
         resources += 1
-        for entry in before.entries:
+        if [e.name for e in before.entries] != [e.name for e in after.entries]:
+            raise ValueError('Review archive member order mismatch')
+        for entry, new_entry in zip(before.entries, after.entries):
             if not entry.name.endswith('.TM2'):
                 continue
-            data, changed = before.read(entry), after.read(entry.name)
+            data, changed = before.read(entry), after.read(new_entry)
             key = digest(data)
             if key not in dispositions:
                 raise ValueError('Unclassified source texture')
@@ -157,13 +190,13 @@ def build_review(root, original_path, modified_path, manifest_path, locale, outp
                       'width': source_image.width, 'height': source_image.height,
                       'original_image': 'images/' + a.name, 'chinese_image': 'images/' + b.name,
                       'references': row['references'], 'texts': texts, 'disposition': disposition,
-                      'localized': bool(texts), 'changed': row['before'] != row['after'],
+                      'localized': bool(texts), 'restored': disposition == 'retain-original-user-request',
+                      'changed': row['before'] != row['after'],
                       'fixed': fixed, 'review_note': note})
 
     # Translated images first; every remaining source TIM2 is also reviewable.
-    order = sorted(unique, key=lambda key: (key not in registered,
-                   not any('/UI/' in r['resource'] or r['resource'] == 'RES/LOGO.RES'
-                           for r in unique[key]['references']), unique[key]['references'][0]['member'], key))
+    order = stable_order(unique, json.loads((root / 'assets/image-review-order.json').read_text('utf8')),
+                         manifest['original']['sha256'])
     for key in order:
         row = unique[key]
         before, profile = decode_tim2(row['before'])
@@ -202,6 +235,8 @@ def build_review(root, original_path, modified_path, manifest_path, locale, outp
                'resources': resources, 'physical_tim2_members': refs,
                'unique_tim2': len(unique), 'localized_artworks': sum(i['localized'] for i in items),
                'items': items}
+    if feedback_path:
+        attach_previous_feedback(payload, feedback_path)
     payload['revision'] = digest(canonical(payload))
     template = root / 'tools/review_page'
     html = (template / 'review.html').read_text('utf8').replace('__DATA__', script_json(payload))

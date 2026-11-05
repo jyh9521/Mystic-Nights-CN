@@ -347,6 +347,203 @@
         "locales/zh-CN/artwork/3c1dbf83a249.json"
       ],
       "registration": "Replace complete source-bound footprints, including first/last rows and right edge formerly excluded by core masks; same adopted lettering mask/placement; original per-variant lighting/frame/palette preserved."
+    },
+    {
+      "id": "feedback-c7-larva-door",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove the TWO white door labels LARVA LABORATORY and RESTRICTED AREA, including the line below the second label. Preserve the separate small slot above and narrow orange/red status light below. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "beab24e671483fa72b12ae3053bc2eb09f669516dd50da652b520bca116ab280",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/63a4d2a40a1a.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-camera-label",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove the black CASIO-ROBOT / CAMERA lettering from the metal label. Preserve the label perimeter, small bolts, cyan-gray metal mottling and separate dark horizontal slots below. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "3d348055fe42a4baa40552a1576440c46214b906f2bf06a7b971646e079ac40c",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/133aa7eea030.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-main-control",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove all six large readable label fields on the two door leaves: two MAIN CONTROL CENTER headings, two RESTRICTED AREA red lines, and two UNLOCK labels. Keep the central metal door seam, warm upper reflections, horizontal metal braces and all machinery. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "f1fca76c62adfe2ccb971632f7a6db4a95d38710034dfd17c6835eb38588840c",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c58c820b6113.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-data-console",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY VITAL CREATIONS small label at upper-middle, the main DATA LOADING text on the lower cyan monitor, and lower-left VITAL CREATIONS tiny company word. Preserve the monitor cyan gradient, black title band edges, small unreadable computer code, vents, keyboard, buttons and ALL atlas layout. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "6864b1f94ce300eee9e7700360ba4f921fe3953fbcd9edc0e6fc57f5ceea8b90",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/5c5ccd471e15.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-exit-sign",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove VITAL CREATIONS (top line) and EXIT (large lower line) from this original cyan wall sign. Retain the tiny unreadable middle manufacturing line and exact cyan glow, perimeter, patina and original thin physical frame. Do not draw a new panel or solid rectangle. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "efc3898895a6ed8c28af819353cf8adabe0189fcb9ed977465abb2250aa3ec06",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/44821a6e82f8.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-keepout-plaque",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the dark KEEP OUT word on this worn dim brown-red industrial plaque. Preserve the horizontal embossed borders, corner hardware, surface scratches and dark inner patina. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "b7c15ca580f8a423516a8bf6c5116aebaf5611baede5b50543ed18e5857c8f60",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/8b22f906baa7.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-warning-paper",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove the three large black printed lines CAUTION / DO NOT APPROACH WHILE / OPERATION IN PROCESS. Preserve the original orange-brown weathered paper with its scratched speckled material and lighting; leave a continuous blank paper face, not a smooth orange patch. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "73c2235fcd9973ffb5afaff0e7b859d533cc638814ace40f840374145ed9e6cd",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/89d4eec42316.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-sterilizer",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove STERILIZER and AIR CLEANER white labels only, leaving the original dark muted green metal glass. Keep the panel edges and natural broad light falloff and grain. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "083fe215d65d3bff0c275b5a6cb1bbd7ba7a013177000bd412a92194c39add73",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/2388ec1c2a38.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-id-allen",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the three readable white/silver texts VITAL CREATIONS, ALLEN DERN and SECURITY. Keep the small logo symbol at top-left, card stripe, red translucent/plastic grain, holographic photo details and barcode-like bands. No new text. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "48dae0516a89e36c0a22aad4624aaba2fad51573c8a1391f176927c0a3301033",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/5617fe442fdf.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-id-jane",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the three readable white/silver texts VITAL CREATIONS, JANE BLAIRE and SECURITY. Keep the small logo at top-left, card stripe, red laminate grain, holographic photo and barcode-like bands. No new text. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "45b66f789e2efd809e5309a14144a7ca19356a05ce8bdf6c216f6bdfbbc50843",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/b4b214448de4.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-id-damaged",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the small VITAL CREATIONS label at top and SECURITY label lower-right. Keep the heavy original scratches, chips, scuffed red holographic ID-card surface, faint photo, large damage pattern, logo and bars unchanged. Do not restore the card to new condition. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "00d5b895fae445c5cf8796e961f442e042c8aad5899219925a8986612f8ec419",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/a1b2c956c06b.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-nano-door",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the large NANO CELL and LABORATORY text in the middle of this dark glass equipment-door crop. Preserve all the tiny unreadable microprint below, horizontal seams and old dusty, scratched, muted blue/red surface. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "ea911b6f7e3d8a466668eeba2c6c87123aa4c9766eea9ffd3561be116c999caa",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/8fa268a3a14c.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-restricted-red",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the two large vertical label lines ALERT and RESTRICTED AREA from the red warning strip. Preserve all tiny unreadable side print, dark red mottled glass, narrow bordering panel lines and the warm red illumination. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "61a1f17edacbef08b3aa8206800444daa649913ac647cd947967944638e8c554",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/2af85bf214e5.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-no-video",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY EXIT in the upper-left dark panel and NO VIDEO SIGNAL on the lower-right monitor. Preserve the underline/end-bracket graphic beside NO VIDEO SIGNAL, the tiny blue/red/white microprint, the screen yellow-green glow, machinery and all atlas layout. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "11eb2f44a186510803dde26cc8927e87968cca1710f9efcad44dfdaa5f29fe7f",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/3383eb4cdb99.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-keepout-red",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the three reddish label lines KEEP OUT / UNKNOWN DNA / OBJECT INSIDE from this red-lit industrial glass. Preserve continuous red mottled patina, black dark top panel, seams and natural fading light, no new dark box. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "610a2560ebf6c7cd702fdbee625b3adb3098d45eba80b8052c47edf6dac46d29",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/1a0cdaaf037f.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-organic-title",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY MYSTIC NIGHTS glowing lettering and its old letter-shaped halos from the lower part of this green organic/scientific texture. Reconstruct the same green membranes, translucent fibers and yellow cells beneath the letters, preserving natural fine details. Do not add dark bands, do not alter the rest of the organisms. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "9763fe22316177ad892cf105d60b958a9e1ee734621e117eab7f4b2e6ac5be6c",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/87f3f3fda8d1.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-random-photo",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit, original PS2 game material restoration clean plate. Edit this exact supplied texture crop; output same aspect ratio and geometry. Remove ONLY the big RANDOM word and its letter-shaped blue/black outlines. Preserve the white thin elliptical outline, all four real sci-fi interior photograph quadrants, original bright center spotlight and black corners. Do not alter doors, red lights, blue monitors, camera viewpoint or invent new room geometry. Remove old lettering including immediate outlines and glow, leaving NO replacement lettering. Heal only the old ink with the surrounding original continuous lighting and material grain. No flat cover rectangles, no inset plaques, no invented decoration, no blur-smearing across real details, no redesign or brighter light. Retain panel edges, mechanical seams, patina, existing microprint that is not the named text, and all unrelated objects. This is a material donor for later precise glyph registration, not a new game screenshot. No captions, no margin, no crop.",
+      "selected_output_sha256": "61a15eba4065bb854a22b0bde1164838d96f11d83b669c2722bfe3122757105d",
+      "usage": "Material donor only within source-locked old/new lettering beds; all unrelated model changes discarded; accepted native glyphs and original CLUT preserved",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e9c6c44b4f.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-menu-plate",
+      "tool": "built-in imagegen",
+      "authoring_specification": "Original red/metal PS2 main-menu atlas: remove only English words, retain original frames, translucent normal-state red bands, mechanical pattern, MN logo and copyright. No replacement text; accepted prior glyph art is registered afterward.",
+      "selected_output_sha256": "4d798c43d56bd249ce7f922ccee2e34cc08244c67702a6e85d1adc1872f8d7a0",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-capsule-plate",
+      "tool": "built-in imagegen",
+      "authoring_specification": "Original eight-row blue/orange industrial capsules: remove only English foreground; retain every original highlight, frame, edge and mechanical background pattern. Native registration uses this only inside the original Latin foreground footprint, not the whole button.",
+      "selected_output_sha256": "b7f529800b4f469e5101c5b1ba7b5d540f2dff57e2d25c51989be3a14814a6b7",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json",
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "feedback-c7-native-registration",
+      "tool": "deterministic native palette/UV registration",
+      "reused_lettering_sha256": "baa7775ad29dd720dd6d3f802ac9c658e878e60a0a342ad4a3c80c35357e3b24",
+      "registration": "91 rows in assets/artwork-feedback-c7.json; shared native faces, continuous palette color changes, footer/checkbox anchor checks; glyph raster for three ID labels uses the locked project font at one common10px em",
+      "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "important_alpha_rule": "RGBA master must be composited before quantization to an opaque CLUT; hidden RGB under alpha0 is not visible ink and must not become black/Latin residues."
     }
   ]
 }

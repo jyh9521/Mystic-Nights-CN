@@ -171,3 +171,54 @@ def check_shape_pairs(image, checks):
             raise ValueError(f'Artwork shape-pair {identifier}: state silhouettes differ')
         reports.append({'id':identifier,'normal':states[0],'selected':states[1],'silhouette':'identical'})
     return reports
+
+
+def check_anchor_gaps(image, checks):
+    """Compare measured label-to-icon gaps, not the labels' English UV widths.
+
+    Anchor rectangles are explicit source-verified artwork geometry. Their
+    pixels remain protected by the indexed delta; this check is not icon OCR.
+    A label may be before or after its anchor, along either image axis.
+    """
+    if image.mode != 'RGBA' or not isinstance(checks, list):
+        raise ValueError('Invalid artwork anchor-gap input')
+    reports = []; seen = set()
+    for check in checks:
+        identifier = check['id']
+        if not isinstance(identifier, str) or not identifier or identifier in seen:
+            raise ValueError('Invalid/duplicate artwork anchor-gap ID')
+        seen.add(identifier)
+        if check['axis'] not in ('x', 'y'):
+            raise ValueError('Invalid artwork anchor-gap axis')
+        axis = 0 if check['axis'] == 'x' else 1
+        minimum = _integer(check['min_gap'], 0, max(image.size))
+        tolerance = _integer(check['max_gap_difference'], 0, max(image.size))
+        members = check['members']
+        if not isinstance(members, list) or len(members) < 2:
+            raise ValueError('Artwork anchor-gap needs at least two members')
+        rows = []; gaps = []
+        for member in members:
+            anchor = member['anchor']
+            if not isinstance(anchor, list) or len(anchor) != 4:
+                raise ValueError('Invalid artwork anchor rectangle')
+            x, y, w, h = anchor
+            _integer(x, 0, image.width - 1); _integer(y, 0, image.height - 1)
+            _integer(w, 1, image.width - x); _integer(h, 1, image.height - y)
+            label = measure_ink(image, member['label'],
+                                min_row_pixels=check['min_row_pixels'],
+                                min_column_pixels=check['min_column_pixels'])
+            side = member['side']
+            if side == 'before':
+                gap = anchor[axis] - label['bbox'][axis + 2]
+            elif side == 'after':
+                gap = label['bbox'][axis] - anchor[axis] - anchor[axis + 2]
+            else:
+                raise ValueError('Invalid artwork anchor-gap side')
+            if gap < minimum:
+                raise ValueError(f'Artwork anchor-gap {identifier}: gap={gap}, minimum={minimum}')
+            gaps.append(gap)
+            rows.append({'label': label, 'anchor': anchor, 'side': side, 'gap': gap})
+        if max(gaps) - min(gaps) > tolerance:
+            raise ValueError(f'Artwork anchor-gap {identifier}: gaps={gaps}, tolerance={tolerance}')
+        reports.append({'id': identifier, 'axis': check['axis'], 'gaps': gaps, 'members': rows})
+    return reports

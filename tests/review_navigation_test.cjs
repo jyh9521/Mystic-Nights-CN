@@ -54,5 +54,11 @@ function setup(brokenStorage=false) {
   const bad=structuredClone(exported);bad.entries[0].id='unknown';input.files=[{size:100,text:async()=>JSON.stringify(bad)}];
   const before=t.eval('JSON.stringify([...notes])');await input.events.change({target:input});assert.match(t.$('error').textContent,/导入未生效/);assert.equal(t.eval('JSON.stringify([...notes])'),before);
   const b=setup(true);b.$('comment').value='存储禁用仍可导出';b.$('comment').events.input();b.$('export-json').click();assert.equal(JSON.parse(await b.blobs[0].text()).entries[0].comment,'存储禁用仍可导出');
+  memory.clear();items[0].initial_status='ok';items[1].previous_feedback={comment:'旧意见：背景残留',status:'issue',changed:true};items[2].restored=true;
+  const seeded=setup();assert.match(seeded.$('count').textContent,/1 \/ 3/);assert.equal(seeded.eval('notes.get(items[0].id).status'),'ok');
+  seeded.$('next').click();assert.match(seeded.$('previous-opinion').textContent,/旧意见：背景残留/);assert.equal(seeded.$('comment').value,'');assert.equal(seeded.eval('notes.get(current.id).status'),'unreviewed');
+  seeded.$('export-json').click();const recheck=JSON.parse(await seeded.blobs.at(-1).text());assert.equal(recheck.entries.length,1);assert.equal(recheck.entries[0].status,'ok');
+  seeded.$('search').value='missing-again';seeded.$('search').events.input();assert.equal(seeded.$('previous-opinion').textContent,'');
   console.log('REVIEW NAVIGATION PASS arrows-in-input IME search empty-state jump filters autosave reload JSON/CSV downloads import stale-reset atomic-rejection storage-failure=pass');
+  console.log('REVIEW HISTORY PASS unchanged-approval carried changed-opinion readonly new-comment empty restored-image reviewable old-opinion not-reexported=pass');
 })().catch(e=>{console.error(e);process.exitCode=1;});

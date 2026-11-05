@@ -139,6 +139,10 @@ def apply_artwork(data: bytes, patch: dict, *, targets: dict | None = None, reve
         from .artwork_checks import check_shape_pairs
         rendered, _ = decode_tim2(bytes(output))
         check_shape_pairs(rendered, patch["shape_pairs"])
+    if not reverse and "anchor_gap_groups" in patch:
+        from .artwork_checks import check_anchor_gaps
+        rendered, _ = decode_tim2(bytes(output))
+        check_anchor_gaps(rendered, patch["anchor_gap_groups"])
     return bytes(output)
 
 

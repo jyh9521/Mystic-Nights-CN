@@ -14,8 +14,10 @@ def main():
     p.add_argument('--locale', default='zh-CN')
     p.add_argument('--output', type=Path, required=True)
     p.add_argument('--audit', type=Path)
+    p.add_argument('--feedback', type=Path, help='Optional local previous feedback; never published to Git')
     a = p.parse_args()
-    print(json.dumps(build_review(ROOT, a.original, a.iso, a.manifest, a.locale, a.output, audit_path=a.audit), ensure_ascii=False))
+    print(json.dumps(build_review(ROOT, a.original, a.iso, a.manifest, a.locale, a.output,
+                                 audit_path=a.audit, feedback_path=a.feedback), ensure_ascii=False))
 
 
 if __name__ == '__main__':

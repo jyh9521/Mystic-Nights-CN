@@ -1,0 +1,741 @@
+{
+  "format": "artwork-feedback-resolution",
+  "version": 1,
+  "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "feedback_iso_sha256": "c7c2d8c2e33f809e27927ce815e2c9ab3748ac8df9cb1bc839403c0157931f1b",
+  "feedback_file_sha256": "1f212f60cae053c6679fef08b9bbc752a2d1955943e11d2a425f712d03e784b9",
+  "opinions": 91,
+  "localized_revisions": 89,
+  "exact_original_restorations": 2,
+  "user_approval": "pending; prior approvals apply only to byte-identical images",
+  "items": [
+    {
+      "number": 13,
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "before_sha256": "99ebe95b4afed0245c640a45ef5bbc2dbe8547cc1daf2683c2a797c4ff3ece31",
+      "after_sha256": "1e0804feadc7fba595e84bf3cb51e56f0bb07163968b5b86003e129ca762eb50",
+      "changed_indices": 29692,
+      "note": "All8menu words share14px em, accepted high-res art; unselected original translucent red bands restored, START red/black glyph halo restored; matching HD source/key regenerated"
+    },
+    {
+      "number": 14,
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "before_sha256": "68b78347dada5d193542654d91b0ac09cfec7be4121cb50cc1cb49fcd9725cfa",
+      "after_sha256": "3038b2a667908f4f1b5954d45422921613dcea230e36204c4c28139c96b042f3",
+      "changed_indices": 14766,
+      "note": "Original angular highlights and mechanical lower/side pattern restored; only English word ink healed with new imagegen donor, accepted Chinese face+bevel retained"
+    },
+    {
+      "number": 15,
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "before_sha256": "b9cab898e9218c0ff5c6fdf6bfc19b41273acc10fb16178dc31da9c9f663e8bf",
+      "after_sha256": "3a35a2256606d47c6dc24b00bb56e0d0f2a5478573d9092b620abbb82c4b08ad",
+      "changed_indices": 10090,
+      "note": "Original angular highlights and mechanical lower/side pattern restored; only English word ink healed with new imagegen donor, accepted Chinese face+bevel retained"
+    },
+    {
+      "number": 16,
+      "source_sha256": "569d71f3aa82485efd70d83dedb6fad287bb4b831750600aa088c6bcbf9dece3",
+      "before_sha256": "30fb7c22c632accbaff2e3cda872137716fd0b2e25853d184684686ae49c1917",
+      "after_sha256": "569d71f3aa82485efd70d83dedb6fad287bb4b831750600aa088c6bcbf9dece3",
+      "action": "retain-original-by-user-request",
+      "note": "Restore exact source texture; do not localize this image"
+    },
+    {
+      "number": 19,
+      "source_sha256": "315a3049ad1505ece0bc45a09b576ff95f56966ffb573a9379ba944edc28a587",
+      "before_sha256": "7f66d5962ee9b1f160c0b7bd67f7f52415ec52f3e7b2548d6d31ced3fe35b72a",
+      "after_sha256": "741f189b7fbc661689f2321555bd772600e677e4e531c6d03a3c9cd7a5285369",
+      "changed_indices": 232,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 20,
+      "source_sha256": "3b65fbd1f3a8531f4e6ed735731fca4096fb70ab88076f96a34949468316dc22",
+      "before_sha256": "60e8980c6970daf8d14c701385ef04407cd8aabf7a0ebbfdeb84bb1bdc3713bd",
+      "after_sha256": "470e115c406809a109892c6538fec4cbff1786a47b087c321164993b25499742",
+      "changed_indices": 231,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 25,
+      "source_sha256": "6c34d8b631c77f77e9373ce502f64087f2f0fd5221f7d6d0243b68776390df1a",
+      "before_sha256": "aff8fafc2d7fadb122cc3a4b438689344c4686a8b5da41321c2ebb71fe8609c7",
+      "after_sha256": "fb2014974ee1a8930520e238f014b5d7d8a31ea7bd0f21ae5384ea70795bb99b",
+      "changed_indices": 2920,
+      "note": "Camera-reset line optical center matches vibration-function line; existing white style retained"
+    },
+    {
+      "number": 26,
+      "source_sha256": "c316f7a8f6f4b4bafe374642fb935da4bea6ee620a31a4fed852bafc066c005b",
+      "before_sha256": "2b9275a216d364815db3eeec079eba058e58003aaf9f82a27d27fe1ffe97f2b8",
+      "after_sha256": "85852f85e8b0016df62e82aebc86a046478fadb948684185c463bfda8ca20539",
+      "changed_indices": 903,
+      "note": "ON/OFF labels use identical left gap to original square markers, both rows; no checkbox edits"
+    },
+    {
+      "number": 27,
+      "source_sha256": "50dab06d4bb5fc501da8b948cc3df0283f65c453b930347dce592e4bb8537be9",
+      "before_sha256": "43a3a7fcac967294a7599de839ded6e47f3763cddf62dc44a0bc56075d2dcabf",
+      "after_sha256": "967358f9d9c254ec1650163d25165f5d7777d49e7c34876ddfbc7abfca130ec2",
+      "changed_indices": 7487,
+      "note": "结束 two glyphs match corresponding 游戏 glyph visible dimensions and cells, retaining blue beveled art"
+    },
+    {
+      "number": 44,
+      "source_sha256": "300be638e51ff5b990c49332c7c859cbfaf67734f7661a100948a3b4484ba439",
+      "before_sha256": "1898d3f405c9ad95eac680fc3044198c0b540b4fec856a735f403e20f4f79777",
+      "after_sha256": "07e2e2b43d783c640c118c11f4ad878f6515cc4af9de2503cd87a76456c8d1e9",
+      "changed_indices": 321,
+      "note": "武 and 器 each rotated clockwise upright and stacked in requested order, 武above器; source red sign untouched"
+    },
+    {
+      "number": 48,
+      "source_sha256": "78e7735e27bec57ae7725e8f76e0eb91cfae749ca5a463a6c3e72faaa218ac88",
+      "before_sha256": "68dde4a63d9ed8c28e6fdc5f36615c9f44ad6d3114c400da4a904611864d449b",
+      "after_sha256": "30c17771edc1a7a34387f59f973708d741354ba216efdd704ff313af880bda4c",
+      "changed_indices": 549,
+      "note": "Shares exact master#47 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 52,
+      "source_sha256": "2703c76fa0d403e15540dd8ae639e9ed164bf877ecd543605f825df421ec29fc",
+      "before_sha256": "c49b55d1312d85441f26e6e5b1c06705750e74fe37730f34c608e6fded292f59",
+      "after_sha256": "ad9b806794704deb2a9920b1df6e5e42a35ff305daf3240d277e4b257c04b9fb",
+      "changed_indices": 10,
+      "note": "Same ERROR glyph geometry as#52 in all4palette states; exact original5x2 trailing white cursor block preserved"
+    },
+    {
+      "number": 53,
+      "source_sha256": "6b3da2d9f62eeb9c1ae2950cf9e1617856603c054b487dd0ae3d33a0ae4c936d",
+      "before_sha256": "632558ff3675ef1e364348e4ecfabe2e6cc2171cd75bef95b4a9435c1ac4cb5a",
+      "after_sha256": "834f44cfe99c8d3f8775cfa233372505c88931202cc107f83a81d21fbd2f0cb5",
+      "changed_indices": 595,
+      "note": "Same ERROR glyph geometry as#52 in all4palette states; exact original5x2 trailing white cursor block preserved"
+    },
+    {
+      "number": 54,
+      "source_sha256": "a038662342eef2a107e0fd0873676836cc7c7a884356c114dc0f528142369e44",
+      "before_sha256": "a825c3685b4a9fd68d7520b6bc0adb016d8b4d0639286f1eed87039587d73bff",
+      "after_sha256": "c9f5d1fc15ba61b48e1464c4d97f35a2c44304cf0b8d9d0682b66a5fe774cc05",
+      "changed_indices": 686,
+      "note": "Same ERROR glyph geometry as#52 in all4palette states; exact original5x2 trailing white cursor block preserved"
+    },
+    {
+      "number": 55,
+      "source_sha256": "f04efd60e59c102667f8be855a25d96811ac8ff8bde45cde7cc6527ff8430f12",
+      "before_sha256": "8371d5280a23a9d6505b4f9fdc78c7da8a8c2eb0ea9ffa0312d87c7206edf95d",
+      "after_sha256": "047dc680d371be0889cfdda8ecf8353b065232e83ac5dff69829150d1ef6d870",
+      "changed_indices": 615,
+      "note": "Same ERROR glyph geometry as#52 in all4palette states; exact original5x2 trailing white cursor block preserved"
+    },
+    {
+      "number": 56,
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "before_sha256": "032c59c249319ee3b5e6ef107476cf1a0d4b185e86656e0424ff9db590849ad9",
+      "after_sha256": "9b7395b91dfac103e7652209eb1f69e75e98517aee787793580fd44d5c83d8a1",
+      "changed_indices": 1399,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 57,
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "before_sha256": "e20377e259641691783b55353df056ea64f111010ea4fdf8708ca1ea723ffd3b",
+      "after_sha256": "0e04b17c57729d260d0000a8b1f83540d87d32f2d3605a40dfe3f2a8d7b5aec7",
+      "changed_indices": 1772,
+      "note": "Shares exact master#56 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 58,
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "before_sha256": "4e74757bdbdbbad9b4589b023492bd4fcb56b35154cec28bb1395576cacd5292",
+      "after_sha256": "0c27562714b9ab6050e2e11be16264ddcd9d3b9941aec6c389d4af1b77969931",
+      "changed_indices": 2034,
+      "note": "Shares exact master#56 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 59,
+      "source_sha256": "133aa7eea03053951dc5b3bf549bd59a0bd959536622002b3814917cefcae089",
+      "before_sha256": "1fc6d34d43697e3a31b24280427136c1e02ed3f2a10483cc25932db24be14885",
+      "after_sha256": "40322edca7c3c13e307b7999062f2572dd9bf8701237e3367747719ddf2840f3",
+      "changed_indices": 207,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 60,
+      "source_sha256": "92a89aa10b813b2c875213f4a9eec9f8aa816b21c1a9a2700f7cd3669d72db19",
+      "before_sha256": "9c127beacb0243be7750f29e5f325124283ff462ddf5e430b88539b8773d6df5",
+      "after_sha256": "7ded7adbc91061f3b8ac13d444d7c7454041e0fc2f2a770cd96c4789ebe782d3",
+      "changed_indices": 1000,
+      "note": "Shares exact master#59 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 61,
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "before_sha256": "4e70bb745844ece2ce2827705749924260005517dd273da8e2efee3530435928",
+      "after_sha256": "7384e0b99ecee35b9d6a99da85afccebd07eb7c63b9f013cdade3ff616ee330c",
+      "changed_indices": 3432,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 64,
+      "source_sha256": "28c1e7c5244e54f0b72c6710cc03113c14ee6b3da3283b0662de1b05f15e3dae",
+      "before_sha256": "f5567032d87fcc2726bfd905f162559b15f7b60a2a55919c66950e9c045c1b66",
+      "after_sha256": "436bd7b0b5068eb5ed5403c2364e3c992342c65a3fa56e2803b0492bbd0382ec",
+      "changed_indices": 1353,
+      "note": "Shares exact master#63 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 65,
+      "source_sha256": "ad363f03c5a231f6d0f446c252a3348bab75640167a63fa0e13e27312a19b7fd",
+      "before_sha256": "5df50bbfdf65cc272a1883344df169250bd8f32384e9409d90bcdddcee45141b",
+      "after_sha256": "b462917f7c33c66d196cc851626a282d2a3b37c945041c51258ed89976daf865",
+      "changed_indices": 1354,
+      "note": "Shares exact master#63 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 66,
+      "source_sha256": "f003f9c373dc699f6a5f3bd714a00c48f66107fbea9e23064d114fe4546da903",
+      "before_sha256": "14f963b4ae958a6f089b2026f1ceddd733784b35ebffa0bb3dae2d0b162fe42e",
+      "after_sha256": "6929c12eb179a42d6ca5adf6feb417d6b2ab76dfc1647b883d9bd4dc4a9dd0a6",
+      "changed_indices": 1479,
+      "note": "Shares exact master#63 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 67,
+      "source_sha256": "f5023ab71b873a77fb7ecffc6ccf4c78449ce61bffca575b3bda2d3e0d2a0b67",
+      "before_sha256": "d9a70678e6f3fcde83966759dbf7d8aac0e132931bfd11ceb74341a84a6c87d2",
+      "after_sha256": "ae4872ba3f82ef88eb28b9740ac82269c8041924d972b35ce554d856ec69f765",
+      "changed_indices": 1290,
+      "note": "Shares exact master#63 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 68,
+      "source_sha256": "5c5ccd471e1594926d95cd85387fa7650cd93b2de2bf6a339f845ea9e6cee837",
+      "before_sha256": "068ac6dd53d997965e304e331b34979e16309cb2b5274e6ce8f70698d11cd43f",
+      "after_sha256": "0af46f6f9404f4a3b3e0224aab847cddde943df89083b1154c58b750a040618f",
+      "changed_indices": 811,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 69,
+      "source_sha256": "7bfee954cdfa4c2a2749b7937048470126e0609fb22ff1836fd4e8c34f558977",
+      "before_sha256": "042d6a103f28ec349763cb00f6f66e372d487e5a9a9aecaf72c217ee24544968",
+      "after_sha256": "564ff3ffce2c5d4ff1f2ac3d9b0b34b4c3be7aac8f20a12dddbdb36d2b013ee7",
+      "changed_indices": 1914,
+      "note": "Shares exact master#68 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 70,
+      "source_sha256": "fefc3f417e032239492ec51873bb736bcb648bed7f3325e686ccf794745b5450",
+      "before_sha256": "cfa3f7dbefa7417f254407c57d563c51191e0258dc43a02a4664eff1879a63ad",
+      "after_sha256": "7260d7ee2ac6a2942448eda9c6f3f82a9e6a0440c29d08e9091c9ea92a7c7ef9",
+      "changed_indices": 2125,
+      "note": "Shares exact master#68 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 72,
+      "source_sha256": "4051fb2bdf6cdb74af37c43ca88db8e3c3b00d347b34cb034dc2084a59ce0269",
+      "before_sha256": "6ec001475ae0246037fabf863c9f4e22fd921bfa841bd7226cb098d488038d49",
+      "after_sha256": "b2d3521f5a5c42a7726738f462f784222dac7e865649f2bf6935f08fa9cb84f7",
+      "changed_indices": 1004,
+      "note": "Shares exact master#71 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 74,
+      "source_sha256": "7fa571208bd31b4cc5f6db3de5f9c7fddb46c446ce431fb4d24c405a04e641cd",
+      "before_sha256": "611ebcfdfbdac75bf65cd8a93576036330dacdee9f2af4c423cdb3f3fb6cf0f2",
+      "after_sha256": "825ac3789383c755c7782c533ad1204189f4d2d4b1af3b2d6139041ebebc5068",
+      "changed_indices": 1123,
+      "note": "Shares exact master#73 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 75,
+      "source_sha256": "8f8c61c41b150de4bc3578617127f93282fc31d68814e5e1606a4a92fbade503",
+      "before_sha256": "01cc286de3f6ea198f54eb764685f74fe4f6d68bea3ff2d443beefa8b10f1786",
+      "after_sha256": "9c949e1ca781493410cf13daf49a244238a8e9addc5b3d5be7d003cce7bd9aa4",
+      "changed_indices": 1304,
+      "note": "Shares exact master#73 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 77,
+      "source_sha256": "aa01c58ae3ce696ff28cd1c07407185dcd15c97c0477e7b3ab9309f78e6dd310",
+      "before_sha256": "6661548e03236c29946b9eef813c01ede1f4b92b5b15251a7cadbee4903f9191",
+      "after_sha256": "aa01c58ae3ce696ff28cd1c07407185dcd15c97c0477e7b3ab9309f78e6dd310",
+      "action": "retain-original-by-user-request",
+      "note": "Restore exact source texture; do not localize this image"
+    },
+    {
+      "number": 78,
+      "source_sha256": "f369593e7f10b239aa51cabdc1320a7cfd8e21f1fd3b9f87295690524e105a57",
+      "before_sha256": "ea3a58bd9fd92c5c40505d99fa749844ec57a136805f2f15820ef0db2ce059cc",
+      "after_sha256": "357bd02c781d42cfb330da795ae273664ff467b68e6cf081d758ef7a36b79491",
+      "changed_indices": 113,
+      "note": "注意 right edge placed immediately beside original white fine-print bar; no new panel"
+    },
+    {
+      "number": 79,
+      "source_sha256": "3ee3c511da911a9a8748bdb15062d3cfd714ed13bf085cd1c7cb8025692a4dbc",
+      "before_sha256": "b48f37669eff5609dc7168d6bc8798262d63cfeb72ca8cbc38c5266803bf7e6f",
+      "after_sha256": "75f8a435566fd62c0ba7fa2910f82234b1b7b8a52c07a0f1a62d5b15e0aeb982",
+      "changed_indices": 1810,
+      "note": "Blank issue marker: original red CAUTION plate restored; complete Chinese face and footer letters retained with AA guard, source monitor pictures untouched"
+    },
+    {
+      "number": 80,
+      "source_sha256": "44821a6e82f8571923ede1cdf6e2892ea7bd4e904b7bad7ab7c34d945372fde2",
+      "before_sha256": "4124b2acf7937e91d2be64a08b41969b100b13375375b18cc0dc3592ac182e4c",
+      "after_sha256": "39647ca468b2bdbccfcc71d2d3211bb6b0901316ed9203e3d778486fa7e3a586",
+      "changed_indices": 1175,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 81,
+      "source_sha256": "4f5e8aba7eace67983943a245fac7791af2303eb596ff27fbc3edbd3da4793e2",
+      "before_sha256": "cdc17d060dcb8e52ac1a5256660c38d3b37cc8f477fc2fddff43e211701ce0ae",
+      "after_sha256": "4be415e73d9453fbec26ad0c9d601db0acc253f5305e6377919d5e92d5f8ac20",
+      "changed_indices": 979,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 82,
+      "source_sha256": "871db805372a5c1494aed11971ab62e17675a685f24b5c42b7d38c4b5b55ec05",
+      "before_sha256": "ac65a3b1f3f336d23b18bc0163acffab4e3bf39f946225f935d2e7104c49bdf9",
+      "after_sha256": "937582e6293f396e478137a85f35c891e0f9a9d98511e62b95baf3b96cea787c",
+      "changed_indices": 1256,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 83,
+      "source_sha256": "2d73154cccc012f6a2f2be64ac23ed70e4c5c915585ff4b4682ded161db063c1",
+      "before_sha256": "a1ca72b0a62d163a84f2f227443db94cb255b2b09ac04a07c3da5ba9c512a04a",
+      "after_sha256": "9ad5aa2a4bdf28a8cf6a0d9dab00fec5f1a4bb3b542510347b2f0ec9f1089fb0",
+      "changed_indices": 925,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 84,
+      "source_sha256": "4b4153df3b8bbb8f7efb37bffe73df3392b2bf44153ff93f613ad769a4749d17",
+      "before_sha256": "dde5d1ea071002a154b4a0fe7a604d933a652afb3d032f1c1780e1e8a2bd29c3",
+      "after_sha256": "5fe06da55850fbe268bd67f5a05eda7eb2a6d3458a8a3111a885dccdf8c7d9fa",
+      "changed_indices": 923,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 85,
+      "source_sha256": "8b22f906baa7fc29eb454028d96def442a9691d3c341ed242def71a0a6f8ca02",
+      "before_sha256": "b801babc6d54ef91dc7fb79c3a560cd41bcea0147346713b13da8735284b0487",
+      "after_sha256": "a5fc3c995b12ccfe8664602b20ffc67b20517b0fc9ad8608e96cc92721b43b49",
+      "changed_indices": 452,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 86,
+      "source_sha256": "d6c18161e2b52d3adac40a4392caa82ce4b9ee5b39a8de343a5fe4b942e0e415",
+      "before_sha256": "8113638e3796d0e343154a93caf4c1baafc4fabb522dc3d7e1aafd13b5998bc0",
+      "after_sha256": "47e42dc05c88050168b8dc08f04223890c16669521b9ccd91e1313824f29788f",
+      "changed_indices": 896,
+      "note": "Shares exact master#85 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 87,
+      "source_sha256": "f7f619aae3c83b839ba845cbe584125d776ff7200c5e89346233b05e21c39470",
+      "before_sha256": "dc5d4748fe7ee705c34634bb1138183d867f2f23600e9abfaab4e887b4cca6ba",
+      "after_sha256": "75dc9d8fba518c1e3af488fe352a65d61a134eb590902ee2d1c155708de2a0ca",
+      "changed_indices": 892,
+      "note": "Shares exact master#85 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 92,
+      "source_sha256": "d72df6ab73f2289aaa3ff0a43e1e8322e7d470caba257efbaf9757075dc4fdfe",
+      "before_sha256": "d4c551540f210d489bd3ac23fdaef275ee5982e9383e4e64afb0bcd274b7e1a1",
+      "after_sha256": "6af835e97372247a38e207bd7d50b43fbfb2c33da099fec9ac7af973175a80e6",
+      "changed_indices": 4246,
+      "note": "Shares exact master#91 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 93,
+      "source_sha256": "89d4eec42316b14339cff7e3481db2326350e19966233e13787acedf5f1d635d",
+      "before_sha256": "efa322da62d79e389c2b0825feca776b07d2770443194f852c6ffe887c0c590d",
+      "after_sha256": "0f097410de35dc3e53e46422053d95e37f51d00227366513265bb693bd39d21e",
+      "changed_indices": 3188,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 94,
+      "source_sha256": "cb1beda20720e40ddf0c73c46894a7573c931959ffb296c58f7148ebcfa64f58",
+      "before_sha256": "c119907a00ca32305ec0d17586bb7ae5c63bd62a3264cacf2750e55b33f42035",
+      "after_sha256": "e7742abd43780958311dc6fdee17aec7baa6060f9982d2c181c5a7906c5bfdc2",
+      "changed_indices": 5741,
+      "note": "Shares exact master#93 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 98,
+      "source_sha256": "d6ea7fb06f8737002fb19e3572d8a94b029dc2be0976624ad7d6cd7e6e8e2934",
+      "before_sha256": "5e92aff1560f94650d3f0a48ba63a35a403a5da407fae3980a9f02da3737ef94",
+      "after_sha256": "7401b0b8339af2b4519bca410dc35f1ee59e590d08d454fbc5bc3bfa99cd108c",
+      "changed_indices": 767,
+      "note": "Shares exact master#97 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 101,
+      "source_sha256": "c8b4f0f32aa6d1853384644686145888f3afde5ecd6d380ca66c3602ab005bbb",
+      "before_sha256": "14970329b009ecd6a28370822456f165b62a39330d4b539d41b208229a00b61c",
+      "after_sha256": "7b8bd4f63040825f7cce14c1aa87f25f4643304ee88322532fdc9ed8682d55c4",
+      "changed_indices": 485,
+      "note": "Both 探测器室 labels centered on their actual dark door plaques, not English text rectangles"
+    },
+    {
+      "number": 110,
+      "source_sha256": "2388ec1c2a38c39a9704ed5f0ee0d228d356bab3a47ba30ee142dca8544ae630",
+      "before_sha256": "807ff6365a07d8f28490fd4c9d95a31beca9c886a44663e9d0a37eea8c31034f",
+      "after_sha256": "1878a1be23f8a7f85db7c4b49379e5851939c420643341a1e937534fb16cbdbc",
+      "changed_indices": 858,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 111,
+      "source_sha256": "e62df7ba91ecd08ef0c19d557d78bdace2d5eb29a347d69b5bbd2494874c48cc",
+      "before_sha256": "46e5eda2caf34f96bbe732653d771767099366f82fa920b6b724d321208d4b46",
+      "after_sha256": "4dbc828d5d485cb3f8114895413f87d6613ef76b3d6b045e33995dc4f7684585",
+      "changed_indices": 1536,
+      "note": "Shares exact master#110 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 112,
+      "source_sha256": "ad7931dc54e9e7a790fff20a3fbe12fb22947d9f8f29cb581c1a071081eb90c0",
+      "before_sha256": "40bb210f06022b3c9ef1a80d321fd4a4178ec55e9c8b0855633008eee375bbec",
+      "after_sha256": "d6aaea6c94ec4b48c38744081c604513a8a3db6cc5f5ddddfcccc97c062fa9c6",
+      "changed_indices": 308,
+      "note": "电池 heading moved down2native pixels without rescaling, full AA face retained; original frame and lower fine print retained"
+    },
+    {
+      "number": 115,
+      "source_sha256": "28f5c7d8051e9d1f060f2d81879f82129b077950337e066cc967000cb6fce73d",
+      "before_sha256": "91f85b53d75c7bda56641438a7f714935bc96e4301a7ab9f94fbb9afa4c818e6",
+      "after_sha256": "d989d5a0b9e71b4f6c356d24d1c20854cb99fc47f22b5c7d3d36f64613f71100",
+      "changed_indices": 373,
+      "note": "错误 changes only native glyph hue/coverage to original magenta ERROR palette, preserving all geometry and AA intensities"
+    },
+    {
+      "number": 121,
+      "source_sha256": "5617fe442fdfc99683d7107ab16106e05e77bf061a3f4807a6b908bf34b61de8",
+      "before_sha256": "9e1d7c81d25bf626a62665de732a01ec754bc1044807c17d078c1df082ae7845",
+      "after_sha256": "ed2d74211852cc6664b4f594d659811062d0962bf5f6537ea81c74fdd1f1c260",
+      "changed_indices": 1800,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 123,
+      "source_sha256": "b4b214448de4094b8231fa795f06393bde82ab80c88adf03aec8de777880c1df",
+      "before_sha256": "c35bad38548302e565e42cbe0d523205b7cf5641940b122aab024fd7bc021fe6",
+      "after_sha256": "423eaad949196eb59df36fae51c564bfd7c4535719564e927317cc4fe49b3f62",
+      "changed_indices": 1793,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 124,
+      "source_sha256": "a1b2c956c06b7190354193488e4026fec9082ba24ea832c0c5680b3467b0ffab",
+      "before_sha256": "594f1a8b8cf0e752968270107d91a87718fc566b45810e53032bf506f7d413c4",
+      "after_sha256": "751bdf673fd258666f3fc57b925d9c3af3a8623679791532ebd258784f50494d",
+      "changed_indices": 1554,
+      "note": "Damaged-card material restored from its own new donor, company/security glyphs and positions shared with#123; chips and photo outside labels unchanged"
+    },
+    {
+      "number": 130,
+      "source_sha256": "13cd43ad8eb81998f05ff7a839093ecee7b23203d46ee61e847fadddcfd58b19",
+      "before_sha256": "4bb85edf5f2e31025f02739c7bd73fa4cedc1e99652e7b5f6b5d51779d47c698",
+      "after_sha256": "40cbd2499364907c822bd08511332dd308f95bcb9dfea9c447a915cdd111dc1e",
+      "changed_indices": 950,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 131,
+      "source_sha256": "3b08c3cd5b4d62481406636ef895fabbeb692adc4b2243f1e6f33759a687e8ae",
+      "before_sha256": "b301ba2cba18e516b6314847b8f8c00eabafb5303a6e5bc24a86a756cfde090a",
+      "after_sha256": "3deac01c183955dff0eea7cba66ec032491b30d35a32e18d5736133b5120bbe8",
+      "changed_indices": 1030,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 132,
+      "source_sha256": "c06a1378e931e2794b9f0502d7d417aea9c15e8d9468f804d401a050de550c8c",
+      "before_sha256": "f3ec5acf266587aa9125ffc98fd87e192dd90e959252189b62f053b0677f1713",
+      "after_sha256": "b808b3381f9f4741a2539b58a26224cac887a267160a2e16f39dc52a06c32698",
+      "changed_indices": 1033,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 133,
+      "source_sha256": "0d18baa138df407878e8f4c8a9cc0b919b0662823465041e7f8ca929ee2c9a8b",
+      "before_sha256": "c05f36b1aae910728b9925549e21c705bb146e5a6af9cf5cf19db6bef14b290d",
+      "after_sha256": "8fd6a39ac78b1e10957e554cd54338defae6b3f74caa0d0be9341866ceaa56b7",
+      "changed_indices": 1037,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 134,
+      "source_sha256": "518a12e3768ebc276c11d0a0f0e24d0aacb246db3a81863e9223e11932f5d909",
+      "before_sha256": "05d5b2afd652c007271c9015c6ec96dda21a9699516e4c92a45fe0bb90d658d4",
+      "after_sha256": "acd3139984e53abe94333882a542ead7dc531be19c638c2af9d051296b7696f6",
+      "changed_indices": 1034,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 135,
+      "source_sha256": "6f6acbe2aa58c061cfafe94f526c4ee3aba6b4f692daab37bad0c74d48f57c23",
+      "before_sha256": "170028f05fdec2846bbf0bcf4eefa824a1fd97190806075cbade32bc6558dd5e",
+      "after_sha256": "46b25ef17b34b422a3d65b5a6a9b407a0e9ba1098b7af4a265130d56b08e5e0b",
+      "changed_indices": 1020,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 136,
+      "source_sha256": "d7c78a1b81d51ff9b4a71cf7ac2e74e774365f75d516550d4d9f4dcb8ab7e3e3",
+      "before_sha256": "08348dc9986a7074c25eb615f7f8ead457712ebc3c3757ccba80bcfe1584474a",
+      "after_sha256": "30ec303d090105279f4e7a1d092b6310e52cea1b83a96e10cb4f1828bb6b4102",
+      "changed_indices": 1035,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 137,
+      "source_sha256": "bad47b8ddfb3f4f6dc0d0a8308bc8d4a297ddfce40d42aa893094ac42ee4f0b6",
+      "before_sha256": "0569321d1b505e536abf92ab9ae1e453914ec363eacb61949f1f64110d00ccac",
+      "after_sha256": "80a89ee575974a7619d10ea46c4fda9d7bd99ac6b3bfa7bd85c69654cf9fec12",
+      "changed_indices": 1040,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 138,
+      "source_sha256": "9ece5b6e3dd5a34a988427ddf4071e2ae6810369321df783bb34a666177b2412",
+      "before_sha256": "37be825e31306f52b1895a4615a1856224e358da6c22f63ef99bf00c22d5f5a3",
+      "after_sha256": "fccd8370710739d6731cab93118669e155e6b1e25854a9190eba6e3e97923c8d",
+      "changed_indices": 1032,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 139,
+      "source_sha256": "ee493ac1c4a9009d2f518081f9794341bd2f6f0c5da1d2171514c33a041d40a8",
+      "before_sha256": "4cf94a35f86d4a83a7960408ecdb144eb8a8e39de30982db4cdb7592d49b5dbb",
+      "after_sha256": "f2daabee21b6c0372f452709c4a1deaadcbbf0521ca4e57cd043a9e7783c8201",
+      "changed_indices": 1016,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 140,
+      "source_sha256": "db909841bba11a856b4ff412258c85fa46a0f5b60f03adbfc98780312138f8ed",
+      "before_sha256": "95a0f887329638f76a49a8e442b5378ebc558c8a63c2543478f76a2f395e0108",
+      "after_sha256": "307150861148f15e8c02c7fa275d4c9556af9ac56d183790c1e8a5b3ca4356b7",
+      "changed_indices": 1036,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 143,
+      "source_sha256": "8fa268a3a14c97413d3073938a5f8119570272ed0e59b08d3b16500fb434ec94",
+      "before_sha256": "0c8b90f8888ccb739c7feb9656f66c858ec54e514ba184c034f94fe745278769",
+      "after_sha256": "88a0bcae5f7059bf5465b6457f96b0f40feeef009642b608f9cfcf7f57e71a42",
+      "changed_indices": 1414,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 147,
+      "source_sha256": "2af85bf214e5c7a78d23acccc84c949379baf2de9dafbd76012bb688c62f6744",
+      "before_sha256": "4f171fccd2937f59880175bf48da71109ac6b1ca1220cd6e5ccb34729250d059",
+      "after_sha256": "00da37bb53a2cb3d0c0497e8853009b060e459192a3b00d3fc41def62f7ffbf5",
+      "changed_indices": 1152,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 148,
+      "source_sha256": "3edbbb792997e3da79d538ed2ee724284a9d944a18c6ddfeea73d6d0a7f6fa0e",
+      "before_sha256": "05ee84aeb90e6a2bda39a0dca030acd6f12c6ccdcd14a7bb2393521b76a624bf",
+      "after_sha256": "839e92715e1fa230f3d406623e6ce08d2743956b3c67ff0bfa24fda4763523e0",
+      "changed_indices": 894,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 149,
+      "source_sha256": "71f214f794e95ef6bfaacb070dca6d9ddf7c44371adde24bd0d09cf6f84aa991",
+      "before_sha256": "6d516d52dc88d6d0aef81a952c8823a4807ab1181385b6e8cfbe65e7683d0711",
+      "after_sha256": "319961cf93428925ebbd82c89c034345fc39caa3df3c63420107bae9028bf929",
+      "changed_indices": 1069,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 150,
+      "source_sha256": "2943e8d7ffdbde49d67c3f191252a5039e3ba9cdab10d22a0bbab72cd6a11f09",
+      "before_sha256": "dd1ab4e05564bae209ecedd2474c635983b9fdd59cb3d03d071f6d5eb2f4b41c",
+      "after_sha256": "2043630239f1013a6d8df7073d501b1e1a3c7b33996503673773ff2368252a5e",
+      "changed_indices": 953,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 152,
+      "source_sha256": "49d3912f91b8b1d58cc9e4f87d1b5818c80070293f948346d51aa3c8b07a3e40",
+      "before_sha256": "49a6af814821e65503797150a7dca3d43c37e7be041ecbda2eead79a348e14ab",
+      "after_sha256": "826a52cfb264a28b59d12698a77aa1c6130208233bbb46cc78e63f4177dd83f0",
+      "changed_indices": 919,
+      "note": "Shares exact master#85 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 153,
+      "source_sha256": "3383eb4cdb99fb338936378931fa5b417c2d9e2bddce365d6cd6bc03f6843fce",
+      "before_sha256": "4d513b1fc6c2d77d5302937ee41460f31164d0fa4c1885e54890092e0bea8f19",
+      "after_sha256": "aa4671a910b502cadb699d08ae95f55d70ee84f40a931e7bd5acc1fa8ef1d35e",
+      "changed_indices": 1477,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 154,
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "before_sha256": "d61015cc083f373315901bfa40244bd796dc19780289d1efe9bbabd521b0aaad",
+      "after_sha256": "ecc84b235e8e658de2096130e8c4236951c4d01ec7448c18cf18f6fd96803456",
+      "changed_indices": 3374,
+      "note": "New imagegen text-free material donor over full old footprints; existing localized letter art re-registered, original frame/layout/palette outside declared beds retained"
+    },
+    {
+      "number": 159,
+      "source_sha256": "d55587b848f39ee8efbd1ba3c0f1df50da72979df18c318a0f9d346362fa91cf",
+      "before_sha256": "be3dde97a023d22dc37a9996895beacf0b3ad7fbe8ecf0ca84d5c1f9855a8325",
+      "after_sha256": "efaeab4c55f45cf30783cf05cb459cf0b895275358c26852762d2955c2b22579",
+      "changed_indices": 144,
+      "note": "Warning plaque Chinese ink uses actual source red palette direction for each line, no font/layout redesign"
+    },
+    {
+      "number": 160,
+      "source_sha256": "1838789d92673bd38ae617c9f9ea067fd8b46ebcec2abd38675bbbf275e073d9",
+      "before_sha256": "f92838ba1864f59ce922073b21d307ac517f7f7b03b421c6311642ecd9292fd5",
+      "after_sha256": "163e1c88a29ad24e2e39b85da45dfe8bd1441980ac1b25af2417b8b3e3aaa429",
+      "changed_indices": 1082,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 162,
+      "source_sha256": "3c1dbf83a249f7d55001734ee306e71980282bb66ff5e28ceade1c11f7049c3d",
+      "before_sha256": "188ba168efa4f917715c6edcbde692ed427a1179a60b923f637d958045c830d6",
+      "after_sha256": "87307fd2e746b175af179387f31aca3727edf0adafd326692552bef3da0d2800",
+      "changed_indices": 966,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 163,
+      "source_sha256": "a1239fdc55604c87df9c14dff247928a40f28889042b91087baf60bfd8014a0c",
+      "before_sha256": "a2daba476101d97825621e348121a5d56325a6eb270cc40292d2337de6de2f9b",
+      "after_sha256": "abd92aca55298b62a3e60c708f619308e144003febec7c7aa6b2c0145ced99ef",
+      "changed_indices": 1379,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 165,
+      "source_sha256": "c6acced11170f4350dbea83668b0a0e1407f33c12e9039631cd151b6240617ad",
+      "before_sha256": "9fec57cf1da5d79f41771e789d43d2700831ee9ed633a30d7a3a5eeacaa3af91",
+      "after_sha256": "84b2645f0fdafbc1af0dcf9041402146556ec056ba5bf13ea3aa950684e84ac6",
+      "changed_indices": 1360,
+      "note": "Canonical shared6px header and8px 出口 glyph masks at identical native positions across23variants; full panel clean plate, exact original middle microprint and outside frame preserved"
+    },
+    {
+      "number": 166,
+      "source_sha256": "07073c97023291748c72e78d7d5bb2e8bd5e394f048d8eb8eddfc234e0f7d642",
+      "before_sha256": "5009cbc3cce4eabe2d61f532217acc8f5cc9f152e6b29eabc3894afa71d1a90b",
+      "after_sha256": "3ec3461f7443bb53ec0d327aee25a91085ce53880c1c3c0ecaee42fc6de12c89",
+      "changed_indices": 650,
+      "note": "Both 探测器室 labels centered on their actual dark door plaques, not English text rectangles"
+    },
+    {
+      "number": 169,
+      "source_sha256": "a57fe417957b7de3949837a3614728d17802172068a37c39cb735bb63df054ae",
+      "before_sha256": "0122e296d28d64ba382afdb313047d52ea464e33cd01e97c1ffa34937f6a5f38",
+      "after_sha256": "4b70ca4759d63bd3be8e0c7096626f4a149c97d58f0d1722eae6da7a120e3cab",
+      "changed_indices": 1433,
+      "note": "Shares exact master#68 native glyph layout/size and material; original variant lighting preserved; transparent master composited before opaque-CLUT quantization, no inherited Latin alpha/RGB"
+    },
+    {
+      "number": 172,
+      "source_sha256": "bcb5b0782d765f4316d577cf92a1195aedf82e83d4af153e202ee68a3e08fe22",
+      "before_sha256": "6c803e9428541dbd0a8213cd055374871db660b12fbdfcbd70fdaf686dcae76e",
+      "after_sha256": "0f83456c89cfd44c471119c186fea697af5c0b4767dd95c23e3febb07577f966",
+      "changed_indices": 5401,
+      "note": "Both WARNING and PROCESS ERROR lines share black-display center128 along reading axis; grouped block centered on original panel"
+    },
+    {
+      "number": 180,
+      "source_sha256": "1a0cdaaf037ff144f2f1eb5d08ba327c2c0e9c3c1fe05ed0f61407197974114f",
+      "before_sha256": "1c93980bef826e0a8e3922bba5e1a9137cdcee7a4902d8f6bb3a4c5500112c97",
+      "after_sha256": "e8e8fabdc045c303c32e3a472f0f3287a1264df2389456579e5799de767e7c5a",
+      "changed_indices": 2623,
+      "note": "Full old three-line bed restored; localized block centered on dark plaque, original red material and surrounding door retained"
+    },
+    {
+      "number": 182,
+      "source_sha256": "4ef12dc045324effd49667e8fdd802bedecc18e92e09f4ed0bd72f61a86d253b",
+      "before_sha256": "e12dce3a5179f72a6b69d8b79338a8a8a356a61f5d049693869cb370f32fce3b",
+      "after_sha256": "f6ad961506bec76046565e2fcc526a75a2d2f9552a8fccdb0f70c5a901785e43",
+      "changed_indices": 1482,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 183,
+      "source_sha256": "af91ca0e09852b68bcc2f6a80834c6c362b2b4771316b585b79ea77bef3ae268",
+      "before_sha256": "bafdb43b86247ac9f511044a4111a64b05833a0583441811a3aed6cd9e64dd38",
+      "after_sha256": "1c2f13642fbbc4400e752238ce32901fca85400d3538c6285ed34a5d732d2c95",
+      "changed_indices": 1544,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 184,
+      "source_sha256": "87f3f3fda8d1dae02e46b1f3ce8cffad2d5fad15ecabfb54824511341f57e888",
+      "before_sha256": "920969fa2da97cc447114b2fb13926dca6d25676778a6d35437908aa56fe6b71",
+      "after_sha256": "a5abe744dfe9a6dacc6a60fa32ef65c42803ed6b0e351d37e9e74777b6cb7f00",
+      "changed_indices": 5753,
+      "note": "Original-style soft fluorescent title glow restored; old Latin/flat title bed replaced using organic text-free donor, existing Chinese italic art retained"
+    },
+    {
+      "number": 185,
+      "source_sha256": "0f1afa0bbe823df6d302638ed9318dba8117447a8fd5462393f793f055e2fd86",
+      "before_sha256": "9c0d87b607f63c97702a7068008bce8977448af5b133feb10ccb94679c3c2818",
+      "after_sha256": "df45e7890489cfa661e5815ead9354c935758a2521b60a8f0a899c9403282e3c",
+      "changed_indices": 306,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 186,
+      "source_sha256": "e8932d921c392b46c887dc3520cda6396061dd13040ea33d48ce967565033294",
+      "before_sha256": "90f557f53b2fecf90988a0282abff6b0ffae9530ab8215ad4cf8831a65c3245d",
+      "after_sha256": "3f09c789550fd5de13bb9875a612dc44a220e0b833821edca423fd530027a05e",
+      "changed_indices": 306,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 187,
+      "source_sha256": "60a58b8a9e2cb965f22924041b6d78c0c409a6664f6c3ad1ad155dccd43df287",
+      "before_sha256": "fc2771d80ae390c430ca355bf5b6afeee27f5da17e10fb5ce66c4a97fb9f8de2",
+      "after_sha256": "696dead80ff4c03281252c689e7b7f7a6ab5e04ae14bda5ba1a46f6146bfbf0c",
+      "changed_indices": 2489,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 188,
+      "source_sha256": "acba74ed5f652fa041349b7e8a5f9b9544230aa161dbe57154dbb47e312a0edb",
+      "before_sha256": "a389de2afddb21f494e9c49489fe63a529b5aa47c5f0dc0ce650a84c51ee7682",
+      "after_sha256": "37c695e4c920278c1fe5d624f9972199cf21f70c16e978be1038df28fe0250ad",
+      "changed_indices": 481,
+      "note": "Shared accepted glyphs, logical O/X edge gaps equal; controller icon bytes untouched; variants182/183 and185/186 share exact layout"
+    },
+    {
+      "number": 191,
+      "source_sha256": "c6e9c6c44b4f06d425b03a57994169937759ca636cd068cc2d0d1d2202876589",
+      "before_sha256": "f76923e50e37dc433b40ff77ef20a2f352edb894c01f6a30e6c93fcd5e82f6f9",
+      "after_sha256": "907dcc5ddde0d526d51f89f162ebad8ba8352cbb48fd56e6902f25dd556c3ac7",
+      "changed_indices": 4027,
+      "note": "Complete RANDOM/native-Chinese footprint restored from new text-free photo donor, ellipse and four scene quadrants retained outside bed; existing blue Chinese lettering reused"
+    },
+    {
+      "number": 192,
+      "source_sha256": "4d5ff5857ffe65f512649eda1567bf61f05981dfaebc4f4800821bdaca4c90bf",
+      "before_sha256": "e2880878bc14a3dce7cdd6f05445dcb7b72e609ab04232eb8f4f83e9a4ef4ae4",
+      "after_sha256": "a009609d0f3b40416e68b644384bbe159382482fb77ef405ad7840eed4c143bf",
+      "changed_indices": 6136,
+      "note": "Exact original angled stamp border restored, localized red text clipped to inner parallelogram; no frame removed"
+    }
+  ]
+}

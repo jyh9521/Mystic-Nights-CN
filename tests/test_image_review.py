@@ -3,7 +3,8 @@ from pathlib import Path
 import tempfile
 import unittest
 from PIL import Image
-from mysticnights.image_review import canonical, script_json, write_png, read_feedback
+from mysticnights.image_review import (canonical, script_json, write_png, read_feedback,
+                                      stable_order, attach_previous_feedback)
 
 
 class ImageReviewTests(unittest.TestCase):
@@ -82,6 +83,38 @@ class ImageReviewTests(unittest.TestCase):
                 writer.writerow(['image_id', 'source_sha256', 'localized_sha256', 'status', 'feedback'])
                 writer.writerow([row['id'], row['source_sha256'], row['localized_sha256'], row['status'], row['comment']])
             self.assertEqual(read_feedback(path, review)['entries'][0]['comment'], row['comment'])
+
+    def test_retaining_image_does_not_renumber_source_order(self):
+        recipe = {'format': 'disc-image-review-order', 'version': 1,
+                  'source_iso_sha256': 's', 'tim2': ['b', 'a']}
+        self.assertEqual(stable_order({'a': {}, 'b': {}}, recipe, 's'), ['b', 'a'])
+        for keys in (['b', 'b'], ['b'], ['a', 'b', 'c']):
+            with self.assertRaises(ValueError):
+                stable_order({'a': {}, 'b': {}}, {**recipe, 'tim2': keys}, 's')
+        with self.assertRaises(ValueError):
+            stable_order({'a': {}, 'b': {}}, recipe, 'other-disc')
+
+    def test_changed_feedback_is_history_not_new_approval(self):
+        review, value = self.fixture()
+        value['entries'][0].update(status='ok', localized_sha256='e' * 64)
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'feedback.json'; path.write_bytes(canonical(value))
+            attach_previous_feedback(review, path)
+        item = review['items'][0]
+        self.assertTrue(item['previous_feedback']['changed'])
+        self.assertEqual(item['previous_feedback']['comment'], value['entries'][0]['comment'])
+        self.assertNotIn('initial_status', item)
+        self.assertEqual(review['previous_feedback_summary'],
+                         {'carried_confirmations': 0, 'changed_for_recheck': 1})
+
+    def test_unchanged_confirmation_carries_but_issue_not_auto_approved(self):
+        for status, expected in [('ok', 1), ('issue', 0)]:
+            review, value = self.fixture(); value['entries'][0]['status'] = status
+            with tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / 'feedback.json'; path.write_bytes(canonical(value))
+                attach_previous_feedback(review, path)
+            self.assertEqual(review['previous_feedback_summary']['carried_confirmations'], expected)
+            self.assertEqual(review['items'][0].get('initial_status'), 'ok' if expected else None)
 
 
 if __name__ == '__main__':

@@ -15,7 +15,7 @@ def main():
  if quality.get('format')!='artwork-quality-review'or quality.get('version')!=1 or quality['source_iso_sha256']!=slots['source_iso_sha256']:raise ValueError('Unsupported inspection source/format')
  if len(rows)!=len(quality['textures'])or set(rows)!=set(specs):raise ValueError('Inspection ledger is not closed')
  if not checks or len({(c['source_sha256'],c['id'])for c in checks})!=len(checks)or any(c['source_sha256']not in specs for c in checks):raise ValueError('Empty/duplicate/unknown material regression samples')
- cache={};members=0;retained=[];samplecount=0
+ cache={};members=0;failures=[];samplecount=0;preserved=0;removed=0
  def read(iso,ref):
   key=(str(iso.path),ref['resource'])
   if key not in cache:cache[key]=parse_res(iso.read(ref['resource']))
@@ -34,10 +34,15 @@ def main():
    def block(b):return b''.join(b[offset+yy*stride+x:offset+yy*stride+x+w]for yy in range(y,y+h))
    blocksrc=block(src)
    if hashlib.sha256(blocksrc).hexdigest()!=c['source_sample_sha256']:raise ValueError('Regression source fingerprint changed')
-   if blocksrc==block(dst):retained.append(key[:12]+'/'+c['id'])
+   expectation=c.get('expectation','changed')
+   if expectation not in ('changed','preserved'):raise ValueError('Unknown material sample expectation')
+   equal=blocksrc==block(dst)
+   if equal != (expectation=='preserved'):failures.append(key[:12]+'/'+c['id']+'/'+expectation)
+   if expectation=='preserved':preserved+=1
+   else:removed+=1
    samplecount+=1
- print(f'ARTWORK MATERIAL {"FAIL"if retained else"PASS"} retained_source_patterns={len(retained)}/{samplecount}')
- if retained:raise ValueError('Retained known old patterns: '+','.join(retained))
+ print(f'ARTWORK MATERIAL {"FAIL"if failures else"PASS"} samples={samplecount} preserved_detail={preserved} changed_old_ink={removed} mismatches={len(failures)}')
+ if failures:raise ValueError('Material sample expectation mismatch: '+','.join(failures))
  print(f'ARTWORK REVIEW PASS unique={len(rows)} physical={members} ledger=closed provenance=offline-not-game-approval')
 
 
