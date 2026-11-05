@@ -5,6 +5,7 @@ import json
 import math
 import struct
 from pathlib import Path
+from functools import lru_cache
 from _bootstrap import ROOT
 from mysticnights.versions import verify_original, load_version
 from mysticnights.iso9660 import IsoImage, sha256_file
@@ -29,8 +30,84 @@ def execute_store(instruction, value, initial):
     return int.from_bytes(memory[offset:offset+width], 'little')
 
 
+@lru_cache(maxsize=4)
+def _vertical_program(elf):
+    return {address: word(elf, address)
+            for start, stop in ((0x16a2c4, 0x16a318), (0x16a744, 0x16a778))
+            for address in range(start, stop, 4)}
+
+
+def replay_vertical_input(elf, axis, height, *, upper, lower, inhibited=False):
+    """Replay only the actual scalar vertical-input/clamp blocks, including delays.
+
+    This stops before the subsequent camera/collision calculations. FPU
+    accumulator/MMI instructions and the rest of UpdateCamera are not emulated.
+    The positive branch's conditional upper clamp and its pre-existing inhibit
+    gate are deliberately preserved, rather than replaced by a generic clamp.
+    """
+    if not -32768 <= axis <= 32767:
+        raise ValueError('Vertical fixture axis is outside signed halfword range')
+    program = _vertical_program(elf)
+    registers = [0] * 32; fp = [0.] * 32
+    player, camera = 0x10000, 0x20000
+    registers[2] = player; registers[6] = int(inhibited); registers[16] = camera
+    fp[4] = struct.unpack('<f', struct.pack('<f', upper))[0]
+    memory = {player+0x860: axis, camera+0x208: height, camera+0x214: lower}
+    pc, pending, condition = 0x16a2c4, None, False
+    def signed(value):return value if value < 0x80000000 else value-0x100000000
+    def f32(value):return struct.unpack('<f', struct.pack('<f', value))[0]
+    for _ in range(128):
+        if pc == 0x16a318:
+            return f32(memory[camera+0x208])
+        if pc not in program:
+            raise ValueError('Vertical fixture escaped verified instruction blocks')
+        instruction = program[pc]
+        op, rs, rt = instruction >> 26, instruction >> 21 & 31, instruction >> 16 & 31
+        immediate = instruction & 65535
+        displacement = immediate if immediate < 32768 else immediate-65536
+        target = None
+        if instruction == 0:
+            pass
+        elif op == 0 and instruction & 63 == 0x23:
+            rd = instruction >> 11 & 31
+            registers[rd] = (registers[rs]-registers[rt]) & 0xffffffff
+        elif op == 0x21:  # LH
+            registers[rt] = memory[registers[rs]+displacement] & 0xffffffff
+        elif op == 0x0a:  # SLTI
+            registers[rt] = int(signed(registers[rs]) < displacement)
+        elif op in (4, 5):
+            if (registers[rs] == registers[rt]) == (op == 4):
+                target = pc+4+displacement*4
+        elif op == 0x0f:
+            registers[rt] = immediate << 16
+        elif op == 0x31:  # LWC1
+            fp[rt] = f32(memory[registers[rs]+displacement])
+        elif op == 0x39:  # SWC1
+            memory[registers[rs]+displacement] = f32(fp[rt])
+        elif op == 0x11:
+            fs, fd, fn = instruction >> 11 & 31, instruction >> 6 & 31, instruction & 63
+            if rs == 4:  # MTC1, rt is the GPR and fs is the FPR
+                fp[fs] = struct.unpack('<f', struct.pack('<I', registers[rt]))[0]
+            elif rs == 8:  # BC1F / BC1T
+                if rt not in (0, 1):raise ValueError('Unexpected vertical COP1 branch')
+                if condition == bool(rt):target = pc+4+displacement*4
+            elif rs == 16 and fn in (0, 1):
+                fp[fd] = f32(fp[fs]+fp[rt] if fn == 0 else fp[fs]-fp[rt])
+            elif rs == 16 and fn in (0x34, 0x36):
+                condition = fp[fs] < fp[rt] if fn == 0x34 else fp[fs] <= fp[rt]
+            else:raise ValueError('Unsupported vertical FPU fixture instruction')
+        else:
+            raise ValueError(f'Unsupported vertical fixture instruction {instruction:08X}')
+        registers[0] = 0
+        old_pending, pending = pending, target
+        pc = old_pending if old_pending is not None else pc+4
+    raise ValueError('Vertical instruction fixture budget exceeded')
+
+
 def verify_fixtures(original, current, recipe):
     validate_recipe(original, current, recipe)
+    if _vertical_program(original) != _vertical_program(current):
+        raise ValueError('Localized vertical camera instruction blocks changed before optional patches')
     ids = [g['id'] for g in recipe['groups']]
     for flags in itertools.product((False, True), repeat=len(ids)):
         selected = {k for k, yes in zip(ids, flags) if yes}
@@ -78,6 +155,22 @@ def verify_fixtures(original, current, recipe):
             if -90 <= axis <= 90 and before != after:
                 raise ValueError('Yaw deadzone changed')
             yaw_cases += 1
+    # Input negation (not signed step replacement) routes through the original
+    # gate and clamp bodies. Check the exact scalar blocks and branch delays.
+    vertical_cases = 0
+    for lower, upper in ((-10., 0.), (-5., -1.), (-1., 2.)):
+        heights = (lower-.5, lower, lower+.25, (lower+upper)/2, upper-.25, upper, upper+.5)
+        for inhibited in (False, True):
+            for axis in range(-128, 128):
+                for height in heights:
+                    expected = replay_vertical_input(current, -axis, height, upper=upper, lower=lower, inhibited=inhibited)
+                    after = replay_vertical_input(modified, axis, height, upper=upper, lower=lower, inhibited=inhibited)
+                    if expected != after:
+                        raise ValueError('Vertical input/clamp/inhibit instruction fixture failed')
+                    if -90 <= axis <= 90:
+                        before = replay_vertical_input(current, axis, height, upper=upper, lower=lower, inhibited=inhibited)
+                        if before != after:raise ValueError('Vertical deadzone changed')
+                    vertical_cases += 1
     old_focal = struct.unpack('<f', struct.pack('<I', (word(current, 0x16aa5c) & 65535) << 16))[0]
     new_focal = struct.unpack('<f', struct.pack('<I', (word(modified, 0x16aa5c) & 65535) << 16))[0]
     def projection(elf):
@@ -85,7 +178,8 @@ def verify_fixtures(original, current, recipe):
         return struct.unpack('<f', struct.pack('<I', bits))[0]
     if new_focal / old_focal != .75 or not math.isclose(old_focal*projection(current), new_focal*projection(modified), rel_tol=1e-6, abs_tol=1e-6):
         raise ValueError('Widescreen projection coefficient fixture failed')
-    return {'combinations': 16, 'yaw_axis_angle_cases': yaw_cases, 'store_cases': store_cases,
+    return {'combinations': 16, 'yaw_axis_angle_cases': yaw_cases, 'vertical_axis_height_cases': vertical_cases,
+            'vertical_clamp_gate': 'original branches preserved under input negation', 'store_cases': store_cases,
             'focal_scale': [old_focal, new_focal], 'localized_crc': pcsx2_crc(current),
             'rollback': 'all 16 combinations restored localized ELF byte-identically',
             'in_game_acceptance': 'user-operated; not executed by this tool'}

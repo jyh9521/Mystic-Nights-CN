@@ -1,0 +1,2 @@
+# Optional PCSX2 exact-key HD texture pack builder; base build needs no xxhash.
+xxhash==3.6.0

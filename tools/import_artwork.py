@@ -27,6 +27,12 @@ def main():
     if "clear_regions" in recipe:
         patch["clear_regions"] = recipe["clear_regions"]
         apply_artwork(source, patch)
+    if "size_groups" in recipe:
+        patch["size_groups"] = recipe["size_groups"]
+        apply_artwork(source, patch)
+    if "shape_pairs" in recipe:
+        patch["shape_pairs"] = recipe["shape_pairs"]
+        apply_artwork(source, patch)
     serialized = json.dumps(patch, ensure_ascii=False, separators=(",", ":")) + "\n"
     with args.output.open("x", encoding="utf8", newline="\n") as output:
         output.write(serialized)

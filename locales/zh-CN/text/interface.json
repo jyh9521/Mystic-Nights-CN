@@ -95,7 +95,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "cef4b25182ed764dc0a5906759b0aed82e46b36f73219a9b9b7ca5896179bb94",
       "text_type": "system_message",
-      "target": "读取记忆卡(PS2)插槽%d的信息失败。",
+      "target": "读取记忆卡(PS2)插槽%d的信息失败",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -109,7 +109,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "0ebcb61ee36d2405a6845e48aaba64210a50895377ce8522e19bb7da6d6a1c72",
       "text_type": "system_message",
-      "target": "插槽%d的记忆卡(PS2)未正确插入。",
+      "target": "插槽%d的记忆卡(PS2)未正确插入",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -123,7 +123,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "636c6aa8b1be1998c562bcc1694e4ee4959d3c6eb325962f9b9050272032f6b1",
       "text_type": "system_message",
-      "target": "插槽%d插入的记忆卡(PS2)不受支持。",
+      "target": "插槽%d插入的记忆卡(PS2)不受支持",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -795,7 +795,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "d1c66c49adebd101cb7ab621d6fdef3343142b707bf6da1d104edcb1ebf4f46e",
       "text_type": "system_message",
-      "target": "向插槽%d的记忆卡(PS2)保存数据失败。",
+      "target": "向插槽%d的记忆卡(PS2)保存数据失败",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -809,7 +809,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "d339019a858dd3f5abceb710c4fe78d5d71d245e88f62386278dad039082b724",
       "text_type": "system_message",
-      "target": "数据未正确保存至插槽%d的记忆卡(PS2)。",
+      "target": "数据未正确保存至插槽%d的记忆卡(PS2)",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -823,7 +823,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "a9ad358b2ff7fa22ec1655faee0bbe761b6046d85695a43ba27dcb3bee70c135",
       "text_type": "system_message",
-      "target": "向插槽%d的记忆卡(PS2)保存数据失败。",
+      "target": "向插槽%d的记忆卡(PS2)保存数据失败",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -837,7 +837,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "1cf7aa7da0a45d3a4f08552e84193c74975f80b83a540fa270ccda7f9ec160cd",
       "text_type": "system_message",
-      "target": "数据已保存至插槽%d的记忆卡(PS2)。",
+      "target": "数据已保存至插槽%d的记忆卡(PS2)",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -907,7 +907,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "b62782cc5648a98bdbf84320454bdab9ccbab0a74054f60b98efddcec0f90fe2",
       "text_type": "system_message",
-      "target": "插槽%d的记忆卡(PS2)格式化失败。",
+      "target": "插槽%d的记忆卡(PS2)格式化失败",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -921,7 +921,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "4a352558690386bbd3b7eaa11e3c5bd987fa0bd003aa5682687650c0e5f22321",
       "text_type": "system_message",
-      "target": "插槽%d的记忆卡(PS2)格式化完成。",
+      "target": "插槽%d的记忆卡(PS2)格式化完成",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -963,7 +963,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "6985a3c0b9466c382e268fee3f96fc5a2842c25724ee5fe5b2dfbb6b2b42fc31",
       "text_type": "system_message",
-      "target": "读取插槽%d的记忆卡(PS2)数据失败。",
+      "target": "读取插槽%d的记忆卡(PS2)数据失败",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -991,7 +991,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "3cd47d8dbdeffb05eb66b2b1ace32feecd9204c349a3f3189118e70a4fbdb613",
       "text_type": "system_message",
-      "target": "插槽%d的记忆卡(PS2)中没有存档。",
+      "target": "插槽%d的记忆卡(PS2)中没有存档",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -1005,7 +1005,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "638bb0f0e30159a75d356347d488828e0b3a82244a0011f8350ba12a0a94058b",
       "text_type": "system_message",
-      "target": "已读取插槽%d的记忆卡(PS2)数据。",
+      "target": "已读取插槽%d的记忆卡(PS2)数据",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -2433,7 +2433,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "d0e8762592b183c8059a3b86c239b85b0aa9b41546e2a1e4dbd407a0d9afd174",
       "text_type": "system_message",
-      "target": "未插入记忆卡(PS2)。",
+      "target": "未插入记忆卡(PS2)",
       "status": "draft",
       "batch": "full-interface"
     },
@@ -2489,7 +2489,7 @@
       "resource": "SCKA_200.55",
       "source_sha256": "ac32ae7d9d7cba44cc3209d75755dac7d37b58b2b7bdb6bcecd65440cc04807a",
       "text_type": "system_message",
-      "target": "中的记忆卡(PS2)没有网络设置文件。",
+      "target": "中的记忆卡(PS2)没有网络设置文件",
       "status": "draft",
       "batch": "full-interface"
     },

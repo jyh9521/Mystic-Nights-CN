@@ -661,7 +661,7 @@
       "line": 196,
       "role": "display",
       "text_type": "system_message",
-      "target": "获得了恢复药(小)。",
+      "target": "获得了恢复药(小)",
       "status": "draft",
       "batch": "opening-2f"
     },

@@ -1,8 +1,46 @@
 # 汉化构建：离线验收
 
+## 2026-11-05：恢复既有字稿与反馈修正（当前）
+
+分支 `master`。原盘SHA `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b`，ISO长度1,696,530,432，差分24021区间。当前四件为 `build/full-text/Mystic-Nights-zh-CN-full-text.iso`、`DIFF_FILE.mnp.zip`、`VERIFICATION.txt`、可执行 `ROLLBACK.sh`。
+
+| 文件 | SHA-256 |
+|---|---|
+| `Mystic-Nights-zh-CN-full-text.iso` | `f4e6bfbcf6e5153a09818199388af792e639923b8613e0bc7c012acd73c250bf` |
+| `DIFF_FILE.mnp.zip` | `2b5e3839c49a048acc37cd8bf113de03b39b66b10a960df759a962591792f22e` |
+| `manifest.json` | `3cff2f6722f4493785779cfe2fd817a637229e0db5d42f72b9fb7853ed9d419f` |
+| `ROLLBACK.sh` | `307d0f2e92a2ce94a8697b5d2cc08ff99f291c817271488c7cb5e08a598044ae` |
+
+### 变更与边界
+
+源绑定的18张图/54引用已从最终ISO独立回读，175张其他汉化图保持。主菜单用既有彩色字稿SHA5722e343…，不是否定的粗块字；同16px字格与AA，原生中心误差≤0.5px。第三行阈值高度15/16px、部分源裁切边缘仍有像素，不能据此宣称完美美术或无任何裁切损失。当前修正保留旧样式，运行画面须玩家确认。
+
+主逻辑2178字段+镜像/补充共2306物理字段、1433字形、113名称/698引用、网络270、协议1均通过。全量2487字段移除25处多余句号；504图字段安装到193纹理/361成员，2标识保留。
+
+新ELF SHA `20de884f0728dc3303932a1622cc5de351e983469b45bb94b7cde19b0f7cbf27`，其PCSX2 XOR CRC恰仍是634DBCA7。13可选指令不烘焙进ISO，纵轴10752、横轴1792、存储50及16组合回滚通过。实际安装2PNACH+8字体PNG+1菜单PNG。游戏INI与全局INI原字节不变，宽屏及三项作弊继续保留玩家原选择。PNG按当前配置的Textures/SERIAL目录，不误用程序目录或CRC目录。
+
+### 实测命令（完整原样日志见本地 VERIFICATION.txt）
+
+```text
+python -X utf8 tools/verify_build.py --kind baseline --iso "[full2]미스틱 나이츠(K).iso"
+BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306
+SHA256 4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b
+EXIT_STATUS 0
+python -X utf8 -m unittest discover -s tests
+Ran 350 tests
+OK
+EXIT_STATUS 0
+python -X utf8 tools/verify_build.py --kind modified --original "[full2]미스틱 나이츠(K).iso" --iso build/full-text/Mystic-Nights-zh-CN-full-text.iso --manifest build/full-text/manifest.json --font build/fonts/NotoSansCJKsc-Regular.otf
+MODIFIED PASS strings=2306 glyphs=1433 changed_files=77 unchanged_files=647 lba=unchanged
+SHA256 f4e6bfbcf6e5153a09818199388af792e639923b8613e0bc7c012acd73c250bf
+EXIT_STATUS 0
+```
+
+350测试的原样耗时行在本地日志；上面只列计数。原版297测试也在独立旧源码归档通过。正向补丁副本与当前ISO字节一致，回滚副本与原盘字节一致，修改版保留；运行补丁和HD包安装器另经独立目录撤销，不对真实配置做演示性回滚。新源码干净归档重建及清理/推送身份在最后收尾记录；没有把这些离线证据等同于游戏启动或玩家认可。
+
 ## 2026-11-05 START 外缘修正与 PCSX2 实际安装
 
-当前交付为本节，后面各节是历史记录。之前 `aae84a…` 确为当时最新输出，但图自身仍留有 START 外缘光晕；没有把“文件已安装/同哈希”等同于“画面干净”。已有用户启动日志的路径和 ELF CRC 与该交付一致，本次工具没有启动游戏。
+本节保留 START 修正时的历史交付。之前 `aae84a…` 确为当时最新输出，但图自身仍留有 START 外缘光晕；没有把“文件已安装/同哈希”等同于“画面干净”。已有用户启动日志的路径和 ELF CRC 与该交付一致，本次工具没有启动游戏。
 
 ### 变更和实际目录
 

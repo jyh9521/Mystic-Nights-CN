@@ -2,7 +2,7 @@
   "game_title": "诡秘之夜 (SCKA-20055)",
   "groups": {
     "widescreen-16-9": {"name":"16比9宽屏","description":"扩大三维场景水平视野，保持纵向比例；不包含去交错或其他修改"},
-    "right-stick-horizontal": {"name":"反转右摇杆水平视角","description":"交换右摇杆左右转向，不改变上下转向、死区或转速"},
+    "right-stick-horizontal": {"name":"反转右摇杆水平视角","description":"此开关现同时反转右摇杆左右和上下视角；保留旧名称以兼容已有勾选，不改变死区、转速或上下限"},
     "infinite-ammo": {"name":"无限子弹","description":"射击不扣弹匣子弹，装填不扣备用弹匣和备用弹药；保留正常开火与装填流程"},
     "infinite-health": {"name":"无限生命","description":"阻止普通受伤及周期伤害扣除生命值；保留受击效果、护甲损耗和剧情事件"}
   }

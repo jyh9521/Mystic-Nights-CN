@@ -131,6 +131,14 @@ def apply_artwork(data: bytes, patch: dict, *, targets: dict | None = None, reve
         from .artwork_checks import check_clear_regions
         rendered, _ = decode_tim2(bytes(output))
         check_clear_regions(rendered, patch["clear_regions"])
+    if not reverse and "size_groups" in patch:
+        from .artwork_checks import check_size_groups
+        rendered, _ = decode_tim2(bytes(output))
+        check_size_groups(rendered, patch["size_groups"])
+    if not reverse and "shape_pairs" in patch:
+        from .artwork_checks import check_shape_pairs
+        rendered, _ = decode_tim2(bytes(output))
+        check_shape_pairs(rendered, patch["shape_pairs"])
     return bytes(output)
 
 

@@ -2477,6 +2477,66 @@
       "id": "55b23003c6eb/text-02",
       "target": "限制区域",
       "status": "draft"
+    },
+    {
+      "id": "13cd43ad8eb8/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "13cd43ad8eb8/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "3edbbb792997/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "3edbbb792997/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "71f214f794e9/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "71f214f794e9/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "2943e8d7ffdb/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "2943e8d7ffdb/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "1838789d9267/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "1838789d9267/text-02",
+      "target": "出口",
+      "status": "draft"
+    },
+    {
+      "id": "3c1dbf83a249/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "3c1dbf83a249/text-02",
+      "target": "出口",
+      "status": "draft"
     }
   ],
   "artwork_files": [
@@ -2666,6 +2726,12 @@
     "artwork/1dcaca3a44d2.json",
     "artwork/aed422709a04.json",
     "artwork/6fb062166a55.json",
-    "artwork/55b23003c6eb.json"
+    "artwork/55b23003c6eb.json",
+    "artwork/13cd43ad8eb8.json",
+    "artwork/3edbbb792997.json",
+    "artwork/71f214f794e9.json",
+    "artwork/2943e8d7ffdb.json",
+    "artwork/1838789d9267.json",
+    "artwork/3c1dbf83a249.json"
   ]
 }

@@ -80,7 +80,7 @@ def _save_receipt(directory, report):
 
 
 def install_package(package, data_directory, receipt_directory, *, role='localized',
-                    enabled_patches=(), allow_cheats=False):
+                    enabled_patches=(), allow_cheats=False, settings_from=None):
     package = _plain_path(Path(package)); receipt_directory = _plain_path(Path(receipt_directory))
     root, folders = profile_folders(data_directory)
     if role not in ('localized', 'original'):
@@ -99,7 +99,7 @@ def install_package(package, data_directory, receipt_directory, *, role='localiz
     entries = {r['path']: r for r in metadata['files']}
     if len(entries) != len(metadata['files']):
         raise ValueError('Duplicate runtime package path')
-    plan = []; patch_groups = set()
+    plan = []; available_groups = {}
     for kind in ('patches', 'cheats'):
         name = f'{role}/{kind}/{stem}.pnach'
         if name not in entries:
@@ -113,15 +113,44 @@ def install_package(package, data_directory, receipt_directory, *, role='localiz
         groups = [s[1:-1] for s in data.decode('utf8').splitlines() if s.startswith('[') and s.endswith(']')]
         if not groups or len(groups) != len(set(groups)):
             raise ValueError('Runtime groups missing/duplicate')
-        if kind == 'patches':
-            patch_groups.update(groups)
+        available_groups[kind] = set(groups)
         target = folders[kind]/(stem+'.pnach')
         plan.append((kind, target, data, _state(target)))
-    enabled_patches = list(enabled_patches)
-    if (len(enabled_patches) != len(set(enabled_patches)) or not set(enabled_patches) <= patch_groups
+    enabled_patches = list(enabled_patches); enabled_cheats = []; settings_source = None
+    if (len(enabled_patches) != len(set(enabled_patches)) or not set(enabled_patches) <= available_groups['patches']
             or any(any(c in p for c in '\r\n[]=') for p in enabled_patches)):
         raise ValueError('Unknown/invalid enabled patch group')
-    if enabled_patches or allow_cheats:
+    if settings_from is not None:
+        if enabled_patches or allow_cheats:
+            raise ValueError('Settings migration and new preference flags are exclusive')
+        source = _plain_path(Path(settings_from))
+        serial = metadata['recipe']['serial']
+        if (source.parent != folders['gamesettings'] or source.name == stem+'.ini'
+                or not re.fullmatch(re.escape(serial)+r'_[0-9A-F]{8}\.ini', source.name)
+                or not source.is_file()):
+            raise ValueError('Settings migration requires another CRC of the same serial in this profile')
+        source_data = source.read_bytes(); section = ''; allow_cheats = None
+        selected = {'patches':enabled_patches, 'cheats':enabled_cheats}
+        for line in source_data.decode('utf-8-sig').splitlines():
+            line = line.strip()
+            if line.startswith('[') and line.endswith(']'):
+                section = line[1:-1].casefold()
+            elif '=' in line and not line.startswith((';','#')):
+                key, value = [p.strip() for p in line.split('=',1)]
+                if section in selected and key.casefold() == 'enable':
+                    if value not in available_groups[section] or value in selected[section]:
+                        raise ValueError('Unknown/duplicate migrated settings group')
+                    selected[section].append(value)
+                elif section == 'emucore' and key.casefold() == 'enablecheats':
+                    if value.casefold() not in ('true','false') or allow_cheats is not None:
+                        raise ValueError('Invalid/duplicate migrated cheat master')
+                    allow_cheats = value.casefold() == 'true'
+        target = folders['gamesettings']/(stem+'.ini'); before = _state(target)
+        if before is not None and before != source_data:
+            raise FileExistsError('Existing per-game settings differ from migration source')
+        plan.append(('gamesettings', target, source_data, before))
+        settings_source = {'path':str(source), 'sha256':_sha(source_data)}
+    elif enabled_patches or allow_cheats:
         text = '[EmuCore]\nEnableCheats = '+('true' if allow_cheats else 'false')+'\n\n[Patches]\n'
         text += ''.join('Enable = '+name+'\n' for name in enabled_patches)
         data = text.encode('utf8'); target = folders['gamesettings']/(stem+'.ini')
@@ -143,11 +172,14 @@ def install_package(package, data_directory, receipt_directory, *, role='localiz
     report = {'format':'runtime-install-receipt', 'version':1, 'state':'prepared',
               'profile':str(root), 'folders':{k:str(v) for k,v in folders.items()}, 'role':role,
               'stem':stem, 'files':rows, 'enabled_patches':enabled_patches,
-              'cheat_master':allow_cheats, 'enabled_cheat_groups':[],
+              'cheat_master':allow_cheats, 'enabled_cheat_groups':enabled_cheats,
+              'settings_source':settings_source,
               'global_ini_sha256':_sha((root/'inis/PCSX2.ini').read_bytes())}
     _save_receipt(receipt_directory, report)
     committed = []
     try:
+        if settings_source is not None and _sha(source.read_bytes()) != settings_source['sha256']:
+            raise ValueError('Settings source changed during installation')
         for kind, target, data, before in plan:
             if _state(target) != before:
                 raise ValueError('Runtime target changed during installation')
@@ -158,6 +190,8 @@ def install_package(package, data_directory, receipt_directory, *, role='localiz
                 raise ValueError('Installed runtime file readback mismatch')
         if _sha((root/'inis/PCSX2.ini').read_bytes()) != report['global_ini_sha256']:
             raise ValueError('Global INI changed during runtime installation')
+        if settings_source is not None and _sha(source.read_bytes()) != settings_source['sha256']:
+            raise ValueError('Settings source changed during installation')
     except BaseException:
         for target, before in reversed(committed):
             if before is None:target.unlink()

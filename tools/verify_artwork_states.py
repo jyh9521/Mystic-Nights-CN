@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from _bootstrap import ROOT
 from mysticnights.artwork import digest, load_graphics_catalogue
-from mysticnights.artwork_checks import check_state_pairs, check_clear_regions
+from mysticnights.artwork_checks import check_state_pairs, check_clear_regions, check_size_groups, check_shape_pairs
 from mysticnights.graphics import decode_tim2
 from mysticnights.iso9660 import IsoImage
 from mysticnights.resources import parse_res
@@ -20,7 +20,7 @@ def main():
     textures={t["sha256"]:t for t in json.loads(args.slots.read_text("utf8"))["textures"]}
     image=IsoImage(args.iso);report=[]
     for patch in catalogue["artwork_patches"]:
-        if "state_checks" not in patch and "clear_regions" not in patch:continue
+        if not any(k in patch for k in ('state_checks','clear_regions','size_groups','shape_pairs')):continue
         for ref in textures[patch["source_sha256"]]["references"]:
             data=parse_res(image.read(ref["resource"])).read(ref["member"])
             if digest(data)!=patch["modified_sha256"]:
@@ -28,13 +28,17 @@ def main():
             decoded,_=decode_tim2(data)
             rows=check_state_pairs(decoded,patch.get("state_checks",[]))
             clear=check_clear_regions(decoded,patch.get("clear_regions",[]))
-            if not rows and not clear:raise ValueError("Empty installed artwork checks")
+            sizes=check_size_groups(decoded,patch.get('size_groups',[]))
+            shapes=check_shape_pairs(decoded,patch.get('shape_pairs',[]))
+            if not rows and not clear and not sizes and not shapes:raise ValueError("Empty installed artwork checks")
             report.append({"resource":ref["resource"],"member":ref["member"],
-                           "sha256":digest(data),"pairs":rows,"clear_regions":clear})
+                           "sha256":digest(data),"pairs":rows,"clear_regions":clear,"size_groups":sizes,"shape_pairs":shapes})
     if not report:raise ValueError("Catalogue declares no artwork state checks")
     print(json.dumps(report,ensure_ascii=False,indent=2))
     print(f"ARTWORK STATES PASS members={len(report)} pairs={sum(len(r['pairs']) for r in report)} installed=identical")
     print(f"ARTWORK GUTTERS PASS regions={sum(len(r['clear_regions']) for r in report)} nontransparent_pixels=0")
+    print(f"ARTWORK PEER SIZES PASS groups={sum(len(r['size_groups']) for r in report)}")
+    print(f"ARTWORK SHAPES/CENTERS PASS pairs={sum(len(r['shape_pairs']) for r in report)} silhouettes=identical max_center_error=0.5px")
 
 
 if __name__=="__main__":main()

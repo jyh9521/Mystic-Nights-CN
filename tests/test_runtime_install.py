@@ -66,6 +66,41 @@ class RuntimeInstallTests(unittest.TestCase):
         with self.assertRaisesRegex(FileExistsError,'per-game'):self.install(enabled_patches=['Wide'])
         self.assertEqual(self.snapshot(),before);self.assertFalse(self.receipt.exists())
 
+    def test_same_serial_settings_migration_preserves_verbatim_user_choices(self):
+        p=self.profile/'gamesettings/TEST-12345_00000001.ini';p.parent.mkdir()
+        data=b'\xef\xbb\xbf[EmuCore]\r\nEnableCheats = true\r\n\r\n[Patches]\r\nEnable = Wide\r\n\r\n[Cheats]\r\nEnable = HP\r\n\r\n[User]\r\nUnrelated = keep\r\n'
+        p.write_bytes(data);before=self.snapshot()
+        report=self.install(settings_from=p)
+        self.assertEqual((p.parent/(self.stem+'.ini')).read_bytes(),data)
+        self.assertEqual(p.read_bytes(),data)
+        self.assertEqual(report['enabled_patches'],['Wide'])
+        self.assertEqual(report['enabled_cheat_groups'],['HP'])
+        self.assertTrue(report['cheat_master'])
+        self.assertEqual(report['settings_source']['sha256'],hashlib.sha256(data).hexdigest())
+        rollback_install(self.receipt);self.assertEqual(self.snapshot(),before)
+
+    def test_settings_migration_rejects_other_serial_outside_profile_and_conflicts(self):
+        p=self.profile/'gamesettings/TEST-12345_00000001.ini';p.parent.mkdir()
+        p.write_bytes(b'[Patches]\nEnable=Wide\n')
+        before=self.snapshot()
+        for source,opts in [(p,{'enabled_patches':['Wide']}),(p,{'allow_cheats':True}),
+                            (self.root/'TEST-12345_00000001.ini',{}),
+                            (p.parent/'ELSE-12345_00000001.ini',{}),
+                            (p.parent/(self.stem+'.ini'),{})]:
+            with self.assertRaises(ValueError):self.install(settings_from=source,**opts)
+        self.assertEqual(self.snapshot(),before);self.assertFalse(self.receipt.exists())
+
+    def test_settings_migration_rejects_unknown_groups_and_preserves_existing_target(self):
+        p=self.profile/'gamesettings/TEST-12345_00000001.ini';p.parent.mkdir()
+        p.write_bytes(b'[Cheats]\nEnable=Missing\n');before=self.snapshot()
+        with self.assertRaisesRegex(ValueError,'settings group'):self.install(settings_from=p)
+        self.assertEqual(self.snapshot(),before)
+        p.write_bytes(b'[Cheats]\nEnable=HP\n')
+        target=p.parent/(self.stem+'.ini');target.write_bytes(b'user data')
+        before=self.snapshot()
+        with self.assertRaises(FileExistsError):self.install(settings_from=p)
+        self.assertEqual(self.snapshot(),before);self.assertFalse(self.receipt.exists())
+
     def test_unknown_group_role_and_duplicate_folder_fail_closed(self):
         for options in ({'enabled_patches':['Missing']},{'enabled_patches':['Wide','Wide']},{'role':'other'}):
             with self.assertRaises(ValueError):self.install(**options)

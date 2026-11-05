@@ -102,3 +102,11 @@ python -X utf8 tools/import_raw_artwork.py --source original.rgb --source-sha256
 复用提示词补充：`Isolate ONLY the lettering. Exclude capsule frames, highlights, underline-like bars and background from glyph bounds. Match paired state dimensions after native CLUT quantization, not merely high-resolution crop dimensions.`
 
 累计 402 项可翻译 TIM2 文字全部安装，136 张唯一纹理、246 个物理成员；待重绘 0 项，2 项 D.I.A 标识保留。联网背景标题另计 1 项。模糊字迹保持原图；实际游戏混色与玩家美术验收仍单独记录。版本、哈希、实测命令与回滚结果见 VERIFICATION。
+
+## 反馈修正：保留已采用字稿，不另换风格
+
+玩家否定了中途的独立粗体与二值化轮廓候选，均未写入 ISO。最终主菜单沿用原生成稿 SHA `5722e3435eb105fcf4b05b69a0b15b1d48b39b4ac8dcaeee684503f72aadf826` 的字形、配色方向、浮雕和抗锯齿；同一个游/戏用于所有菜单词。每字统一16px格，量化后核心对齐按钮中心，原生坐标误差不超过0.5px。标题只取四个独立原字形，整个旧标题和普通态字床清空 alpha，不带邻字碎片或旧字光晕。
+
+选中态仅用原拉丁字笔画/阴影掩码修复自己的原材质，不把整张生成稿或不透明矩形粘到按钮上。原材质的钢边/火光不计入字形测量。正常构建只重放已提交差分；可选高清菜单由同风格自创字形 RLE 加本地源材质重建，见 `locales/zh-CN/hd-artwork.json`。
+
+其余反馈补充：8 张确定/返回图覆盖27引用；两个 NoSignal 和一个 G329 按原连续光照修复；新补6张 EXIT /12字段/18引用。当前总量 193 张唯一 TIM2、361成员、504安装字段及2保留标识。模糊微字不猜译，真实混色仍由玩家验收。

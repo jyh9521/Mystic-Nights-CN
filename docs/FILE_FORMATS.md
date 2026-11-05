@@ -140,3 +140,15 @@ PF不是TTF。KOREAN.PF为4,251,264字节，47个子字体；韩文部分为26×
 ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压其中任何路径。清单记录format/version、原/新全文件size及SHA-256、升序不重叠offset/size、before/after成员名和SHA-256。
 
 应用前检查原盘和所有段，应用后检查新盘全哈希；reverse交换before/after角色。生成ZIP时间戳固定，源码相同输入产生相同补丁。拒绝路径穿越、未知ZIP成员、重复JSON键、重叠和越界。工具：`patch.py`、`tools/apply_patch.py`。
+
+## 图像检查扩展与高清配方 — 本项目定义
+
+`indexed-artwork-delta` 的 `size_groups` 持有多个选择器、`min_row_pixels/min_column_pixels`、`max_height_difference` 以及可选 `expected_height`；跨行比较而非只比较同一行两态。选择器可有 `exclude_points`：限定在矩形内、不重复的 `[x,y]`，只用于已核对的原材质高光，不用于删除不满意的字形。`shape_pairs` 可检查两态归一化后的像素集合相同和 `center_twice`（像素边界中心乘二）误差；这不是 OCR 或风格验收。
+
+`hd-artwork-recipe` v1 持有 `scale/serial/textures`。每纹理以最终原生 member SHA 和实际 RES offset/size 绑定；`base_delta` 是从最终原生字图到无字原材质的标准可逆索引差分。`allowed_hd_rectangles` 是输出坐标。`layers` 的 `rect` 不重叠，`pixels_rle` 为 `[count,[r,g,b,a]]`，严格等于矩形像素数：
+
+- `replace-region`：贴入自创图层的原始 RGBA。
+- `rgb-mask-keep-alpha`：A 仅为覆盖率，混合 RGB、保留原 A。
+- `rgba-mask`：A 为覆盖率，同时按 `alpha_peak` 混合原始 A；覆盖255时精确返回 alpha_peak，不把 PS2 原始 A 当普通255制不透明度再次合成。
+
+构建验证最终 ISO、原生 member、base 差分、受保护像素、PNG 和完整清单。`pcsx2-hd-main-font-pack` / `pcsx2-hd-artwork-pack` v1 的 `textures[]` 逐项记录精确 texture/CLUT/bits 文件名、源 SHA 和 PNG size/hash/dimensions。安装器只接受一个匹配格式的清单，按所有权列表预检和可逆替换。

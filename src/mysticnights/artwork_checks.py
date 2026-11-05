@@ -24,8 +24,16 @@ def _points(image, selector):
         raise ValueError("Invalid artwork check color")
     for a, b in zip(low, high):
         _integer(a, 0, 255); _integer(b, a, 255)
-    return {(xx, yy) for yy in range(y, y+h) for xx in range(x, x+w)
+    points={(xx, yy) for yy in range(y, y+h) for xx in range(x, x+w)
             if all(a <= c <= b for c, a, b in zip(image.getpixel((xx, yy)), low, high))}
+    excluded=set()
+    for point in selector.get('exclude_points',[]):
+        if not isinstance(point,list) or len(point)!=2:
+            raise ValueError('Invalid artwork material exclusion')
+        xx,yy=point;_integer(xx,x,x+w-1);_integer(yy,y,y+h-1)
+        if (xx,yy)in excluded:raise ValueError('Duplicate artwork material exclusion')
+        excluded.add((xx,yy))
+    return points-excluded
 
 
 def measure_ink(image, selector, *, min_row_pixels, min_column_pixels):
@@ -101,4 +109,65 @@ def check_clear_regions(image, checks):
             raise ValueError(f"Artwork clear-region {identifier}: nontransparent pixels={len(dirty)}")
         reports.append({"id": identifier, "rect": check["rect"], "max_alpha": maximum,
                         "nontransparent_pixels": 0})
+    return reports
+
+
+def check_size_groups(image, checks):
+    """Compare peer labels across different rows/states, not only each pair."""
+    if image.mode != 'RGBA' or not isinstance(checks, list):
+        raise ValueError('Invalid artwork size-group input')
+    reports=[];seen=set()
+    for check in checks:
+        identifier=check['id']
+        if not isinstance(identifier,str) or not identifier or identifier in seen:
+            raise ValueError('Invalid/duplicate artwork size-group ID')
+        seen.add(identifier)
+        if not isinstance(check['members'],list) or len(check['members'])<2:
+            raise ValueError('Artwork size-group needs at least two members')
+        kwargs={k:check[k]for k in ('min_row_pixels','min_column_pixels')}
+        rows=[measure_ink(image,member,**kwargs)for member in check['members']]
+        heights=[r['height']for r in rows]
+        tolerance=_integer(check['max_height_difference'],0,image.height)
+        if max(heights)-min(heights)>tolerance:
+            raise ValueError(f'Artwork size-group {identifier}: peer heights={heights}')
+        if 'expected_height' in check:
+            expected=_integer(check['expected_height'],1,image.height)
+            if any(h!=expected for h in heights):
+                raise ValueError(f'Artwork size-group {identifier}: heights={heights}, expected={expected}')
+        reports.append({'id':identifier,'members':rows,'heights':heights})
+    return reports
+
+
+def check_shape_pairs(image, checks):
+    """Require shared glyph silhouettes and measured alignment in both states.
+
+    Centers are twice the pixel-edge coordinates, so a half-pixel center has
+    an exact integer representation. Selectors describe face colors only.
+    """
+    if image.mode != 'RGBA' or not isinstance(checks,list):
+        raise ValueError('Invalid artwork shape-pair input')
+    reports=[];seen=set()
+    for check in checks:
+        identifier=check['id']
+        if not isinstance(identifier,str) or not identifier or identifier in seen:
+            raise ValueError('Invalid/duplicate artwork shape-pair ID')
+        seen.add(identifier);shapes=[];states=[]
+        for state in ('normal','selected'):
+            selector=check[state];points=_points(image,selector)
+            if not points:raise ValueError('Artwork shape pair has no face pixels')
+            x0=min(x for x,y in points);y0=min(y for x,y in points)
+            x1=max(x for x,y in points)+1;y1=max(y for x,y in points)+1
+            center=selector['center_twice']
+            if not isinstance(center,list) or len(center)!=2:
+                raise ValueError('Invalid artwork alignment center')
+            for c,dimension in zip(center,image.size):_integer(c,0,dimension*2)
+            tolerance=_integer(check['max_center_error_twice'],0,max(image.size)*2)
+            error=[abs(x0+x1-center[0]),abs(y0+y1-center[1])]
+            if max(error)>tolerance:
+                raise ValueError(f'Artwork shape-pair {identifier}: {state} center error={error}')
+            shapes.append({(x-x0,y-y0)for x,y in points})
+            states.append({'bbox':[x0,y0,x1,y1],'face_pixels':len(points),'center_error_twice':error})
+        if shapes[0]!=shapes[1]:
+            raise ValueError(f'Artwork shape-pair {identifier}: state silhouettes differ')
+        reports.append({'id':identifier,'normal':states[0],'selected':states[1],'silhouette':'identical'})
     return reports

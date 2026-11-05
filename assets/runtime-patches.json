@@ -16,7 +16,10 @@
        {"address":"0016AA78","before":"3442F5C3","after":"34429CFE","field":"InitCamera vertical compensation low half"}]},
     {"id":"right-stick-horizontal","kind":"cheats","writes":[
        {"address":"0016871C","before":"3C02BD4C","after":"3C023D4C","field":"UpdateCamera right-axis positive branch yaw step"},
-       {"address":"00168CAC","before":"3C023D4C","after":"3C02BD4C","field":"UpdateCamera right-axis negative branch yaw step"}]},
+       {"address":"00168CAC","before":"3C023D4C","after":"3C02BD4C","field":"UpdateCamera right-axis negative branch yaw step"},
+       {"address":"0016A2C8","before":"2862FFA6","after":"00031823","field":"UpdateCamera negate signed vertical axis before branch selection"},
+       {"address":"0016A2CC","before":"1440011D","after":"2862FFA6","field":"UpdateCamera displaced vertical-axis negative threshold test"},
+       {"address":"0016A2D0","before":"00000000","after":"1440011C","field":"UpdateCamera displaced negative-axis branch to original lower-clamp path"}]},
     {"id":"infinite-ammo","kind":"cheats","writes":[
        {"address":"001F7F94","before":"A6E20030","after":"00000000","field":"CheckAttack magazine bullet decrement store"},
        {"address":"001F8824","before":"A0830004","after":"00000000","field":"ReloadBullet reserve magazine decrement store"},

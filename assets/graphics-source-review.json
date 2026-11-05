@@ -2,13 +2,13 @@
   "format": "graphics-source-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "review_basis": "All original unique TIM2 atlases, prior localized pairs, revised native text beds and all member-name/colored variants reviewed offline; not in-game acceptance",
+  "review_basis": "All original unique TIM2 atlases and native localized pairs reviewed offline; 2026-11-05 feedback corrected six falsely classified EXIT variants and original-material masks; not in-game acceptance",
   "summary": {
     "unique_textures": 1140,
     "physical_members": 2634,
     "dispositions": {
-      "localized-readable-text": 187,
-      "no-readable-localizable-prose": 913,
+      "no-readable-localizable-prose": 907,
+      "localized-readable-text": 193,
       "retain-unreadable-or-identifier": 32,
       "runtime-font-atlas": 8
     }
@@ -5708,8 +5708,8 @@
         5,
         1
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
@@ -7286,8 +7286,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0102.RES",
@@ -7716,8 +7716,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0103.RES",
@@ -7796,8 +7796,8 @@
         5,
         1
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0103.RES",
@@ -12075,8 +12075,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0301_1.RES",
@@ -13175,8 +13175,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Reclassified after source-native visual EXIT family review; readable VITAL CREATIONS and EXIT localized with original lighting and all differently named physical references source-bound",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0303_1.RES",

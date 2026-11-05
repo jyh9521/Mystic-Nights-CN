@@ -31,3 +31,7 @@
 ## 游戏资源
 
 《Mystic Nights》原游戏由 N-Log Soft 开发、Sony Computer Entertainment Korea 发行。ISO、ELF、RES、视频、音频、模型及原字体不作为本项目自有内容授权。原始/测试镜像和提取目录只保存在被 Git 忽略的本地区域；PCSX2、BIOS、配置和存档也不加入仓库。
+
+### 可选高清显示研究
+
+PSMT8 地址/hash/精确 CLUT 文件名及 PNG 原始 alpha 行为依据 PCSX2 **v2.9.155** 的 `GSTables.cpp`、`GSTextureCache.cpp`、`GSTextureReplacements.cpp`、`GSXXH.cpp` 公开接口独立实现。未提交或复制 GPL 模拟器源文件。可选 `xxhash==3.6.0` 的 Python 包采用 BSD-2-Clause，底层 xxHash 为 BSD-2-Clause；通过固定依赖安装，不捆绑二进制。高清包含本地源素材的未改像素，不提交完整包或纹理；菜单配方只提交自创中文字形与源绑定差分，字体许可与原资产边界不改变。

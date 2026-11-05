@@ -264,6 +264,51 @@
       ],
       "registration": "Original 14px core at native UV; full [0,225,214,31] sprite footprint including all former glow replaced; four zero-alpha gutters required",
       "verification": "Old top gutter reproduces 781 nontransparent pixels; corrected four gutters all zero; other atlas pixels and CLUT byte-identical"
+    },
+    {
+      "id": "feedback-menu-retained-approved-style",
+      "tool": "retained built-in imagegen artwork; no new accepted typeface",
+      "selected_output_sha256": "5722e3435eb105fcf4b05b69a0b15b1d48b39b4ac8dcaeee684503f72aadf826",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ],
+      "registration": "Same approved glyphs/bevel; antialiased16pxcells, shared repeated glyphs/state alpha; native face centered<=0.5px. Explicit per-glyph bounds exclude capsule frame. Full standalone text alpha beds replaced; source-original ink-mask-only material repair. Two later alternate-font/binary candidates rejected, never installed.",
+      "hd_recipe": "locales/zh-CN/hd-artwork.json"
+    },
+    {
+      "id": "feedback-ok-back-equal-pairs",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization\nAsset type: transparent paired footer lettering for a Korean PS2 horror game localization.\nInput images: Image 1 is the original U204 game texture, reference only; Image 2 is the original U317 atlas, reference only. Their footer OK and BACK lettering defines the original fine white serif/printed optical style. Do not redraw their backgrounds or controller icons.\nPrimary request: Draw only two separate exact Simplified Chinese labels, 确定 and 返回. Both labels consist of exactly two Hanzi. Place 确定 on the left and 返回 on the right with generous transparent separation. Give all four Hanzi exactly the same square em cell, visible core height, thickness, baseline and spacing. Do NOT make 确定 smaller to mimic the shorter Latin word OK, and do NOT make 返回 bigger to fill the longer BACK region. They must be equal-size peers.\nStyle: precise finely cut off-white Song/Ming serif lettering that faithfully matches the original narrow high-contrast white serif labels. Clear open counters, subtle triangular serifs and slight stroke contrast. Native PS2 UI print style, not modern sans, not calligraphy, not brush, not 3D. Crisp clean strokes with no grit, artificial scratches, JPEG noise, glow, dark border, shadow or underlining. This is artwork to be reduced to a 13-pixel-high native UI, so interior strokes must remain distinct.\nText verbatim: 确定   返回\nComposition: one straight horizontal row, exactly those four characters, two equal-width words with large blank gap; ample blank transparent margins; no other objects.\nConstraints: genuinely transparent background, no black backing panels, no rectangles, no caption, no English, no icon, no frame. Neither reference texture is to be reproduced. Output only the four white Chinese glyphs.",
+      "selected_output_sha256": "ccc9ed1690e0f63a34df9c419985c2c599f78e26bc14075d0b997d5a611af4de",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4ef12dc04532.json",
+        "locales/zh-CN/artwork/af91ca0e0985.json",
+        "locales/zh-CN/artwork/315a3049ad15.json",
+        "locales/zh-CN/artwork/3b65fbd1f3a8.json",
+        "locales/zh-CN/artwork/0f1afa0bbe82.json",
+        "locales/zh-CN/artwork/e8932d921c39.json",
+        "locales/zh-CN/artwork/60a58b8a9e2c.json",
+        "locales/zh-CN/artwork/acba74ed5f65.json"
+      ],
+      "registration": "Source-bound original CLUT; equal per-character cells and baseline; all O/X and unrelated text retained; U204/U208 original13/13,current9/14,corrected13/13."
+    },
+    {
+      "id": "feedback-nosignal-cleanplate-191",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit / restoration clean plate. Edit target: this exact enlarged original PS2 monitor texture crop. Remove ONLY the lettering 'NO SIGANAL' and its small 'ALERT-STATE OF EMERGENCY' subline, including every original glyph edge/shadow, leaving NO text. Reconstruct the continuous cyan/teal radial screen illumination underneath the old glyphs. Preserve the bright cyan soft hotspot in the upper middle-left, original gradual dark falloff, original panel edge, low-resolution worn/grainy material, color and perspective. IMPORTANT: no new inset panel, no rectangle, no border, no flat blue/dark backing, no geometric slab, no text, no symbols. It must look like the same original monitor with its printed words carefully removed, with smooth continuous lighting across the former word positions. Keep exact wide image layout and all original non-letter pixels as closely as possible. Output this clean screen plate only.",
+      "selection": "Original-material old/new-ink masks only; not a full rectangular panel replacement; exact source CLUT and alpha preserved"
+    },
+    {
+      "id": "feedback-nosignal-cleanplate-211",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit / restoration clean plate. Edit target: this exact enlarged original PS2 monitor texture crop. Remove ONLY the lettering 'NO SIGANAL' and its small 'ALERT-STATE OF EMERGENCY' subline, including every original glyph edge/shadow, leaving NO text. Reconstruct the continuous cyan/teal radial screen illumination underneath the old glyphs. Preserve the bright cyan soft hotspot in the upper middle-left, original gradual dark falloff, original panel edge, low-resolution worn/grainy material, color and perspective. IMPORTANT: no new inset panel, no rectangle, no border, no flat blue/dark backing, no geometric slab, no text, no symbols. It must look like the same original monitor with its printed words carefully removed, with smooth continuous lighting across the former word positions. Keep exact wide image layout and all original non-letter pixels as closely as possible. Output this clean screen plate only. This is the separate original damaged/lighting variant; preserve this variant's own native brightness and wear, do not replace it with another screen version.",
+      "selection": "Original-material old/new-ink masks only; not a full rectangular panel replacement; exact source CLUT and alpha preserved"
+    },
+    {
+      "id": "feedback-caution-cleanplate-157",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit / restoration clean plate. Edit target: the exact supplied original PS2 industrial door texture atlas. Remove ONLY the white word CAUTION near the center of the cyan-lit door (approximately x45..84,y62..77 of the 128x128 source), reconstructing the ORIGINAL softly cyan-lit metallic door shading underneath those letters. Keep the tiny unreadable white microprint to its right/below exactly as original; keep door frames, black recesses, the dark red side panel, small vent above the word, blue horizontal status light below, upper red lamp and all other atlas regions exactly unchanged. No new wording is needed: this output is a clean plate only. IMPORTANT: no flat black/blue rectangle, no new inset plaque, no slab, no border behind where CAUTION was. The original continuous elliptical cyan illumination must flow naturally through the removed lettering. Preserve native worn low-resolution material and soft original illumination, not a clean modern redesign. Output the original atlas with only CAUTION removed.",
+      "selection": "Original-material old/new-ink masks only; not a full rectangular panel replacement; exact source CLUT and alpha preserved"
     }
   ]
 }
