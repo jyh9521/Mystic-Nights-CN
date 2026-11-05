@@ -75,6 +75,29 @@ EXIT_STATUS 0
 
 待玩家冷启动验收：按钮和加载的实际混色/动画、字体清晰度、房间名显示、全剧情换行、宽屏/HUD、三项金手指的所有玩法路径。模糊手稿及无法可靠辨认的装饰微字按既定要求保持。
 
+### 干净源码重建与清理
+
+验证源码提交 **`3cde79e4cc38bb767046aa5cad58cfd3d47c34ee`**，分支 `master`。使用 `git archive` 提取已提交源码，不复制当前工作区；只读使用玩家原盘和锁定字体，重新运行 286 项单元、完整构建、整盘验证及运行补丁夹具。六件基础输出与五件 runtime 输出的尺寸、SHA-256 全部一致。
+
+```text
+python -X utf8 -m unittest discover -s tests
+Ran 286 tests in 4.147s
+OK
+EXIT_STATUS 0
+python -X utf8 tools/build_locale.py --iso "[full2]미스틱 나이츠(K).iso" --font build/fonts/NotoSansCJKsc-Regular.otf --locale zh-CN --output build/full-text
+BUILD profile=full-text strings=2306 glyphs=1433 changed_files=77
+OUTPUT sha256=aae84a054389d481f1bf735038b532f9d81bb4558d49f3adc28696ed59ff4746 size=1696530432
+EXIT_STATUS 0
+REBUILD PASS files=11 iso=identical patch=identical manifest=identical previews=identical rollback_script=identical runtime=identical
+EXIT_STATUS 0
+CLEANUP PASS files=1825 bytes=13920222726 original=preserved modified=retained evidence=preserved
+EXIT_STATUS 0
+```
+
+上述干净重建命令在临时源码根运行，原盘/字体参数实际使用主工作区绝对路径；完整 argv、原始输出、提交号与 11 件身份保存在本地 `build/full-audit/reproducibility.json` 及 VERIFICATION。隔离验证完成后清理 1825 个文件、13,920,222,726 字节；每个删除文件先记录路径/长度/SHA，递归目标先核验解析后的绝对路径、原盘/交付身份及重建完成状态，拒绝重解析点。旧 PoC、旧交付、两次否定构建、正反向副本、重建临时 checkout、创作临时依赖和两张否定图稿已移除；原盘、当前修改版及研究证据保留。
+
+删除执行成功后，字节总数由预先保存的文件清单重新相加，原执行日志和汇总修订分别保留，不覆盖原始命令输出。`README.md` 保持不变；本节及状态页属于对已验证源码提交的纯文档收尾，不改变构建输入或产物。
+
 ## 2026-11-05 主菜单两态字号与白线修正
 
 源码提交 `f018cdbe58b1c365e9cca8db831d09c8dc56c5d0`，分支 `master`。`L001_004.TM2` 仅四个选中区域修改 3119 个索引；差分字段 `ranges/modified_sha256/state_checks/authoring_method` 更新。正文、字库、普通态、其余 135 张重绘纹理、UID 脚本和菜单渲染代码保持。
