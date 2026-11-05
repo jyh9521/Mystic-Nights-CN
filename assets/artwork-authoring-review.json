@@ -321,6 +321,32 @@
       "registration": "Complete4x119x16interior beds; source text-free donor row alpha, no old glyph alpha. New generation used only inside beds. 123456 outside indices, originalCLUT/header and all12approvedforegroundRLElayers unchanged. Original pattern existing is not an excuse to retain unwanted letter-shaped residue.",
       "supersedes_material_policy": "bright-face-only original-material masking",
       "hd_recipe": "locales/zh-CN/hd-artwork.json"
+    },
+    {
+      "id": "full-capsule-material-sweep",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Asset type: original PS2 industrial capsule button atlas used solely as a blank material donor. Edit the supplied original two-column eight-row atlas. Remove ALL lettering from all sixteen capsules: the central EASY/NORMAL/HARD/character words, every dark outline/shadow/glow of those words, AND every repeated letter-like/stencil-like black underprint across the left and right lower interior. Each entire inner glass bed must be genuinely letter-free blue or orange-red textured glass, not a mechanical typographic pattern. Preserve the exact original narrow chrome frame, silver beveled end caps, angular upper-left highlight, horizontal glass reflection, palette direction, row spacing, button proportions and transparent outside. Do not replace the interiors with flat color rectangles: continue their natural brushed mottled glass, bright upper ledge and darker lower band. No new words, glyphs, numbers, logos, stencil/engraving marks, ticks or hash patterns anywhere in the interiors. Do not add foreground text. Keep TWO columns, EIGHT rows, blue left and orange red right. Output an accurately aligned high-resolution atlas only; this is a blank-material repair, not a redesign.",
+      "selected_output_sha256": "886de453326f20c647a2a58e17eaed95ca1a0bfd8fb09baa614031cb66fd2106",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json",
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ],
+      "registration": "26 full inner beds; per-row palette direction, exact adopted foreground plus 2px outline and original outer chrome retained; no build-time generation dependency"
+    },
+    {
+      "id": "exit-full-footprint-registration-correction",
+      "tool": "reuse previously selected built-in imagegen clean plate and thin lettering",
+      "selected_output_sha256": "503a1084e11024cd05fc680da4a6e438476d22fe2e74ac2585241d0c9fd82d93",
+      "lettering_sha256": "baa7775ad29dd720dd6d3f802ac9c658e878e60a0a342ad4a3c80c35357e3b24",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/13cd43ad8eb8.json",
+        "locales/zh-CN/artwork/3edbbb792997.json",
+        "locales/zh-CN/artwork/71f214f794e9.json",
+        "locales/zh-CN/artwork/2943e8d7ffdb.json",
+        "locales/zh-CN/artwork/1838789d9267.json",
+        "locales/zh-CN/artwork/3c1dbf83a249.json"
+      ],
+      "registration": "Replace complete source-bound footprints, including first/last rows and right edge formerly excluded by core masks; same adopted lettering mask/placement; original per-variant lighting/frame/palette preserved."
     }
   ]
 }

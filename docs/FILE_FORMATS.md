@@ -1,5 +1,11 @@
 # 文件格式
 
+## 离线图片审查/意见交换 — 本项目定义
+
+`disc-image-review` v1 包含原/汉化 ISO SHA、1141 个载体条目及逐 PNG 文件/解码 RGBA 哈希。`id=tim2:<原成员SHA>` 或 `rgb24:<原文件SHA>` 保持跨修订稳定；编号仅用于浏览。`disc-image-feedback` v1 的条目携带 ID、源/成稿 SHA、资源路径、`comment` 和 `status=unreviewed|ok|issue`。空白不是认可；旧成稿意见保留文字并重置认可；未知、重复 ID 或来源不符整批拒绝。CSV 携带相同逐图身份并正确引用中文、多行和双引号。
+
+RES 读取不可假定所有成员名唯一：源盘中可有重复 GEO 名称。已验证布局相同的逐成员比较须使用带 offset/size 的成员记录，按名称读取仅适用于已确认唯一的目标；不能将 GEO 重名误报为改图损坏。
+
 本文件的 Verified 均限定于 `assets/game-version.json` 中的韩版原盘。
 
 ## SCENEDEF 房间显示名 — Verified

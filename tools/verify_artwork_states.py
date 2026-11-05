@@ -38,7 +38,11 @@ def main():
     print(f"ARTWORK STATES PASS members={len(report)} pairs={sum(len(r['pairs']) for r in report)} installed=identical")
     print(f"ARTWORK GUTTERS PASS regions={sum(len(r['clear_regions']) for r in report)} nontransparent_pixels=0")
     print(f"ARTWORK PEER SIZES PASS groups={sum(len(r['size_groups']) for r in report)}")
-    print(f"ARTWORK SHAPES/CENTERS PASS pairs={sum(len(r['shape_pairs']) for r in report)} silhouettes=identical max_center_error=0.5px")
+    shape_count=sum(len(r['shape_pairs']) for r in report)
+    if shape_count:
+        print(f"ARTWORK SHAPES/CENTERS PASS pairs={shape_count} silhouettes=identical max_center_error=0.5px")
+    else:
+        print('ARTWORK SHAPES/CENTERS NOT_DECLARED pairs=0; no silhouette/center proof claimed')
 
 
 if __name__=="__main__":main()

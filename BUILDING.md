@@ -23,6 +23,8 @@ python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나�
 
 输出目录必须尚不存在。构建在新的同级事务目录中完成后才发布，不覆盖已有镜像。构建和修改版验证均支持 `--font` 指定同哈希字体；未指定时使用 `build/fonts/` 的锁定字体。
 
+完整图片/按钮复核见 `docs/ARTWORK_SWEEP.md`；本地左右图筛查网页与意见 JSON/CSV 回传见 `docs/IMAGE_REVIEW.md`。网页由 `tools/build_image_review.py` 从最终 ISO 重建，输出完整图片不提交 Git。
+
 ## 当前配置和输出
 
 `full-text` 要求全部非空正文有译文：2176 条逻辑正文（含 142 个场景房间显示名）、2 条原始空白；文档镜像展开后 2268 槽，加 38 个补充 ELF 槽，共 2306。113 个道具名称的 698 处静态引用原子回填。270 条网络设置、完整服务协议和网络记忆卡标题同步构建。
