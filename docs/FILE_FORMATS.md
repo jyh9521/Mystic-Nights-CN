@@ -175,3 +175,8 @@ ZIP内包含`manifest.json`与各区间before/after内容；不执行或解压�
 ## 图片锚点的跨轴对齐补充
 
 `anchor_gap_groups` 可选 `max_cross_axis_center_error_twice`，为非负整数，单位是半像素。每项既按 `axis` 检查文字与原图标边缘间距，也比较另一轴的文字实测边界中心与 `anchor=[x,y,w,h]` 中心。省略此字段保持旧配方行为；显式 null、布尔和越界值拒绝。锚点坐标来自源图，非 OCR 推测，不改变图标像素。此规则属于通用像素核验，文字颜色、区域、允许误差仍归 locale 美术数据。
+# 新增格式研究入口
+
+- 原生过场脚本的 CRLF 行命令、6 字节统一节点、24 字节 CAPTION、camera BIN 头及同尺寸注入：见 [CUTSCENE_SUBTITLES.md](CUTSCENE_SUBTITLES.md)。原盘 47 场景未使用 CAPTION；存在读取函数不代表原游戏已会显示字幕。
+- VAG 的 48 字节 big-endian 头、MIH 的 64 字节 little-endian 布局、MIB 交错及末块有效长度：见 [CUTSCENE_AUDIO.md](CUTSCENE_AUDIO.md)。音频秒数不直接等同于游戏 FRAME。
+- CLUT16 的 RGB5 左移、显式 TEXA 和精确替换键：见 [HD_PALETTE_PROFILES.md](HD_PALETTE_PROFILES.md)。拒绝未知状态，不用 CLUT32 解释套入 16 位调色板。
