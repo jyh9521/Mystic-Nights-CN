@@ -800,6 +800,133 @@
         "CLUT16 does not use existing CLUT32 hash profile; no guessed runtime keys.",
         "Equal em does not imply identical thresholded glyph height: footer core9/10px, common11px outline em and original safe cell retained."
       ]
+    },
+    {
+      "id": "feedback-e97f-menu-type",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Input 1 is the original 2005 PS2 Mystic Nights menu STYLE REFERENCE, not a background to paste. Create a brand-new production lettering atlas on genuine transparent background, large high resolution, 1536x1536 or larger, SIX widely separated horizontal rows. Verbatim text, top to bottom: 诡秘之夜 / 新游戏 / 读取游戏 / 联机游戏 / 画廊 / 按START键 . No other content. All six rows use the SAME restrained engraved-metal typography family: solid perfectly readable Simplified Chinese, relatively condensed squared Ming/Song industrial serifs, subtly chiseled ivory-gold faces, tiny dark burgundy keyline, slim amber bevel, original's orange/red metallic lighting. NOT calligraphy, NOT thick black comic outline, NOT pixel/block font, NOT plain system sans. Interior counters must remain wide open and slim strokes continuous even when reduced. No noisy mottling or distress inside strokes; clean high resolution edges with genuine anti-aliased alpha. Equal character height for rows 2,3,4,5 (do NOT fit short words larger); row1 may be 1.2x taller, row6 may be same height as row2. Do NOT spread glyphs widely. Put one phrase per row, centered, enormous blank transparent gutters at least one whole character height between rows. No logos, buttons, plates, frames, texture backgrounds, added dots, punctuation or shadows outside the letters. This will be recolored/registered to original UVs; don't draw the original English.",
+      "transparent_background": true,
+      "selected_output_sha256": "15145cadb18ff2919fda5bbfcdcf0f705e37fb722bfdeb787ee6bd08a412503d",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-capsule-type-rejected-traditional",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Create a new TRANSPARENT LETTERING ATLAS, eight separated rows. Input1 original capsule-menu is the exact 2005 PS2 industrial UI style reference; input2 lettering is the desired same restrained squared Ming industrial serif family (not its gold color). Exact Chinese text top to bottom: 简单 / 普通 / 困难 / 詹妮弗 / 布鲁斯 / 艾伦 / 亨利 / 弗兰克 . Every glyph in ALL rows has identical size, stroke weight, cap height, and spacing; longer words just wider. One centered phrase per row, generous transparent gutters. Slim chiseled SILVER-IVORY faces, very narrow charcoal keyline, a faint pale-gold lower bevel; strong smooth readable faces with wide open counters. Only a restrained bevel, not bulky gold 3D, no texture/noise inside face, no thick outlines, no distressed/dotted/pixel/stencil strokes. Straight upright precise Simplified Chinese forms. These are small game UI glyphs; clarity of 凡/弗/妮/斯/亨/兰/克 matters. No rectangle, frames, backgrounds, buttons, original English, additional text, ornaments, or shadow clouds. GENUINE TRANSPARENT alpha outside each entire word. Finish as full high-res authored text, not mockup.",
+      "transparent_background": true,
+      "selected_output_sha256": "84045596dfa16b511b94b1e7c5ffebc9e5e011e192a7993e5dfba537c51699a8",
+      "status": "rejected: traditional characters",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "feedback-e97f-capsule-type-rejected-guide-traditional",
+      "tool": "built-in imagegen",
+      "prompt": "编辑输入图片，制作正式游戏字稿。必须严格保留参考图每一个字的简体字形结构，不能改成繁体！特别是 简 单 难 鲁 伦 兰，全部使用简体。文字自上而下准确为：简单、普通、困难、詹妮弗、布鲁斯、艾伦、亨利、弗兰克。每行一句，不要标点。输入图片是精确字形和八行布局的编辑目标，不是仅供气氛参考。保持字距、相同字高、每行坐标和空白间隔。在字形上增加非常克制的2005年PS2科幻恐怖菜单金属质感：细银白字面、纤细深灰轮廓、极窄香槟色下沿倒角，增强笔画到清晰可读但不粗胖。保留宋体方正衬线。不要倾斜，不要放大短词，不要变成金色厚3D，不要黑色厚描边，不要噪点，不要像素化。背景必须真正透明，保留透明alpha，不要彩色光云，不要文字之外的任何东西。请逐字检查不是繁体再交稿。",
+      "transparent_background": true,
+      "selected_output_sha256": "63d10ca80f4a086542d967abd7451e5a13a14b2bf7a39634c30f6c468de6bbbb",
+      "status": "rejected: changed simplified guide forms and noisy faces",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "feedback-e97f-beds",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Input1 is 2005 PS2 capsule menu style reference. Make a NEW master sheet of THREE TEXT-FREE button interiors for precise original-game UV registration. Pure material sample, not a UI mockup. Three long horizontal rectangular material swatches, separated on dark neutral background: TOP burnt orange / black-red / gold highlight material (main menu selected); MIDDLE deep cobalt / navy blue / cool silver highlight; BOTTOM deep vermilion / black-red / amber gold highlight. Each swatch ~10:1 width:height, straight rectangular edges, NO metal rims/endcaps/outside glow, those will remain exact original. Material must resemble original's gritty polished industrial 2005 sci-fi horror glass, dark shaded lower band, broad subtle upper reflection, tiny restrained continuous scratches running horizontally. Crisp but not photoreal glossy plastic or modern app gradient. CRITICAL: entirely clean text beds, NO writing, NO alphabetic or Chinese shapes, NO pseudo-letters, NO circuits, NO geometric logo patterns, NO vertical scratches/blocks that could resemble remaining lettering. Broad low-frequency horizontal light only through center. Do not draw the original English, chrome/endcaps, frames or word shadows. Render high-resolution swatches, all three interior materials completely rebuilt, not little patches.",
+      "transparent_background": false,
+      "selected_output_sha256": "950aaff1e308f4fd74a69a42f5f13016ef6e6fc4dc7eba4212b52baaa1c480d6",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-lab-blue",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Edit this exact original PS2 game texture atlas into a Simplified Chinese production atlas at the SAME square layout. Rebuild ALL lettering and ALL its underlying printed steel surface continuously, not dark rectangles behind words. Preserve original blue illumination, navy-black brushed steel, vents, all frame edges, central gray strips, side strip at x0-30%, upper/lower panel split at y30%, and cyan light at y70%; no camera perspective and no added objects. Exact text replacements: faint upper panel lab name -> 幼虫实验室 ; main white lab name in lower panel -> 幼虫实验室 ; line below it -> 限制区域 . Use exact SIMPLIFIED characters 实 验 区, never 實 驗 區. Small condensed industrial lab printing, clean fine silver-white strokes, subtle blue reflected light, restrained thin serifs matching original; NOT a plain desktop-font sticker, not calligraphy, not chunky bevel. Main Chinese label and restriction line should fit the SAME original text bands between approximately x38%-88% and y52%-66%, do not enlarge the bands, cyan light stays at 70%. No English text, no leftover English outlines or old text-bed shadows anywhere. Lettering and background must look like a single original painted metal game asset, crisp high-res printing without grain inside letters, retain surface grain outside. Upper label very faint like source, not brighter. Lower room label and restriction line are both white/cool ivory. No border added around restriction. Retain all texture seams and boundary alignment exactly.",
+      "transparent_background": false,
+      "selected_output_sha256": "69a406aa1b2c575e49b5fae7782dbe26e2f52c856426655a2b66b507b1872be8",
+      "status": "superseded: unwanted horizontal rule between labels",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "feedback-e97f-lab-red",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. This is the red-lamp variant of the original industrial laboratory-door game atlas. Make its full Chinese companion artwork, same flat square atlas layout and material/light style as source. Preserve all seams, side strips, upper-panel split, dark steel, vent at y42%, red status lamp at y70%, warm red spill around that lamp and blue illumination elsewhere. Replace ALL three text sites, no English remains: faint upper panel = 幼虫实验室 ; main lower white line = 幼虫实验室 ; white line immediately beneath = 限制区域 . Exact Simplified Chinese 实 验 区, not traditional. The lower two lines should be large enough for tiny-game visibility: each glyph roughly 8% of atlas height, and words fit x38%-88%, first line centered y55%, second line centered y64%. Do not overlap lamp at y70%. Restrained slightly condensed industrial Ming print with delicate serifs, legible continuous white faces and very subtle blue cast, not thick 3D/bevel, no underlines added. Rebuild original English beds as continuous navy brushed steel with natural original blue/red reflected light; NO flat black panels behind words, no old word-shaped alpha/shadows, no Latin-looking marks. No extra objects, no new borders, no bright modern screens. Original grain outside type, smooth clear strokes inside type. Complete localized asset not a caption.",
+      "transparent_background": false,
+      "selected_output_sha256": "c2aab5c5a3f06c716e5273b95d78726d4aad1d18a6a77779e58054e9ff965d2b",
+      "status": "superseded: unwanted horizontal rule between labels",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "feedback-e97f-control",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. Full faithful localized remake of this original 2005 PS2 sci-fi horror industrial two-leaf steel door texture. Keep the exact atlas layout, camera-flat square, center vertical seam, rail ribs, upper lamps and warm pools of illumination, side control panel and all geometry unchanged. Recreate the printed metal faces as complete coherent surfaces, absolutely no rectangles or old word shadows behind the Chinese. Replace text on BOTH leaves identically: cyan MAIN CONTROL / CENTER becomes two lines 主控制 / 中心 ; red RESTRICTED AREA becomes 限制区域 ; small cyan UNLOCKED becomes 解锁 . Exact Simplified Chinese 控 制 区 解 锁, NOT 區 鎖. Upright precisely aligned squared industrial lettering in original's narrow condensed tech-print style, understated slight cyan reflected bloom, visible clean face (no noise inside glyphs), NOT serif calligraphy or beveled gold UI. Main cyan two lines centered on each original label area, red one-line immediately below, cyan unlock small at lower left of each leaf. Original word positions, equal mirrored sizes. Original steel is dark charcoal finely brushed, not brightly polished silver; do not add screens, logos, warning symbols, bolts, borders, hinges or extra neon. Remove every English stroke including faint dark edges and original shadows, but preserve lamp color and strength. Chinese must be clean and fully legible, no chunky pixel lettering. Production game texture, no mockup caption.",
+      "transparent_background": false,
+      "selected_output_sha256": "11b950569c587290ceee3911ca5f95f7fc22f95aef292b30f86adb10e2455cfe",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c58c820b6113.json",
+        "locales/zh-CN/artwork/f4a11c596ef6.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-capsule-full",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. 将这张原版PS2游戏胶囊按钮贴图整体重绘为简体中文版。精确保持原图2列8行布局、胶囊外形、端帽、金属银框、左列蓝色、右列橙红色、透明黑底间距。全部26? 本张是16个按钮，两列文字完全相同。每行从上到下准确写：简单 / 普通 / 困难 / 詹妮弗 / 布鲁斯 / 艾伦 / 亨利 / 弗兰克 。严禁繁体字：必须“简单”不是“簡單”，“困难”不是“困難”，“布鲁斯”不是“布魯斯”，“艾伦”不是“艾倫”，“弗兰克”不是“弗蘭克”。字体风格严格像原版2005年游戏按钮：方正稍窄的粗壮工业黑体字面，银白或奶油白金属面、细深色边、极窄明亮倒角、不要厚重3D。所有汉字统一同样的字号和高度，短词绝不放大；两列同字形同大小同居中，橙列字面暖浅金，蓝列冷银白。不要宋体、不要书法、不要衬线、不要普通细字、不要噪点。彻底重做整个按钮内部底纹，不保留任何英文、暗字影、机械伪字、旧字alpha。新底纹保持原版深蓝/暗红玻璃的水平光带，不要现代app光滑塑料感，不要花哨图案。文字清晰锐利，没有字形重叠，字放在每个按钮精确正中央，四周留白，不要触框。整张制作，非海报，无额外说明文字。",
+      "transparent_background": true,
+      "selected_output_sha256": "e970d58355e4d498ca1969c50a32741d0a731e27ffaa1081b198f9da0e9e82c4",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-names-full",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: text-localization. 以输入1原版PS2按钮为位置依据，以输入2新胶囊按钮为字面/光带风格参考，制作另一张人物选择的完整按钮图。布局必须是两列、5行；每一行两边写完全相同的简体中文姓名，从上到下准确为：约翰 / 迈克尔 / 卢克 / 凯莉 / 简 。简体必须准确：约不是約、迈不是邁、卢不是盧、凯不是凱、简不是簡。不要出现英文。每个字同样的字高、字重和字距，短词不放大；左蓝银白字面，右橙红浅金字面；方正稍窄工业黑体，细深边、极窄亮倒角，原2005年PS2科幻恐怖游戏UI风格，不是细系统字体，不是厚黑描边，不是像素粗块字体。每个词完美居中。重做全部内部底纹，保持水平蓝/红光带，任何字母状暗纹、旧字阴影都必须清零。外框银色金属、端帽保留原版味道，不添加新装饰。输出真正透明底高分辨率正式资产，不要背景光云、无标题说明、无额外按钮、无额外字；不要显示输入1顶部无字条。本张就是5行10个按钮，保持行距宽敞。",
+      "transparent_background": true,
+      "selected_output_sha256": "395326b9b79c052547b420944930ff0f8355ce4bcf0d83ea642909659219b02b",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-lab-blue-clean",
+      "tool": "built-in imagegen",
+      "prompt": "Precise production-art correction to this Chinese laboratory door texture: remove ONLY the long thin horizontal black separator/underline between 幼虫实验室 and 限制区域. Reconstruct continuous matching navy-blue brushed steel across its entire width, no line, no groove, no banner, no rectangular text plate edge. Keep all three Chinese texts exactly correct and unchanged in shape, size and position; keep the upper faint Chinese header, two small upper vents, cyan status lamp, gray lower vertical light stripe, side seams, frame and all other material/lighting unchanged. There must be NO horizontal rule between these two white printed lines. This is a text-localized game asset, do not add new features or new text. Preserve original square atlas layout.",
+      "transparent_background": false,
+      "selected_output_sha256": "a0738d673003586084e3b3f2a67c1802058d1c32fe5549a276c5afc7b55494d5",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/63a4d2a40a1a.json",
+        "locales/zh-CN/artwork/db107f489be6.json",
+        "locales/zh-CN/artwork/55b23003c6eb.json"
+      ]
+    },
+    {
+      "id": "feedback-e97f-lab-red-clean",
+      "tool": "built-in imagegen",
+      "prompt": "Precise variant edit. Input1 is the APPROVED MASTER lettering/material layout; input2 is the original red-lamp lighting reference. In input1 change ONLY the cyan status lamp below 限制区域 and its nearby reflected spill to the RED state shown in input2. Keep ALL THREE Chinese texts absolutely unchanged in geometry, font, size, spacing, brightness, and exact location; keep continuous blue steel between the text lines with NO horizontal rules or old English shadows. Keep the faint upper 幼虫实验室 unchanged, keep white lower 幼虫实验室 and 限制区域 unchanged; keep the frame, two upper vents, side strips and gray lower vertical strip identical. Red lamp light reflected onto immediately adjacent blue steel, not recoloring the white text. Don't add any line, rectangle, sign plate, or decoration. Same square camera-flat game texture atlas.",
+      "transparent_background": false,
+      "selected_output_sha256": "2c996ae9e65c289218d31d3ef5fb993716abae886f9b071e364cdecce7339fc8",
+      "status": "adopted",
+      "usage": "Fresh whole localized composition and complete material/print beds, source UV/CLUT registration and protected source geometry; rejected Traditional/noisy drafts and unwanted rules not adopted",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/55b23003c6eb.json"
+      ]
     }
   ]
 }

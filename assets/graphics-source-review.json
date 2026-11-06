@@ -2,7 +2,7 @@
   "format": "graphics-source-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "review_basis": "Closed original1140TIM2/2634-reference inventory, feedback17e7 changes29 native TIM2s, retains all other carriers and two explicit original restorations. Offline scope proof is not user artistic approval.",
+  "review_basis": "Closed1140 TIM2/2634 member inventory; e97f rebuilds8 localized compositions, including3 faint repeated lab headers. All other carriers retained; offline art checks do not imply player approval.",
   "summary": {
     "unique_textures": 1140,
     "physical_members": 2634,
@@ -498,7 +498,7 @@
         1
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "references": [
         {
           "resource": "RES/CUTSCENE/C011-020/C011_1.RES",
@@ -737,7 +737,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "references": [
         {
           "resource": "RES/CUTSCENE/C011-020/C013.RES",
@@ -2398,7 +2398,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "New restrained chiseled Simplified lettering; complete new constant-opacity selected interiors; identical two-state master and common14px word cells; one18px complete title master; new START. Original MN/rims/endcaps/exterior exact.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -2418,7 +2418,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -2438,7 +2438,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -8060,7 +8060,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
@@ -8993,7 +8993,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
@@ -10085,7 +10085,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0202_1.RES",

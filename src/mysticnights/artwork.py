@@ -14,7 +14,8 @@ def digest(data: bytes) -> str:
 
 def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sha256: str,
                           reference: bytes | None = None, reference_sha256: str | None = None,
-                          reference_rectangles: list | None = None) -> bytes:
+                          reference_rectangles: list | None = None,
+                          palette_constraints: list | None = None) -> bytes:
     """Import reviewed RGBA artwork without typesetting or regenerating a CLUT.
 
     Unchanged decoded pixels retain their original *index*, even when the
@@ -33,6 +34,23 @@ def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sh
         raise ValueError("Artwork import requires matching indexed TIM2 and RGBA dimensions")
     allowed = validate_rectangles(rectangles, *original.size)
     colors = _palette(source, info)
+    # A material may require uniform opacity even if old glyphs used slightly
+    # different CLUT alpha. Restrict candidates, never regenerate the palette.
+    constrained = {}
+    if palette_constraints is not None:
+        if not isinstance(palette_constraints, list):
+            raise ValueError('Invalid artwork palette constraints')
+        for rule in palette_constraints:
+            region = validate_rectangles([rule['rect']], *original.size)
+            if not region <= allowed or region & constrained.keys():
+                raise ValueError('Palette constraint overlaps or exceeds allowed pixels')
+            low, high = rule['min_alpha'], rule['max_alpha']
+            if type(low) is not int or type(high) is not int or not 0 <= low <= high <= 255:
+                raise ValueError('Invalid palette alpha range')
+            candidates = tuple(n for n, c in enumerate(colors) if low <= c[3] <= high)
+            if not candidates:
+                raise ValueError('No palette colors in requested alpha range')
+            constrained.update((i, candidates) for i in region)
     if reference is not None:
         if reference_sha256 is None or digest(reference) != reference_sha256:
             raise ValueError("Artwork reference identity mismatch")
@@ -52,20 +70,24 @@ def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sh
         return tuple(color[k] * color[3] // 255 for k in range(3)) + (color[3],)
 
     palette = [premultiply(c) for c in colors]
+    unrestricted = tuple(range(len(palette)))
     output = bytearray(source)
     cache = {}
     for i, (before, after) in enumerate(zip(original.get_flattened_data(), artwork.get_flattened_data())):
-        if before == after:
+        candidates = constrained.get(i, unrestricted)
+        original_index = source[info['pixel_offset'] + i]
+        if before == after and original_index in candidates:
             continue
         if i not in allowed:
             raise ValueError(f"Artwork import changed protected pixel ({i % original.width}, {i // original.width})")
-        if premultiply(before) == premultiply(after):
+        if premultiply(before) == premultiply(after) and original_index in candidates:
             continue
-        if after not in cache:
+        cache_key = (after, candidates)
+        if cache_key not in cache:
             value = premultiply(after)
-            cache[after] = min(range(len(palette)), key=lambda n:
+            cache[cache_key] = min(candidates, key=lambda n:
                 sum((palette[n][k] - value[k]) ** 2 * (2 if k == 3 else 1) for k in range(4)))
-        output[info["pixel_offset"] + i] = cache[after]
+        output[info["pixel_offset"] + i] = cache[cache_key]
     if reference is not None:
         start = info["pixel_offset"]
         for i in preferred:

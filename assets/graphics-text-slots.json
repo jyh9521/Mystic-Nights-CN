@@ -416,6 +416,66 @@
           204,
           132,
           16
+        ],
+        [
+          53,
+          128,
+          126,
+          23
+        ],
+        [
+          280,
+          132,
+          132,
+          16
+        ],
+        [
+          53,
+          152,
+          126,
+          23
+        ],
+        [
+          280,
+          156,
+          132,
+          16
+        ],
+        [
+          53,
+          176,
+          126,
+          23
+        ],
+        [
+          280,
+          180,
+          132,
+          16
+        ],
+        [
+          53,
+          200,
+          126,
+          23
+        ],
+        [
+          280,
+          204,
+          132,
+          16
+        ],
+        [
+          0,
+          105,
+          512,
+          23
+        ],
+        [
+          0,
+          225,
+          214,
+          31
         ]
       ]
     },
@@ -1207,6 +1267,102 @@
           224,
           84,
           15
+        ],
+        [
+          15,
+          14,
+          84,
+          15
+        ],
+        [
+          125,
+          14,
+          84,
+          15
+        ],
+        [
+          15,
+          44,
+          84,
+          15
+        ],
+        [
+          125,
+          44,
+          84,
+          15
+        ],
+        [
+          15,
+          74,
+          84,
+          15
+        ],
+        [
+          125,
+          74,
+          84,
+          15
+        ],
+        [
+          15,
+          104,
+          84,
+          15
+        ],
+        [
+          125,
+          104,
+          84,
+          15
+        ],
+        [
+          15,
+          134,
+          84,
+          15
+        ],
+        [
+          125,
+          134,
+          84,
+          15
+        ],
+        [
+          15,
+          164,
+          84,
+          15
+        ],
+        [
+          125,
+          164,
+          84,
+          15
+        ],
+        [
+          15,
+          194,
+          84,
+          15
+        ],
+        [
+          125,
+          194,
+          84,
+          15
+        ],
+        [
+          15,
+          224,
+          84,
+          15
+        ],
+        [
+          125,
+          224,
+          84,
+          15
         ]
       ]
     },
@@ -1590,6 +1746,66 @@
           223,
           84,
           17
+        ],
+        [
+          15,
+          104,
+          84,
+          15
+        ],
+        [
+          125,
+          104,
+          84,
+          15
+        ],
+        [
+          15,
+          134,
+          84,
+          15
+        ],
+        [
+          125,
+          134,
+          84,
+          15
+        ],
+        [
+          15,
+          164,
+          84,
+          15
+        ],
+        [
+          125,
+          164,
+          84,
+          15
+        ],
+        [
+          15,
+          194,
+          84,
+          15
+        ],
+        [
+          125,
+          194,
+          84,
+          15
+        ],
+        [
+          15,
+          224,
+          84,
+          15
+        ],
+        [
+          125,
+          224,
+          84,
+          15
         ],
         [
           15,
@@ -7908,6 +8124,30 @@
           "minimum_font_size": 5,
           "background_mode": "authored-pixel-restoration",
           "disposition": "authored-redraw"
+        },
+        {
+          "id": "db107f489be6/upper-lab-name",
+          "source": "LARVA LABORATORY",
+          "install": true,
+          "evidence": "visible-faint-repeated-room-name; linked to the lower same-label original",
+          "rect": [
+            60,
+            15,
+            54,
+            10
+          ],
+          "source_pixels_sha256": "9365d29850cf906b329cf196ffd0717f648d62619374466883573a5bfe807711",
+          "background_index": 2,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 5,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
         }
       ],
       "rendering": "authored-delta",
@@ -7935,6 +8175,18 @@
           61,
           69,
           26
+        ],
+        [
+          40,
+          0,
+          87,
+          38
+        ],
+        [
+          40,
+          39,
+          87,
+          89
         ]
       ]
     },
@@ -10076,6 +10328,18 @@
           142,
           36,
           15
+        ],
+        [
+          78,
+          80,
+          59,
+          77
+        ],
+        [
+          144,
+          80,
+          59,
+          77
         ]
       ]
     },
@@ -15756,6 +16020,30 @@
           "minimum_font_size": 5,
           "background_mode": "authored-pixel-restoration",
           "disposition": "authored-redraw"
+        },
+        {
+          "id": "63a4d2a40a1a/upper-lab-name",
+          "source": "LARVA LABORATORY",
+          "install": true,
+          "evidence": "visible-faint-repeated-room-name; linked to the lower same-label original",
+          "rect": [
+            60,
+            15,
+            54,
+            10
+          ],
+          "source_pixels_sha256": "0bcc36ca451786ca64f9e81811e2b275382c240d4faa5f5c2db4be570488f713",
+          "background_index": 4,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 5,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
         }
       ],
       "rendering": "authored-delta",
@@ -15783,6 +16071,18 @@
           61,
           69,
           26
+        ],
+        [
+          40,
+          0,
+          87,
+          38
+        ],
+        [
+          40,
+          39,
+          87,
+          89
         ]
       ]
     },
@@ -19882,6 +20182,18 @@
           142,
           36,
           15
+        ],
+        [
+          78,
+          80,
+          59,
+          77
+        ],
+        [
+          144,
+          80,
+          59,
+          77
         ]
       ]
     },
@@ -22247,6 +22559,23 @@
           "source_pixels_sha256": "6fd6b0c2ef738dd52b4de56801f95baa577d4543a214f77017afc6cf8d3da6b2",
           "background_mode": "authored-pixel-restoration",
           "disposition": "authored-redraw"
+        },
+        {
+          "id": "55b23003c6eb/upper-lab-name",
+          "source": "LARVA LABORATORY",
+          "install": true,
+          "evidence": "visible-faint-repeated-room-name; linked to the lower same-label original",
+          "rect": [
+            60,
+            15,
+            54,
+            10
+          ],
+          "source_pixels_sha256": "ecf96787d0d34dc231f78891b41d4fdeb3a43b4d457bba1da97c83aa42c2a9fe",
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw",
+          "font_size": 5,
+          "minimum_font_size": 5
         }
       ],
       "rendering": "authored-delta",
@@ -22280,6 +22609,18 @@
           61,
           69,
           26
+        ],
+        [
+          40,
+          0,
+          87,
+          38
+        ],
+        [
+          40,
+          39,
+          87,
+          89
         ]
       ]
     },

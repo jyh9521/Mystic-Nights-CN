@@ -2,22 +2,22 @@
   "format": "artwork-quality-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "baseline_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
-  "method": "Bounded feedback17e7:29 native TIM2 revisions;164 explicit same-hash approvals preserved;162 other localized TIM2s unchanged. Source/natives/protected indexed material, independent ISO readback and clean-source rebuild; art/runtime acceptance remains player-operated.",
+  "baseline_iso_sha256": "e97f16be5996953d86820b5f7d8f6e5a719cb025b736c1645578ef290a7d7a79",
+  "method": "e97f:8 requested complete localized compositions remade;183 other localized TIM2s and2 original restorations unchanged; native/HD RGBA and isolated rollback verified offline, not player acceptance",
   "summary": {
     "source_unique": 1140,
     "physical_tim2_members": 2634,
     "localized_tim2": 191,
     "localized_members": 359,
-    "localized_tim2_fields": 502,
+    "localized_tim2_fields": 505,
     "raw_rgb24_images": 1,
     "additional_ui_sources": 159,
-    "fixed_textures": 29,
+    "fixed_textures": 8,
     "capsule_beds": 26,
-    "edge_regression_samples": 156,
-    "unchanged_localized_tim2": 162,
+    "edge_regression_samples": 196,
+    "unchanged_localized_tim2": 183,
     "restored_originals": 2,
-    "preserved_material_samples": 92,
+    "preserved_material_samples": 132,
     "changed_old_ink_samples": 64
   },
   "textures": [
@@ -263,69 +263,63 @@
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
-      "localized_sha256": "d6dbe40f9ac51261c7485577d0a1902d91a8ec70ab2c731503b1acdb83815771",
+      "localized_sha256": "0c7ab4b8c687d54669f99912a0cfac7e60f6f4a08c65c27e17117aec906d0a85",
       "member": "L001_004.TM2",
       "result": "fixed",
-      "note": "New continuous text-free glass across all four complete interiors; donor has no mechanical pseudo-letter texture. Exact existing12HD text layers and native normal/title/START retained. Original exterior/rim outside interior mask unchanged.",
+      "note": "New restrained chiseled Simplified lettering; complete new constant-opacity selected interiors; identical two-state master and common14px word cells; one18px complete title master; new START. Original MN/rims/endcaps/exterior exact.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 13,
-        "overview_page": "proof/01.png",
-        "overview_sha256": "71f29b02427ca48a88d7d05b9d2c7c841892fc6d92dd16f547e3467ec940dc19",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_004.TM2",
           "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
-          "actual_sha256": "d6dbe40f9ac51261c7485577d0a1902d91a8ec70ab2c731503b1acdb83815771",
+          "actual_sha256": "0c7ab4b8c687d54669f99912a0cfac7e60f6f4a08c65c27e17117aec906d0a85",
           "size": 132160
         }
       ]
     },
     {
       "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
-      "localized_sha256": "07cd9b0f75c7257cc87258fe0a0e870532879f7520730b1905c95ecff526e440",
+      "localized_sha256": "a0ded1a8ce4c29dcf58a21a3f42edbf116b387f973023fd8acde3c0119446d4e",
       "member": "L001_006.TM2",
       "result": "fixed",
-      "note": "New smooth cobalt/vermilion glass interiors without pseudo-letter reflections; original source chrome and endcaps exact. Full prior metallic Chinese alpha art, shared15px height and13px em, identical two-state geometry.",
+      "note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 14,
-        "overview_page": "proof/01.png",
-        "overview_sha256": "71f29b02427ca48a88d7d05b9d2c7c841892fc6d92dd16f547e3467ec940dc19",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_006.TM2",
           "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
-          "actual_sha256": "07cd9b0f75c7257cc87258fe0a0e870532879f7520730b1905c95ecff526e440",
+          "actual_sha256": "a0ded1a8ce4c29dcf58a21a3f42edbf116b387f973023fd8acde3c0119446d4e",
           "size": 66624
         }
       ]
     },
     {
       "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
-      "localized_sha256": "c93b542df2e9cc54c58bd3c151ecba2fc89244762f9d703c1a6099b9faeaf0e3",
+      "localized_sha256": "4c57c2f47d989f490064c5b4d40ec90647b23d8218ba9cfed79c96ed33d7fdea",
       "member": "L001_007.TM2",
       "result": "fixed",
-      "note": "New smooth cobalt/vermilion glass interiors without pseudo-letter reflections; original source chrome and endcaps exact. Full prior metallic Chinese alpha art, shared15px height and13px em, identical two-state geometry.",
+      "note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 15,
-        "overview_page": "proof/01.png",
-        "overview_sha256": "71f29b02427ca48a88d7d05b9d2c7c841892fc6d92dd16f547e3467ec940dc19",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_007.TM2",
           "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
-          "actual_sha256": "c93b542df2e9cc54c58bd3c151ecba2fc89244762f9d703c1a6099b9faeaf0e3",
+          "actual_sha256": "4c57c2f47d989f490064c5b4d40ec90647b23d8218ba9cfed79c96ed33d7fdea",
           "size": 66624
         }
       ]
@@ -749,7 +743,7 @@
       "source_sha256": "16c04c38c46c4ba4c652964de12ac13e8b67bd90cbf03c3c77159cac48475f08",
       "localized_sha256": "b3b90e58eadb235bdb9de53fbb6fdf2e2535d5770475fc3edca562ab5c7db4f5",
       "member": "G021.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete10px two-line Chinese outline, correct180-degree atlas orientation, natural cyan spotlight donor; no tiny blurred generated glyphs. True4x matching glyph layer included.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -779,7 +773,7 @@
       "source_sha256": "6a2034752e224e37c0f172bd7c712b6368854dd1322ac0c8f571f49e688af9d2",
       "localized_sha256": "d8bfdf1924219e65307d17752af85217197ed1a2c82b457289399dfc106a4e02",
       "member": "G021.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete10px two-line Chinese outline, correct180-degree atlas orientation, natural cyan spotlight donor; no tiny blurred generated glyphs. True4x matching glyph layer included.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -871,7 +865,7 @@
       "source_sha256": "7da5e0e485eefd23b44cd5338cfd7b43ef63530060b593552d0381b2e43726bf",
       "localized_sha256": "acb5787613cd4dc903b23d445c63d96b4fba395b71b38343b80c9bd4fdb1bf40",
       "member": "G104.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete accepted master39 glyph coverage and identical UV origin; continuously un-matted from red, not copying its semitransparent background into opaque variant. New own red material under labels; source louvers/seam unchanged.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -942,7 +936,7 @@
       "source_sha256": "d37e08bb58cdf6326cf4b2fb69e344ba36b9e241667b1002621823b2e6d8dea6",
       "localized_sha256": "5616b743b05b3424a38ad2ba84a35df3a204631c2e262858c195e3ce4574c2b8",
       "member": "G184.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Exact complete accepted master#41 word-bed coordinates/size copied; no independent font fitting or retouched accepted master. Own texture outside declared word beds and own original CLUT preserved.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -965,7 +959,7 @@
       "source_sha256": "e05113db2385a6bf51dbe31c8bc7b3561819ea62c00e04da64881b411e11bde7",
       "localized_sha256": "35839ffb6c797932ab788743e0104c7c85d556030dd85480ce8c68f586701516",
       "member": "G184.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Exact complete accepted master#41 word-bed coordinates/size copied; no independent font fitting or retouched accepted master. Own texture outside declared word beds and own original CLUT preserved.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1129,7 +1123,7 @@
       "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
       "localized_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
       "member": "G269.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Whole16px 注意 and11px 限制区域 source-style cream industrial print over coherent own red metal, open counters/no dirty composite edge. Source lamps and geometry unchanged; true4x outlines.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1216,7 +1210,7 @@
       "source_sha256": "646dd6d4a6a93f58c986f770c92bcbeb2ae5aed9b3c77e5db7c8901ede5c5fae",
       "localized_sha256": "91c6f5d185f626157890cce2bd9dbe1ce4ec9b9241f2d63c2f50e7150935aaeb",
       "member": "G275.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1246,7 +1240,7 @@
       "source_sha256": "96b77b854a9087ed84d7482f7cdd09e7e143c3e43592c592854e7fa4f0e9b67b",
       "localized_sha256": "9218ef067d6069595973a3d8d5330a2c8f54affc94af45b6a20f1be1972d75be",
       "member": "G275.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1269,7 +1263,7 @@
       "source_sha256": "e10ecf9cea50ae66d1f6daab7eb247d74b79d49c06364f3220461659e00de916",
       "localized_sha256": "7c1448d26db2e90dc4431c98c9ae165dc27169df46ef90049987c3ac1a3a0c4a",
       "member": "G275.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1292,7 +1286,7 @@
       "source_sha256": "2703c76fa0d403e15540dd8ae639e9ed164bf877ecd543605f825df421ec29fc",
       "localized_sha256": "e0557066f58a39870c078ce706580e4b1a08e22e22962af6449e4aa606248132",
       "member": "G280.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1315,7 +1309,7 @@
       "source_sha256": "6b3da2d9f62eeb9c1ae2950cf9e1617856603c054b487dd0ae3d33a0ae4c936d",
       "localized_sha256": "bf9044536106cdbcac3faf4ce3b75bf647e39fad91c6432b552601b1881d01ff",
       "member": "G280.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1345,7 +1339,7 @@
       "source_sha256": "a038662342eef2a107e0fd0873676836cc7c7a884356c114dc0f528142369e44",
       "localized_sha256": "8ee07973369e723d8c81ae0fb8ee501c3ee59c78282a7a30d6107033b9bbe288",
       "member": "G280.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1375,7 +1369,7 @@
       "source_sha256": "f04efd60e59c102667f8be855a25d96811ac8ff8bde45cde7cc6527ff8430f12",
       "localized_sha256": "1dda4e0df93e8c05130e573c4a2f2b4ee5a2ab765153c7ea5c4b687726671e11",
       "member": "G280.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1417,76 +1411,70 @@
     },
     {
       "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
-      "localized_sha256": "de866b7f7a363815a0658c9bae2f36d8d3ca86c54082aebe3a4226b0401f128f",
+      "localized_sha256": "f62826a22736a7a50314eaac1796aef62fe21d27f4c413efdd6ff49a67931c49",
       "member": "G282.TM2",
       "result": "fixed",
-      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 56,
-        "overview_page": "proof/05.png",
-        "overview_sha256": "88b013a0e3061e4a625d7c1488b6becf281d9a8b44743401c958302954bb1e44",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/CUTSCENE/C011-020/C013.RES",
           "member": "G282.TM2",
           "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
-          "actual_sha256": "de866b7f7a363815a0658c9bae2f36d8d3ca86c54082aebe3a4226b0401f128f",
+          "actual_sha256": "f62826a22736a7a50314eaac1796aef62fe21d27f4c413efdd6ff49a67931c49",
           "size": 17472
         },
         {
           "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
           "member": "G282.TM2",
           "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
-          "actual_sha256": "de866b7f7a363815a0658c9bae2f36d8d3ca86c54082aebe3a4226b0401f128f",
+          "actual_sha256": "f62826a22736a7a50314eaac1796aef62fe21d27f4c413efdd6ff49a67931c49",
           "size": 17472
         }
       ]
     },
     {
       "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
-      "localized_sha256": "53d3f74f3f54763ea00c65eacac322c4227601b56625212a858fe31babb68842",
+      "localized_sha256": "fa8ae91620f6dde8a77d67a3c4faca0aeaa779ee9812af3bcbf493b7cb10af3e",
       "member": "G282.TM2",
       "result": "fixed",
-      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 57,
-        "overview_page": "proof/05.png",
-        "overview_sha256": "88b013a0e3061e4a625d7c1488b6becf281d9a8b44743401c958302954bb1e44",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/CUTSCENE/C011-020/C011_1.RES",
           "member": "G282.TM2",
           "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
-          "actual_sha256": "53d3f74f3f54763ea00c65eacac322c4227601b56625212a858fe31babb68842",
+          "actual_sha256": "fa8ae91620f6dde8a77d67a3c4faca0aeaa779ee9812af3bcbf493b7cb10af3e",
           "size": 16960
         }
       ]
     },
     {
       "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
-      "localized_sha256": "455f98ccd71b804bc1b7db2f45c25535f531b7b6ecd843a223b3d7c6e46825c5",
+      "localized_sha256": "a5cf403335b146875395451240abfcd3bd254df8a8a5869602f1f1a8cc6fcefd",
       "member": "G282_C.TM2",
       "result": "fixed",
-      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 58,
-        "overview_page": "proof/05.png",
-        "overview_sha256": "88b013a0e3061e4a625d7c1488b6becf281d9a8b44743401c958302954bb1e44",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
           "member": "G282_C.TM2",
           "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
-          "actual_sha256": "455f98ccd71b804bc1b7db2f45c25535f531b7b6ecd843a223b3d7c6e46825c5",
+          "actual_sha256": "a5cf403335b146875395451240abfcd3bd254df8a8a5869602f1f1a8cc6fcefd",
           "size": 17472
         }
       ]
@@ -1495,7 +1483,7 @@
       "source_sha256": "133aa7eea03053951dc5b3bf549bd59a0bd959536622002b3814917cefcae089",
       "localized_sha256": "de439083a8d27a8cf9b287b36f56bc37a02b08c42905b4d4c196f1f67ccdf4f7",
       "member": "G284.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete10px black camera label with open counters and full outlines; no blurred face/photo crop. Existing camera body/optic untouched; true4x print layers.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1539,23 +1527,21 @@
     },
     {
       "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
-      "localized_sha256": "92e5484d5dbbe3f355418da8104b5594134cdc5f6ecbc5df59e69322bf94afad",
+      "localized_sha256": "29673e8caec261278493ad0cd2763be82e1192bab2de01461174dbc936a1c11d",
       "member": "G289.TM2",
       "result": "fixed",
-      "note": "New continuous blank steel donor across full old letter/shadow footprints, not a color threshold carrying old background back. Complete cyan/red glyphs; own central seam, braces, lights and outside steel retained.",
+      "note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 61,
-        "overview_page": "proof/06.png",
-        "overview_sha256": "c900fbc396beb1cdc7c498f73d299ac6978a7426d5ed1813b52993493947eb6c",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
           "member": "G289.TM2",
           "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
-          "actual_sha256": "92e5484d5dbbe3f355418da8104b5594134cdc5f6ecbc5df59e69322bf94afad",
+          "actual_sha256": "29673e8caec261278493ad0cd2763be82e1192bab2de01461174dbc936a1c11d",
           "size": 66624
         }
       ]
@@ -1807,7 +1793,7 @@
       "source_sha256": "17210fa50297479b8337ddce5c1a6ab1f30121d6279e3f864d077ad76528d2bb",
       "localized_sha256": "78eac6fbe729ceb08f9a006e903498399ca69f82164b9d0d5b40357f9f75788d",
       "member": "G311.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Same complete11px detector heading and10px rotated company outlines on two source variants; exact original lower microprint, border and light outside beds. CLUT16 native profile retained, no speculative replacement key.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -1837,7 +1823,7 @@
       "source_sha256": "4051fb2bdf6cdb74af37c43ca88db8e3c3b00d347b34cb034dc2084a59ce0269",
       "localized_sha256": "e1a0eb737f2462a526060f783009e8af6f01fca9717362e12efb106ad7fb68ef",
       "member": "G311.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Same complete11px detector heading and10px rotated company outlines on two source variants; exact original lower microprint, border and light outside beds. CLUT16 native profile retained, no speculative replacement key.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -2489,7 +2475,7 @@
       "source_sha256": "89d4eec42316b14339cff7e3481db2326350e19966233e13787acedf5f1d635d",
       "localized_sha256": "3e6da491b3aaf28feede317f571a63d1e33543cf84688407d5e3bcaa77cef8c6",
       "member": "G362.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Original side paper and tiny fine-print recovered; only the narrow actual CAUTION bed gets matched worn-paper donor and modest9px whole rotated 注意. No broad red plate. Main3 translated lines unchanged.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -2519,7 +2505,7 @@
       "source_sha256": "cb1beda20720e40ddf0c73c46894a7573c931959ffb296c58f7148ebcfa64f58",
       "localized_sha256": "145e6f0c637edf72b55ee8a90f4562ca55336fbc8a8b6246a5fc72c752ce9c59",
       "member": "G362.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Original side paper and tiny fine-print recovered; only the narrow actual CAUTION bed gets matched worn-paper donor and modest9px whole rotated 注意. No broad red plate. Main3 translated lines unchanged.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -4053,23 +4039,21 @@
     },
     {
       "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
-      "localized_sha256": "225e0e515e5c30e0f0a7f9b6807dcc8537d4f54f556a3694fa905e3d11486990",
+      "localized_sha256": "df98df7a6405ff21a2898b2618558e701fc27ef8f7df8120608c5df507662598",
       "member": "ST0201_023.TM2",
       "result": "fixed",
-      "note": "New continuous blank steel donor across full old letter/shadow footprints, not a color threshold carrying old background back. Complete cyan/red glyphs; own central seam, braces, lights and outside steel retained.",
+      "note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 154,
-        "overview_page": "proof/07.png",
-        "overview_sha256": "ab3f727046e6dfdb15882cb9b532842c695c0ca52d759278779cb81f5f339e8c",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
+        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
       },
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0201_1.RES",
           "member": "ST0201_023.TM2",
           "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
-          "actual_sha256": "225e0e515e5c30e0f0a7f9b6807dcc8537d4f54f556a3694fa905e3d11486990",
+          "actual_sha256": "df98df7a6405ff21a2898b2618558e701fc27ef8f7df8120608c5df507662598",
           "size": 66624
         }
       ]
@@ -4296,7 +4280,7 @@
       "source_sha256": "a1239fdc55604c87df9c14dff247928a40f28889042b91087baf60bfd8014a0c",
       "localized_sha256": "28e6a49a35a3e807a2327d138c183014659fb5463828a8b3d89b14e7344c19a6",
       "member": "ST0303_048.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Own original complete blood field restored, not clean sibling palette. Only identified readable old ink and fresh Chinese glyph footprints change; source blood pixels crossing letters, full rim and middle microprint protected pixel-exact.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -4771,7 +4755,7 @@
       "source_sha256": "4ef12dc045324effd49667e8fdd802bedecc18e92e09f4ed0bd72f61a86d253b",
       "localized_sha256": "1f00adade38584363f8eeb14f71941a076a34809c8e6ead61bcff7a1c2dd29cd",
       "member": "U317.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete11px ivory footer words inside original UV/frame, no repeated-row stripe background. Both lower alpha states rebuilt from same full outline, centered on original O/X; clear full20px beds removes stray horizontal lines, icons and frame exact.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -4794,7 +4778,7 @@
       "source_sha256": "af91ca0e09852b68bcc2f6a80834c6c362b2b4771316b585b79ea77bef3ae268",
       "localized_sha256": "69bdd8e0cc132533191f027b322d5d3dead9cfa592a75ab7f741e7a9e77dbd05",
       "member": "U317.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete11px ivory footer words inside original UV/frame, no repeated-row stripe background. Both lower alpha states rebuilt from same full outline, centered on original O/X; clear full20px beds removes stray horizontal lines, icons and frame exact.",
       "review_evidence": {
         "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
@@ -7290,6 +7274,486 @@
         2
       ],
       "source_sample_sha256": "550d12733b8ca577dd8991c1b032c824a67c485e0cafd7de9a5c8e0506a8b1fc",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-MN-emblem",
+      "rect": [
+        0,
+        0,
+        512,
+        105
+      ],
+      "source_sample_sha256": "b7641642a3fd153c5d6b0cef6fd49869daa30d561f371894503efe47f5bdee41",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-copyright",
+      "rect": [
+        390,
+        228,
+        122,
+        28
+      ],
+      "source_sample_sha256": "f8fd8e28493b9ff91ff35aa53941e21bd4eda3d7b9fe3a1663b1e9e763c2b8db",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-top-rim-0",
+      "rect": [
+        275,
+        129,
+        141,
+        3
+      ],
+      "source_sample_sha256": "51841eb751085a86c4fbd4b8e3c386cc2634fa15eac3471f7f28aa4cfd6c724f",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-bottom-rim-0",
+      "rect": [
+        275,
+        148,
+        141,
+        3
+      ],
+      "source_sample_sha256": "170a376bb3ba93fcf3c64eba953f9e9d3b6245d619d66249380bc0847645d1fa",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-left-cap-0",
+      "rect": [
+        274,
+        134,
+        6,
+        11
+      ],
+      "source_sample_sha256": "f17e1f87cabfb3d45ad418cc7925397bee2725cc6cddc0179e3bbaa488246398",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-right-cap-0",
+      "rect": [
+        412,
+        134,
+        5,
+        11
+      ],
+      "source_sample_sha256": "3fa0229d892eaec716089f73b862eb82b4939fcdb71f0513c04be12fe2178057",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-top-rim-1",
+      "rect": [
+        275,
+        153,
+        141,
+        3
+      ],
+      "source_sample_sha256": "535ab9908645112e8212da92eec608381b3841a5cee69b648dc469d95a67624d",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-bottom-rim-1",
+      "rect": [
+        275,
+        172,
+        141,
+        3
+      ],
+      "source_sample_sha256": "e84809148a150ceb330e1bcbe2a649bfb8cd4ba93d041aad1618cb40095a28a5",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-left-cap-1",
+      "rect": [
+        274,
+        158,
+        6,
+        11
+      ],
+      "source_sample_sha256": "f17e1f87cabfb3d45ad418cc7925397bee2725cc6cddc0179e3bbaa488246398",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-right-cap-1",
+      "rect": [
+        412,
+        158,
+        5,
+        11
+      ],
+      "source_sample_sha256": "3fa0229d892eaec716089f73b862eb82b4939fcdb71f0513c04be12fe2178057",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-top-rim-2",
+      "rect": [
+        275,
+        177,
+        141,
+        3
+      ],
+      "source_sample_sha256": "b79c38a3f8530660da0e7fc0d9ca54a86aaedc23b4aebe693759cae74272abab",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-bottom-rim-2",
+      "rect": [
+        275,
+        196,
+        141,
+        3
+      ],
+      "source_sample_sha256": "170a376bb3ba93fcf3c64eba953f9e9d3b6245d619d66249380bc0847645d1fa",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-left-cap-2",
+      "rect": [
+        274,
+        182,
+        6,
+        11
+      ],
+      "source_sample_sha256": "f17e1f87cabfb3d45ad418cc7925397bee2725cc6cddc0179e3bbaa488246398",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-right-cap-2",
+      "rect": [
+        412,
+        182,
+        5,
+        11
+      ],
+      "source_sample_sha256": "3fa0229d892eaec716089f73b862eb82b4939fcdb71f0513c04be12fe2178057",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-top-rim-3",
+      "rect": [
+        275,
+        201,
+        141,
+        3
+      ],
+      "source_sample_sha256": "8b25b6757ba101bf825c844e1dd3a404b0856dbe3706a7771745b63099cf924a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-bottom-rim-3",
+      "rect": [
+        275,
+        220,
+        141,
+        3
+      ],
+      "source_sample_sha256": "ce11ab848a5cea3b698305cd16a5ab32213ff950cc3ebe59b2c0cc46359601d5",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-left-cap-3",
+      "rect": [
+        274,
+        206,
+        6,
+        11
+      ],
+      "source_sample_sha256": "f17e1f87cabfb3d45ad418cc7925397bee2725cc6cddc0179e3bbaa488246398",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "e97f-right-cap-3",
+      "rect": [
+        412,
+        206,
+        5,
+        11
+      ],
+      "source_sample_sha256": "3fa0229d892eaec716089f73b862eb82b4939fcdb71f0513c04be12fe2178057",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "id": "e97f-vents",
+      "rect": [
+        69,
+        50,
+        22,
+        12
+      ],
+      "source_sample_sha256": "782518854b5eadc5c274413213a381e694e70593e1c7eb5b12c14f5a3d2f19ef",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "id": "e97f-status-lamp-halo",
+      "rect": [
+        68,
+        87,
+        26,
+        8
+      ],
+      "source_sample_sha256": "5b34efba85a2af1dcef276f80aba9363b513db1d793bedc47692fe88e6d34287",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "id": "e97f-lower-stripe",
+      "rect": [
+        69,
+        95,
+        22,
+        33
+      ],
+      "source_sample_sha256": "012217856905f762fec23b211aab8acef889095b852a73b90d9fcc68d458f20c",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "id": "e97f-left-frame",
+      "rect": [
+        30,
+        0,
+        10,
+        128
+      ],
+      "source_sample_sha256": "b96e8201947078a13be058fc180f47654248f3dc93413183043a238c354be8a2",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "id": "e97f-vents",
+      "rect": [
+        69,
+        50,
+        22,
+        12
+      ],
+      "source_sample_sha256": "4518533407dab124784ac1668ad8b4394411c1c6d58018645fbea65bdfc7a87d",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "id": "e97f-status-lamp-halo",
+      "rect": [
+        68,
+        87,
+        26,
+        8
+      ],
+      "source_sample_sha256": "5bc938f7a3f6db42577fa905b0422a3dc32eac93230df93237084efdf7fd2ce6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "id": "e97f-lower-stripe",
+      "rect": [
+        69,
+        95,
+        22,
+        33
+      ],
+      "source_sample_sha256": "c634553bea041179d1309696ba80918849ed401f8c1ae8c2243930c62ac74978",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "id": "e97f-left-frame",
+      "rect": [
+        30,
+        0,
+        10,
+        128
+      ],
+      "source_sample_sha256": "e73ce6a3199c1a1964e30ec40f34078bcc861efc75fd41d4251937993da1cfc3",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "id": "e97f-vents",
+      "rect": [
+        69,
+        50,
+        22,
+        12
+      ],
+      "source_sample_sha256": "2ad06459819588d9e7711835d2ef2e8a43f7a6d562d3b5ef6336bfa232772b87",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "id": "e97f-status-lamp-halo",
+      "rect": [
+        68,
+        87,
+        26,
+        8
+      ],
+      "source_sample_sha256": "d6f1a63d230c5cc82c0cd6301e865689d317b9c6e7cd515903959163f35636e8",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "id": "e97f-lower-stripe",
+      "rect": [
+        69,
+        95,
+        22,
+        33
+      ],
+      "source_sample_sha256": "4c96462df408a628ed83fc4b87fd061084c2c74309f4b3db863e48ef8584de92",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "id": "e97f-left-frame",
+      "rect": [
+        30,
+        0,
+        10,
+        128
+      ],
+      "source_sample_sha256": "b61c8303a609cd1bd3b4c3d58c58c00ced9ca90c7ed8cd25a5ffe54cd195a06d",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "id": "e97f-center-seam",
+      "rect": [
+        137,
+        64,
+        7,
+        94
+      ],
+      "source_sample_sha256": "eed2686cd4a4421a2b91559f479a14ee435e099c953e63534c4ec4d6491c4129",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "id": "e97f-left-lamp",
+      "rect": [
+        91,
+        64,
+        25,
+        15
+      ],
+      "source_sample_sha256": "9b5688916313baa139875139257431e4930d12d18b2cefec1aa3b50e075ff1f9",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "id": "e97f-right-lamp",
+      "rect": [
+        156,
+        64,
+        25,
+        15
+      ],
+      "source_sample_sha256": "07b4942457457fb6d21b9e32fa8ce86e65ded0057fed7bb1b5fd7521ab542fac",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "id": "e97f-bottom-rails",
+      "rect": [
+        77,
+        158,
+        127,
+        24
+      ],
+      "source_sample_sha256": "0b3477485ac7789f43f3755a33d2e62742f98e20cad2bce172ee22eee4eccbe6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "id": "e97f-side-controls",
+      "rect": [
+        205,
+        4,
+        27,
+        89
+      ],
+      "source_sample_sha256": "112fadef31693bfeebf1a20f36f144986c40c8bfab76b32051d9512d2f135c37",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "id": "e97f-center-seam",
+      "rect": [
+        137,
+        64,
+        7,
+        94
+      ],
+      "source_sample_sha256": "bb04189d29f7a75f3039bdcc4c038d62c7fdbf6343a438320e4660072d1523b4",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "id": "e97f-left-lamp",
+      "rect": [
+        91,
+        64,
+        25,
+        15
+      ],
+      "source_sample_sha256": "7e33e8a317378a19b14b5b9b472c8cbea267b27988791af3d4c85a8d8c9785aa",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "id": "e97f-right-lamp",
+      "rect": [
+        156,
+        64,
+        25,
+        15
+      ],
+      "source_sample_sha256": "3b73a08cb5307ea8367c7ea8d57fecf077a96b65ee7f75cb58c5e594adb9c1c7",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "id": "e97f-bottom-rails",
+      "rect": [
+        77,
+        158,
+        127,
+        24
+      ],
+      "source_sample_sha256": "88e326feabd800afc8dd640f7b8dc7a39f9f0414da5044e6102849c97f4d7670",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "id": "e97f-side-controls",
+      "rect": [
+        205,
+        4,
+        27,
+        89
+      ],
+      "source_sample_sha256": "082d6b5c1e458ca12c950d030134745aec6bfbd093bf3bded7a9b785a61b2a1a",
       "expectation": "preserved"
     }
   ],

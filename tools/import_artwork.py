@@ -24,7 +24,8 @@ def main():
                                          source_sha256=args.source_sha256,
                                          reference=args.reference.read_bytes() if args.reference else None,
                                          reference_sha256=args.reference_sha256,
-                                         reference_rectangles=recipe.get("reference_rectangles"))
+                                         reference_rectangles=recipe.get("reference_rectangles"),
+                                         palette_constraints=recipe.get("palette_constraints"))
     patch = make_artwork_delta(source, modified, recipe["allowed_rectangles"], recipe["targets"])
     if "state_checks" in recipe:
         patch["state_checks"] = recipe["state_checks"]

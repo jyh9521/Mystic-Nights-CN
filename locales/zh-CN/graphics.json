@@ -2527,6 +2527,21 @@
       "id": "3c1dbf83a249/text-02",
       "target": "出口",
       "status": "draft"
+    },
+    {
+      "id": "db107f489be6/upper-lab-name",
+      "target": "幼虫实验室",
+      "status": "draft"
+    },
+    {
+      "id": "63a4d2a40a1a/upper-lab-name",
+      "target": "幼虫实验室",
+      "status": "draft"
+    },
+    {
+      "id": "55b23003c6eb/upper-lab-name",
+      "target": "幼虫实验室",
+      "status": "draft"
     }
   ],
   "artwork_files": [

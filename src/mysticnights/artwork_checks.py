@@ -62,6 +62,18 @@ def check_state_pairs(image, checks):
         seen.add(identifier)
         kwargs = {k: check[k] for k in ("min_row_pixels", "min_column_pixels")}
         states = [measure_ink(image, check[k], **kwargs) for k in ("normal", "selected")]
+        if 'max_center_error_twice' in check:
+            tolerance = _integer(check['max_center_error_twice'], 0, max(image.size)*2)
+            for name, state in zip(('normal', 'selected'), states):
+                center = check[name].get('center_twice')
+                if not isinstance(center, list) or len(center) != 2:
+                    raise ValueError('Invalid artwork state center')
+                for value, dimension in zip(center, image.size):
+                    _integer(value, 0, dimension*2)
+                b = state['bbox']; error = [abs(b[i]+b[i+2]-center[i]) for i in (0, 1)]
+                if max(error) > tolerance:
+                    raise ValueError(f'Artwork state {identifier}: {name} center error={error}')
+                state['center_error_twice'] = error
         errors = []
         for dimension in ("width", "height"):
             tolerance = _integer(check["max_"+dimension+"_difference"], 0, max(image.size))
@@ -102,6 +114,13 @@ def check_clear_regions(image, checks):
             raise ValueError("Invalid/duplicate artwork clear-region ID")
         seen.add(identifier)
         maximum = _integer(check["max_alpha"], 0, 254)
+        minimum = _integer(check.get('min_alpha', 0), 0, maximum)
+        if minimum:
+            below = _points(image, {"rect": check['rect'],
+                            'rgba_min': [0, 0, 0, 0],
+                            'rgba_max': [255, 255, 255, minimum - 1]})
+            if below:
+                raise ValueError(f'Artwork clear-region {identifier}: below minimum pixels={len(below)}')
         selector = {"rect": check["rect"], "rgba_min": [0, 0, 0, maximum + 1],
                     "rgba_max": [255, 255, 255, 255]}
         dirty = _points(image, selector)

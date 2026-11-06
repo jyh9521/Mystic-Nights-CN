@@ -1,5 +1,11 @@
 # 文件格式
 
+## 可选材质alpha与字面中心约束
+
+`import_artwork.py`的配方可含`palette_constraints`，元素为`{"rect":[x,y,w,h],"min_alpha":209,"max_alpha":209}`。取值为`decode_tim2`显示归一化后的0..255 alpha；只限制原CLUT候选，不创建/改动调色板。区域必须位于允许修改范围且彼此不重叠，区间中没有候选即失败。未声明时维持既有量化行为；即使原像素RGBA未改变，也必须满足显式候选约束。
+
+`clear_regions`可附`min_alpha`（默认0），与原`max_alpha`组成区间，用来检测低于材质下限的旧透明字影。`state_checks`可附`max_center_error_twice`，并在normal/selected选择器中声明`center_twice:[2*cx,2*cy]`；依据测得字面bbox的像素边坐标计算，不等同于字形OCR。1表示半个原生像素容差。所有规则可由其他locale复用。
+
 ## 离线图片审查/意见交换 — 本项目定义
 
 `disc-image-review` v1 包含原/汉化 ISO SHA、1141 个载体条目及逐 PNG 文件/解码 RGBA 哈希。`id=tim2:<原成员SHA>` 或 `rgb24:<原文件SHA>` 保持跨修订稳定；编号仅用于浏览。`disc-image-feedback` v1 的条目携带 ID、源/成稿 SHA、资源路径、`comment` 和 `status=unreviewed|ok|issue`。空白不是认可；旧成稿意见保留文字并重置认可；未知、重复 ID 或来源不符整批拒绝。CSV 携带相同逐图身份并正确引用中文、多行和双引号。
