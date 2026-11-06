@@ -70,8 +70,9 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
         raise ValueError('HD artwork requires scale=4')
     if not isinstance(recipe,dict) or recipe.get('source_sha256')!=_sha(source):
         raise ValueError('HD artwork native source SHA-256 mismatch')
-    identity=tim2_replacement_identity(source,hash_function=lambda data:0)
-    native=raw_atlas(source)
+    texa=recipe.get('clut16_texa')
+    identity=tim2_replacement_identity(source,hash_function=lambda data:0,clut16_texa=texa)
+    native=raw_atlas(source,clut16_texa=texa)
     width,height=native.width*scale,native.height*scale
     if max(width,height)>16384:
         raise ValueError('HD artwork dimensions exceed supported bounds')
@@ -88,7 +89,7 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
     base_bytes=apply_artwork(source,delta)
     if apply_artwork(base_bytes,delta,reverse=True)!=source:
         raise ValueError('HD artwork base delta roundtrip mismatch')
-    base=raw_atlas(base_bytes).resize((width,height),Image.Resampling.NEAREST)
+    base=raw_atlas(base_bytes,clut16_texa=texa).resize((width,height),Image.Resampling.NEAREST)
     original=native.resize((width,height),Image.Resampling.NEAREST)
     outside=ImageChops.invert(allowed)
     if ImageChops.multiply(_difference_mask(base,original),outside).getbbox():
@@ -98,6 +99,10 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
         raise ValueError('HD artwork requires authored pixel layers')
     image=base.copy(); ids=set();regions=[];layer_reports=[]
     layer_mask=Image.new('L',(width,height));layer_draw=ImageDraw.Draw(layer_mask)
+    # A text-free base can accidentally be the original *lettered* texture.
+    # Track replacement coverage, not RGB differences: a fresh transparent
+    # pixel also replaces the old pixel, whereas a half-covered mask does not.
+    replacement_coverage=Image.new('L',(width,height))
     for layer in layers:
         if not isinstance(layer,dict):
             raise ValueError('Invalid HD artwork layer')
@@ -115,6 +120,7 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
         mode=layer.get('mode')
         if mode=='replace-region':
             result=authored
+            coverage=Image.new('L',(w,h),255)
         elif mode in ('rgb-mask-keep-alpha','rgba-mask'):
             peak=layer.get('alpha_peak')
             if mode=='rgba-mask' and (type(peak) is not int or not 0<=peak<=255):
@@ -128,15 +134,26 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
                 if mode=='rgba-mask':
                     mixed[offset+3]=(peak*coverage+old[offset+3]*(255-coverage)+127)//255
             result=Image.frombytes('RGBA',(w,h),bytes(mixed))
+            coverage=authored.getchannel('A')
             if mode=='rgb-mask-keep-alpha' and result.getchannel('A').tobytes()!=material.getchannel('A').tobytes():
                 raise ValueError('HD artwork RGB mask altered base alpha')
         else:
             raise ValueError('Unknown HD artwork layer mode')
         image.paste(result,(x,y));layer_draw.rectangle((x,y,x+w-1,y+h-1),fill=255)
+        replacement_coverage.paste(coverage,(x,y))
         layer_reports.append({'id':name,'rect':list(rect),'mode':mode,
                               **({'alpha_peak':layer['alpha_peak']} if mode=='rgba-mask' else {}),
                               'authored_rgba_sha256':_sha(authored.tobytes()),
                               'rendered_rgba_sha256':_sha(result.tobytes())})
+    required=recipe.get('full_coverage_regions',[])
+    if not isinstance(required,list):
+        raise ValueError('HD artwork full coverage regions require a list')
+    for value in required:
+        x,y,w,h=_rect(value,width,height)
+        if allowed.crop((x,y,x+w,y+h)).getextrema()!=(255,255):
+            raise ValueError('HD artwork full coverage region outside allowed HD regions')
+        if replacement_coverage.crop((x,y,x+w,y+h)).getextrema()!=(255,255):
+            raise ValueError('HD artwork full coverage region reuses old base pixels')
     final_difference=_difference_mask(image,original)
     if ImageChops.multiply(final_difference,outside).getbbox():
         raise ValueError('HD artwork output changed protected native pixels')
@@ -150,6 +167,7 @@ def build_texture(source: bytes,recipe: dict,*,scale: int=4):
                   'base_roundtrip':'byte-identical','outside_allowed':'raw RGBA byte-identical to final-native nearest',
                   'outside_layers':'raw RGBA byte-identical to glyph-free-base nearest',
                   'changed_hd_pixels':final_difference.histogram()[255],
+                  'full_coverage_regions':required,
                   'layers':layer_reports,'native_width':identity['width'],'native_height':identity['height']}
 
 

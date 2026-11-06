@@ -2,23 +2,23 @@
   "format": "artwork-quality-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "baseline_iso_sha256": "e97f16be5996953d86820b5f7d8f6e5a719cb025b736c1645578ef290a7d7a79",
-  "method": "e97f:8 requested complete localized compositions remade;183 other localized TIM2s and2 original restorations unchanged; native/HD RGBA and isolated rollback verified offline, not player acceptance",
+  "baseline_iso_sha256": "d8db7a92b894bc6c20a4e6f5dcf1e9ec08fc066c321fa5d8edb1e8377f4cec0e",
+  "method": "Runtime screenshot source/UV/full-alpha audit:4 existing sprites revised,4 embedded atlases newly localized;187 other localized source TIM2s unchanged; actual native/HD proof remains offline and new art awaits player review",
   "summary": {
     "source_unique": 1140,
     "physical_tim2_members": 2634,
-    "localized_tim2": 191,
-    "localized_members": 359,
-    "localized_tim2_fields": 505,
+    "localized_tim2": 195,
+    "localized_members": 365,
+    "localized_tim2_fields": 512,
     "raw_rgb24_images": 1,
     "additional_ui_sources": 159,
     "fixed_textures": 8,
     "capsule_beds": 26,
-    "edge_regression_samples": 196,
-    "unchanged_localized_tim2": 183,
+    "edge_regression_samples": 264,
+    "unchanged_localized_tim2": 187,
     "restored_originals": 2,
-    "preserved_material_samples": 132,
-    "changed_old_ink_samples": 64
+    "preserved_material_samples": 195,
+    "changed_old_ink_samples": 69
   },
   "textures": [
     {
@@ -263,63 +263,63 @@
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
-      "localized_sha256": "0c7ab4b8c687d54669f99912a0cfac7e60f6f4a08c65c27e17117aec906d0a85",
+      "localized_sha256": "868d6463d8b19101c07fd0c3a120d145b7daca1e1142c02389732db14b8d39d1",
       "member": "L001_004.TM2",
       "result": "fixed",
-      "note": "New restrained chiseled Simplified lettering; complete new constant-opacity selected interiors; identical two-state master and common14px word cells; one18px complete title master; new START. Original MN/rims/endcaps/exterior exact.",
+      "note": "Runtime feedback: original MN RGB/core retained with source-derived near-silhouette alpha falloff; continuous18px menu cavity material; shared14px master, real UV x-scale compensation and exact source-UV centre; START UV-centred.",
       "review_evidence": {
         "stable_number": 13,
-        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
-        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_004.TM2",
           "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
-          "actual_sha256": "0c7ab4b8c687d54669f99912a0cfac7e60f6f4a08c65c27e17117aec906d0a85",
+          "actual_sha256": "868d6463d8b19101c07fd0c3a120d145b7daca1e1142c02389732db14b8d39d1",
           "size": 132160
         }
       ]
     },
     {
       "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
-      "localized_sha256": "a0ded1a8ce4c29dcf58a21a3f42edbf116b387f973023fd8acde3c0119446d4e",
+      "localized_sha256": "dfae1cb9edd721d64be341ac28e3d814825a84e31a62aa776729203ac5226c0d",
       "member": "L001_006.TM2",
       "result": "fixed",
-      "note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
+      "note": "Runtime feedback: literal-alpha extracted whole-word masters over one continuous19px material, no opaque foreground sticker; original source-UV centers (blue57/orange166, characterY110.5+30i), shared13px face; silver outer rim exact.",
       "review_evidence": {
         "stable_number": 14,
-        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
-        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_006.TM2",
           "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
-          "actual_sha256": "a0ded1a8ce4c29dcf58a21a3f42edbf116b387f973023fd8acde3c0119446d4e",
+          "actual_sha256": "dfae1cb9edd721d64be341ac28e3d814825a84e31a62aa776729203ac5226c0d",
           "size": 66624
         }
       ]
     },
     {
       "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
-      "localized_sha256": "4c57c2f47d989f490064c5b4d40ec90647b23d8218ba9cfed79c96ed33d7fdea",
+      "localized_sha256": "e2cd33ebaf7e58ddf5de5abea92e7226e4b80a9484586f1eb7f610ec75ea7033",
       "member": "L001_007.TM2",
       "result": "fixed",
-      "note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
+      "note": "Runtime feedback: literal-alpha extracted whole-word masters over one continuous19px material, no opaque foreground sticker; original source-UV centers (blue57/orange166, characterY110.5+30i), shared13px face; silver outer rim exact.",
       "review_evidence": {
         "stable_number": 15,
-        "basis": "Fresh complete localized composition; original/final-native and full4x authored output inspected offline; player artistic acceptance pending",
-        "feedback_snapshot": "assets/artwork-feedback-e97f.json"
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
       },
       "references": [
         {
           "resource": "RES/LOGO.RES",
           "member": "L001_007.TM2",
           "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
-          "actual_sha256": "4c57c2f47d989f490064c5b4d40ec90647b23d8218ba9cfed79c96ed33d7fdea",
+          "actual_sha256": "e2cd33ebaf7e58ddf5de5abea92e7226e4b80a9484586f1eb7f610ec75ea7033",
           "size": 66624
         }
       ]
@@ -1121,37 +1121,35 @@
     },
     {
       "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
-      "localized_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
+      "localized_sha256": "e093ed4fa20e97c31210c5da76b1ae411cd6e6ba00b872c715fa3135a957519b",
       "member": "G269.TM2",
-      "result": "unchanged",
-      "note": "Whole16px 注意 and11px 限制区域 source-style cream industrial print over coherent own red metal, open counters/no dirty composite edge. Source lamps and geometry unchanged; true4x outlines.",
+      "result": "fixed",
+      "note": "Runtime screenshot7: complete locked-outline 注意 and 限制区域 masters; no stroke thresholding or separately mirrored accent pieces; original restored sign material and exact exterior retained.",
       "review_evidence": {
-        "feedback_source_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
         "stable_number": 46,
-        "overview_page": "proof/03.png",
-        "overview_sha256": "4d89d82536a447071831849e78ff0d893245202e05b23aaa36c87cf67e3394be",
-        "basis": "Actual source and adopted native indexed output inspected offline; awaiting new player opinion"
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
       },
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
           "member": "G269.TM2",
           "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
-          "actual_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
+          "actual_sha256": "e093ed4fa20e97c31210c5da76b1ae411cd6e6ba00b872c715fa3135a957519b",
           "size": 17472
         },
         {
           "resource": "RES/SCENE/ST01-03/ST0102.RES",
           "member": "G269.TM2",
           "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
-          "actual_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
+          "actual_sha256": "e093ed4fa20e97c31210c5da76b1ae411cd6e6ba00b872c715fa3135a957519b",
           "size": 17472
         },
         {
           "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
           "member": "G269.TM2",
           "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
-          "actual_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
+          "actual_sha256": "e093ed4fa20e97c31210c5da76b1ae411cd6e6ba00b872c715fa3135a957519b",
           "size": 17472
         }
       ]
@@ -1413,7 +1411,7 @@
       "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
       "localized_sha256": "f62826a22736a7a50314eaac1796aef62fe21d27f4c413efdd6ff49a67931c49",
       "member": "G282.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
         "stable_number": 56,
@@ -1441,7 +1439,7 @@
       "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
       "localized_sha256": "fa8ae91620f6dde8a77d67a3c4faca0aeaa779ee9812af3bcbf493b7cb10af3e",
       "member": "G282.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
         "stable_number": 57,
@@ -1462,7 +1460,7 @@
       "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
       "localized_sha256": "a5cf403335b146875395451240abfcd3bd254df8a8a5869602f1f1a8cc6fcefd",
       "member": "G282_C.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Complete new industrial Ming lab print across both entire physical steel panels, not rectangular word patches; lower lines registered to9px faces and upper label translated. Source status lamp/halo, vents, gray lower stripe and exterior frame remain exact via explicit zero-coverage holes.",
       "review_evidence": {
         "stable_number": 58,
@@ -1529,7 +1527,7 @@
       "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
       "localized_sha256": "29673e8caec261278493ad0cd2763be82e1192bab2de01461174dbc936a1c11d",
       "member": "G289.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "review_evidence": {
         "stable_number": 61,
@@ -4041,7 +4039,7 @@
       "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
       "localized_sha256": "df98df7a6405ff21a2898b2618558e701fc27ef8f7df8120608c5df507662598",
       "member": "ST0201_023.TM2",
-      "result": "fixed",
+      "result": "unchanged",
       "note": "Both complete printed steel-face interiors rebuilt from fresh coherent industrial control-door artwork. New cyan two-line main labels, red restriction and cyan unlock; original lamps, center seam, rail ribs and side controls exact.",
       "review_evidence": {
         "stable_number": 154,
@@ -5297,6 +5295,108 @@
           "size": 66624
         }
       ]
+    },
+    {
+      "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+      "member": "ST0101_042.TM2",
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "member": "ST0101_042.TM2",
+          "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+          "actual_sha256": "eaa7f2d4cde05c4c15e4217e56b5deb71484defab071ee8cad7b67ec90ff48bf",
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "member": "ST0102_042.TM2",
+          "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+          "actual_sha256": "eaa7f2d4cde05c4c15e4217e56b5deb71484defab071ee8cad7b67ec90ff48bf",
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
+          "member": "ST0401_003.TM2",
+          "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+          "actual_sha256": "eaa7f2d4cde05c4c15e4217e56b5deb71484defab071ee8cad7b67ec90ff48bf",
+          "size": 17472
+        }
+      ],
+      "localized_sha256": "eaa7f2d4cde05c4c15e4217e56b5deb71484defab071ee8cad7b67ec90ff48bf",
+      "result": "fixed",
+      "note": "Runtime screenshot8: same-family complete outlined words over a sign material calibrated to all four original variant boundaries; separately source-bound embedded aliases and preserved exterior.",
+      "review_evidence": {
+        "stable_number": 686,
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
+      },
+      "previously_unlocalized": true
+    },
+    {
+      "source_sha256": "b41e55919b6fff4395e0e41d25f427b9d3f1144d3b46741d1761bd0ed20250f0",
+      "member": "ST0101_905.TM2",
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "member": "ST0101_905.TM2",
+          "source_sha256": "b41e55919b6fff4395e0e41d25f427b9d3f1144d3b46741d1761bd0ed20250f0",
+          "actual_sha256": "bf83296941f99b0284387b14604b47ecda1affcd7722c4641c6a2527b37ef3df",
+          "size": 66112
+        }
+      ],
+      "localized_sha256": "bf83296941f99b0284387b14604b47ecda1affcd7722c4641c6a2527b37ef3df",
+      "result": "fixed",
+      "note": "Runtime screenshot5: four-character printed company label, correct TRANSVERSE UV; actual6px checker phase retained and original3-line unreadable microprint unchanged.",
+      "review_evidence": {
+        "stable_number": 693,
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
+      },
+      "previously_unlocalized": true
+    },
+    {
+      "source_sha256": "630da3e676e2558f7bf80f489b0ecf5b0434d74557b732279c1d939114298de7",
+      "member": "ST0202_002.TM2",
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "member": "ST0202_002.TM2",
+          "source_sha256": "630da3e676e2558f7bf80f489b0ecf5b0434d74557b732279c1d939114298de7",
+          "actual_sha256": "473a23156fb266cc3c2b9f0b816519ae90bc572c8f03ac05259492911541b85e",
+          "size": 66624
+        }
+      ],
+      "localized_sha256": "473a23156fb266cc3c2b9f0b816519ae90bc572c8f03ac05259492911541b85e",
+      "result": "fixed",
+      "note": "Runtime alias closure: embedded computer headings and data-loading message translated across independent source/CLUT; material outside original text slots exact.",
+      "review_evidence": {
+        "stable_number": 748,
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
+      },
+      "previously_unlocalized": true
+    },
+    {
+      "source_sha256": "94ff522716a35454708ae6552d44ecd8c3360d3344da2920ef82971b54251af9",
+      "member": "ST0202_006.TM2",
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "member": "ST0202_006.TM2",
+          "source_sha256": "94ff522716a35454708ae6552d44ecd8c3360d3344da2920ef82971b54251af9",
+          "actual_sha256": "b93521810bcb0438e6d3b52caa6d65a051b8b6cc52f3c445c97caf245b409894",
+          "size": 66624
+        }
+      ],
+      "localized_sha256": "b93521810bcb0438e6d3b52caa6d65a051b8b6cc52f3c445c97caf245b409894",
+      "result": "fixed",
+      "note": "Runtime closure: complete cyan physical monitor face restored by imagegen with no text; source-aligned rotated two-line stencil; original atlas neighbors/frame unchanged.",
+      "review_evidence": {
+        "stable_number": 749,
+        "basis": "Original/native/full4x source-bound comparison; original frame and source-UV proofs; offline not player approval",
+        "feedback_snapshot": "assets/runtime-image-feedback.json"
+      },
+      "previously_unlocalized": true
     }
   ],
   "material_regressions": [
@@ -7286,7 +7386,8 @@
         105
       ],
       "source_sample_sha256": "b7641642a3fd153c5d6b0cef6fd49869daa30d561f371894503efe47f5bdee41",
-      "expectation": "preserved"
+      "expectation": "changed",
+      "revision_basis": "Source-derived near-silhouette alpha removes the original MN dark matte; original RGB/core is independently compared, source outer silhouette is not regenerated"
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
@@ -7310,7 +7411,8 @@
         3
       ],
       "source_sample_sha256": "51841eb751085a86c4fbd4b8e3c386cc2634fa15eac3471f7f28aa4cfd6c724f",
-      "expectation": "preserved"
+      "expectation": "changed",
+      "revision_basis": "runtime source-contour cavity and genuine-alpha whole-word masters, not old opaque text composition"
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
@@ -7358,7 +7460,8 @@
         3
       ],
       "source_sample_sha256": "535ab9908645112e8212da92eec608381b3841a5cee69b648dc469d95a67624d",
-      "expectation": "preserved"
+      "expectation": "changed",
+      "revision_basis": "runtime source-contour cavity and genuine-alpha whole-word masters, not old opaque text composition"
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
@@ -7406,7 +7509,8 @@
         3
       ],
       "source_sample_sha256": "b79c38a3f8530660da0e7fc0d9ca54a86aaedc23b4aebe693759cae74272abab",
-      "expectation": "preserved"
+      "expectation": "changed",
+      "revision_basis": "runtime source-contour cavity and genuine-alpha whole-word masters, not old opaque text composition"
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
@@ -7454,7 +7558,8 @@
         3
       ],
       "source_sample_sha256": "8b25b6757ba101bf825c844e1dd3a404b0856dbe3706a7771745b63099cf924a",
-      "expectation": "preserved"
+      "expectation": "changed",
+      "revision_basis": "runtime source-contour cavity and genuine-alpha whole-word masters, not old opaque text composition"
     },
     {
       "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
@@ -7754,6 +7859,822 @@
         89
       ],
       "source_sample_sha256": "082d6b5c1e458ca12c950d030134745aec6bfbd093bf3bded7a9b785a61b2a1a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-top-rim-0",
+      "rect": [
+        275,
+        128,
+        141,
+        2
+      ],
+      "source_sample_sha256": "45e6dc96e108fbe76bb171bae74c10302507533129748631e16f639fb6715e1a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-top-rim-1",
+      "rect": [
+        275,
+        152,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1a70a5591a647c09eb5d64d4b36a97a92840b16ffb31108625d632599c381a5c",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-top-rim-2",
+      "rect": [
+        275,
+        176,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1a70a5591a647c09eb5d64d4b36a97a92840b16ffb31108625d632599c381a5c",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-top-rim-3",
+      "rect": [
+        275,
+        200,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1a70a5591a647c09eb5d64d4b36a97a92840b16ffb31108625d632599c381a5c",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-bottom-rim-0",
+      "rect": [
+        275,
+        148,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1ab72050a7a3677525206dd4bc8a00dde39093c9678d6d9f163a25b80e92ff7e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-bottom-rim-1",
+      "rect": [
+        275,
+        172,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1ab72050a7a3677525206dd4bc8a00dde39093c9678d6d9f163a25b80e92ff7e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-bottom-rim-2",
+      "rect": [
+        275,
+        196,
+        141,
+        2
+      ],
+      "source_sample_sha256": "1ab72050a7a3677525206dd4bc8a00dde39093c9678d6d9f163a25b80e92ff7e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "id": "runtime-menu-bottom-rim-3",
+      "rect": [
+        275,
+        220,
+        141,
+        2
+      ],
+      "source_sample_sha256": "20df82fcb0f232b9e70f3a40183ec3cd754c6c4d355cec91cf741745127ffb1e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-0-15",
+      "rect": [
+        15,
+        11,
+        84,
+        1
+      ],
+      "source_sample_sha256": "ff938f6ff9e149e3e2247663a9e85a1682965743eaaf44f67bbb50ec82237092",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-0-15",
+      "rect": [
+        15,
+        31,
+        84,
+        1
+      ],
+      "source_sample_sha256": "a011ed2471b809dae689034645965c7faad282bfba3af145ce30b334d06868ec",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-0-124",
+      "rect": [
+        124,
+        11,
+        84,
+        1
+      ],
+      "source_sample_sha256": "fc509156369a6228f0ceebbc0d25222ff6b3b1cd3b29b4deb0ec80b19cb4f8d3",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-0-124",
+      "rect": [
+        124,
+        31,
+        84,
+        1
+      ],
+      "source_sample_sha256": "b88fa4fa3752143514fa1395418157de1b15c39f414eebed4ac67cc4a8ac13a1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-1-15",
+      "rect": [
+        15,
+        41,
+        84,
+        1
+      ],
+      "source_sample_sha256": "ff938f6ff9e149e3e2247663a9e85a1682965743eaaf44f67bbb50ec82237092",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-1-15",
+      "rect": [
+        15,
+        61,
+        84,
+        1
+      ],
+      "source_sample_sha256": "a011ed2471b809dae689034645965c7faad282bfba3af145ce30b334d06868ec",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-1-124",
+      "rect": [
+        124,
+        41,
+        84,
+        1
+      ],
+      "source_sample_sha256": "fc509156369a6228f0ceebbc0d25222ff6b3b1cd3b29b4deb0ec80b19cb4f8d3",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-1-124",
+      "rect": [
+        124,
+        61,
+        84,
+        1
+      ],
+      "source_sample_sha256": "b88fa4fa3752143514fa1395418157de1b15c39f414eebed4ac67cc4a8ac13a1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-2-15",
+      "rect": [
+        15,
+        71,
+        84,
+        1
+      ],
+      "source_sample_sha256": "ff938f6ff9e149e3e2247663a9e85a1682965743eaaf44f67bbb50ec82237092",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-2-15",
+      "rect": [
+        15,
+        91,
+        84,
+        1
+      ],
+      "source_sample_sha256": "a011ed2471b809dae689034645965c7faad282bfba3af145ce30b334d06868ec",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-2-124",
+      "rect": [
+        124,
+        71,
+        84,
+        1
+      ],
+      "source_sample_sha256": "fc509156369a6228f0ceebbc0d25222ff6b3b1cd3b29b4deb0ec80b19cb4f8d3",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-2-124",
+      "rect": [
+        124,
+        91,
+        84,
+        1
+      ],
+      "source_sample_sha256": "b88fa4fa3752143514fa1395418157de1b15c39f414eebed4ac67cc4a8ac13a1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-3-15",
+      "rect": [
+        15,
+        101,
+        84,
+        1
+      ],
+      "source_sample_sha256": "7a23e8c8a6d94cd8471db913b854e8fafd89e4d40659368e32d61d1138d20501",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-3-15",
+      "rect": [
+        15,
+        121,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8f2b32ab4756075e2aacd14ee4820c5b2afc3d5179e2a669a2551a8bb32037a6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-3-124",
+      "rect": [
+        124,
+        101,
+        84,
+        1
+      ],
+      "source_sample_sha256": "524c0683b91536103679a9d392f840b07769e847033d49c54d37936531e413cf",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-3-124",
+      "rect": [
+        124,
+        121,
+        84,
+        1
+      ],
+      "source_sample_sha256": "955ea740441b90bed023f434fa1f2bc947a09201f65eba342721367d6a8a23d6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-4-15",
+      "rect": [
+        15,
+        131,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8430fd6570eeeb55e01544a39476149fa73ce6c0b5454c66d9b84dad38f53971",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-4-15",
+      "rect": [
+        15,
+        151,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8f2b32ab4756075e2aacd14ee4820c5b2afc3d5179e2a669a2551a8bb32037a6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-4-124",
+      "rect": [
+        124,
+        131,
+        84,
+        1
+      ],
+      "source_sample_sha256": "524c0683b91536103679a9d392f840b07769e847033d49c54d37936531e413cf",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-4-124",
+      "rect": [
+        124,
+        151,
+        84,
+        1
+      ],
+      "source_sample_sha256": "955ea740441b90bed023f434fa1f2bc947a09201f65eba342721367d6a8a23d6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-5-15",
+      "rect": [
+        15,
+        161,
+        84,
+        1
+      ],
+      "source_sample_sha256": "5875b7db108033536ce0a996a85ffd0050069725d24485dcda5385fcb5fafb8b",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-5-15",
+      "rect": [
+        15,
+        181,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8f2b32ab4756075e2aacd14ee4820c5b2afc3d5179e2a669a2551a8bb32037a6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-5-124",
+      "rect": [
+        124,
+        161,
+        84,
+        1
+      ],
+      "source_sample_sha256": "524c0683b91536103679a9d392f840b07769e847033d49c54d37936531e413cf",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-5-124",
+      "rect": [
+        124,
+        181,
+        84,
+        1
+      ],
+      "source_sample_sha256": "955ea740441b90bed023f434fa1f2bc947a09201f65eba342721367d6a8a23d6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-6-15",
+      "rect": [
+        15,
+        191,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8430fd6570eeeb55e01544a39476149fa73ce6c0b5454c66d9b84dad38f53971",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-6-15",
+      "rect": [
+        15,
+        211,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8f2b32ab4756075e2aacd14ee4820c5b2afc3d5179e2a669a2551a8bb32037a6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-6-124",
+      "rect": [
+        124,
+        191,
+        84,
+        1
+      ],
+      "source_sample_sha256": "524c0683b91536103679a9d392f840b07769e847033d49c54d37936531e413cf",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-6-124",
+      "rect": [
+        124,
+        211,
+        84,
+        1
+      ],
+      "source_sample_sha256": "955ea740441b90bed023f434fa1f2bc947a09201f65eba342721367d6a8a23d6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-7-15",
+      "rect": [
+        15,
+        221,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8430fd6570eeeb55e01544a39476149fa73ce6c0b5454c66d9b84dad38f53971",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-7-15",
+      "rect": [
+        15,
+        241,
+        84,
+        1
+      ],
+      "source_sample_sha256": "8f2b32ab4756075e2aacd14ee4820c5b2afc3d5179e2a669a2551a8bb32037a6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-top-7-124",
+      "rect": [
+        124,
+        221,
+        84,
+        1
+      ],
+      "source_sample_sha256": "524c0683b91536103679a9d392f840b07769e847033d49c54d37936531e413cf",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "id": "runtime-capsule-rim-bottom-7-124",
+      "rect": [
+        124,
+        241,
+        84,
+        1
+      ],
+      "source_sample_sha256": "955ea740441b90bed023f434fa1f2bc947a09201f65eba342721367d6a8a23d6",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-0-15",
+      "rect": [
+        15,
+        101,
+        84,
+        1
+      ],
+      "source_sample_sha256": "441295adc2eacb0ff33359b8de2e9609216f022dea64498fbe2e130224e29557",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-0-15",
+      "rect": [
+        15,
+        121,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e7a8f9480b78385952f823930d3bd62f4a15dc407cbe6fdf38c50b0d224ebd8a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-0-124",
+      "rect": [
+        124,
+        101,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e90390a9820301f358fdd71fce1fc5548a1877a22e80ccc3314f05017f900c25",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-0-124",
+      "rect": [
+        124,
+        121,
+        84,
+        1
+      ],
+      "source_sample_sha256": "69b8f52adcc58e89b264d51366cd4b627b3bd7bbee9240743428cf523f44e3e1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-1-15",
+      "rect": [
+        15,
+        131,
+        84,
+        1
+      ],
+      "source_sample_sha256": "7c5f6c43c579fce28e93cec926fb684d13fb1d1a5900b2f08799e9237be93475",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-1-15",
+      "rect": [
+        15,
+        151,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e7a8f9480b78385952f823930d3bd62f4a15dc407cbe6fdf38c50b0d224ebd8a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-1-124",
+      "rect": [
+        124,
+        131,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e90390a9820301f358fdd71fce1fc5548a1877a22e80ccc3314f05017f900c25",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-1-124",
+      "rect": [
+        124,
+        151,
+        84,
+        1
+      ],
+      "source_sample_sha256": "69b8f52adcc58e89b264d51366cd4b627b3bd7bbee9240743428cf523f44e3e1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-2-15",
+      "rect": [
+        15,
+        161,
+        84,
+        1
+      ],
+      "source_sample_sha256": "441295adc2eacb0ff33359b8de2e9609216f022dea64498fbe2e130224e29557",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-2-15",
+      "rect": [
+        15,
+        181,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e7a8f9480b78385952f823930d3bd62f4a15dc407cbe6fdf38c50b0d224ebd8a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-2-124",
+      "rect": [
+        124,
+        161,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e90390a9820301f358fdd71fce1fc5548a1877a22e80ccc3314f05017f900c25",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-2-124",
+      "rect": [
+        124,
+        181,
+        84,
+        1
+      ],
+      "source_sample_sha256": "69b8f52adcc58e89b264d51366cd4b627b3bd7bbee9240743428cf523f44e3e1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-3-15",
+      "rect": [
+        15,
+        191,
+        84,
+        1
+      ],
+      "source_sample_sha256": "441295adc2eacb0ff33359b8de2e9609216f022dea64498fbe2e130224e29557",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-3-15",
+      "rect": [
+        15,
+        211,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e7a8f9480b78385952f823930d3bd62f4a15dc407cbe6fdf38c50b0d224ebd8a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-3-124",
+      "rect": [
+        124,
+        191,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e90390a9820301f358fdd71fce1fc5548a1877a22e80ccc3314f05017f900c25",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-3-124",
+      "rect": [
+        124,
+        211,
+        84,
+        1
+      ],
+      "source_sample_sha256": "69b8f52adcc58e89b264d51366cd4b627b3bd7bbee9240743428cf523f44e3e1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-4-15",
+      "rect": [
+        15,
+        221,
+        84,
+        1
+      ],
+      "source_sample_sha256": "441295adc2eacb0ff33359b8de2e9609216f022dea64498fbe2e130224e29557",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-4-15",
+      "rect": [
+        15,
+        241,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e7a8f9480b78385952f823930d3bd62f4a15dc407cbe6fdf38c50b0d224ebd8a",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-top-4-124",
+      "rect": [
+        124,
+        221,
+        84,
+        1
+      ],
+      "source_sample_sha256": "e90390a9820301f358fdd71fce1fc5548a1877a22e80ccc3314f05017f900c25",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "id": "runtime-capsule-rim-bottom-4-124",
+      "rect": [
+        124,
+        241,
+        84,
+        1
+      ],
+      "source_sample_sha256": "69b8f52adcc58e89b264d51366cd4b627b3bd7bbee9240743428cf523f44e3e1",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
+      "id": "runtime-door-top",
+      "rect": [
+        0,
+        0,
+        128,
+        57
+      ],
+      "source_sample_sha256": "147c9bd376695c10521f5e2d66b312616e3fefecf3a1fd60839027f36f374c0e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
+      "id": "runtime-door-bottom",
+      "rect": [
+        0,
+        90,
+        128,
+        38
+      ],
+      "source_sample_sha256": "20fc50e4c70c75dced655fd805891097a69ef1d810536845b7a377c2dd3c2b91",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+      "id": "runtime-door-top",
+      "rect": [
+        0,
+        0,
+        128,
+        57
+      ],
+      "source_sample_sha256": "9e935f339ec63455e2f801842a080fa946d4ba4105788d4eaa8a0ff4b4ac0693",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+      "id": "runtime-door-bottom",
+      "rect": [
+        0,
+        90,
+        128,
+        38
+      ],
+      "source_sample_sha256": "6a6ebbcd0e7aa5c53a16735a55ba8cb5d319ddad1d416adf4ad402787a92f45b",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "b41e55919b6fff4395e0e41d25f427b9d3f1144d3b46741d1761bd0ed20250f0",
+      "id": "runtime-glass-original-microprint",
+      "rect": [
+        72,
+        75,
+        19,
+        39
+      ],
+      "source_sample_sha256": "b598a8cd17e2d27c2f69e518f6478b799c082ea2f583e4f412369b3a1381b3c4",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "b41e55919b6fff4395e0e41d25f427b9d3f1144d3b46741d1761bd0ed20250f0",
+      "id": "runtime-glass-original-handle",
+      "rect": [
+        0,
+        128,
+        256,
+        128
+      ],
+      "source_sample_sha256": "90ebbb143e4563c514d0df018f81b1538da203cd40220baff60943b2d1c0595e",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "630da3e676e2558f7bf80f489b0ecf5b0434d74557b732279c1d939114298de7",
+      "id": "runtime-computer-right-chassis",
+      "rect": [
+        160,
+        0,
+        96,
+        128
+      ],
+      "source_sample_sha256": "351846097138e4bdee3fce0f3d735f5e97b1af6ee6d8dc25f0fd7c2080ddec4f",
+      "expectation": "preserved"
+    },
+    {
+      "source_sha256": "94ff522716a35454708ae6552d44ecd8c3360d3344da2920ef82971b54251af9",
+      "id": "runtime-monitor-original-neighbor",
+      "rect": [
+        0,
+        0,
+        194,
+        256
+      ],
+      "source_sample_sha256": "978c733368b994da28f49cb7fe8a3140a85f3831ed45f9da2807477de8bccb1e",
       "expectation": "preserved"
     }
   ],

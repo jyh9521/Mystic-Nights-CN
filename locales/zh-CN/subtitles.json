@@ -1,0 +1,2401 @@
+{
+  "format": "cutscene-subtitle-catalogue",
+  "version": 1,
+  "locale": "zh-CN",
+  "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "status": "machine-transcription-drafts-not-approved",
+  "all_speech_transcribed": false,
+  "source_draft_sha256": "9b34bc9e61b284e3938c87b465b4206b5cb6b4bf148864d4a1e657c6ef69a5b2",
+  "coverage": {
+    "scenes": 47,
+    "sound_commands": 172,
+    "explicit_voice_commands": 10,
+    "source_caption_blocks": 0,
+    "unique_audio_inputs": 138,
+    "decoded_wavs": 138,
+    "frame_units": "original engine frame; no wall-clock or FPS assumption",
+    "speech_review": "not performed by extraction; no inferred subtitles"
+  },
+  "installation": {
+    "reviewed_cues": 0,
+    "enabled_by_default": false,
+    "installed_cues": 0
+  },
+  "notes": [
+    "All 47 SCR/camera identities are enumerated; empty cue arrays are untranscribed inventory, not no-speech approvals.",
+    "Machine transcription candidates retain asr-draft status; null end frames and unresolved text are deliberate.",
+    "Explicit --subtitle-catalog is required and rejects the current unreviewed/timing-incomplete catalogue."
+  ],
+  "resources": [
+    {
+      "scene": "C001",
+      "resource": "RES/CUTSCENE/C001-010/C001.RES",
+      "member": "C001.SCR",
+      "source_sha256": "106c8fe561b56c7905e0c7539e6e5662635ba2c26d5b71cf551e42d36bb94bc6",
+      "source_size": 1592,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 986,
+      "camera_resource": "RES/CUTSCENE/C001-010/C001.RES",
+      "camera_member": "C001.BIN",
+      "camera_sha256": "26b0b8b8070a2e70a04a61493d7b15e6a961efe3e2f936f0b48d85895c59e5d8",
+      "camera_frames": 1050,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C002",
+      "resource": "RES/CUTSCENE/C001-010/C002.RES",
+      "member": "C002.SCR",
+      "source_sha256": "b38760396372ed3a16369308fbeb8a40631503304d85294d72e3b3eb1f9a5eb2",
+      "source_size": 15903,
+      "native_captions": 0,
+      "node_count": 135,
+      "last_node_frame": 2136,
+      "camera_resource": "RES/CUTSCENE/C001-010/C002.RES",
+      "camera_member": "C002.BIN",
+      "camera_sha256": "284732934f4a59e86effbdbdbaf9e452360be28323ef3eb1985afaca26a4772a",
+      "camera_frames": 2200,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C003",
+      "resource": "RES/CUTSCENE/C001-010/C003.RES",
+      "member": "C003.SCR",
+      "source_sha256": "d42745afa9fa0f676d79625d2f5439d62382daf8d55f16c931a0504d000df918",
+      "source_size": 1941,
+      "native_captions": 0,
+      "node_count": 21,
+      "last_node_frame": 1368,
+      "camera_resource": "RES/CUTSCENE/C001-010/C003.RES",
+      "camera_member": "C003.BIN",
+      "camera_sha256": "9d6386304a4b8fba07272d9098acb67fcc462c6adb9992ecd2f0151f2e22e035",
+      "camera_frames": 1400,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C004",
+      "resource": "RES/CUTSCENE/C001-010/C004.RES",
+      "member": "C004.SCR",
+      "source_sha256": "071821aa1ff3464ef674260b674a90d1ad94098c32ab22eef45439fdbda0cd22",
+      "source_size": 1394,
+      "native_captions": 0,
+      "node_count": 14,
+      "last_node_frame": 468,
+      "camera_resource": "RES/CUTSCENE/C001-010/C004.RES",
+      "camera_member": "C004.BIN",
+      "camera_sha256": "c61973c9600d88500166081841fcd4355c5315aed86387e5e5fa1ecfda8a98e6",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C005",
+      "resource": "RES/CUTSCENE/C001-010/C005.RES",
+      "member": "C005.SCR",
+      "source_sha256": "61ae6e5ee14ce3cacf604f50d31f5701d0aca7d5fa9151522731a33b3477636c",
+      "source_size": 890,
+      "native_captions": 0,
+      "node_count": 9,
+      "last_node_frame": 1668,
+      "camera_resource": "RES/CUTSCENE/C001-010/C005.RES",
+      "camera_member": "C005.BIN",
+      "camera_sha256": "eef013d6a291d31751d7a20101819010f4e7d1fca99f8c924a2d2549e335678e",
+      "camera_frames": 1700,
+      "cues": [
+        {
+          "id": "C005-001_001",
+          "start_frame": 720,
+          "end_frame_exclusive": null,
+          "text": "喂？",
+          "status": "asr-draft",
+          "source_audio_sha256": "50787a0b60775ff8aa1eda588734209fee0fbeb79bd0c6f673c84cc02e0589e8",
+          "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_001.VAG",
+          "source_transcript": "여보세요?",
+          "timing_samples": {
+            "numerator": 115164,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 230372,
+            "sha256": "41326b2c48a674578f39cf5477a3928ba1d866582084c307850a1bf9f43adb7c"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_001.VAG",
+              "source_sha256": "50787a0b60775ff8aa1eda588734209fee0fbeb79bd0c6f673c84cc02e0589e8",
+              "wav_sha256": "41326b2c48a674578f39cf5477a3928ba1d866582084c307850a1bf9f43adb7c",
+              "source_duration": 2.39925,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.28,
+                  "text": " 여보세요.",
+                  "avg_logprob": -0.6366929908593496,
+                  "no_speech_prob": 0.023784466087818146,
+                  "compression_ratio": 0.5909090909090909,
+                  "words": [
+                    {
+                      "word": " 여보세요.",
+                      "start": 0.0,
+                      "end": 0.28,
+                      "probability": 0.9642095565795898
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.9724580000038259,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_001.VAG",
+              "source_sha256": "50787a0b60775ff8aa1eda588734209fee0fbeb79bd0c6f673c84cc02e0589e8",
+              "wav_sha256": "41326b2c48a674578f39cf5477a3928ba1d866582084c307850a1bf9f43adb7c",
+              "source_duration": 2.39925,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.38,
+                  "text": " 여보세요",
+                  "avg_logprob": -0.34892773628234863,
+                  "no_speech_prob": 0.009397834539413452,
+                  "compression_ratio": 0.5714285714285714,
+                  "words": [
+                    {
+                      "word": " 여보세요",
+                      "start": 0.0,
+                      "end": 0.38,
+                      "probability": 0.9476170837879181
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 5.0630379000213,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_001.VAG",
+              "source_sha256": "50787a0b60775ff8aa1eda588734209fee0fbeb79bd0c6f673c84cc02e0589e8",
+              "wav_sha256": "41326b2c48a674578f39cf5477a3928ba1d866582084c307850a1bf9f43adb7c",
+              "source_duration": 2.39925,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.22,
+                  "text": " 여보세요?",
+                  "avg_logprob": -0.42203158140182495,
+                  "no_speech_prob": 0.13200125098228455,
+                  "compression_ratio": 0.5909090909090909,
+                  "words": [
+                    {
+                      "word": " 여보세요?",
+                      "start": 0.0,
+                      "end": 0.22,
+                      "probability": 0.9403896331787109
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.559097999997903,
+              "human_listening_verified": false
+            }
+          ]
+        },
+        {
+          "id": "C005-001_002",
+          "start_frame": 980,
+          "end_frame_exclusive": null,
+          "text": "这里是……",
+          "status": "asr-draft",
+          "source_audio_sha256": "7a15f61c2bf97adfbf3c0a7da90aa72a19596c8265b077be39c64d5f7bef6b20",
+          "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_002.VAG",
+          "source_transcript": "여기는",
+          "timing_samples": {
+            "numerator": 275856,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 551756,
+            "sha256": "de5a21423c427781206fc4a0224eb903b9ce3fdaa48bdbdce958e9272a38df49"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_002.VAG",
+              "source_sha256": "7a15f61c2bf97adfbf3c0a7da90aa72a19596c8265b077be39c64d5f7bef6b20",
+              "wav_sha256": "de5a21423c427781206fc4a0224eb903b9ce3fdaa48bdbdce958e9272a38df49",
+              "source_duration": 5.747,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.69,
+                  "end": 3.92,
+                  "text": " 아... 여기는...",
+                  "avg_logprob": -0.9948125752535734,
+                  "no_speech_prob": 0.020231960341334343,
+                  "compression_ratio": 0.8,
+                  "words": [
+                    {
+                      "word": " 아...",
+                      "start": 0.69,
+                      "end": 1.99,
+                      "probability": 0.25511985272169113
+                    },
+                    {
+                      "word": " 여기는...",
+                      "start": 2.76,
+                      "end": 3.92,
+                      "probability": 0.687236875295639
+                    }
+                  ]
+                },
+                {
+                  "start": 4.14,
+                  "end": 4.56,
+                  "text": " 아!",
+                  "avg_logprob": -0.9948125752535734,
+                  "no_speech_prob": 0.020231960341334343,
+                  "compression_ratio": 0.8,
+                  "words": [
+                    {
+                      "word": " 아!",
+                      "start": 4.14,
+                      "end": 4.56,
+                      "probability": 0.39854666590690613
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.8207535999827087,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_002.VAG",
+              "source_sha256": "7a15f61c2bf97adfbf3c0a7da90aa72a19596c8265b077be39c64d5f7bef6b20",
+              "wav_sha256": "de5a21423c427781206fc4a0224eb903b9ce3fdaa48bdbdce958e9272a38df49",
+              "source_duration": 5.747,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.69,
+                  "end": 3.64,
+                  "text": " 하... 여기는...",
+                  "avg_logprob": -0.7918058293206351,
+                  "no_speech_prob": 0.13034126162528992,
+                  "compression_ratio": 0.6785714285714286,
+                  "words": [
+                    {
+                      "word": " 하...",
+                      "start": 0.69,
+                      "end": 2.17,
+                      "probability": 0.3012895733118057
+                    },
+                    {
+                      "word": " 여기는...",
+                      "start": 2.94,
+                      "end": 3.64,
+                      "probability": 0.7830614149570465
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.629194899986032,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_002.VAG",
+              "source_sha256": "7a15f61c2bf97adfbf3c0a7da90aa72a19596c8265b077be39c64d5f7bef6b20",
+              "wav_sha256": "de5a21423c427781206fc4a0224eb903b9ce3fdaa48bdbdce958e9272a38df49",
+              "source_duration": 5.747,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.69,
+                  "end": 2.01,
+                  "text": " 여기는",
+                  "avg_logprob": -0.4872743636369705,
+                  "no_speech_prob": 0.06749881058931351,
+                  "compression_ratio": 0.5,
+                  "words": [
+                    {
+                      "word": " 여기는",
+                      "start": 0.69,
+                      "end": 2.01,
+                      "probability": 0.6596727967262268
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.7460427999612875,
+              "human_listening_verified": false
+            }
+          ]
+        },
+        {
+          "id": "C005-001_003",
+          "start_frame": 1405,
+          "end_frame_exclusive": null,
+          "text": "莫……莫妮卡！莫妮卡！你没事吧？",
+          "status": "asr-draft",
+          "source_audio_sha256": "529fd1cc09b689188a9bf503d432f6d40f574155580ecb4892467c33ec9324f3",
+          "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_003.VAG",
+          "source_transcript": "모, 모니카! 모니카! 괜찮아?",
+          "timing_samples": {
+            "numerator": 125776,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 251596,
+            "sha256": "ca99f71f0591b0a5524c46302940bdb132f7da4018b841c4587275ee739a6374"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_003.VAG",
+              "source_sha256": "529fd1cc09b689188a9bf503d432f6d40f574155580ecb4892467c33ec9324f3",
+              "wav_sha256": "ca99f71f0591b0a5524c46302940bdb132f7da4018b841c4587275ee739a6374",
+              "source_duration": 2.6203333333333334,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.62,
+                  "text": " 뭐.. 모니카..",
+                  "avg_logprob": -0.6350084021687508,
+                  "no_speech_prob": 0.05474277213215828,
+                  "compression_ratio": 1.0,
+                  "words": [
+                    {
+                      "word": " 뭐..",
+                      "start": 0.0,
+                      "end": 0.66,
+                      "probability": 0.43564672768116
+                    },
+                    {
+                      "word": " 모니카..",
+                      "start": 0.66,
+                      "end": 1.62,
+                      "probability": 0.6209162399172783
+                    }
+                  ]
+                },
+                {
+                  "start": 1.62,
+                  "end": 2.28,
+                  "text": " 모니카 괜찮아?",
+                  "avg_logprob": -0.6350084021687508,
+                  "no_speech_prob": 0.05474277213215828,
+                  "compression_ratio": 1.0,
+                  "words": [
+                    {
+                      "word": " 모니카",
+                      "start": 1.62,
+                      "end": 2.0,
+                      "probability": 0.9677045146624247
+                    },
+                    {
+                      "word": " 괜찮아?",
+                      "start": 2.0,
+                      "end": 2.28,
+                      "probability": 0.46497058868408203
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.9806643999763764,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_003.VAG",
+              "source_sha256": "529fd1cc09b689188a9bf503d432f6d40f574155580ecb4892467c33ec9324f3",
+              "wav_sha256": "ca99f71f0591b0a5524c46302940bdb132f7da4018b841c4587275ee739a6374",
+              "source_duration": 2.6203333333333334,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.68,
+                  "text": " 모... 모니카...",
+                  "avg_logprob": -0.4464742997113396,
+                  "no_speech_prob": 0.03559945523738861,
+                  "compression_ratio": 1.025,
+                  "words": [
+                    {
+                      "word": " 모...",
+                      "start": 0.0,
+                      "end": 0.76,
+                      "probability": 0.6159854829311371
+                    },
+                    {
+                      "word": " 모니카...",
+                      "start": 0.76,
+                      "end": 1.68,
+                      "probability": 0.7301173582673073
+                    }
+                  ]
+                },
+                {
+                  "start": 1.68,
+                  "end": 2.5,
+                  "text": " 모니카! 괜찮아?",
+                  "avg_logprob": -0.4464742997113396,
+                  "no_speech_prob": 0.03559945523738861,
+                  "compression_ratio": 1.025,
+                  "words": [
+                    {
+                      "word": " 모니카!",
+                      "start": 1.68,
+                      "end": 2.12,
+                      "probability": 0.98431924978892
+                    },
+                    {
+                      "word": " 괜찮아?",
+                      "start": 2.36,
+                      "end": 2.5,
+                      "probability": 0.9854121804237366
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.9685368000064045,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/001-002/001_003.VAG",
+              "source_sha256": "529fd1cc09b689188a9bf503d432f6d40f574155580ecb4892467c33ec9324f3",
+              "wav_sha256": "ca99f71f0591b0a5524c46302940bdb132f7da4018b841c4587275ee739a6374",
+              "source_duration": 2.6203333333333334,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.0,
+                  "text": " 모, 모니카!",
+                  "avg_logprob": -0.39373021967270794,
+                  "no_speech_prob": 0.04244640842080116,
+                  "compression_ratio": 1.0,
+                  "words": [
+                    {
+                      "word": " 모,",
+                      "start": 0.0,
+                      "end": 0.1,
+                      "probability": 0.9042417407035828
+                    },
+                    {
+                      "word": " 모니카!",
+                      "start": 0.12,
+                      "end": 1.0,
+                      "probability": 0.9926466743151346
+                    }
+                  ]
+                },
+                {
+                  "start": 1.62,
+                  "end": 2.28,
+                  "text": " 모니카! 괜찮아?",
+                  "avg_logprob": -0.39373021967270794,
+                  "no_speech_prob": 0.04244640842080116,
+                  "compression_ratio": 1.0,
+                  "words": [
+                    {
+                      "word": " 모니카!",
+                      "start": 1.62,
+                      "end": 1.92,
+                      "probability": 0.9969005982081095
+                    },
+                    {
+                      "word": " 괜찮아?",
+                      "start": 1.98,
+                      "end": 2.28,
+                      "probability": 0.9960954785346985
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 8.141673199948855,
+              "human_listening_verified": false
+            }
+          ]
+        }
+      ],
+      "review_state": "machine-drafts-pending-listening"
+    },
+    {
+      "scene": "C006",
+      "resource": "RES/CUTSCENE/C001-010/C006.RES",
+      "member": "C006.SCR",
+      "source_sha256": "7a4348476d2dfd68a785b793416c34db873aa2c85a69e43bb4da5265c0e88115",
+      "source_size": 670,
+      "native_captions": 0,
+      "node_count": 7,
+      "last_node_frame": 872,
+      "camera_resource": "RES/CUTSCENE/C001-010/C006.RES",
+      "camera_member": "C006.BIN",
+      "camera_sha256": "8682566f0b03ee5cd772cc913bdb97b488c7811c681845454c2dbdd79d917e27",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C007",
+      "resource": "RES/CUTSCENE/C001-010/C007.RES",
+      "member": "C007.SCR",
+      "source_sha256": "d3413738e64a8ba2d578e1e6f6375ff1e44d34fa9b6227b36f6f274b02f1cf32",
+      "source_size": 5928,
+      "native_captions": 0,
+      "node_count": 64,
+      "last_node_frame": 372,
+      "camera_resource": "RES/CUTSCENE/C001-010/C007.RES",
+      "camera_member": "C007.BIN",
+      "camera_sha256": "8a6e0f558730ace4edbab6c6fed6490c5d6db3a6403ece0244127018228b97f0",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C008",
+      "resource": "RES/CUTSCENE/C001-010/C008_3.RES",
+      "member": "C008.SCR",
+      "source_sha256": "a18d060b9d501d3149a74b3b75bdda7a5911e9457986293d6ca38dd0cca4428c",
+      "source_size": 1101,
+      "native_captions": 0,
+      "node_count": 11,
+      "last_node_frame": 1268,
+      "camera_resource": "RES/CUTSCENE/C001-010/C008_3.RES",
+      "camera_member": "C008.BIN",
+      "camera_sha256": "085d1d39300d5e39991246d0fc477410dc8d35adf29c3a8033f6ba441dccc03b",
+      "camera_frames": 1300,
+      "cues": [
+        {
+          "id": "C008-003_001",
+          "start_frame": 960,
+          "end_frame_exclusive": null,
+          "text": "别开枪！",
+          "status": "asr-draft",
+          "source_audio_sha256": "1f19a8ff8b46cc9cf12a424a07122b6631b3e605560faa8aa4d39fd79402c637",
+          "source_audio_id": "vag:RES/SOUND/VOICE/003-004/003_001.VAG",
+          "source_transcript": "쏘지 말아요!",
+          "timing_samples": {
+            "numerator": 115584,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 231212,
+            "sha256": "8a4bb758b72ae4ed4e537bba4c54ab45d15a483029076c69a73e6382a8b1064c"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/003-004/003_001.VAG",
+              "source_sha256": "1f19a8ff8b46cc9cf12a424a07122b6631b3e605560faa8aa4d39fd79402c637",
+              "wav_sha256": "8a4bb758b72ae4ed4e537bba4c54ab45d15a483029076c69a73e6382a8b1064c",
+              "source_duration": 2.408,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.72,
+                  "text": " 쏘지 말아요!",
+                  "avg_logprob": -0.4206111696031358,
+                  "no_speech_prob": 0.14895905554294586,
+                  "compression_ratio": 0.6538461538461539,
+                  "words": [
+                    {
+                      "word": " 쏘지",
+                      "start": 0.0,
+                      "end": 0.34,
+                      "probability": 0.9500518043835958
+                    },
+                    {
+                      "word": " 말아요!",
+                      "start": 0.34,
+                      "end": 0.72,
+                      "probability": 0.9647428095340729
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.8279490999993868,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/003-004/003_001.VAG",
+              "source_sha256": "1f19a8ff8b46cc9cf12a424a07122b6631b3e605560faa8aa4d39fd79402c637",
+              "wav_sha256": "8a4bb758b72ae4ed4e537bba4c54ab45d15a483029076c69a73e6382a8b1064c",
+              "source_duration": 2.408,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.2,
+                  "text": " 쏘지 말아요!!",
+                  "avg_logprob": -0.46846214930216473,
+                  "no_speech_prob": 0.07035522907972336,
+                  "compression_ratio": 0.6666666666666666,
+                  "words": [
+                    {
+                      "word": " 쏘지",
+                      "start": 0.0,
+                      "end": 0.44,
+                      "probability": 0.9562898278236389
+                    },
+                    {
+                      "word": " 말아요!!",
+                      "start": 0.44,
+                      "end": 1.2,
+                      "probability": 0.7169799158970515
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.513743699993938,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/003-004/003_001.VAG",
+              "source_sha256": "1f19a8ff8b46cc9cf12a424a07122b6631b3e605560faa8aa4d39fd79402c637",
+              "wav_sha256": "8a4bb758b72ae4ed4e537bba4c54ab45d15a483029076c69a73e6382a8b1064c",
+              "source_duration": 2.408,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.6,
+                  "text": " 쏘지 말아요!",
+                  "avg_logprob": -0.4193377759721544,
+                  "no_speech_prob": 0.26077690720558167,
+                  "compression_ratio": 0.6538461538461539,
+                  "words": [
+                    {
+                      "word": " 쏘지",
+                      "start": 0.0,
+                      "end": 0.28,
+                      "probability": 0.8801001707712809
+                    },
+                    {
+                      "word": " 말아요!",
+                      "start": 0.28,
+                      "end": 0.6,
+                      "probability": 0.9771445393562317
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.7372746000182815,
+              "human_listening_verified": false
+            }
+          ]
+        }
+      ],
+      "review_state": "machine-drafts-pending-listening"
+    },
+    {
+      "scene": "C009",
+      "resource": "RES/CUTSCENE/C001-010/C009.RES",
+      "member": "C009.SCR",
+      "source_sha256": "703c3c3a5bdca394f2d64945ece61d813ed9496a0cec0000480c21adc5daf661",
+      "source_size": 1477,
+      "native_captions": 0,
+      "node_count": 13,
+      "last_node_frame": 736,
+      "camera_resource": "RES/CUTSCENE/C001-010/C009.RES",
+      "camera_member": "C009.BIN",
+      "camera_sha256": "5f66ef6aafe0bbc39cf987e2adc14ef9078ce1b2b606b3a757127d230c595dee",
+      "camera_frames": 800,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C010",
+      "resource": "RES/CUTSCENE/C001-010/C010.RES",
+      "member": "C010.SCR",
+      "source_sha256": "6d78e03d9f38fc333f3d5cff9225a294fe90816f2c86f030d95d42715935b6b2",
+      "source_size": 926,
+      "native_captions": 0,
+      "node_count": 9,
+      "last_node_frame": 568,
+      "camera_resource": "RES/CUTSCENE/C001-010/C010.RES",
+      "camera_member": "C010.BIN",
+      "camera_sha256": "46addd13ae9106d9a0f785d911fd10eb3c450cc026dda9f5f0ccabf1e6675812",
+      "camera_frames": 600,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C011",
+      "resource": "RES/CUTSCENE/C011-020/C011_3.RES",
+      "member": "C011.SCR",
+      "source_sha256": "3b20a841a99b04145b0c03b45117bf25bde9b57b4d1dccf971a7ef395dd6b586",
+      "source_size": 1061,
+      "native_captions": 0,
+      "node_count": 11,
+      "last_node_frame": 868,
+      "camera_resource": "RES/CUTSCENE/C011-020/C011_3.RES",
+      "camera_member": "C011.BIN",
+      "camera_sha256": "82259d4f0d921b90d200c5b51ed8f9a243b77e4b4dca752e201a4029ac9ae897",
+      "camera_frames": 900,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C012",
+      "resource": "RES/CUTSCENE/C011-020/C012_2.RES",
+      "member": "C012.SCR",
+      "source_sha256": "d2f37199d8987f345f7a24f6eae8346d6216a823d848259de1d554c2843ad127",
+      "source_size": 4740,
+      "native_captions": 0,
+      "node_count": 45,
+      "last_node_frame": 536,
+      "camera_resource": "RES/CUTSCENE/C011-020/C012_2.RES",
+      "camera_member": "C012.BIN",
+      "camera_sha256": "c4418668b569816a6e0234d41ba940f00c2e45d5468deda6e9de59e30aeaec1a",
+      "camera_frames": 600,
+      "cues": [
+        {
+          "id": "C012-007_001",
+          "start_frame": 380,
+          "end_frame_exclusive": null,
+          "text": "",
+          "status": "asr-draft",
+          "source_audio_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
+          "source_audio_id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
+          "source_transcript": "신!",
+          "timing_samples": {
+            "numerator": 114688,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 229420,
+            "sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
+              "source_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
+              "wav_sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f",
+              "source_duration": 2.3893333333333335,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.28,
+                  "text": " 신!",
+                  "avg_logprob": -0.7037745475769043,
+                  "no_speech_prob": 0.22767144441604614,
+                  "compression_ratio": 0.3333333333333333,
+                  "words": [
+                    {
+                      "word": " 신!",
+                      "start": 0.0,
+                      "end": 0.28,
+                      "probability": 0.40984731912612915
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.7684323000139557,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
+              "source_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
+              "wav_sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f",
+              "source_duration": 2.3893333333333335,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.36,
+                  "text": " 신!",
+                  "avg_logprob": -0.665704345703125,
+                  "no_speech_prob": 0.24172750115394592,
+                  "compression_ratio": 0.3333333333333333,
+                  "words": [
+                    {
+                      "word": " 신!",
+                      "start": 0.0,
+                      "end": 0.36,
+                      "probability": 0.46361103653907776
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.387958500010427,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
+              "source_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
+              "wav_sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f",
+              "source_duration": 2.3893333333333335,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.28,
+                  "text": " 신!",
+                  "avg_logprob": -0.6152348041534423,
+                  "no_speech_prob": 0.23185661435127258,
+                  "compression_ratio": 0.3333333333333333,
+                  "words": [
+                    {
+                      "word": " 신!",
+                      "start": 0.0,
+                      "end": 0.28,
+                      "probability": 0.4685470759868622
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.222479300049599,
+              "human_listening_verified": false
+            }
+          ],
+          "uncertain_audio_diagnostics": {
+            "id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
+            "source_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
+            "wav_sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f",
+            "samples_16k": 38229,
+            "peak": 0.623382568359375,
+            "rms_peak": 0.2535301148891449,
+            "rms_threshold": 0.012676505744457245,
+            "activity_start": 0.0,
+            "activity_end": 0.48,
+            "vad_segments_samples_16k": [
+              {
+                "start": 0,
+                "end": 38229
+              }
+            ],
+            "machine_only": true,
+            "probes": [
+              {
+                "kind": "whole-no-vad",
+                "task": "transcribe",
+                "seconds": 7.581400100025348,
+                "segments": [
+                  {
+                    "text": " 신!",
+                    "start": 0.0,
+                    "end": 0.22,
+                    "avg_logprob": -0.6228340148925782,
+                    "no_speech_prob": 0.24896591901779175,
+                    "words": [
+                      {
+                        "word": " 신!",
+                        "probability": 0.5220127105712891
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "energy-crop-no-vad",
+                "task": "transcribe",
+                "seconds": 7.406141000043135,
+                "segments": [
+                  {
+                    "text": " 신!",
+                    "start": 0.0,
+                    "end": 0.28,
+                    "avg_logprob": -0.5985257148742675,
+                    "no_speech_prob": 0.3474811911582947,
+                    "words": [
+                      {
+                        "word": " 신!",
+                        "probability": 0.5328774452209473
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "translate-no-prompt",
+                "task": "translate",
+                "seconds": 7.313069599971641,
+                "segments": [
+                  {
+                    "text": " SIN!",
+                    "start": 0.0,
+                    "end": 0.3,
+                    "avg_logprob": -0.8526486158370972,
+                    "no_speech_prob": 0.3474811911582947,
+                    "words": [
+                      {
+                        "word": " SIN!",
+                        "probability": 0.46782959438860416
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "classification": "short-call-unresolved; original scene contains Jane but models only recover shin"
+        }
+      ],
+      "review_state": "machine-drafts-pending-listening"
+    },
+    {
+      "scene": "C013",
+      "resource": "RES/CUTSCENE/C011-020/C013.RES",
+      "member": "C013.SCR",
+      "source_sha256": "d2f7f402e73c236aba33153e9449199957869e37f585056f8b5fc31356517cca",
+      "source_size": 472,
+      "native_captions": 0,
+      "node_count": 5,
+      "last_node_frame": 536,
+      "camera_resource": "RES/CUTSCENE/C011-020/C013.RES",
+      "camera_member": "C013.BIN",
+      "camera_sha256": "00a3ed2b4576a97feb0a21ebc3a5790c7a2641dd3e8b829c0600c289f9c27f48",
+      "camera_frames": 600,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C014",
+      "resource": "RES/CUTSCENE/C011-020/C014_3.RES",
+      "member": "C014.SCR",
+      "source_sha256": "114cc4657018a61a02bebb8d8aaa9d1e0244e0d76100571dd82e44683ff938ba",
+      "source_size": 998,
+      "native_captions": 0,
+      "node_count": 10,
+      "last_node_frame": 968,
+      "camera_resource": "RES/CUTSCENE/C011-020/C014_2.RES",
+      "camera_member": "C014.BIN",
+      "camera_sha256": "9a24500e2b1623742c9b1a716ba6be45a381c5f0f773492857c84dd4050c067d",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C015",
+      "resource": "RES/CUTSCENE/C011-020/C015.RES",
+      "member": "C015.SCR",
+      "source_sha256": "a60e4ade4f6358ff8ae32e3e81138abdba8d55ac3e82a16614f5124478d389c5",
+      "source_size": 811,
+      "native_captions": 0,
+      "node_count": 9,
+      "last_node_frame": 968,
+      "camera_resource": "RES/CUTSCENE/C011-020/C015.RES",
+      "camera_member": "C015.BIN",
+      "camera_sha256": "39782721a91d74c19aa56348c1baf945b0945866ce436e0feeae988b8c100ae5",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C016",
+      "resource": "RES/CUTSCENE/C011-020/C016.RES",
+      "member": "C016.SCR",
+      "source_sha256": "3e116fa1df18ce2d4c56ad9543e2bcc6be28761fad4c26aed6b60ca61cc266e8",
+      "source_size": 968,
+      "native_captions": 0,
+      "node_count": 10,
+      "last_node_frame": 468,
+      "camera_resource": "RES/CUTSCENE/C011-020/C016.RES",
+      "camera_member": "C016.BIN",
+      "camera_sha256": "e96e8f6ec03d8b2fe932f6ff9f02406cc3813492bdabb8b2a6b8e4c9be401361",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C017",
+      "resource": "RES/CUTSCENE/C011-020/C017_2.RES",
+      "member": "C017.SCR",
+      "source_sha256": "b4d5a8ea5b63e1490dfc98de8c35992dc2f78ad22086e1fc62c13ffadb8fffcd",
+      "source_size": 1122,
+      "native_captions": 0,
+      "node_count": 11,
+      "last_node_frame": 568,
+      "camera_resource": "RES/CUTSCENE/C011-020/C017_2.RES",
+      "camera_member": "C017.BIN",
+      "camera_sha256": "4435bb2a7650cc1b75b88ca430a9ff83f75df1ff31d2020d16f165e18b5310e7",
+      "camera_frames": 600,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C018",
+      "resource": "RES/CUTSCENE/C011-020/C018.RES",
+      "member": "C018.SCR",
+      "source_sha256": "0518e7d0586f950826a336c542afe5da704e2510a985b7cf69c71db3a8ec4b26",
+      "source_size": 830,
+      "native_captions": 0,
+      "node_count": 8,
+      "last_node_frame": 1036,
+      "camera_resource": "RES/CUTSCENE/C011-020/C018.RES",
+      "camera_member": "C018.BIN",
+      "camera_sha256": "590a9c4f3c42671ff6a7ad73d494e808787f42e2dfea3f097c7997b2251c8f1d",
+      "camera_frames": 1100,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C019",
+      "resource": "RES/CUTSCENE/C011-020/C019_2.RES",
+      "member": "C019.SCR",
+      "source_sha256": "e4276b9697764299a150c7d8cf33749f4529fa8bc106dfd94dc0c0ae59cb4e31",
+      "source_size": 3170,
+      "native_captions": 0,
+      "node_count": 30,
+      "last_node_frame": 936,
+      "camera_resource": "RES/CUTSCENE/C011-020/C019_2.RES",
+      "camera_member": "C019.BIN",
+      "camera_sha256": "4374221b5b84f54535429d75d645a80fda1acef938ad13110d8efc5bcc9815f0",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C020",
+      "resource": "RES/CUTSCENE/C011-020/C020_3.RES",
+      "member": "C020.SCR",
+      "source_sha256": "272d6661b6532328c726c9cc3bf03602a2b834c2ebad49ff3ed789f2bedb6fc0",
+      "source_size": 3222,
+      "native_captions": 0,
+      "node_count": 30,
+      "last_node_frame": 736,
+      "camera_resource": "RES/CUTSCENE/C011-020/C020_3.RES",
+      "camera_member": "C020.BIN",
+      "camera_sha256": "ac39732b914df7ae6dc10da93a8c89c811471dc59662a794a1aea00e71401580",
+      "camera_frames": 800,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C021",
+      "resource": "RES/CUTSCENE/C021-030/C021.RES",
+      "member": "C021.SCR",
+      "source_sha256": "ac63484c50fd9fbaf2b22c863f92eadc62b2c5ea446dfd7c110be23b9e089866",
+      "source_size": 1003,
+      "native_captions": 0,
+      "node_count": 10,
+      "last_node_frame": 536,
+      "camera_resource": "RES/CUTSCENE/C021-030/C021.RES",
+      "camera_member": "C021.BIN",
+      "camera_sha256": "652b44850fb8e55dc1358b1d30c92ce4b11caf649211cca74178fa75685967fa",
+      "camera_frames": 600,
+      "cues": [
+        {
+          "id": "C021-016_001",
+          "start_frame": 335,
+          "end_frame_exclusive": null,
+          "text": "",
+          "status": "asr-draft",
+          "source_audio_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
+          "source_audio_id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
+          "source_transcript": "어",
+          "timing_samples": {
+            "numerator": 117068,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 234180,
+            "sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
+              "source_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
+              "wav_sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b",
+              "source_duration": 2.4389166666666666,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.27,
+                  "end": 0.69,
+                  "text": " 아!",
+                  "avg_logprob": -1.0161489486694335,
+                  "no_speech_prob": 0.5400988459587097,
+                  "compression_ratio": 0.3333333333333333,
+                  "words": [
+                    {
+                      "word": " 아!",
+                      "start": 0.27,
+                      "end": 0.69,
+                      "probability": 0.14202596247196198
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.618967899994459,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
+              "source_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
+              "wav_sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b",
+              "source_duration": 2.4389166666666666,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.27,
+                  "end": 0.85,
+                  "text": " 으헉",
+                  "avg_logprob": -1.276596983273824,
+                  "no_speech_prob": 0.5538216233253479,
+                  "compression_ratio": 0.42857142857142855,
+                  "words": [
+                    {
+                      "word": " 으헉",
+                      "start": 0.27,
+                      "end": 0.85,
+                      "probability": 0.21412540475527445
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.558864200022072,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
+              "source_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
+              "wav_sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b",
+              "source_duration": 2.4389166666666666,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.27,
+                  "end": 0.57,
+                  "text": " 어",
+                  "avg_logprob": -0.9997677505016327,
+                  "no_speech_prob": 0.7561641931533813,
+                  "compression_ratio": 0.2727272727272727,
+                  "words": [
+                    {
+                      "word": " 어",
+                      "start": 0.27,
+                      "end": 0.57,
+                      "probability": 0.1327812522649765
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.148446600011084,
+              "human_listening_verified": false
+            }
+          ],
+          "uncertain_audio_diagnostics": {
+            "id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
+            "source_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
+            "wav_sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b",
+            "samples_16k": 39023,
+            "peak": 0.641693115234375,
+            "rms_peak": 0.2312430888414383,
+            "rms_threshold": 0.011562154442071915,
+            "activity_start": 0.0,
+            "activity_end": 0.84,
+            "vad_segments_samples_16k": [
+              {
+                "start": 4352,
+                "end": 39023
+              }
+            ],
+            "machine_only": true,
+            "probes": [
+              {
+                "kind": "whole-no-vad",
+                "task": "transcribe",
+                "seconds": 7.884473999962211,
+                "segments": [
+                  {
+                    "text": " ㄱ!",
+                    "start": 0.0,
+                    "end": 0.22,
+                    "avg_logprob": -0.9189540239480826,
+                    "no_speech_prob": 0.5348908305168152,
+                    "words": [
+                      {
+                        "word": " ㄱ!",
+                        "probability": 0.48311349004507065
+                      }
+                    ]
+                  },
+                  {
+                    "text": " ㄱ!",
+                    "start": 0.42,
+                    "end": 0.68,
+                    "avg_logprob": -0.9189540239480826,
+                    "no_speech_prob": 0.5348908305168152,
+                    "words": [
+                      {
+                        "word": " ㄱ!",
+                        "probability": 0.399163156747818
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "energy-crop-no-vad",
+                "task": "transcribe",
+                "seconds": 7.400646900001448,
+                "segments": [
+                  {
+                    "text": " ㄱ",
+                    "start": 0.0,
+                    "end": 0.22,
+                    "avg_logprob": -0.7372289657592773,
+                    "no_speech_prob": 0.628376305103302,
+                    "words": [
+                      {
+                        "word": " ㄱ",
+                        "probability": 0.5218593577543894
+                      }
+                    ]
+                  },
+                  {
+                    "text": " ㅎ",
+                    "start": 0.22,
+                    "end": 0.62,
+                    "avg_logprob": -0.7372289657592773,
+                    "no_speech_prob": 0.628376305103302,
+                    "words": [
+                      {
+                        "word": " ㅎ",
+                        "probability": 0.2055983878672123
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "translate-no-prompt",
+                "task": "translate",
+                "seconds": 7.334158799960278,
+                "segments": [
+                  {
+                    "text": " Gah!",
+                    "start": 0.0,
+                    "end": 0.22,
+                    "avg_logprob": -0.9348008036613464,
+                    "no_speech_prob": 0.628376305103302,
+                    "words": [
+                      {
+                        "word": " Gah!",
+                        "probability": 0.3303256705403328
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "classification": "nonverbal-vocalization-candidate; not silent; no invented lexical subtitle"
+        },
+        {
+          "id": "C021-016_002",
+          "start_frame": 410,
+          "end_frame_exclusive": null,
+          "text": "布鲁斯！布鲁斯！",
+          "status": "asr-draft",
+          "source_audio_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
+          "source_audio_id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
+          "source_transcript": "브루스! 브루스!",
+          "timing_samples": {
+            "numerator": 116172,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 232388,
+            "sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
+              "source_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
+              "wav_sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690",
+              "source_duration": 2.42025,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.75,
+                  "end": 1.35,
+                  "text": " 브로스!",
+                  "avg_logprob": -0.8147795370646885,
+                  "no_speech_prob": 0.23969727754592896,
+                  "compression_ratio": 0.5263157894736842,
+                  "words": [
+                    {
+                      "word": " 브로스!",
+                      "start": 0.75,
+                      "end": 1.35,
+                      "probability": 0.5725303242603937
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.6275801000301726,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
+              "source_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
+              "wav_sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690",
+              "source_duration": 2.42025,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.75,
+                  "end": 1.53,
+                  "text": " 불쌍!",
+                  "avg_logprob": -1.0877144187688828,
+                  "no_speech_prob": 0.2870006859302521,
+                  "compression_ratio": 0.4666666666666667,
+                  "words": [
+                    {
+                      "word": " 불쌍!",
+                      "start": 0.75,
+                      "end": 1.53,
+                      "probability": 0.4262034296989441
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.679401899978984,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
+              "source_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
+              "wav_sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690",
+              "source_duration": 2.42025,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.75,
+                  "end": 1.33,
+                  "text": " 브로스!",
+                  "avg_logprob": -0.6710952860968453,
+                  "no_speech_prob": 0.38040292263031006,
+                  "compression_ratio": 0.5263157894736842,
+                  "words": [
+                    {
+                      "word": " 브로스!",
+                      "start": 0.75,
+                      "end": 1.33,
+                      "probability": 0.6470429003238678
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.7170691000064835,
+              "human_listening_verified": false
+            }
+          ],
+          "uncertain_audio_diagnostics": {
+            "id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
+            "source_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
+            "wav_sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690",
+            "samples_16k": 38724,
+            "peak": 0.710357666015625,
+            "rms_peak": 0.3054770529270172,
+            "rms_threshold": 0.015273852646350861,
+            "activity_start": 0.16,
+            "activity_end": 1.52,
+            "vad_segments_samples_16k": [
+              {
+                "start": 12032,
+                "end": 38724
+              }
+            ],
+            "machine_only": true,
+            "probes": [
+              {
+                "kind": "whole-no-vad",
+                "task": "transcribe",
+                "seconds": 7.977738499990664,
+                "segments": [
+                  {
+                    "text": " 브루스!",
+                    "start": 0.0,
+                    "end": 0.42,
+                    "avg_logprob": -0.5150459729708158,
+                    "no_speech_prob": 0.23772843182086945,
+                    "words": [
+                      {
+                        "word": " 브루스!",
+                        "probability": 0.7143265008926392
+                      }
+                    ]
+                  },
+                  {
+                    "text": " 브루스!",
+                    "start": 0.66,
+                    "end": 1.26,
+                    "avg_logprob": -0.5150459729708158,
+                    "no_speech_prob": 0.23772843182086945,
+                    "words": [
+                      {
+                        "word": " 브루스!",
+                        "probability": 0.9779882828394572
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "energy-crop-no-vad",
+                "task": "transcribe",
+                "seconds": 7.732354399980977,
+                "segments": [
+                  {
+                    "text": " 브루스!",
+                    "start": 0.0,
+                    "end": 0.26,
+                    "avg_logprob": -0.43470247892233044,
+                    "no_speech_prob": 0.22954623401165009,
+                    "words": [
+                      {
+                        "word": " 브루스!",
+                        "probability": 0.6869319279988607
+                      }
+                    ]
+                  },
+                  {
+                    "text": " 브루스!",
+                    "start": 0.66,
+                    "end": 1.1,
+                    "avg_logprob": -0.43470247892233044,
+                    "no_speech_prob": 0.22954623401165009,
+                    "words": [
+                      {
+                        "word": " 브루스!",
+                        "probability": 0.9794302980105082
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "translate-no-prompt",
+                "task": "translate",
+                "seconds": 7.607412000012118,
+                "segments": [
+                  {
+                    "text": " Prus!",
+                    "start": 0.0,
+                    "end": 0.26,
+                    "avg_logprob": -0.6408326192335649,
+                    "no_speech_prob": 0.22954623401165009,
+                    "words": [
+                      {
+                        "word": " Prus!",
+                        "probability": 0.2248123213648796
+                      }
+                    ]
+                  },
+                  {
+                    "text": " Prus!",
+                    "start": 0.66,
+                    "end": 1.08,
+                    "avg_logprob": -0.6408326192335649,
+                    "no_speech_prob": 0.22954623401165009,
+                    "words": [
+                      {
+                        "word": " Prus!",
+                        "probability": 0.9568603038787842
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "text_basis": "Repeated whole/no-VAD and energy-crop agreement, plus original EVENT454 collapse context; not human-listened"
+        }
+      ],
+      "review_state": "machine-drafts-pending-listening"
+    },
+    {
+      "scene": "C022",
+      "resource": "RES/CUTSCENE/C021-030/C022_4.RES",
+      "member": "C022.SCR",
+      "source_sha256": "e580d4cc8d1fac141ac1cf6da87fb18b27577e75ff1a3058a224a85ac15d3e9a",
+      "source_size": 788,
+      "native_captions": 0,
+      "node_count": 8,
+      "last_node_frame": 936,
+      "camera_resource": "RES/CUTSCENE/C021-030/C022_4.RES",
+      "camera_member": "C022.BIN",
+      "camera_sha256": "2bbbfa9276c8f2af3833a8401a276faa418f5c2972378594cff57b1694b9fd7b",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C023",
+      "resource": "RES/CUTSCENE/C021-030/C023.RES",
+      "member": "C023.SCR",
+      "source_sha256": "148718823f2c2bc3c9cd76dfe1fbd30ca4c74b1459a59c038489f7626d034647",
+      "source_size": 1067,
+      "native_captions": 0,
+      "node_count": 10,
+      "last_node_frame": 836,
+      "camera_resource": "RES/CUTSCENE/C021-030/C023.RES",
+      "camera_member": "C023.BIN",
+      "camera_sha256": "9e746c8d500453a432800698c483e65493b3b4aecab95743f23fd0f9f8ddae9f",
+      "camera_frames": 900,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C024",
+      "resource": "RES/CUTSCENE/C021-030/C024.RES",
+      "member": "C024.SCR",
+      "source_sha256": "206910d9de000d3c15abbbe68e7e6cbb3c3c37f94b7276ac59dc8347110071e3",
+      "source_size": 446,
+      "native_captions": 0,
+      "node_count": 5,
+      "last_node_frame": 236,
+      "camera_resource": "RES/CUTSCENE/C021-030/C024.RES",
+      "camera_member": "C024.BIN",
+      "camera_sha256": "46ea3cd39713d169616bfb21c84884c29b1b0d0037a2a4910c529b1632806c52",
+      "camera_frames": 300,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C025",
+      "resource": "RES/CUTSCENE/C021-030/C025_2.RES",
+      "member": "C025.SCR",
+      "source_sha256": "7a02fb3218814cfef665bba97c67ea46b2cba88f597a03d51aa9bd4a4ad5cb51",
+      "source_size": 1392,
+      "native_captions": 0,
+      "node_count": 15,
+      "last_node_frame": 1136,
+      "camera_resource": "RES/CUTSCENE/C021-030/C025_2.RES",
+      "camera_member": "C025.BIN",
+      "camera_sha256": "4784c7131b83de4c33b2fc771b9e9d5b1f535af4cb00cc0ded6e5e15e810c4c4",
+      "camera_frames": 1200,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C026",
+      "resource": "RES/CUTSCENE/C021-030/C026.RES",
+      "member": "C026.SCR",
+      "source_sha256": "159034aac03ac01066072ab2b97ba02911b67df91cf93db582e28efe16880e2c",
+      "source_size": 489,
+      "native_captions": 0,
+      "node_count": 5,
+      "last_node_frame": 368,
+      "camera_resource": "RES/CUTSCENE/C021-030/C026.RES",
+      "camera_member": "C026.BIN",
+      "camera_sha256": "e42bf9deaf93621ffc85bcac5d4f8cf93420d1f986a65830ce2c845ba6a25520",
+      "camera_frames": 400,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C027",
+      "resource": "RES/CUTSCENE/C021-030/C027_2.RES",
+      "member": "C027.SCR",
+      "source_sha256": "03470e91122e90b4a06797f2f6176241fa41e605e85057717404028b07e342a7",
+      "source_size": 2432,
+      "native_captions": 0,
+      "node_count": 24,
+      "last_node_frame": 1472,
+      "camera_resource": "RES/CUTSCENE/C021-030/C027_2.RES",
+      "camera_member": "C027.BIN",
+      "camera_sha256": "5801dc6ab06a047c9cd4f97e1b4bce2b48112e158e93f799e7876758e3f62fb4",
+      "camera_frames": 1600,
+      "cues": [
+        {
+          "id": "C027-021_001",
+          "start_frame": 210,
+          "end_frame_exclusive": null,
+          "text": "詹妮弗！",
+          "status": "asr-draft",
+          "source_audio_sha256": "65fdb7a222d830084ac7155d391493b1e15878d0b9fcc6c8624742569f7125bf",
+          "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_001.VAG",
+          "source_transcript": "제니퍼",
+          "timing_samples": {
+            "numerator": 116396,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 232836,
+            "sha256": "a368bd9df6d057eb8e7312d5609bae90020564f2ef4c3bab76c0d0cbec03956d"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_001.VAG",
+              "source_sha256": "65fdb7a222d830084ac7155d391493b1e15878d0b9fcc6c8624742569f7125bf",
+              "wav_sha256": "a368bd9df6d057eb8e7312d5609bae90020564f2ef4c3bab76c0d0cbec03956d",
+              "source_duration": 2.424916666666667,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.66,
+                  "text": " 치니폼",
+                  "avg_logprob": -0.6902933120727539,
+                  "no_speech_prob": 0.11798028647899628,
+                  "compression_ratio": 0.5294117647058824,
+                  "words": [
+                    {
+                      "word": " 치니폼",
+                      "start": 0.0,
+                      "end": 0.66,
+                      "probability": 0.592859536409378
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.613959500042256,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_001.VAG",
+              "source_sha256": "65fdb7a222d830084ac7155d391493b1e15878d0b9fcc6c8624742569f7125bf",
+              "wav_sha256": "a368bd9df6d057eb8e7312d5609bae90020564f2ef4c3bab76c0d0cbec03956d",
+              "source_duration": 2.424916666666667,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.7,
+                  "text": " 제니퍼",
+                  "avg_logprob": -0.8395278453826904,
+                  "no_speech_prob": 0.7053857445716858,
+                  "compression_ratio": 0.5294117647058824,
+                  "words": [
+                    {
+                      "word": " 제니퍼",
+                      "start": 0.0,
+                      "end": 0.7,
+                      "probability": 0.6680167143543562
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.559077899961267,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_001.VAG",
+              "source_sha256": "65fdb7a222d830084ac7155d391493b1e15878d0b9fcc6c8624742569f7125bf",
+              "wav_sha256": "a368bd9df6d057eb8e7312d5609bae90020564f2ef4c3bab76c0d0cbec03956d",
+              "source_duration": 2.424916666666667,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.56,
+                  "text": " 제니퍼",
+                  "avg_logprob": -0.28577834367752075,
+                  "no_speech_prob": 0.24507929384708405,
+                  "compression_ratio": 0.5294117647058824,
+                  "words": [
+                    {
+                      "word": " 제니퍼",
+                      "start": 0.0,
+                      "end": 0.56,
+                      "probability": 0.9470718502998352
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 8.30786669999361,
+              "human_listening_verified": false
+            }
+          ]
+        },
+        {
+          "id": "C027-021_002",
+          "start_frame": 270,
+          "end_frame_exclusive": null,
+          "text": "布鲁斯……",
+          "status": "asr-draft",
+          "source_audio_sha256": "7e903a66723b21fd9129d98966eac278485d0708fe7cf872a675eee04b5a070a",
+          "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_002.VAG",
+          "source_transcript": "...브루스...",
+          "timing_samples": {
+            "numerator": 116312,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 232668,
+            "sha256": "accf18440f07012ff4fe7b9c656af422c1c3ba5f483524f77d3b4a2a6ee785cb"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_002.VAG",
+              "source_sha256": "7e903a66723b21fd9129d98966eac278485d0708fe7cf872a675eee04b5a070a",
+              "wav_sha256": "accf18440f07012ff4fe7b9c656af422c1c3ba5f483524f77d3b4a2a6ee785cb",
+              "source_duration": 2.4231666666666665,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.56,
+                  "text": " 브루스",
+                  "avg_logprob": -0.7385266820589701,
+                  "no_speech_prob": 0.09766819328069687,
+                  "compression_ratio": 0.5,
+                  "words": [
+                    {
+                      "word": " 브루스",
+                      "start": 0.0,
+                      "end": 0.56,
+                      "probability": 0.6565663516521454
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 1.6019923000130802,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_002.VAG",
+              "source_sha256": "7e903a66723b21fd9129d98966eac278485d0708fe7cf872a675eee04b5a070a",
+              "wav_sha256": "accf18440f07012ff4fe7b9c656af422c1c3ba5f483524f77d3b4a2a6ee785cb",
+              "source_duration": 2.4231666666666665,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 1.1,
+                  "text": " 플스...",
+                  "avg_logprob": -0.8973315443311419,
+                  "no_speech_prob": 0.07429617643356323,
+                  "compression_ratio": 0.5294117647058824,
+                  "words": [
+                    {
+                      "word": " 플스...",
+                      "start": 0.0,
+                      "end": 1.1,
+                      "probability": 0.5815465580672026
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 4.691173299972434,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_002.VAG",
+              "source_sha256": "7e903a66723b21fd9129d98966eac278485d0708fe7cf872a675eee04b5a070a",
+              "wav_sha256": "accf18440f07012ff4fe7b9c656af422c1c3ba5f483524f77d3b4a2a6ee785cb",
+              "source_duration": 2.4231666666666665,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.6,
+                  "text": " ...브루스...",
+                  "avg_logprob": -0.8535006841023763,
+                  "no_speech_prob": 0.10856591165065765,
+                  "compression_ratio": 0.625,
+                  "words": [
+                    {
+                      "word": " ...브루스...",
+                      "start": 0.0,
+                      "end": 0.6,
+                      "probability": 0.6352812511225542
+                    }
+                  ]
+                }
+              ],
+              "elapsed_seconds": 7.5299058999517,
+              "human_listening_verified": false
+            }
+          ]
+        },
+        {
+          "id": "C027-021_003",
+          "start_frame": 1405,
+          "end_frame_exclusive": null,
+          "text": "",
+          "status": "asr-draft",
+          "source_audio_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
+          "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
+          "source_transcript": "",
+          "timing_samples": {
+            "numerator": 118804,
+            "denominator": 48000
+          },
+          "wav": {
+            "size": 237652,
+            "sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac"
+          },
+          "human_listening_verified": false,
+          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "asr": [
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
+              "source_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
+              "wav_sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac",
+              "source_duration": 2.4750833333333335,
+              "model": "small",
+              "device": "cpu",
+              "model_snapshot": "536b0662742c02347bc0e980a01041f333bce120",
+              "language": "ko",
+              "segments": [],
+              "elapsed_seconds": 0.11959289998048916,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
+              "source_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
+              "wav_sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac",
+              "source_duration": 2.4750833333333335,
+              "model": "medium",
+              "device": "cpu",
+              "model_snapshot": "08e178d48790749d25932bbc082711ddcfdfbc4f",
+              "language": "ko",
+              "segments": [],
+              "elapsed_seconds": 0.12987339997198433,
+              "human_listening_verified": false
+            },
+            {
+              "status": "machine-transcription-unreviewed",
+              "audio_id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
+              "source_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
+              "wav_sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac",
+              "source_duration": 2.4750833333333335,
+              "model": "large-v3",
+              "device": "cpu",
+              "model_snapshot": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+              "language": "ko",
+              "segments": [],
+              "elapsed_seconds": 0.12018010002793744,
+              "human_listening_verified": false
+            }
+          ],
+          "uncertain_audio_diagnostics": {
+            "id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
+            "source_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
+            "wav_sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac",
+            "samples_16k": 39601,
+            "peak": 0.988250732421875,
+            "rms_peak": 0.7066019773483276,
+            "rms_threshold": 0.035330098867416386,
+            "activity_start": 0.0,
+            "activity_end": 0.74,
+            "vad_segments_samples_16k": [],
+            "machine_only": true,
+            "probes": [
+              {
+                "kind": "whole-no-vad",
+                "task": "transcribe",
+                "seconds": 7.366367099981289,
+                "segments": [
+                  {
+                    "text": " 흐아악!",
+                    "start": 0.0,
+                    "end": 0.3,
+                    "avg_logprob": -1.2361061871051788,
+                    "no_speech_prob": 0.5876762866973877,
+                    "words": [
+                      {
+                        "word": " 흐아악!",
+                        "probability": 0.39483908703550696
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "energy-crop-no-vad",
+                "task": "transcribe",
+                "seconds": 7.447604299988598,
+                "segments": [
+                  {
+                    "text": " 흐아악!",
+                    "start": 0.0,
+                    "end": 0.3,
+                    "avg_logprob": -1.0927053540945053,
+                    "no_speech_prob": 0.4524914622306824,
+                    "words": [
+                      {
+                        "word": " 흐아악!",
+                        "probability": 0.40548516903072596
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "translate-no-prompt",
+                "task": "translate",
+                "seconds": 7.601455099997111,
+                "segments": [
+                  {
+                    "text": " Ah!",
+                    "start": 0.0,
+                    "end": 0.16,
+                    "avg_logprob": -1.0873663902282715,
+                    "no_speech_prob": 0.4524914622306824,
+                    "words": [
+                      {
+                        "word": " Ah!",
+                        "probability": 0.11385758966207504
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "classification": "nonverbal-vocalization-candidate; not silent; no invented lexical subtitle"
+        }
+      ],
+      "review_state": "machine-drafts-pending-listening"
+    },
+    {
+      "scene": "C028",
+      "resource": "RES/CUTSCENE/C021-030/C028.RES",
+      "member": "C028.SCR",
+      "source_sha256": "e0bb1e267ccd03a4bbef81f03a4cb93372f27a915be43f08ef52a2e6b57e630a",
+      "source_size": 1291,
+      "native_captions": 0,
+      "node_count": 12,
+      "last_node_frame": 736,
+      "camera_resource": "RES/CUTSCENE/C021-030/C028.RES",
+      "camera_member": "C028.BIN",
+      "camera_sha256": "917e6a1f4facdd9e6e357a9623448377d02009ff1329f5584f807511a2e56209",
+      "camera_frames": 800,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C029",
+      "resource": "RES/CUTSCENE/C021-030/C029_2.RES",
+      "member": "C029.SCR",
+      "source_sha256": "6d2e17fdeff287eedb68440ab8bca8050aaa6f3af3a9d854eedeb49c71ba20df",
+      "source_size": 8269,
+      "native_captions": 0,
+      "node_count": 66,
+      "last_node_frame": 1336,
+      "camera_resource": "RES/CUTSCENE/C021-030/C029_2.RES",
+      "camera_member": "C029.BIN",
+      "camera_sha256": "1a99baa90e40f1be03eeabfe7a0849c8ed40ca02e84c9f014c0ac1309bb6cc59",
+      "camera_frames": 1400,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C030",
+      "resource": "RES/CUTSCENE/C021-030/C030.RES",
+      "member": "C030.SCR",
+      "source_sha256": "977be7d7267bc2d14869253ef9bdda5b315dbc5beb3f86905061b4de9f302151",
+      "source_size": 719,
+      "native_captions": 0,
+      "node_count": 7,
+      "last_node_frame": 372,
+      "camera_resource": "RES/CUTSCENE/C021-030/C030.RES",
+      "camera_member": "C030.BIN",
+      "camera_sha256": "6e3b35f3e1df095ed792931aad02b273f322651289303fe66e8631ed2b307011",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C031",
+      "resource": "RES/CUTSCENE/C031-040/C031.RES",
+      "member": "C031.SCR",
+      "source_sha256": "218bff862338645ecbd3fa5411ba434a7e398312daa6cf7a1c84911c92b1c8bd",
+      "source_size": 2272,
+      "native_captions": 0,
+      "node_count": 24,
+      "last_node_frame": 368,
+      "camera_resource": "RES/CUTSCENE/C031-040/C031.RES",
+      "camera_member": "C031.BIN",
+      "camera_sha256": "0ceb1acbd1f2b11fd640c7c04ae10fa96955bcebfe888e28d600df8d6ad1d7b5",
+      "camera_frames": 400,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C032",
+      "resource": "RES/CUTSCENE/C031-040/C032.RES",
+      "member": "C032.SCR",
+      "source_sha256": "1cf44c8b5382b679e78e4ec5f5e99b67f42d80d5ef4640946fc0eb3353735989",
+      "source_size": 3910,
+      "native_captions": 0,
+      "node_count": 38,
+      "last_node_frame": 468,
+      "camera_resource": "RES/CUTSCENE/C031-040/C032.RES",
+      "camera_member": "C032.BIN",
+      "camera_sha256": "5e6397a64ba801ac0a0b704345fbf6b24a03abe1f0a72e323d4b3c9ecdfa8bcb",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C033",
+      "resource": "RES/CUTSCENE/C031-040/C033_2.RES",
+      "member": "C033.SCR",
+      "source_sha256": "da39195a46abd796d5efd3d8d7c71c105a1ee8cd1fdccf89061c9c5cf7767599",
+      "source_size": 1552,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 518,
+      "camera_resource": "RES/CUTSCENE/C031-040/C033_2.RES",
+      "camera_member": "C033.BIN",
+      "camera_sha256": "d9230f86a8b9d02de32766f2eb5adef5995cf6d8e4560d4a255dacd988e56414",
+      "camera_frames": 580,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C034",
+      "resource": "RES/CUTSCENE/C031-040/C034_2.RES",
+      "member": "C034.SCR",
+      "source_sha256": "af93bc09c908c7fd006bb3679995ab9fb54476b43cd3d0a1a42276b91d47c3fd",
+      "source_size": 878,
+      "native_captions": 0,
+      "node_count": 9,
+      "last_node_frame": 568,
+      "camera_resource": "RES/CUTSCENE/C031-040/C034_2.RES",
+      "camera_member": "C034.BIN",
+      "camera_sha256": "8350efb5ea9c7cc4c9a6c4460d52b5a1123987045e2ea760e178cad859c2f8e1",
+      "camera_frames": 600,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C035",
+      "resource": "RES/CUTSCENE/C031-040/C035.RES",
+      "member": "C035.SCR",
+      "source_sha256": "6c63192a06ef088db57a6e48ea6bf214678a3ababca13b33072162bb97ea4e63",
+      "source_size": 1897,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 672,
+      "camera_resource": "RES/CUTSCENE/C031-040/C035.RES",
+      "camera_member": "C035.BIN",
+      "camera_sha256": "2614761e14c0ec5021041e4d853bbc9a70817cf3e90e081a6390f8e63caa73fd",
+      "camera_frames": 800,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C036",
+      "resource": "RES/CUTSCENE/C031-040/C036_3.RES",
+      "member": "C036.SCR",
+      "source_sha256": "c671249f36cc1161a26aaecdeda64ddadae80e08feaae430c7fb53112fa8afa2",
+      "source_size": 802,
+      "native_captions": 0,
+      "node_count": 8,
+      "last_node_frame": 668,
+      "camera_resource": "RES/CUTSCENE/C031-040/C036_3.RES",
+      "camera_member": "C036.BIN",
+      "camera_sha256": "c7cc07646b60cc5121829b549e5f6ad733cadd8c7e6d1207abcfc43e4d22d05d",
+      "camera_frames": 700,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C037",
+      "resource": "RES/CUTSCENE/C031-040/C037_3.RES",
+      "member": "C037.SCR",
+      "source_sha256": "b597fb6433ed765f32f4555a58510cef3094904d540899b83ab3421817e60682",
+      "source_size": 3106,
+      "native_captions": 0,
+      "node_count": 30,
+      "last_node_frame": 768,
+      "camera_resource": "RES/CUTSCENE/C031-040/C037_3.RES",
+      "camera_member": "C037.BIN",
+      "camera_sha256": "026ee690e445e1f88ecdf4a7515f1ec804e2e29a19cc61b31b03cb8cb1a3bb94",
+      "camera_frames": 850,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C038",
+      "resource": "RES/CUTSCENE/C031-040/C038.RES",
+      "member": "C038.SCR",
+      "source_sha256": "ba4ed59fd19fdc0bf5a6e068343ab4efd8282fc2adc33dfeee7e9850636675c7",
+      "source_size": 472,
+      "native_captions": 0,
+      "node_count": 5,
+      "last_node_frame": 218,
+      "camera_resource": "RES/CUTSCENE/C031-040/C038.RES",
+      "camera_member": "C038.BIN",
+      "camera_sha256": "76306bc11b1f768f43c1cd915b37bff72299efe7111752e636c7f67e858a8824",
+      "camera_frames": 250,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C039",
+      "resource": "RES/CUTSCENE/C031-040/C039.RES",
+      "member": "C039.SCR",
+      "source_sha256": "123a93cdf327b47f34ee98f268cb56bb7d0a78be033265996da095bd16759cc9",
+      "source_size": 3059,
+      "native_captions": 0,
+      "node_count": 27,
+      "last_node_frame": 668,
+      "camera_resource": "RES/CUTSCENE/C031-040/C039.RES",
+      "camera_member": "C039.BIN",
+      "camera_sha256": "6c790905db118283fda7ddcd03a4310a8f7420db7bec6509f15aaf957646b3dd",
+      "camera_frames": 700,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C040",
+      "resource": "RES/CUTSCENE/C031-040/C040.RES",
+      "member": "C040.SCR",
+      "source_sha256": "cd6e0415d6874e513fa6ffd3b8348808a80e8dafc64aeb7497ffbb857fdb44a0",
+      "source_size": 1282,
+      "native_captions": 0,
+      "node_count": 14,
+      "last_node_frame": 268,
+      "camera_resource": "RES/CUTSCENE/C031-040/C040.RES",
+      "camera_member": "C040.BIN",
+      "camera_sha256": "4606e2113e604541872fd335b2afda461f671d872b0f8879b8b512d99f3bd5a9",
+      "camera_frames": 300,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C041",
+      "resource": "RES/CUTSCENE/C041-050/C041.RES",
+      "member": "C041.SCR",
+      "source_sha256": "5f5270be4032043696eb49fbb3bf077c160cafbd3ac0a151a18ba6ba87b8e5e8",
+      "source_size": 1286,
+      "native_captions": 0,
+      "node_count": 14,
+      "last_node_frame": 268,
+      "camera_resource": "RES/CUTSCENE/C041-050/C041.RES",
+      "camera_member": "C041.BIN",
+      "camera_sha256": "278c15d6aac97e05da5425248105fbc97e888246a780ea043918fa50b56a18de",
+      "camera_frames": 300,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C042",
+      "resource": "RES/CUTSCENE/C041-050/C042.RES",
+      "member": "C042.SCR",
+      "source_sha256": "fe1977d62c812088b5e88b1b3e9d156a71f0f20cc404c69b292e85822c9a56d5",
+      "source_size": 1695,
+      "native_captions": 0,
+      "node_count": 15,
+      "last_node_frame": 936,
+      "camera_resource": "RES/CUTSCENE/C041-050/C042.RES",
+      "camera_member": "C042.BIN",
+      "camera_sha256": "0fb9dd23260077e1ea31e5671de347fcc8055ac2df93c6ec75ed2021e2bc0cc6",
+      "camera_frames": 1000,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C043",
+      "resource": "RES/CUTSCENE/C041-050/C043.RES",
+      "member": "C043.SCR",
+      "source_sha256": "5e3a95c2937f4b74cf99b5079616b962261a11dab892fdcd4aa751c6f916e7c4",
+      "source_size": 1405,
+      "native_captions": 0,
+      "node_count": 15,
+      "last_node_frame": 1136,
+      "camera_resource": "RES/CUTSCENE/C041-050/C043.RES",
+      "camera_member": "C043.BIN",
+      "camera_sha256": "accfe5f6b45e9961119768be5df6ce8f7aebaba61ea6e02ab9402787630fb013",
+      "camera_frames": 1200,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C044",
+      "resource": "RES/CUTSCENE/C041-050/C044.RES",
+      "member": "C044.SCR",
+      "source_sha256": "0d5e491178b759aea32aeecb13bed530121c77fd31c7d6d33b29a3188ad1c36c",
+      "source_size": 1916,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 672,
+      "camera_resource": "RES/CUTSCENE/C041-050/C044.RES",
+      "camera_member": "C044.BIN",
+      "camera_sha256": "b829a6621ba0f0bd01537fc990216c8a322005d7ebfba57e4540997e1968ce96",
+      "camera_frames": 800,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C045",
+      "resource": "RES/CUTSCENE/C041-050/C045.RES",
+      "member": "C045.SCR",
+      "source_sha256": "3f69474806e740dd0a83cd3b2c5a34ffa4a263e81bf9392158e518dc4a47cf48",
+      "source_size": 1894,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 468,
+      "camera_resource": "RES/CUTSCENE/C041-050/C045.RES",
+      "camera_member": "C045.BIN",
+      "camera_sha256": "8300002b7d61b9afe412d13aa01ff4642b19875ecda7d2a70c162ea220f9837d",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C046",
+      "resource": "RES/CUTSCENE/C041-050/C046.RES",
+      "member": "C046.SCR",
+      "source_sha256": "144a497e832c719e0503b06be695f893ee8825296528be311216be3decdcd4e5",
+      "source_size": 2108,
+      "native_captions": 0,
+      "node_count": 16,
+      "last_node_frame": 468,
+      "camera_resource": "RES/CUTSCENE/C041-050/C046.RES",
+      "camera_member": "C046.BIN",
+      "camera_sha256": "8ade7feb2b0061728f54f79f3535612a4e4e8d901979fb6c7d53136be73e91e4",
+      "camera_frames": 500,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    },
+    {
+      "scene": "C047",
+      "resource": "RES/CUTSCENE/C041-050/C047.RES",
+      "member": "C047.SCR",
+      "source_sha256": "f6e15e320b30527d9dec2f5641cdb04c023959bb0b4a937297e70396d434c7af",
+      "source_size": 6270,
+      "native_captions": 0,
+      "node_count": 49,
+      "last_node_frame": 836,
+      "camera_resource": "RES/CUTSCENE/C041-050/C047.RES",
+      "camera_member": "C047.BIN",
+      "camera_sha256": "fffa64bde0de3315e43612f4eba332e623d9c3b0849a9f359f277df0f0fc7a94",
+      "camera_frames": 900,
+      "cues": [],
+      "review_state": "not-transcribed-not-approved"
+    }
+  ]
+}

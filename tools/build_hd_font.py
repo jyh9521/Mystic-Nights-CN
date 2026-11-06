@@ -43,6 +43,15 @@ def _preview_entries(manifest: dict, mapping: dict) -> list[dict]:
         # Only the proof image wraps; native target data and FNT remain untouched.
         wrapped="\n".join(text[i:i+36] for i in range(0,len(text),36))
         selected.append({"id":row["id"],"text_type":row["text_type"],"target":text,"preview_text":wrapped})
+    # Include an actual mixed-script control/number sample when present. Old
+    # Chinese-only previews concealed nearest-scaled Latin letters and digits.
+    candidates=[e for e in manifest["entries"] if re.search(r"[A-Za-z][0-9]",e.get("target",""))
+                and not re.search(r"[<%\r\n]",e["target"])
+                and all(ord(c)<128 or c in mapping for c in e["target"])]
+    if candidates and candidates[0]["id"] not in {e["id"] for e in selected}:
+        row=candidates[0]; text=row["target"]
+        selected.append({"id":row["id"],"text_type":row["text_type"],"target":text,
+                         "preview_text":"\n".join(text[i:i+36] for i in range(0,len(text),36))})
     return selected
 
 
@@ -67,7 +76,8 @@ def build_pack(iso_path: Path, manifest_path: Path, font_path: Path, output: Pat
     textures={f"FONT_{i}.TM2":archive.read(f"FONT_{i}.TM2") for i in range(1,9)}
     font=manifest["font"]
     hd=build_hd_atlases(fnt,textures,font["mapping"],font_data,font["sha256"],
-                       pixel_size=font["pixel_size"],native_raster_policy=font.get("raster_policy"))
+                       pixel_size=font["pixel_size"],native_raster_policy=font.get("raster_policy"),
+                       ascii_outlines=True)
     examples=_preview_entries(manifest,font["mapping"])
     text="\n".join(e["preview_text"] for e in examples)
     native=render_hd_preview(fnt,textures,hd.images,text,font["mapping"],hd=False)
@@ -81,15 +91,21 @@ def build_pack(iso_path: Path, manifest_path: Path, font_path: Path, output: Pat
             "outline":{"name":font_spec["name"],"sha256":font["sha256"],
                        "pixel_size":font["pixel_size"],"hd_pixel_size":font["pixel_size"]*4},
             "mapped_glyphs":hd.mapped_glyphs,"common_baseline_shift_hd_pixels":hd.baseline_shift,
+            "ascii_outline_glyphs":hd.ascii_glyphs,
+            "ascii_layout":"fresh pinned outline, original native core-ink size/baseline and unchanged FNT metrics",
             "native_mapping_raster":"all mapped native cells independently re-rendered and matched",
-            "unmapped_source_pixels":"nearest-scaled raw RGBA, independently checked outside mapped rectangles",
+            "unmapped_source_pixels":"protected runtime y+1/h-1 UV regions nearest-scaled and independently checked; unreferenced padding cleared",
+            "sampling_padding":{"runtime_uv":"x,y+1,width,height-1 from existing FNT; integer FST endpoints",
+                                "policy":"all texels outside every runtime glyph UV rectangle have zero alpha; no outline thresholding",
+                                "cleared_source_pixels_native":hd.cleared_padding_pixels_native},
             "alpha_policy":"raw source CLUT peak RGB; outline coverage scales raw peak alpha; no doubled alpha in replacement PNG",
             "key_profile":{"texture":"XXH3-64(default seed), full native PSMT8 blocks in logical block-row order",
                            "palette":"XXH3-64(default seed), exact 256 logical raw RGBA CLUT entries",
                            "filename":"texturehash-palettehash-packedbits.png","wildcard_palette":False},
             "verified_offline":["exact source ISO / manifest / font / SYSTEM.RES identities",
                                 "native mapping/raster correspondence and existing FNT layout",
-                                "fresh outline glyphs, PNG roundtrip, untouched unmapped pixels",
+                                "fresh mapped and ASCII outline glyphs, PNG roundtrip, untouched protected runtime UV regions",
+                                "zero-alpha unreferenced font padding prevents stale source-ink bilinear leakage",
                                 "hash algorithm and exact-CLUT lookup read from pinned PCSX2 primary source"],
             "unverified_runtime":["actual replacement lookup/loading is user-operated, not executed by this tool",
                                   "only native full-region single-level source and exact file CLUT keys are generated",
@@ -111,6 +127,7 @@ def build_pack(iso_path: Path, manifest_path: Path, font_path: Path, output: Pat
             row={"source_member":name,**identity,"path":relative.as_posix(),
                  "raw_peak_rgba":list(hd.peak_rgba[name]),
                  "mapped_rectangles_native":hd.replaced_rectangles[name],
+                 "ascii_rectangles_native":hd.ascii_rectangles[name],
                  "png":_save_png(hd.images[name],stage/relative)}
             report["textures"].append(row)
         for name,pixels in (("native-1x.png",native),("native-4x-nearest.png",nearest),("outline-4x.png",high)):
@@ -161,7 +178,7 @@ def main():
     parser.add_argument("--output",required=True,type=Path)
     args=parser.parse_args()
     report=build_pack(args.iso,args.manifest,args.font,args.output)
-    print(f"HD_FONT PASS pages={len(report['textures'])} glyphs={report['mapped_glyphs']} scale=4 native_mapping=exact png_readback=exact runtime=user-test")
+    print(f"HD_FONT PASS pages={len(report['textures'])} glyphs={report['mapped_glyphs']} ascii={report['ascii_outline_glyphs']} scale=4 padding=transparent native_mapping=exact png_readback=exact runtime=user-test")
     print(args.output.resolve()/"hd-font-manifest.json")
 
 

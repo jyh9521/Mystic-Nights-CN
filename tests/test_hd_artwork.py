@@ -38,6 +38,29 @@ def art_fixture():
 
 
 class HdArtworkTests(unittest.TestCase):
+    def test_full_coverage_rejects_exposed_base_and_partial_masks(self):
+        source,clean,row=art_fixture()
+        row['full_coverage_regions']=[[4,4,8,4]]
+        with self.assertRaisesRegex(ValueError,'reuses old base'):
+            build_texture(source,row)
+        row['layers'][1]['pixels_rle']=[[16,[240,80,20,255]]]
+        image,proof=build_texture(source,row)
+        self.assertEqual(proof['full_coverage_regions'],[[4,4,8,4]])
+        # Transparent authored pixels erase the base too; alpha=0 is not a
+        # reason to inherit the old artwork in replace-region mode.
+        row['layers'][0]['pixels_rle']=[[16,[0,0,0,0]]]
+        image,_=build_texture(source,row)
+        self.assertEqual(image.getpixel((4,4)),(0,0,0,0))
+        row['full_coverage_regions']=[[4,4,8,5]]
+        with self.assertRaisesRegex(ValueError,'reuses old base'):
+            build_texture(source,row)
+
+    def test_full_coverage_regions_validate_data_and_bounds(self):
+        source,clean,row=art_fixture()
+        for regions in (None,{},[[True,4,4,4]],[[-1,4,4,4]],[[0,0,4,4]]):
+            bad=deepcopy(row);bad['full_coverage_regions']=regions
+            with self.assertRaises(ValueError):build_texture(source,bad)
+
     def test_fresh_replace_and_mask_blend_keep_raw_alpha_and_protected_material(self):
         source,clean,row=art_fixture(); image,report=build_texture(source,row,scale=4)
         self.assertEqual(image.size,(1024,1024))

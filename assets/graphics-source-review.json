@@ -2,13 +2,13 @@
   "format": "graphics-source-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "review_basis": "Closed1140 TIM2/2634 member inventory; e97f rebuilds8 localized compositions, including3 faint repeated lab headers. All other carriers retained; offline art checks do not imply player approval.",
+  "review_basis": "Full1140 source TIM2/2634 physical-member inventory retained; four independently source-bound scene-embedded missed atlases corrected after actual screenshot comparison; visual-family declarations supplement name-only closure. Metadata completeness is not OCR or in-game approval.",
   "summary": {
     "unique_textures": 1140,
     "physical_members": 2634,
     "dispositions": {
-      "localized-readable-text": 191,
-      "no-readable-localizable-prose": 907,
+      "localized-readable-text": 195,
+      "no-readable-localizable-prose": 903,
       "retain-original-user-request": 2,
       "retain-unreadable-or-identifier": 32,
       "runtime-font-atlas": 8
@@ -2398,7 +2398,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "New restrained chiseled Simplified lettering; complete new constant-opacity selected interiors; identical two-state master and common14px word cells; one18px complete title master; new START. Original MN/rims/endcaps/exterior exact.",
+      "review_note": "Runtime feedback: original MN RGB/core retained with source-derived near-silhouette alpha falloff; continuous18px menu cavity material; shared14px master, real UV x-scale compensation and exact source-UV centre; START UV-centred.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -2418,7 +2418,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
+      "review_note": "Runtime feedback: literal-alpha extracted whole-word masters over one continuous19px material, no opaque foreground sticker; original source-UV centers (blue57/orange166, characterY110.5+30i), shared13px face; silver outer rim exact.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -2438,7 +2438,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "All localized interior/type/shadows rebuilt as complete imagegen compositions; blue master and deterministic warm color grade share exact geometry;13px face-height registration; original chrome, endcaps and nontext bars remain exact.",
+      "review_note": "Runtime feedback: literal-alpha extracted whole-word masters over one continuous19px material, no opaque foreground sticker; original source-UV centers (blue57/orange166, characterY110.5+30i), shared13px face; silver outer rim exact.",
       "references": [
         {
           "resource": "RES/LOGO.RES",
@@ -4308,7 +4308,7 @@
         3
       ],
       "disposition": "localized-readable-text",
-      "review_note": "Source and native localized pixels reviewed; all physical references bound by source hash",
+      "review_note": "Runtime screenshot7: complete locked-outline 注意 and 限制区域 masters; no stroke thresholding or separately mirrored accent pieces; original restored sign material and exact exterior retained.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
@@ -5635,8 +5635,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Runtime screenshot8: same-family complete outlined words over a sign material calibrated to all four original variant boundaries; separately source-bound embedded aliases and preserved exterior.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
@@ -6070,8 +6070,8 @@
         5,
         1
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Runtime screenshot5: four-character printed company label, correct TRANSVERSE UV; actual6px checker phase retained and original3-line unreadable microprint unchanged.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
@@ -10536,8 +10536,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Runtime alias closure: embedded computer headings and data-loading message translated across independent source/CLUT; material outside original text slots exact.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
@@ -10576,8 +10576,8 @@
         5,
         3
       ],
-      "disposition": "no-readable-localizable-prose",
-      "review_note": "Source atlas visually reviewed: scene art, icon/model surface, technical glyphs, brand or illegible decorative microprint retained",
+      "disposition": "localized-readable-text",
+      "review_note": "Runtime closure: complete cyan physical monitor face restored by imagegen with no text; source-aligned rotated two-line stencil; original atlas neighbors/frame unchanged.",
       "references": [
         {
           "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
@@ -33272,6 +33272,26 @@
           "size": 66624
         }
       ]
+    }
+  ],
+  "visual_families": [
+    {
+      "id": "caution-red-door",
+      "members": [
+        "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
+        "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b"
+      ],
+      "evidence": "Original sign crop brightness-normalized correlation0.995635; independently reviewed CAUTION/RESTRICTED AREA words and all3 embedded refs; distinct source hashes retained."
+    },
+    {
+      "id": "computer-brand-and-loading",
+      "members": [
+        "fefc3f417e032239492ec51873bb736bcb648bed7f3325e686ccf794745b5450",
+        "7bfee954cdfa4c2a2749b7937048470126e0609fb22ff1836fd4e8c34f558977",
+        "5c5ccd471e1594926d95cd85387fa7650cd93b2de2bf6a339f845ea9e6cee837",
+        "630da3e676e2558f7bf80f489b0ecf5b0434d74557b732279c1d939114298de7"
+      ],
+      "evidence": "Original ST0202_002 appearance/crop correlation0.957958 to reviewed G293 computer atlas; three independently localized print fields, not a filename inference."
     }
   ]
 }

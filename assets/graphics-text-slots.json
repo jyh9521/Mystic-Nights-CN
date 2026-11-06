@@ -476,6 +476,78 @@
           225,
           214,
           31
+        ],
+        [
+          0,
+          0,
+          512,
+          105
+        ],
+        [
+          53,
+          128,
+          126,
+          23
+        ],
+        [
+          280,
+          130,
+          132,
+          18
+        ],
+        [
+          53,
+          152,
+          126,
+          23
+        ],
+        [
+          280,
+          154,
+          132,
+          18
+        ],
+        [
+          53,
+          176,
+          126,
+          23
+        ],
+        [
+          280,
+          178,
+          132,
+          18
+        ],
+        [
+          53,
+          200,
+          126,
+          23
+        ],
+        [
+          280,
+          202,
+          132,
+          18
+        ],
+        [
+          0,
+          105,
+          512,
+          23
+        ],
+        [
+          0,
+          225,
+          214,
+          31
+        ],
+        [
+          0,
+          214,
+          53,
+          11
         ]
       ]
     },
@@ -1363,6 +1435,150 @@
           224,
           84,
           15
+        ],
+        [
+          15,
+          12,
+          84,
+          19
+        ],
+        [
+          124,
+          12,
+          84,
+          19
+        ],
+        [
+          15,
+          42,
+          84,
+          19
+        ],
+        [
+          124,
+          42,
+          84,
+          19
+        ],
+        [
+          15,
+          72,
+          84,
+          19
+        ],
+        [
+          124,
+          72,
+          84,
+          19
+        ],
+        [
+          15,
+          102,
+          84,
+          19
+        ],
+        [
+          124,
+          102,
+          84,
+          19
+        ],
+        [
+          15,
+          132,
+          84,
+          19
+        ],
+        [
+          124,
+          132,
+          84,
+          19
+        ],
+        [
+          15,
+          162,
+          84,
+          19
+        ],
+        [
+          124,
+          162,
+          84,
+          19
+        ],
+        [
+          15,
+          192,
+          84,
+          19
+        ],
+        [
+          124,
+          192,
+          84,
+          19
+        ],
+        [
+          15,
+          222,
+          84,
+          19
+        ],
+        [
+          124,
+          222,
+          84,
+          19
+        ],
+        [
+          208,
+          12,
+          1,
+          19
+        ],
+        [
+          208,
+          42,
+          1,
+          19
+        ],
+        [
+          208,
+          72,
+          1,
+          19
+        ],
+        [
+          208,
+          102,
+          1,
+          19
+        ],
+        [
+          208,
+          132,
+          1,
+          19
+        ],
+        [
+          208,
+          162,
+          1,
+          19
+        ],
+        [
+          208,
+          192,
+          1,
+          19
+        ],
+        [
+          208,
+          222,
+          1,
+          19
         ]
       ]
     },
@@ -1926,6 +2142,96 @@
           224,
           84,
           15
+        ],
+        [
+          15,
+          102,
+          84,
+          19
+        ],
+        [
+          124,
+          102,
+          84,
+          19
+        ],
+        [
+          15,
+          132,
+          84,
+          19
+        ],
+        [
+          124,
+          132,
+          84,
+          19
+        ],
+        [
+          15,
+          162,
+          84,
+          19
+        ],
+        [
+          124,
+          162,
+          84,
+          19
+        ],
+        [
+          15,
+          192,
+          84,
+          19
+        ],
+        [
+          124,
+          192,
+          84,
+          19
+        ],
+        [
+          15,
+          222,
+          84,
+          19
+        ],
+        [
+          124,
+          222,
+          84,
+          19
+        ],
+        [
+          208,
+          102,
+          1,
+          19
+        ],
+        [
+          208,
+          132,
+          1,
+          19
+        ],
+        [
+          208,
+          162,
+          1,
+          19
+        ],
+        [
+          208,
+          192,
+          1,
+          19
+        ],
+        [
+          208,
+          222,
+          1,
+          19
         ]
       ]
     },
@@ -8609,6 +8915,12 @@
           58,
           59,
           29
+        ],
+        [
+          49,
+          57,
+          59,
+          32
         ]
       ]
     },
@@ -23132,6 +23444,334 @@
           51,
           31
         ]
+      ]
+    },
+    {
+      "sha256": "ade679ba2acf9eedfcfb8461eead6c03aa7b1dea7ae4aa0c89da74dc452bac4b",
+      "profile": [
+        128,
+        128,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "member": "ST0101_042.TM2",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "offset": 2452600,
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/ST01-03/ST0102.RES",
+          "member": "ST0102_042.TM2",
+          "resource_sha256": "2744c2a5f1a2ac90c58f9aa75677f8db6360cdc0c7655ced881256429b17f4e7",
+          "offset": 1792568,
+          "size": 17472
+        },
+        {
+          "resource": "RES/SCENE/ST04-07/ST0401_1.RES",
+          "member": "ST0401_003.TM2",
+          "resource_sha256": "345db9ea24bb08c1d9c94497a6ee3d04694408bac0f5dbdbfad65b3748e3e907",
+          "offset": 1789532,
+          "size": 17472
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          49,
+          57,
+          59,
+          32
+        ]
+      ],
+      "slots": [
+        {
+          "id": "ade679ba2acf/text-01",
+          "source": "CAUTION",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            53,
+            59,
+            49,
+            18
+          ],
+          "source_pixels_sha256": "283e9e69048e56ef92e20c65493a1a70c68ccb4b8366244f293d069edd1f9617",
+          "background_index": 70,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "ade679ba2acf/text-02",
+          "source": "RESTRICTED AREA",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            49,
+            77,
+            58,
+            12
+          ],
+          "source_pixels_sha256": "42524c288c23652cfa7f915723ab285617646dc4abb6d4132c2ce45523b41cef",
+          "background_index": 98,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ]
+    },
+    {
+      "sha256": "b41e55919b6fff4395e0e41d25f427b9d3f1144d3b46741d1761bd0ed20250f0",
+      "profile": [
+        256,
+        256,
+        5,
+        1
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0101_1.RES",
+          "member": "ST0101_905.TM2",
+          "resource_sha256": "57be3203a0f28697684c86a8df17d4fde722d0251049f949c2a962d52ed14611",
+          "offset": 3585608,
+          "size": 66112
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          91,
+          37,
+          13,
+          78
+        ]
+      ],
+      "slots": [
+        {
+          "id": "b41e55919b6f/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            93,
+            39,
+            9,
+            74
+          ],
+          "source_pixels_sha256": "738582052648da12371eb6a95bd6eebe68c0587ad72bb707f8f11c01d78255dd",
+          "background_index": 244,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ]
+    },
+    {
+      "sha256": "630da3e676e2558f7bf80f489b0ecf5b0434d74557b732279c1d939114298de7",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "member": "ST0202_002.TM2",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "offset": 1591464,
+          "size": 66624
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          70,
+          49,
+          54,
+          10
+        ],
+        [
+          103,
+          162,
+          60,
+          12
+        ],
+        [
+          1,
+          198,
+          38,
+          14
+        ],
+        [
+          67,
+          46,
+          60,
+          16
+        ],
+        [
+          100,
+          158,
+          68,
+          18
+        ],
+        [
+          0,
+          195,
+          41,
+          19
+        ]
+      ],
+      "slots": [
+        {
+          "id": "630da3e676e2/text-01",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            70,
+            49,
+            54,
+            10
+          ],
+          "source_pixels_sha256": "f7976a8e89eb1b0841b52a2c79d6407e401f7413a181db14580b530de09d7425",
+          "background_index": 14,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "630da3e676e2/text-02",
+          "source": "DATA LOADING",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            103,
+            162,
+            60,
+            12
+          ],
+          "source_pixels_sha256": "a6e0b865c5b9478bc2231aa34dbd72b5e5f1cd0c8cbb4a9394d4271d4002a45e",
+          "background_index": 227,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        },
+        {
+          "id": "630da3e676e2/text-03",
+          "source": "VITAL CREATIONS",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            1,
+            198,
+            38,
+            14
+          ],
+          "source_pixels_sha256": "cd9a68d0634d74f97da622d88987150beb4dfbdb610216f004d92f9d45513511",
+          "background_index": 100,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
+      ]
+    },
+    {
+      "sha256": "94ff522716a35454708ae6552d44ecd8c3360d3344da2920ef82971b54251af9",
+      "profile": [
+        256,
+        256,
+        5,
+        3
+      ],
+      "references": [
+        {
+          "resource": "RES/SCENE/ST01-03/ST0202_1.RES",
+          "member": "ST0202_006.TM2",
+          "resource_sha256": "359403d948167372066d17ac9bf8459e639d5a232874b16c8dd76e1b1c295e23",
+          "offset": 1675120,
+          "size": 66624
+        }
+      ],
+      "rendering": "authored-delta",
+      "artwork_rectangles": [
+        [
+          194,
+          130,
+          56,
+          124
+        ]
+      ],
+      "slots": [
+        {
+          "id": "94ff522716a3/text-01",
+          "source": "NO SIGANAL / ALERT-STATE OF EMERGENCY",
+          "install": true,
+          "evidence": "verified-visible",
+          "rect": [
+            208,
+            137,
+            35,
+            113
+          ],
+          "source_pixels_sha256": "26d645c21332705fa85a8ed1c156e37ef4b7b07673dcae05b17e027e524b6508",
+          "background_index": 105,
+          "foreground_rgba": [
+            220,
+            235,
+            235,
+            255
+          ],
+          "font_size": 10,
+          "minimum_font_size": 5,
+          "background_mode": "authored-pixel-restoration",
+          "disposition": "authored-redraw"
+        }
       ]
     }
   ],

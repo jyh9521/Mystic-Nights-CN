@@ -83,11 +83,14 @@ def retained_codes(image, elf_recipe: dict) -> set[int]:
 
 def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
                         font_path: Path, elf_recipe: dict, *, version: dict | None = None,
-                        name_targets=None, plaintext_replacements=None):
+                        name_targets=None, plaintext_replacements=None, additional_font_texts=()):
     """Build equal-sized replacement payloads; do not write any disc files."""
+    additional_font_texts = tuple(additional_font_texts)
     entries = catalogue["entries"]
     for row in entries:
         validate_text(row["target"], row.get("text_type", ""), config.get("punctuation", {}))
+    for text in additional_font_texts:
+        validate_text(text, "cutscene", config.get("punctuation", {}))
     original_font = parse_res(image.read("RES/SYSTEM.RES"))
     fnt = original_font.read("FONT.FNT")
     textures = {f"FONT_{n}.TM2": original_font.read(f"FONT_{n}.TM2") for n in range(1, 9)}
@@ -112,6 +115,7 @@ def localized_resources(image, catalogue: dict, config: dict, font_spec: dict,
     allowed = range(code_range["first"], code_range["last"] + 1)
     font_texts = [row["target"] for row in entries] + list((name_targets or {}).values())
     font_texts += [row["target"] for row in (plaintext_replacements or {}).values()]
+    font_texts += list(additional_font_texts)
     font = build_font(fnt, textures, font_texts, font_path,
                       font_spec["sha256"], pixel_size=config["font_pixel_size"],
                       forbidden_codes=protected, allowed_codes=allowed,

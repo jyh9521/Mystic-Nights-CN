@@ -25,6 +25,27 @@ def validate_review(review, graphics, image=None):
     reviewed = {k for k, r in records.items() if r['disposition'] == 'localized-readable-text'}
     if reviewed != localized:
         raise ValueError('Graphics source review/localized texture coverage mismatch')
+    # Some meshes embed the same sign under STxxxx_xxx instead of the Gxxx
+    # atlas name. Filename suffix closure alone cannot express that relation.
+    # Families are source-bound human/pixel-reviewed declarations, not OCR or
+    # an automatic claim that all similar-looking surfaces are equivalent.
+    families=review.get('visual_families',[])
+    if not isinstance(families,list):
+        raise ValueError('Graphics visual family declarations require a list')
+    family_ids=set()
+    for family in families:
+        if not isinstance(family,dict):
+            raise ValueError('Invalid graphics visual family')
+        ident=family.get('id');members=family.get('members');evidence=family.get('evidence')
+        if (not isinstance(ident,str) or not ident.strip() or ident in family_ids
+                or not isinstance(evidence,str) or not evidence.strip()
+                or not isinstance(members,list) or len(members)<2
+                or any(not isinstance(k,str) or k not in records for k in members)
+                or len(members)!=len(set(members))):
+            raise ValueError('Invalid graphics visual family identity/members/evidence')
+        family_ids.add(ident)
+        if any(k not in localized for k in members):
+            raise ValueError('Unlocalized graphics visual family member requires explicit review')
     physical = set()
     for row in records.values():
         if row['disposition'] not in DISPOSITIONS or not row.get('review_note', '').strip() or not row['references']:

@@ -2542,6 +2542,41 @@
       "id": "55b23003c6eb/upper-lab-name",
       "target": "幼虫实验室",
       "status": "draft"
+    },
+    {
+      "id": "ade679ba2acf/text-01",
+      "target": "注意",
+      "status": "draft"
+    },
+    {
+      "id": "ade679ba2acf/text-02",
+      "target": "限制区域",
+      "status": "draft"
+    },
+    {
+      "id": "b41e55919b6f/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "630da3e676e2/text-01",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "630da3e676e2/text-02",
+      "target": "正在加载数据",
+      "status": "draft"
+    },
+    {
+      "id": "630da3e676e2/text-03",
+      "target": "生命创造",
+      "status": "draft"
+    },
+    {
+      "id": "94ff522716a3/text-01",
+      "target": "无信号\n警戒·紧急状态",
+      "status": "draft"
     }
   ],
   "artwork_files": [
@@ -2735,6 +2770,10 @@
     "artwork/71f214f794e9.json",
     "artwork/2943e8d7ffdb.json",
     "artwork/1838789d9267.json",
-    "artwork/3c1dbf83a249.json"
+    "artwork/3c1dbf83a249.json",
+    "artwork/ade679ba2acf.json",
+    "artwork/b41e55919b6f.json",
+    "artwork/630da3e676e2.json",
+    "artwork/94ff522716a3.json"
   ]
 }

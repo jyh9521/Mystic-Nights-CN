@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>诡秘之夜 · 过场语音听审</title>
+<style>
+body{font:16px/1.6 system-ui,sans-serif;background:#121a20;color:#dce8eb;margin:0}
+main{max-width:1100px;margin:auto;padding:28px}h1{font-size:27px}
+article{border:1px solid #354952;border-radius:12px;padding:20px;margin:22px 0;background:#1a272e}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+textarea{width:96%;min-height:80px;font:inherit;background:#101c22;color:#edf3f4;border:1px solid #597078;padding:8px}
+input{font:inherit}button{font:inherit;padding:10px 20px;background:#52b4bb;border:0;border-radius:7px;cursor:pointer}
+code{overflow-wrap:anywhere;color:#a9d8da}.hint{color:#e9be79}.asr{white-space:pre-wrap;color:#acbcc4;font-size:14px}
+audio{width:100%;margin:10px 0}label{display:block;margin:8px 0}
+@media(max-width:700px){.columns{grid-template-columns:1fr}main{padding:14px}}
+</style>
+<main>
+<h1>《诡秘之夜》过场语音听审</h1>
+<p class="hint">以下为原盘语音与机器转录草稿，不是已听审字幕。请听原音后修订韩文和译文，填写结束帧，再明确勾选确认。页面不会自动勾选认可，未确认条目继续保持 asr-draft。</p>
+<p>导出会完整保留47个场景的原SCR与camera身份、10条候选及原始证据。没有字幕候选的场景仍是“未转录、未认可”，空白不视为认可。FRAME来自游戏脚本，不使用外部计时器猜帧率。</p>
+<p id="summary"></p><button id="export">导出字幕目录 JSON</button><span id="saved"></span><div id="cards"></div>
+</main>
+<script id="source" type="application/json">CATALOGUE_JSON_PLACEHOLDER</script>
+<script id="audio-meta" type="application/json">AUDIO_META_JSON_PLACEHOLDER</script>
+<script>
+const source=JSON.parse(document.querySelector('#source').textContent);
+const metadata=JSON.parse(document.querySelector('#audio-meta').textContent);
+const key='mystic-cutscene-audio-review-v2:'+metadata.catalogue_sha256;
+let saved={};
+try{saved=JSON.parse(localStorage.getItem(key)||'{}')}catch(e){}
+const rows=source.resources.flatMap(r=>r.cues.map(c=>({resource:r,cue:c})));
+const edits={};
+document.querySelector('#summary').textContent=`${rows.length}条语音候选，完整保留${source.resources.length}个场景；原盘SHA-256：${source.source_iso_sha256}`;
+function el(tag,text){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n}
+function persist(){
+    try{localStorage.setItem(key,JSON.stringify(edits));document.querySelector('#saved').textContent=' 已保存到此浏览器'}
+    catch(e){document.querySelector('#saved').textContent=' 本地保存失败，请立即导出'}
+}
+for(const {resource:r,cue:c}of rows){
+    // A previous checked box is not silently restored. Text/end edits survive,
+    // but this page load always requires a fresh explicit confirmation.
+    const edit=edits[c.id]=Object.assign({text:c.text,source_transcript:c.source_transcript,end_frame_exclusive:c.end_frame_exclusive,comment:''},saved[c.id]||{},{reviewed:false});
+    const later=r.cues.filter(other=>other.start_frame>c.start_frame).map(other=>other.start_frame);
+    const maxEnd=Math.min(r.camera_frames-1,...later);
+    const box=el('article');
+    box.append(el('h2',`${r.scene} · ${c.id} · 起始FRAME ${c.start_frame}`));
+    box.append(el('code',`原音SHA-256 ${c.source_audio_sha256}`));
+    box.append(el('p',`结束FRAME范围：${c.start_frame+1}–${maxEnd}（不含结束帧；下一条字幕或camera上界）`));
+    const a=el('audio');a.controls=true;a.preload='metadata';a.src=metadata.audio_map[c.source_audio_id].path;box.append(a);
+    const grid=el('div');grid.className='columns';
+    for(const [field,title]of [['source_transcript','韩文听审稿'],['text','简体中文译文（显式换行使用 <BR>）']]){
+        const col=el('div');col.append(el('label',title));const input=el('textarea');input.value=edit[field];
+        input.addEventListener('input',()=>{edit[field]=input.value;edit.reviewed=false;check.checked=false;persist()});
+        col.append(input);grid.append(col);
+    }
+    box.append(grid);
+    if(c.classification){const p=el('p',c.classification);p.className='hint';box.append(p)}
+    for(const t of c.asr||[]){const p=el('p',t.model+'（机器）：'+t.segments.map(s=>s.text.trim()).join(' '));p.className='asr';box.append(p)}
+    const end=el('input');end.type='number';end.min=String(c.start_frame+1);end.max=String(maxEnd);end.value=edit.end_frame_exclusive??'';
+    end.addEventListener('input',()=>{edit.end_frame_exclusive=end.value===''?null:Number(end.value);edit.reviewed=false;check.checked=false;persist()});
+    const endlabel=el('label','结束FRAME：');endlabel.append(end);box.append(endlabel);
+    const check=el('input');check.type='checkbox';check.checked=false;
+    check.addEventListener('change',()=>{edit.reviewed=check.checked;persist()});
+    const label=el('label');label.append(check,document.createTextNode(' 我已听原音，确认此韩文、译文与字幕结束帧'));box.append(label);
+    const comment=el('textarea');comment.placeholder='意见／不确定词／是否只是呻吟等';comment.value=edit.comment;
+    comment.addEventListener('input',()=>{edit.comment=comment.value;persist()});box.append(comment);
+    document.querySelector('#cards').append(box);
+}
+document.querySelector('#export').addEventListener('click',()=>{
+    try{
+        const resources=source.resources.map(r=>({...r,cues:r.cues.map(c=>{
+            const e=edits[c.id];const maxEnd=Math.min(r.camera_frames-1,...r.cues.filter(o=>o.start_frame>c.start_frame).map(o=>o.start_frame));
+            const valid=Number.isInteger(e.end_frame_exclusive)&&e.end_frame_exclusive>c.start_frame&&e.end_frame_exclusive<=maxEnd
+                &&typeof e.text==='string'&&e.text.trim()&&!/[\0\r\n"]/.test(e.text)&&new TextEncoder().encode(e.text).length<=1000
+                &&typeof e.source_transcript==='string'&&e.source_transcript.trim();
+            if(e.reviewed&&!valid)throw new Error(c.id+'：确认项必须填写韩文、合法译文与有效结束帧；结束帧不得越过下一条字幕或camera上界');
+            return{...c,text:e.text,source_transcript:e.source_transcript,end_frame_exclusive:e.end_frame_exclusive,
+                   status:e.reviewed?'reviewed':'asr-draft',human_listening_verified:Boolean(e.reviewed),comment:e.comment};
+        })}));
+        const result={...source,status:'listening-feedback',all_speech_transcribed:false,
+                      review_source_catalogue_sha256:metadata.catalogue_sha256,resources};
+        const b=new Blob([JSON.stringify(result,null,2)+'\n'],{type:'application/json'});
+        const url=URL.createObjectURL(b);const a=document.createElement('a');a.href=url;a.download='cutscene-subtitle-catalogue-reviewed.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+    }catch(e){alert(e.message)}
+});
+</script>
+</html>

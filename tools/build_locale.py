@@ -25,6 +25,7 @@ def main() -> None:
     parser.add_argument("--locale", default="zh-CN")
     parser.add_argument("--output", type=Path, default=ROOT / "build/full-text")
     parser.add_argument("--font", type=Path)
+    parser.add_argument("--subtitle-catalog", type=Path, help="Explicit reviewed frame-based cutscene subtitles; never inferred from locale config")
     parser.add_argument("--release", action="store_true")
     args = parser.parse_args()
     if args.release:
@@ -47,6 +48,16 @@ def main() -> None:
     if args.output.exists():
         raise FileExistsError(f"Use a new output directory: {args.output}")
     image = verify_original(args.iso, version)
+    subtitle_catalogue, subtitle_sha256, subtitle_texts = None, None, []
+    if args.subtitle_catalog is not None:
+        if catalogue["profile"] != "full-text":
+            raise ValueError("Cutscene subtitles require the verified full-text profile")
+        from mysticnights.cutscene_subtitles import validate_catalogue
+        subtitle_data = args.subtitle_catalog.read_bytes()
+        subtitle_catalogue = json.loads(subtitle_data)
+        subtitle_sha256 = hashlib.sha256(subtitle_data).hexdigest()
+        checked_scenes = validate_catalogue(image, subtitle_catalogue, locale=args.locale)
+        subtitle_texts = [cue["text"] for scene in checked_scenes for cue in scene["cues"]]
     if catalogue["profile"] in {"partial", "full-text"}:
         from validate_translations import validate_project
         validate_project(locale_dir, image)
@@ -60,8 +71,9 @@ def main() -> None:
         name_targets = {r["id"]: r["target"] for r in names}
         plaintext = {r["resource"]: r for r in auxiliary["agreement"]}
         full_details = {"names": names, "auxiliary": auxiliary}
+    additional = {"additional_font_texts": subtitle_texts} if subtitle_catalogue is not None else {}
     replacements, font, protected = localized_resources(image, catalogue, config, font_spec, font_path, elf_recipe,
-                                                         version=version, name_targets=name_targets, plaintext_replacements=plaintext)
+                                                         version=version, name_targets=name_targets, plaintext_replacements=plaintext, **additional)
     if catalogue["profile"] == "full-text":
         from mysticnights.font import encode_text
         from mysticnights.linked_names import discover_name_links, patch_linked_names
@@ -123,6 +135,18 @@ def main() -> None:
             image.read(resource), replacements[resource], catalogue["entries"], font.mapping,
             layout_recipe, {"no_line_start": layout_policy["no_line_start"]})
         full_details["text_layout"] = layout_report
+    if subtitle_catalogue is not None:
+        from mysticnights.cutscene_subtitles import build_script_edits, build_engine_patch
+        from mysticnights.resources import parse_res
+        member_edits, script_report = build_script_edits(image, subtitle_catalogue, font.mapping)
+        for resource, changes in member_edits.items():
+            source = image.read(resource)
+            changed = parse_res(source).replace(changes)
+            replacements[resource] = merge_resource_edits(source, replacements.get(resource, source), changed)
+        replacements["SCKA_200.55"], engine_report = build_engine_patch(
+            image.read("SCKA_200.55"), replacements["SCKA_200.55"], catalogue["entries"], font.mapping)
+        full_details["cutscene_subtitles"] = {"catalogue": subtitle_catalogue,
+            "catalogue_sha256": subtitle_sha256, "script_report": script_report, "engine_patch": engine_report}
     args.output.parent.mkdir(parents=True, exist_ok=True)
     parent = args.output.parent.resolve()
     # Only a newly allocated sibling directory is ever cleaned on failure.

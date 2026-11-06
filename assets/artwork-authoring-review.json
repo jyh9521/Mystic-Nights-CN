@@ -927,6 +927,67 @@
       "native_artwork_deltas": [
         "locales/zh-CN/artwork/55b23003c6eb.json"
       ]
+    },
+    {
+      "id": "runtime-feedback-capsule-ink",
+      "tool": "built-in imagegen",
+      "prompt_summary": "Extract only8 complete left-column Simplified white capsule words on genuine alpha; preserve adopted thick condensed beveled slab-sans, dark outline and exact words; remove all old button material/chrome/glow.",
+      "prompt_summary_not_verbatim": true,
+      "transparent_background": true,
+      "selected_output_sha256": "0579bb49410dbcc9527782e3aa3f89b4d0c10e9c39a901690b68f4b629d79add",
+      "status": "adopted",
+      "usage": "Literal-alpha foreground extraction / complete physical material only; deterministic source UV, CLUT and reversible deltas; no complete source images distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json"
+      ]
+    },
+    {
+      "id": "runtime-feedback-names-ink",
+      "tool": "built-in imagegen",
+      "prompt_summary": "Extract only5 complete left-column Simplified character names on genuine alpha; keep same condensed beveled face, outline and exact spelling; remove old button material.",
+      "prompt_summary_not_verbatim": true,
+      "transparent_background": true,
+      "selected_output_sha256": "6629698103ceebd0b25feb746c53b6e4c77c2b9add72970c271c545a4bcc2faf",
+      "status": "adopted",
+      "usage": "Literal-alpha foreground extraction / complete physical material only; deterministic source UV, CLUT and reversible deltas; no complete source images distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "runtime-feedback-signal-clean",
+      "tool": "built-in imagegen",
+      "prompt_summary": "Remove NO SIGNAL and smaller status line from supplied source-oriented monitor; preserve cyan light, frame and all neighboring atlas geometry, no flat rectangle.",
+      "prompt_summary_not_verbatim": true,
+      "transparent_background": false,
+      "selected_output_sha256": "606d60e73996a7c7d1488ebbd236dbd3541f13f513acef8d980a455514dc55b6",
+      "status": "adopted-physical-face-only",
+      "usage": "Literal-alpha foreground extraction / complete physical material only; deterministic source UV, CLUT and reversible deltas; no complete source images distributed",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/94ff522716a3.json"
+      ]
+    },
+    {
+      "id": "runtime-feedback-MN-rejected-red-glow",
+      "tool": "built-in imagegen",
+      "prompt_summary": "Attempt source MN matte cleanup without changing logo geometry; rejected because generated red glow/geometry changed.",
+      "prompt_summary_not_verbatim": true,
+      "transparent_background": true,
+      "selected_output_sha256": "46777cfed24325a94f8f23484466ffefe079a5428c61b96377d2ce2de550854f",
+      "status": "rejected",
+      "usage": "Literal-alpha foreground extraction / complete physical material only; deterministic source UV, CLUT and reversible deltas; no complete source images distributed",
+      "native_artwork_deltas": []
+    },
+    {
+      "id": "runtime-feedback-glass-clean-not-used",
+      "tool": "built-in imagegen",
+      "prompt_summary": "Attempt remove only VITAL CREATIONS while preserving original checker and microprint; rejected because generated checker phase shifted.",
+      "prompt_summary_not_verbatim": true,
+      "transparent_background": false,
+      "selected_output_sha256": "967d48d0fc9305525028da48a51c782602c0eadbe2dbce3d976bb614de507183",
+      "status": "rejected",
+      "usage": "Literal-alpha foreground extraction / complete physical material only; deterministic source UV, CLUT and reversible deltas; no complete source images distributed",
+      "native_artwork_deltas": []
     }
   ]
 }

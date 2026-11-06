@@ -135,3 +135,8 @@ python -X utf8 tools/inspect_menu_layout.py --iso "[full2]미스틱 나이츠(K)
 ## 主菜单完整内床恢复（后续修正）
 
 此前前景字稿恢复后，仍保留左右原材质内嵌的字形状暗纹。该结果没有满足玩家的无残留要求。当前采用四块完整119×16无字内床，而不是原[299,129,98,21]里的亮字面遮罩。四床之外的索引与前版逐字节一致，原端帽、边框、外部火光、标题、普通态、START保持。高清配方的12个彩色前景RLE图层不变，只更新base_delta及来源键；因此“只修背景”有独立字节证据。
+# 运行画面反馈补充
+
+本次已核实实际 `RenderLogo` 和 `RenderTexture` UV：START `[2,226,194,30]`、胶囊蓝/橙中心 X57/166，人物中心 Y110.5+30i。旧布局错误、原始暗影、同名扫描漏项及保护样本见 [RUNTIME_IMAGE_FEEDBACK.md](docs/RUNTIME_IMAGE_FEEDBACK.md)。HD 字库实际取样框和 CLUT16 显式 TEXA 分别见 [HD_FONT_SAMPLING.md](docs/HD_FONT_SAMPLING.md)、[HD_PALETTE_PROFILES.md](docs/HD_PALETTE_PROFILES.md)。
+
+原生过场已有未完成 CAPTION 读取脚手架，但缺执行/绘制；可选同尺寸脚本编译和守卫式绘制钩子的源锚点、回放边界及草稿门控见 [CUTSCENE_SUBTITLES.md](docs/CUTSCENE_SUBTITLES.md)。当前默认 ISO 不含未听审字幕。

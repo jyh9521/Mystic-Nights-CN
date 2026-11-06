@@ -26,7 +26,88 @@ def textured_fixture():
     return bytes(data)
 
 
+def outline_with_ascii(path):
+    """Original test outlines, including a slanted Latin glyph."""
+    from fontTools.fontBuilder import FontBuilder
+    from fontTools.pens.ttGlyphPen import TTGlyphPen
+    builder = FontBuilder(1000, isTTF=True)
+    builder.setupGlyphOrder([".notdef", "square", "latin"])
+    builder.setupCharacterMap({ord("中"): "square", ord("文"): "square", ord("A"): "latin"})
+    glyphs = {}
+    for name in (".notdef", "square", "latin"):
+        pen = TTGlyphPen(None)
+        points = [(150, 0), (850, 0), (500, 700)] if name == "latin" else [(200, 0), (800, 0), (800, 700), (200, 700)]
+        pen.moveTo(points[0])
+        for point in points[1:]: pen.lineTo(point)
+        pen.closePath()
+        glyphs[name] = pen.glyph()
+    builder.setupGlyf(glyphs)
+    builder.setupHorizontalMetrics({name: (1000, 150 if name == "latin" else 200) for name in glyphs})
+    builder.setupHorizontalHeader(ascent=800, descent=-200)
+    builder.setupOS2(sTypoAscender=800, sTypoDescender=-200, usWinAscent=800, usWinDescent=200)
+    builder.setupNameTable({"familyName": "Synthetic HD", "styleName": "Regular"})
+    builder.setupPost(); builder.setupMaxp(); builder.save(path)
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
 class HdFontTests(unittest.TestCase):
+    def test_ascii_option_uses_fresh_outline_in_source_core_layout(self):
+        with tempfile.TemporaryDirectory() as directory:
+            font = Path(directory) / "synthetic.ttf"
+            digest = outline_with_ascii(font)
+            mapping = {"中": 0xA4A1, "文": 0xA4A2}
+            original = build_font(fnt_fixture(), {"FONT_8.TM2": textured_fixture()}, [],
+                                  font, digest, pixel_size=12, existing_mapping=mapping).textures
+            result = build_hd_atlases(fnt_fixture(), original, mapping, font.read_bytes(),
+                                      digest, pixel_size=12, ascii_outlines=True)
+            image = result.images["FONT_8.TM2"]
+            self.assertEqual(result.ascii_glyphs, 1)
+            self.assertEqual(result.ascii_rectangles, {"FONT_8.TM2": [[1, 0, 5, 14]]})
+            native = raw_atlas(original["FONT_8.TM2"]).resize(image.size, Image.Resampling.NEAREST)
+            cell = image.crop((4, 4, 24, 56))
+            self.assertNotEqual(cell.tobytes(), native.crop((4, 4, 24, 56)).tobytes())
+            self.assertEqual(cell.getchannel("A").getbbox(), (0, 0, 20, 52))
+            self.assertTrue(any(len({cell.getpixel((x+i,y+j)) for i in range(4) for j in range(4)}) > 1
+                                for y in range(0,52,4) for x in range(0,20,4)))
+            self.assertGreater(result.cleared_padding_pixels_native["FONT_8.TM2"], 0)
+            self.assertEqual(image.getpixel((7*4+3, 6*4))[3], 0)
+
+    def test_ascii_option_is_explicit_and_checks_outline_coverage(self):
+        with tempfile.TemporaryDirectory() as directory:
+            font = Path(directory) / "synthetic.ttf"
+            digest = make_outline(font)
+            mapping = {"中": 0xA4A1}
+            original = build_font(fnt_fixture(), {"FONT_8.TM2": textured_fixture()}, [],
+                                  font, digest, pixel_size=12, existing_mapping=mapping).textures
+            with self.assertRaisesRegex(HdFontError, "lacks mapped"):
+                build_hd_atlases(fnt_fixture(), original, mapping, font.read_bytes(), digest,
+                                 pixel_size=12, ascii_outlines=True)
+            with self.assertRaisesRegex(HdFontError, "boolean"):
+                build_hd_atlases(fnt_fixture(), original, mapping, font.read_bytes(), digest,
+                                 pixel_size=12, ascii_outlines=1)
+
+    def test_unsampled_padding_cannot_leak_into_bilinear_glyph_boundaries(self):
+        """The old pack retained source ink in gaps; integer UVs sample it."""
+        with tempfile.TemporaryDirectory() as directory:
+            font = Path(directory) / "synthetic.ttf"
+            digest = make_outline(font)
+            mapping = {"中": 0xA4A1}
+            original = build_font(fnt_fixture(), {"FONT_8.TM2": textured_fixture()}, [],
+                                  font, digest, pixel_size=12, existing_mapping=mapping).textures
+            result = build_hd_atlases(fnt_fixture(), original, mapping, font.read_bytes(),
+                                      digest, pixel_size=12)
+            image = result.images["FONT_8.TM2"]
+            # x=7 is not referenced by any FNT glyph; the first mapped glyph
+            # starts at x=8. A linear sample at the boundary mixes this old ink.
+            self.assertEqual(image.getpixel((7*4+3, 6*4))[3], 0)
+            self.assertEqual(image.getpixel((8*4, 0))[3], 0)
+            # The protected glyph's *actual* y+1 / h-1 sampling region is exact.
+            native = raw_atlas(original["FONT_8.TM2"]).resize(image.size, Image.Resampling.NEAREST)
+            self.assertEqual(image.crop((4, 4, 24, 56)).tobytes(),
+                             native.crop((4, 4, 24, 56)).tobytes())
+            self.assertEqual(image.crop((92, 4, 144, 56)).tobytes(),
+                             native.crop((92, 4, 144, 56)).tobytes())
+
     def test_psmt8_offsets_are_permutation_and_reference_points(self):
         self.assertEqual(sorted(swizzle8_offset(x, y) for y in range(16) for x in range(16)), list(range(256)))
         for xy, expected in { (0, 0): 0, (1, 0): 4, (4, 2): 1, (0, 2): 33, (0, 4): 96, (15, 15): 255 }.items():
@@ -88,9 +169,10 @@ class HdFontTests(unittest.TestCase):
             image = result.images["FONT_8.TM2"]
             self.assertEqual(image.size, (1024,1024))
             native = raw_atlas(original["FONT_8.TM2"]).resize(image.size, Image.Resampling.NEAREST)
-            # ASCII slot, unmapped source pixels, and atlas padding remain exact.
-            self.assertEqual(image.crop((4,0,24,56)).tobytes(), native.crop((4,0,24,56)).tobytes())
-            self.assertEqual(image.crop((0,60,1024,1024)).tobytes(), native.crop((0,60,1024,1024)).tobytes())
+            # Protected ASCII sampling stays exact; unreferenced source padding
+            # is now deliberately transparent to stop filtered stale-ink bleed.
+            self.assertEqual(image.crop((4,4,24,56)).tobytes(), native.crop((4,4,24,56)).tobytes())
+            self.assertIsNone(image.crop((0,60,1024,1024)).getbbox())
             self.assertEqual(image.crop((32,0,84,4)).getbbox(), None)
             self.assertLessEqual(max(image.crop((32,4,84,56)).getchannel("A").tobytes()), 128)
             # Fresh outline edges have sub-native structure, not 4x nearest cells.

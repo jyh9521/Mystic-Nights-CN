@@ -215,7 +215,60 @@ def verify_full_paths(original, image, manifest, ranges, *, font_path: Path | No
     print(f"FULL_PATHS PASS names={len(targets)} references={count} network_strings={len(auxiliary['network'])} network_glyphs={len(network['mapping'])} agreement=1 extra_interface={len(auxiliary['extra_interface'])}")
 
 
-def modified(original, image, manifest, *, font_path: Path | None = None):
+def verify_cutscene_subtitles(original, image, manifest, ranges, *, catalogue_path: Path | None = None):
+    """Rebuild source-bound scripts/code independently of the build directory."""
+    from mysticnights.cutscene_subtitles import (build_script_edits, build_engine_patch,
+        reverse_engine_patch, replay_engine_hook)
+    detail = manifest.get("full_text", {}).get("cutscene_subtitles")
+    if not detail:
+        require(catalogue_path is None, "Explicit subtitle catalogue was not compiled into this ISO")
+        return None
+    catalogue = detail["catalogue"]
+    require(catalogue.get("locale") == manifest["locale"], "Subtitle manifest locale mismatch")
+    require(isinstance(detail.get("catalogue_sha256"), str) and len(detail["catalogue_sha256"]) == 64
+            and all(c in "0123456789abcdef" for c in detail["catalogue_sha256"]),
+            "Invalid subtitle catalogue source digest")
+    if catalogue_path is not None:
+        data = catalogue_path.read_bytes()
+        require(hashlib.sha256(data).hexdigest() == detail["catalogue_sha256"]
+                and json.loads(data) == catalogue, "Explicit subtitle catalogue identity mismatch")
+    edits, script_report = build_script_edits(original, catalogue, manifest["font"]["mapping"])
+    require(script_report == detail["script_report"], "Subtitle script source/replay report mismatch")
+    for resource, members in edits.items():
+        source = parse_res(original.read(resource)); actual = parse_res(image.read(resource))
+        require(source.entries == actual.entries, "Subtitle RES member table changed")
+        for key, expected in members.items():
+            member = next(member for member in source.entries if member.key == key)
+            actual_member = next(member for member in actual.entries if member.key == key)
+            require(actual.read(actual_member) == expected, f"Subtitle SCR independent replay mismatch: {resource}/{member.name}")
+            ranges.setdefault(resource, []).append((member.offset, member.end))
+    actual_elf = image.read("SCKA_200.55"); receipt = detail["engine_patch"]
+    before_elf = reverse_engine_patch(actual_elf, receipt)
+    expected_elf, actual_receipt = build_engine_patch(original.read("SCKA_200.55"), before_elf,
+                                                     manifest["entries"], manifest["font"]["mapping"])
+    require(expected_elf == actual_elf and actual_receipt == receipt, "Subtitle engine independent replay mismatch")
+    for row in receipt["writes"]:
+        ranges.setdefault("SCKA_200.55", []).append((row["offset"], row["offset"] + len(bytes.fromhex(row["after"]))))
+    checked = 0
+    for row in script_report["reports"]:
+        for cue in row.get("cues", []):
+            nodes = [{"type": 2, "index": 0, "frame": cue["start_frame"]}]
+            captions = [{"text": encode_text(cue["text"], manifest["font"]["mapping"]),
+                         "end_frame_inclusive": cue["end_frame_exclusive"] - 1}]
+            for frame, skip, draw_count in [(cue["start_frame"], False, 0),
+                                           (cue["start_frame"] + 1, False, 2),
+                                           (cue["end_frame_exclusive"], False, 2),
+                                           (cue["end_frame_exclusive"] + 1, False, 0),
+                                           (cue["start_frame"] + 1, True, 0)]:
+                outcome = replay_engine_hook(actual_elf, receipt, frame=frame, nodes=nodes, captions=captions, skip=skip)
+                require(len(outcome["draws"]) == draw_count, "Subtitle native frame/skip replay mismatch")
+                checked += 1
+    require(checked > 0, "Subtitle feature has no reviewed caption replay cases")
+    print(f"CUTSCENE_SUBTITLES PASS scenes={script_report['scenes']} captioned={script_report['captioned_scenes']} reviewed_cues={script_report['reviewed_cues']} replay_cases={checked} source_bound=pass game_executed=false")
+    return detail
+
+
+def modified(original, image, manifest, *, font_path: Path | None = None, subtitle_catalog: Path | None = None):
     require(sha256_file(image.path) == manifest["modified"]["sha256"], "Modified ISO hash mismatch")
     require(image.size == manifest["modified"]["size"], "Modified ISO size mismatch")
     require(image.files == original.files and image.directories == original.directories, "ISO LBA/records changed")
@@ -224,6 +277,7 @@ def modified(original, image, manifest, *, font_path: Path | None = None):
     mapping = manifest["font"]["mapping"]
     require(len(mapping) == len(set(mapping.values())), "Duplicate glyph assignments")
     ranges = {"RES/SYSTEM.RES": []}
+    subtitles = verify_cutscene_subtitles(original, image, manifest, ranges, catalogue_path=subtitle_catalog)
     layout = manifest.get("full_text", {}).get("text_layout")
     if layout:
         from mysticnights.text_layout import build_text_layout
@@ -277,6 +331,14 @@ def modified(original, image, manifest, *, font_path: Path | None = None):
             begin = table_write["offset"] - row["offset"]
             table = bytes.fromhex(table_write["after"])
             wanted[begin:begin + len(table)] = table
+        if subtitles and row["kind"] == "elf":
+            for write in subtitles["engine_patch"]["writes"]:
+                if write.get("owner_id") == row["id"]:
+                    begin = write["offset"] - row["offset"]
+                    payload = bytes.fromhex(write["after"])
+                    require(begin > len(encode_text(row["target"], mapping)) and begin + len(payload) <= len(wanted),
+                            "Subtitle code escaped its translated C-string padding")
+                    wanted[begin:begin + len(payload)] = payload
         require(slot == wanted, f"Target readback mismatch: {row['id']}")
         visible = slot.split(b"\0", 1)[0] if row["kind"] == "elf" else slot.rstrip(b"\0")
         require(decode_text(visible, mapping) == row["target"], f"Text decoding mismatch: {row['id']}")
@@ -360,9 +422,12 @@ def main():
     parser.add_argument("--manifest", type=Path)
     parser.add_argument("--locale", default="zh-CN")
     parser.add_argument("--font", type=Path, help="Font used for independent graphics rerender; must match manifest font SHA-256")
+    parser.add_argument("--subtitle-catalog", type=Path, help="Optionally require exact identity of the explicit compiled subtitle input")
     args = parser.parse_args()
     version = load_version(ROOT / "assets/game-version.json")
     if args.kind == "baseline":
+        if args.subtitle_catalog is not None:
+            parser.error("--subtitle-catalog is only valid for modified verification")
         if not args.locale or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-" for c in args.locale):
             parser.error("Invalid locale identifier")
         locale_dir = ROOT / "locales" / args.locale
@@ -378,7 +443,8 @@ def main():
             parser.error("modified requires --original and --manifest")
         manifest = json.loads(args.manifest.read_text(encoding="utf-8"))
         require(manifest["original"] == version["iso"], "Manifest original identity mismatch")
-        modified(verify_original(args.original, version), IsoImage(args.iso), manifest, font_path=args.font)
+        extra = {"subtitle_catalog": args.subtitle_catalog} if args.subtitle_catalog is not None else {}
+        modified(verify_original(args.original, version), IsoImage(args.iso), manifest, font_path=args.font, **extra)
         if manifest.get("full_text", {}).get("runtime_patches"):
             from mysticnights.runtime_patches import render_package
             runtime = manifest["full_text"]["runtime_patches"]

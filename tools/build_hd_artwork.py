@@ -33,7 +33,8 @@ def build_pack(iso_path:Path,manifest_path:Path,recipe_path:Path,output:Path,*,h
             'textures':[]}
     rendered=[];seen=set()
     for row,source in bound:
-        identity=tim2_replacement_identity(source,hash_function=hash_function)
+        identity=tim2_replacement_identity(source,hash_function=hash_function,
+                                           clut16_texa=row.get('clut16_texa'))
         if identity['filename'] in seen:
             raise ValueError('Duplicate HD artwork replacement filename')
         seen.add(identity['filename'])
