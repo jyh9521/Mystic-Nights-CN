@@ -15,7 +15,7 @@ audio{width:100%;margin:10px 0}label{display:block;margin:8px 0}
 </style>
 <main>
 <h1>《诡秘之夜》过场语音听审</h1>
-<p class="hint">以下为原盘语音与机器转录草稿，不是已听审字幕。请听原音后修订韩文和译文，填写结束帧，再明确勾选确认。页面不会自动勾选认可，未确认条目继续保持 asr-draft。</p>
+<p class="hint">页面保留原盘语音、机器识别历史及已有文字听审记录。文字认可、情境消歧与结束帧对时分别标示。修改后请填写结束帧，再明确确认；新的整条认可不会自动勾选，未勾选的反馈不冒充新的听审通过。</p>
 <p>导出会完整保留47个场景的原SCR与camera身份、10条候选及原始证据。没有字幕候选的场景仍是“未转录、未认可”，空白不视为认可。FRAME来自游戏脚本，不使用外部计时器猜帧率。</p>
 <p id="summary"></p><button id="export">导出字幕目录 JSON</button><span id="saved"></span><div id="cards"></div>
 </main>
@@ -43,6 +43,9 @@ for(const {resource:r,cue:c}of rows){
     const maxEnd=Math.min(r.camera_frames-1,...later);
     const box=el('article');
     box.append(el('h2',`${r.scene} · ${c.id} · 起始FRAME ${c.start_frame}`));
+    if(c.listening_review?.text_confirmed)box.append(el('p','既有记录：文字已由玩家听审确认；此页修改后的内容需重新确认'));
+    if(c.reference_interpretation)box.append(el('p','称呼解释：'+c.reference_interpretation.target_name+'；'+c.reference_interpretation.evidence_level+'，保留原听到的音节 '+c.reference_interpretation.user_heard));
+    if(c.timing_review?.status==='static-derived-nominal')box.append(el('p','结束帧为原音长度与原生边界下的名义时基推算；游戏内音画同步尚待核对'));
     box.append(el('code',`原音SHA-256 ${c.source_audio_sha256}`));
     box.append(el('p',`结束FRAME范围：${c.start_frame+1}–${maxEnd}（不含结束帧；下一条字幕或camera上界）`));
     const a=el('audio');a.controls=true;a.preload='metadata';a.src=metadata.audio_map[c.source_audio_id].path;box.append(a);

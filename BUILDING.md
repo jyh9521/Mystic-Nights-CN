@@ -4,7 +4,7 @@
 
 九张截图的取样边界、按钮 UV、同图异名漏译及尚待 GS 转储/字幕听审的边界见 [RUNTIME_IMAGE_FEEDBACK.md](docs/RUNTIME_IMAGE_FEEDBACK.md)。当前为 195 张 TIM2／365 成员／512 实装图字字段，HD 图字 15 张及主字库 8 页；下方 e97f 的 191／359／505／11 为历史数字。高清 ASCII 与字形留白取样修正见 [HD_FONT_SAMPLING.md](docs/HD_FONT_SAMPLING.md)。
 
-即时演算字幕仅通过显式 `--subtitle-catalog` 启用；普通构建不启用当前未听审机器稿。完整接口、拒绝草稿、独立验证/回滚与听审网页重建见 [CUTSCENE_SUBTITLES.md](docs/CUTSCENE_SUBTITLES.md)、[CUTSCENE_AUDIO.md](docs/CUTSCENE_AUDIO.md)。
+即时演算字幕仅通过显式 `--subtitle-catalog locales/zh-CN/subtitles.json` 启用；普通构建不隐式启用。当前目录含玩家听审回填的10条字幕（5场景；C012称呼为有来源的情境推断），不是全部47场景完成。完整接口、拒绝草稿、独立验证/回滚与听审网页重建见 [CUTSCENE_SUBTITLES.md](docs/CUTSCENE_SUBTITLES.md)、[CUTSCENE_AUDIO.md](docs/CUTSCENE_AUDIO.md)、[听审回填](docs/SUBTITLE_LISTENING_20261106.md)。
 
 ## 输入和环境
 

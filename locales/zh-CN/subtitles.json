@@ -3,7 +3,7 @@
   "version": 1,
   "locale": "zh-CN",
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "status": "machine-transcription-drafts-not-approved",
+  "status": "listening-reviewed-with-contextual-name-and-authored-timing",
   "all_speech_transcribed": false,
   "source_draft_sha256": "9b34bc9e61b284e3938c87b465b4206b5cb6b4bf148864d4a1e657c6ef69a5b2",
   "coverage": {
@@ -14,17 +14,24 @@
     "unique_audio_inputs": 138,
     "decoded_wavs": 138,
     "frame_units": "original engine frame; no wall-clock or FPS assumption",
-    "speech_review": "not performed by extraction; no inferred subtitles"
+    "speech_review": "User heard10 explicit VOICE clips:9 targets confirmed, C012 reference resolved from original scene context; other42 empty scenes not approved as silent",
+    "human_heard_cues": 10,
+    "user_confirmed_text_cues": 9,
+    "unresolved_identity_cues": 0,
+    "editorially_resolved_cues": 1,
+    "authored_end_frames": 10,
+    "runtime_sync_verified": false
   },
   "installation": {
-    "reviewed_cues": 0,
+    "reviewed_cues": 10,
     "enabled_by_default": false,
-    "installed_cues": 0
+    "required_build_argument": "--subtitle-catalog locales/<locale>/subtitles.json"
   },
   "notes": [
     "All 47 SCR/camera identities are enumerated; empty cue arrays are untranscribed inventory, not no-speech approvals.",
-    "Machine transcription candidates retain asr-draft status; null end frames and unresolved text are deliberate.",
-    "Explicit --subtitle-catalog is required and rejects the current unreviewed/timing-incomplete catalogue."
+    "9 texts explicitly confirmed by user; C012 target 简！ is a high-confidence source-context decision, not a verified transcription 제인!.",
+    "Native source start FRAMEs preserved; end FRAMEs authored from nominal NTSC ticks/PCM duration and native stop boundaries. No runtime synchronization or player approval of end frames claimed.",
+    "Explicit --subtitle-catalog is required; ordinary unflagged builds do not implicitly enable captions."
   ],
   "resources": [
     {
@@ -108,9 +115,9 @@
         {
           "id": "C005-001_001",
           "start_frame": 720,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 864,
           "text": "喂？",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "50787a0b60775ff8aa1eda588734209fee0fbeb79bd0c6f673c84cc02e0589e8",
           "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_001.VAG",
           "source_transcript": "여보세요?",
@@ -122,8 +129,8 @@
             "size": 230372,
             "sha256": "41326b2c48a674578f39cf5477a3928ba1d866582084c307850a1bf9f43adb7c"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -218,14 +225,35 @@
               "elapsed_seconds": 7.559097999997903,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 144,
+            "unbounded_end_frame_exclusive": 864,
+            "next_voice_frame": 980,
+            "next_out_fade_frame": 1668,
+            "camera_end_exclusive": 1699,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "61ae6e5ee14ce3cacf604f50d31f5701d0aca7d5fa9151522731a33b3477636c"
+          }
         },
         {
           "id": "C005-001_002",
           "start_frame": 980,
-          "end_frame_exclusive": null,
-          "text": "这里是……",
-          "status": "asr-draft",
+          "end_frame_exclusive": 1325,
+          "text": "这里是……呃啊……",
+          "status": "reviewed",
           "source_audio_sha256": "7a15f61c2bf97adfbf3c0a7da90aa72a19596c8265b077be39c64d5f7bef6b20",
           "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_002.VAG",
           "source_transcript": "여기는",
@@ -237,8 +265,8 @@
             "size": 551756,
             "sha256": "de5a21423c427781206fc4a0224eb903b9ce3fdaa48bdbdce958e9272a38df49"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -361,14 +389,37 @@
               "elapsed_seconds": 7.7460427999612875,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "text_before_user_review": "这里是……",
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "explicit correction",
+            "timing_confirmed": false
+          },
+          "transcript_note": "Original lexical ASR 여기는 retained; Chinese trailing vocalization explicitly supplied by user, not invented Korean verbatim",
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 345,
+            "unbounded_end_frame_exclusive": 1325,
+            "next_voice_frame": 1405,
+            "next_out_fade_frame": 1668,
+            "camera_end_exclusive": 1699,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "61ae6e5ee14ce3cacf604f50d31f5701d0aca7d5fa9151522731a33b3477636c"
+          }
         },
         {
           "id": "C005-001_003",
           "start_frame": 1405,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 1563,
           "text": "莫……莫妮卡！莫妮卡！你没事吧？",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "529fd1cc09b689188a9bf503d432f6d40f574155580ecb4892467c33ec9324f3",
           "source_audio_id": "vag:RES/SOUND/VOICE/001-002/001_003.VAG",
           "source_transcript": "모, 모니카! 모니카! 괜찮아?",
@@ -380,8 +431,8 @@
             "size": 251596,
             "sha256": "ca99f71f0591b0a5524c46302940bdb132f7da4018b841c4587275ee739a6374"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -560,7 +611,28 @@
               "elapsed_seconds": 8.141673199948855,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 158,
+            "unbounded_end_frame_exclusive": 1563,
+            "next_voice_frame": null,
+            "next_out_fade_frame": 1668,
+            "camera_end_exclusive": 1699,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "61ae6e5ee14ce3cacf604f50d31f5701d0aca7d5fa9151522731a33b3477636c"
+          }
         }
       ],
       "review_state": "machine-drafts-pending-listening"
@@ -614,9 +686,9 @@
         {
           "id": "C008-003_001",
           "start_frame": 960,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 1105,
           "text": "别开枪！",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "1f19a8ff8b46cc9cf12a424a07122b6631b3e605560faa8aa4d39fd79402c637",
           "source_audio_id": "vag:RES/SOUND/VOICE/003-004/003_001.VAG",
           "source_transcript": "쏘지 말아요!",
@@ -628,8 +700,8 @@
             "size": 231212,
             "sha256": "8a4bb758b72ae4ed4e537bba4c54ab45d15a483029076c69a73e6382a8b1064c"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -742,7 +814,28 @@
               "elapsed_seconds": 7.7372746000182815,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 145,
+            "unbounded_end_frame_exclusive": 1105,
+            "next_voice_frame": null,
+            "next_out_fade_frame": 1268,
+            "camera_end_exclusive": 1299,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "a18d060b9d501d3149a74b3b75bdda7a5911e9457986293d6ca38dd0cca4428c"
+          }
         }
       ],
       "review_state": "machine-drafts-pending-listening"
@@ -812,9 +905,9 @@
         {
           "id": "C012-007_001",
           "start_frame": 380,
-          "end_frame_exclusive": null,
-          "text": "",
-          "status": "asr-draft",
+          "end_frame_exclusive": 524,
+          "text": "简！",
+          "status": "reviewed",
           "source_audio_sha256": "dd5b6c3961327e117cd7eb954865e5dbc425a3b454a441301930d5f4b9528242",
           "source_audio_id": "vag:RES/SOUND/VOICE/007-008/007_001.VAG",
           "source_transcript": "신!",
@@ -826,8 +919,8 @@
             "size": 229420,
             "sha256": "841950a4cc1a13aa8b0f738134809ac45b87fa5b988037fc8d45c2171593ff5f"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -1003,7 +1096,38 @@
               }
             ]
           },
-          "classification": "short-call-unresolved; original scene contains Jane but models only recover shin"
+          "classification": "short character-name call resolved from scene context; exact Korean sound remains uncertain",
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "heard": "신!",
+            "text_confirmed": false,
+            "status": "identity-resolved-editorial-context"
+          },
+          "reference_interpretation": {
+            "source_name": "제인 / Jane Blair",
+            "target_name": "简",
+            "evidence_level": "high-confidence contextual deduction",
+            "verbatim_spoken_word_verified": false,
+            "user_heard": "신!",
+            "basis": "Original EVENT161/163/164, ST0201.SCN name+F003.GEO, C012 female blood314 then call380; existing glossary person:jane",
+            "source_note": "docs/C012_REFERENCE.md",
+            "context_evidence_sha256": "4499ed163e73cafb14ee2e5e1553d57960f11bb3960eeaf50254b50c5b02621e"
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 144,
+            "unbounded_end_frame_exclusive": 524,
+            "next_voice_frame": null,
+            "next_out_fade_frame": 536,
+            "camera_end_exclusive": 599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "d2f37199d8987f345f7a24f6eae8346d6216a823d848259de1d554c2843ad127"
+          }
         }
       ],
       "review_state": "machine-drafts-pending-listening"
@@ -1153,12 +1277,12 @@
         {
           "id": "C021-016_001",
           "start_frame": 335,
-          "end_frame_exclusive": null,
-          "text": "",
-          "status": "asr-draft",
+          "end_frame_exclusive": 410,
+          "text": "呃啊",
+          "status": "reviewed",
           "source_audio_sha256": "80bde202a49fcc29b40d264a0a93377ab82e64fb7465db54819a8df5df8e3374",
           "source_audio_id": "vag:RES/SOUND/VOICE/015-016/016_001.VAG",
-          "source_transcript": "어",
+          "source_transcript": "[nonverbal vocalization]",
           "timing_samples": {
             "numerator": 117068,
             "denominator": 48000
@@ -1167,8 +1291,8 @@
             "size": 234180,
             "sha256": "d1f39d107c1a151dfbec8485217cde180901ce6b18ad42b8df6e3005125a752b"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -1370,14 +1494,38 @@
               }
             ]
           },
-          "classification": "nonverbal-vocalization-candidate; not silent; no invented lexical subtitle"
+          "classification": "user-confirmed nonverbal utterance",
+          "text_before_user_review": "",
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "explicit correction",
+            "timing_confirmed": false
+          },
+          "source_transcript_before_review": "어",
+          "transcript_kind": "nonverbal-description",
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 147,
+            "unbounded_end_frame_exclusive": 482,
+            "next_voice_frame": 410,
+            "next_out_fade_frame": 536,
+            "camera_end_exclusive": 599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "ac63484c50fd9fbaf2b22c863f92eadc62b2c5ea446dfd7c110be23b9e089866"
+          }
         },
         {
           "id": "C021-016_002",
           "start_frame": 410,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 536,
           "text": "布鲁斯！布鲁斯！",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "70b98763fa0a833b933feaa4b6f4ee98c2eaf967b473682e6bf847423f0bdee6",
           "source_audio_id": "vag:RES/SOUND/VOICE/015-016/016_002.VAG",
           "source_transcript": "브루스! 브루스!",
@@ -1389,8 +1537,8 @@
             "size": 232388,
             "sha256": "1aa22516502a95a834e00411093e35ab84558016db5642105129bccda0ffc690"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -1605,7 +1753,28 @@
               }
             ]
           },
-          "text_basis": "Repeated whole/no-VAD and energy-crop agreement, plus original EVENT454 collapse context; not human-listened"
+          "text_basis": "User listening approval (其他的都没问题); previous independent source/ASR evidence retained",
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 146,
+            "unbounded_end_frame_exclusive": 556,
+            "next_voice_frame": null,
+            "next_out_fade_frame": 536,
+            "camera_end_exclusive": 599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "ac63484c50fd9fbaf2b22c863f92eadc62b2c5ea446dfd7c110be23b9e089866"
+          }
         }
       ],
       "review_state": "machine-drafts-pending-listening"
@@ -1707,9 +1876,9 @@
         {
           "id": "C027-021_001",
           "start_frame": 210,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 270,
           "text": "詹妮弗！",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "65fdb7a222d830084ac7155d391493b1e15878d0b9fcc6c8624742569f7125bf",
           "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_001.VAG",
           "source_transcript": "제니퍼",
@@ -1721,8 +1890,8 @@
             "size": 232836,
             "sha256": "a368bd9df6d057eb8e7312d5609bae90020564f2ef4c3bab76c0d0cbec03956d"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -1817,14 +1986,35 @@
               "elapsed_seconds": 8.30786669999361,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 146,
+            "unbounded_end_frame_exclusive": 356,
+            "next_voice_frame": 270,
+            "next_out_fade_frame": 1472,
+            "camera_end_exclusive": 1599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "03470e91122e90b4a06797f2f6176241fa41e605e85057717404028b07e342a7"
+          }
         },
         {
           "id": "C027-021_002",
           "start_frame": 270,
-          "end_frame_exclusive": null,
+          "end_frame_exclusive": 416,
           "text": "布鲁斯……",
-          "status": "asr-draft",
+          "status": "reviewed",
           "source_audio_sha256": "7e903a66723b21fd9129d98966eac278485d0708fe7cf872a675eee04b5a070a",
           "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_002.VAG",
           "source_transcript": "...브루스...",
@@ -1836,8 +2026,8 @@
             "size": 232668,
             "sha256": "accf18440f07012ff4fe7b9c656af422c1c3ba5f483524f77d3b4a2a6ee785cb"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -1932,17 +2122,38 @@
               "elapsed_seconds": 7.5299058999517,
               "human_listening_verified": false
             }
-          ]
+          ],
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "其他的都没问题",
+            "timing_confirmed": false
+          },
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 146,
+            "unbounded_end_frame_exclusive": 416,
+            "next_voice_frame": 1405,
+            "next_out_fade_frame": 1472,
+            "camera_end_exclusive": 1599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "03470e91122e90b4a06797f2f6176241fa41e605e85057717404028b07e342a7"
+          }
         },
         {
           "id": "C027-021_003",
           "start_frame": 1405,
-          "end_frame_exclusive": null,
-          "text": "",
-          "status": "asr-draft",
+          "end_frame_exclusive": 1472,
+          "text": "啊！",
+          "status": "reviewed",
           "source_audio_sha256": "722bc296feda6ff62ef2b49e2b7141e156c956b0961c40e1a4fed136dcbc8ac5",
           "source_audio_id": "vag:RES/SOUND/VOICE/021-022/021_003.VAG",
-          "source_transcript": "",
+          "source_transcript": "[nonverbal scream]",
           "timing_samples": {
             "numerator": 118804,
             "denominator": 48000
@@ -1951,8 +2162,8 @@
             "size": 237652,
             "sha256": "25534b42b49208eca4cdb113391005797f243b95af8e9545c05b3adb59165cac"
           },
-          "human_listening_verified": false,
-          "timing_note": "End frame deliberately unset until engine frame rate and listening are verified",
+          "human_listening_verified": true,
+          "timing_note": "Source VOICE start retained; authored end uses nominal NTSC VBLANK ticks and PCM length, bounded by next VOICE, OUT fade and camera; runtime sync remains unverified",
           "asr": [
             {
               "status": "machine-transcription-unreviewed",
@@ -2072,7 +2283,31 @@
               }
             ]
           },
-          "classification": "nonverbal-vocalization-candidate; not silent; no invented lexical subtitle"
+          "classification": "user-confirmed nonverbal utterance",
+          "text_before_user_review": "",
+          "listening_review": {
+            "reviewer": "user",
+            "date": "2026-11-06",
+            "text_confirmed": true,
+            "basis": "explicit correction",
+            "timing_confirmed": false
+          },
+          "source_transcript_before_review": "",
+          "transcript_kind": "nonverbal-description",
+          "timing_review": {
+            "status": "static-derived-nominal",
+            "tick_rate_numerator": 60000,
+            "tick_rate_denominator": 1001,
+            "nominal_duration_ticks": 149,
+            "unbounded_end_frame_exclusive": 1554,
+            "next_voice_frame": null,
+            "next_out_fade_frame": 1472,
+            "camera_end_exclusive": 1599,
+            "runtime_sync_verified": false,
+            "user_end_frame_approval_supplied": false,
+            "basis": "Original NTSC SetGsCrt + one iFrame increment and VBLANK wait per loop; rational rate is nominal authored policy, not a found game constant or measured audio lock",
+            "source_script_sha256": "03470e91122e90b4a06797f2f6176241fa41e605e85057717404028b07e342a7"
+          }
         }
       ],
       "review_state": "machine-drafts-pending-listening"

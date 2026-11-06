@@ -139,4 +139,4 @@ python -X utf8 tools/inspect_menu_layout.py --iso "[full2]미스틱 나이츠(K)
 
 本次已核实实际 `RenderLogo` 和 `RenderTexture` UV：START `[2,226,194,30]`、胶囊蓝/橙中心 X57/166，人物中心 Y110.5+30i。旧布局错误、原始暗影、同名扫描漏项及保护样本见 [RUNTIME_IMAGE_FEEDBACK.md](docs/RUNTIME_IMAGE_FEEDBACK.md)。HD 字库实际取样框和 CLUT16 显式 TEXA 分别见 [HD_FONT_SAMPLING.md](docs/HD_FONT_SAMPLING.md)、[HD_PALETTE_PROFILES.md](docs/HD_PALETTE_PROFILES.md)。
 
-原生过场已有未完成 CAPTION 读取脚手架，但缺执行/绘制；可选同尺寸脚本编译和守卫式绘制钩子的源锚点、回放边界及草稿门控见 [CUTSCENE_SUBTITLES.md](docs/CUTSCENE_SUBTITLES.md)。当前默认 ISO 不含未听审字幕。
+原生过场已有未完成 CAPTION 读取脚手架，但缺执行/绘制；可选同尺寸脚本编译和守卫式绘制钩子的源锚点、回放边界及草稿门控见 [CUTSCENE_SUBTITLES.md](docs/CUTSCENE_SUBTITLES.md)。最新听审回填及C005容量守卫见[本次记录](docs/SUBTITLE_LISTENING_20261106.md)：显式构建5场景10条字幕，实际同步尚待玩家检查。

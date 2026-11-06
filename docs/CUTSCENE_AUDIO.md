@@ -42,14 +42,14 @@ python -B -X utf8 tools/transcribe_cutscene_audio.py --manifest build/cutscene-a
 
 本次采用本地small/medium/large-v3缓存对10条VOICE交叉转录，large-v3另筛检全部138输入。18个专用Cxxx混音的VAD没有检出语音，但该结果不是人工无对白确认。全量机器筛检在部分音乐/效果上生成了“感谢观看”“请订阅点赞”等典型幻觉，明确不采用。机器转录后的文本校审和实际原声听审分别记录。
 
-### 尚需准确听审的短音节
+### 初次机器筛检时尚需听审的短音节（历史记录）
 
 - `007_001.VAG`：原C012 FRAME380，模型/能量裁剪只恢复`신!`，词概率约0.52。EVENT163确有简（`제인2_03`）及V004，属于呼喊简的上下文支持，不是确定听证。
 - `016_001.VAG`：原C021 FRAME335，有效波形约0–0.84秒；无VAD/裁剪转录为孤立辅音和`Gah!`，支持非词呻吟，不编造成句。
 - `016_002.VAG`：原C021 FRAME410。无VAD整段和裁剪均恢复两次`브루스!`，第二词概率约0.978/0.979。EVENT454的既有原文描述布鲁斯突然倒下，与“布鲁斯！布鲁斯！”候选相符；保留不同模型最初误识结果，不伪装为已听原音。
 - `021_003.VAG`：原C027 FRAME1405。VAD无输出但不是静音：峰值约0.988，有效波形约0–0.74秒；有界强制转录恢复喊叫`흐아악!/Ah!`，无可靠实词，不造台词。
 
-本地`build/runtime-feedback-20261106/audio/`保留原始三模型结果、全量筛检、四段无VAD/裁剪对照、原声WAV、10条未认可字幕候选和听审网页。`tools/build_cutscene_audio_review.py`以完整`locales/zh-CN/subtitles.json`和提取清单重建页面，按`source_audio_id`动态匹配并核验WAV，不依赖机器草稿中的旧本机路径。
+本地`build/runtime-feedback-20261106/audio/`保留原始三模型结果、全量筛检、四段无VAD/裁剪对照、原声WAV和初次听审网页。玩家随后确认九条译文并委托C012消歧，三条指定修订已回填；当前新页面在`build/subtitle-listening-20261106/listening-review.html`，显示既有文本确认与独立待验收的推导时间轴，详见[本次记录](SUBTITLE_LISTENING_20261106.md)。历史ASR数组不改写为人工听证。`tools/build_cutscene_audio_review.py`以完整`locales/zh-CN/subtitles.json`和提取清单重建页面，按`source_audio_id`动态匹配并核验WAV，不依赖机器草稿中的旧本机路径。
 
 ```powershell
 python -B -X utf8 tools/build_cutscene_audio_review.py --catalogue locales/zh-CN/subtitles.json --audio-manifest build/cutscene-audio/manifest.json --output build/cutscene-audio/listening-review.html

@@ -2,11 +2,11 @@
 
 ## 当前状态
 
-**新增、离线验证的可选引擎及编译链；未安装到当前默认测试ISO。** 原盘47个过场没有任何`CAPTION`节点。语音转录、中文译文、声学边界与游戏内绘制验收分别记录，不以机器转录、引擎原型或指令夹具代替完整字幕交付。
+**原生字幕引擎及显式编译链已完成离线验证；本次回填5场景10条听审字幕。** 原盘47个过场没有任何`CAPTION`节点。语音转录、中文译文、声学边界与游戏内绘制验收分别记录，不以机器转录、引擎原型或指令夹具代替完整字幕交付。
 
 `tools/inspect_cutscene_subtitles.py`可从受支持原盘重新核验结构并生成独立原型。普通构建不隐式启用字幕，也不加载机器转录稿。`src/mysticnights/cutscene_subtitles.py`提供可复用的同尺寸脚本注入、守卫式ELF补丁、反向恢复和有界指令回放接口。
 
-`tools/build_locale.py --subtitle-catalog 目录.json`是唯一显式启用入口；只支持`full-text`。它在任何字体生成/输出之前核验全部来源及每条`reviewed`、有效结束帧，零条可用字幕也拒绝启用。`locales/zh-CN/subtitles.json`保留尚未听审的草稿；默认配置不引用它，传入时应被门控拒绝，而不是偷偷把机器稿标成认可。
+`tools/build_locale.py --subtitle-catalog 目录.json`是唯一显式启用入口；只支持`full-text`。它在任何字体生成/输出之前核验全部来源及每条`reviewed`、有效结束帧，零条可用字幕也拒绝启用。`locales/zh-CN/subtitles.json`当前含9条玩家确认的译文和1条明确标注的C012称呼推断；十条结束帧由源时间轴与PCM长度推导，实际同步待玩家验收。原机器结果完整保留；42个空场景未认可为无对白。详见[听审回填](SUBTITLE_LISTENING_20261106.md)。
 
 ## 原盘已有但未完成的脚手架 — Verified offline
 
@@ -69,7 +69,7 @@ CONTENTS 260 "经过声音复核并编码后的译文"
 }
 ```
 
-上例帧区间为`[720,980)`，不是实际对白译稿。所有原`SOUND/OBJECT/FADE/...`命令参数和相对顺序均逐行回读对照；新增节点稳定归并到原时间轴。新文本行限定原GetToken的512字节缓冲范围。输出补空格至原成员长度；余量不足明确报错，不截译文、不挪LBA、不暗改资源格式。47场景各一条明确标注的短合成cue容量夹具均通过，但这不证明每场完整听译都一定能放入现有容量。
+上例帧区间为`[720,980)`，不是实际对白译稿。除经完整原ELF与七处锚点验证的SOUND零POSITION容量省略外，所有原`SOUND/OBJECT/FADE/...`命令参数和相对顺序均逐行回读对照；独立检查先恢复明确省略行，再与原节点完全匹配，详见[容量守卫](SUBTITLE_LISTENING_20261106.md)。新增节点稳定归并到原时间轴。新文本行限定原GetToken的512字节缓冲范围。输出补空格至原成员长度；余量不足明确报错，不截译文、不挪LBA、不暗改资源格式。47场景各一条明确标注的短合成cue容量夹具均通过，但这不证明每场完整听译都一定能放入现有容量。
 
 ## 结构化字幕接口与听审门控
 
@@ -157,8 +157,8 @@ python -B -X utf8 tools/inspect_cutscene_subtitles.py --iso "[full2]미스틱 �
 | 实际生成的ISO `ROLLBACK.sh` | 对独立夹具恢复1,696,530,432字节，哈希 `4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b`，与原盘一致 |
 | 恢复后重新验原盘 | `BASELINE PASS files=724 resources=209 scripts=179 source_slots=2306` |
 
-各步骤的精确argv、工作目录、标准输出和退出状态保留在`integration-final/commands/stage-*.json`，聚合到该目录`VERIFICATION.txt`。合成cue的文字和“reviewed”仅用于明确标记的开发夹具，既非原声转录，也不计入正式字幕完成数量。当前`locales/zh-CN/subtitles.json`保留47场景、10条ASR候选、0条听审认可；全部结束帧仍待对时。直接传入该真实草稿的门控记录为`subtitles/actual-draft-gate.json`。
+各步骤的精确argv、工作目录、标准输出和退出状态保留在`integration-final/commands/stage-*.json`，聚合到该目录`VERIFICATION.txt`。合成cue的文字和“reviewed”仅用于明确标记的开发夹具，既非原声转录，也不计入正式字幕完成数量。初次集成时`locales/zh-CN/subtitles.json`保留47场景、10条ASR候选、0条听审认可，结束帧待对时；该历史拒绝记录保留在`subtitles/actual-draft-gate.json`，本次听审后的状态见本文开头。
 
 Windows REA当前Ghidra配置仅接受PE，Hopper不支持Windows/MIPS，IDA无已验证MIPS通道；原MIPS ELF反编译调用明确返回`capability_unavailable`。没有把该调用当成成功分析；本实现依据原DWARF、逐字节锚点及独立指令读取/回放。
 
-剩余：全部实际语音的声音复核和准确译文/声学对时；正式字幕目录完整性；游戏内GS混色、换行、帧同步、切换/跳过/存取场景与全流程验收。默认构建不启用未审目录，不能把当前ISO称为“过场已全部加字幕”。
+剩余：42个空场景及混音内对白的完整性确认；十条新字幕的实际声画同步；游戏内GS混色、换行、帧同步、切换/跳过/存取场景与全流程验收。默认构建不启用未审目录，不能把当前ISO称为“过场已全部加字幕”。

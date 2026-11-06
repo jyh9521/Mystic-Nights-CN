@@ -53,6 +53,19 @@ ANCHORS = {
     HOOK_ADDRESS: '8c9d040c00000000',
 }
 
+# POSITION has a keyword ID, but the SOUND reader explicitly skips its line.
+# The allocation and playback anchors independently exclude a position vector
+# from the eight-byte record. See docs/CUTSCENE_SUBTITLES.md, capacity section.
+SOUND_POSITION_ANCHORS = {
+    0x13C128: '2500043c510105249c4d050c08d88424',
+    0x13C198: '2500043c510105249c4d050c08d88424',
+    0x24D808: '504f534954494f4e00',
+    0x13ADB0: '510103244400431000000000',
+    0x13AEC8: '2d20a0022d2860023c4c050c2d30400202000324b4ff431400000000',
+    0x13BB20: '3cff82a43cff6284c0a80200ea6f040c2d20a0022a00033c2d30a00240ff62ac2d2040004c73040c2d280000',
+    0x138DF0: '020005240500c6807c0046a00200068640ff638cc03006002118c300040066801500c5102d204000010003240d00c310000000000300c0100000000071000010000000002a00023c2a00053c64fb4cc440fba524cc8a050c2d30a00069000010000000002a00023c0889050c90ff44ac64000010000000006889050c000000006000001000000000',
+}
+
 
 def sha(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -83,6 +96,23 @@ def inspect_engine(elf: bytes) -> dict:
         'script_semantics': 'GetToken reads exactly one CRLF command line; GetNextWord consumes its parameters',
         'evidence': 'supported original bytes and embedded DWARF1; no game execution',
     }
+
+
+def inspect_sound_position_elision(elf: bytes) -> dict:
+    """Guard the exact reader which ignores SOUND POSITION (not a zero default)."""
+    if len(elf) != ELF_SIZE or sha(elf) != ORIGINAL_ELF_SHA256:
+        raise ValueError('SOUND POSITION elision requires the supported original ELF')
+    rows = []
+    for address, expected_hex in SOUND_POSITION_ANCHORS.items():
+        expected = bytes.fromhex(expected_hex)
+        offset = address_offset(elf, address, len(expected))
+        if elf[offset:offset + len(expected)] != expected:
+            raise ValueError(f'SOUND POSITION anchor mismatch: {address:#x}')
+        rows.append({'address': address, 'offset': offset, 'expected_hex': expected_hex})
+    return {'source_sha256': sha(elf), 'source_size': len(elf), 'anchors': rows,
+            'sound_record_size': 8,
+            'semantics': 'POSITION keyword 0x151 branches directly to next GetToken; no position stores',
+            'evidence': 'supported original bytes; static control-flow replay, not game execution'}
 
 
 def _tokens(data: bytes) -> list[bytes]:
@@ -212,8 +242,9 @@ def validate_cues(cues: Sequence[Mapping], *, camera_frames: int) -> list[dict]:
     return rows
 
 
-def inject_script(script: bytes, cues: Sequence[Mapping], encode: Callable[[str], bytes], *, camera_frames: int) -> tuple[bytes, dict]:
-    """Stable-merge CAPTION nodes while retaining all original semantic tokens."""
+def inject_script(script: bytes, cues: Sequence[Mapping], encode: Callable[[str], bytes], *, camera_frames: int,
+                  original_elf: bytes | None = None) -> tuple[bytes, dict]:
+    """Stable-merge captions; remove proven ignored SOUND lines only if necessary."""
     rows = validate_cues(cues, camera_frames=camera_frames)
     source_tokens = _tokens(script); blocks = _line_blocks(script)
     if any(name == b'CAPTION' for name, _ in blocks) or b'CAPTION_COUNT' in source_tokens:
@@ -235,28 +266,60 @@ def inject_script(script: bytes, cues: Sequence[Mapping], encode: Callable[[str]
         body = [[b'FRAME', str(row['start_frame']).encode()],
                 [b'CONTENTS', str(row['end_frame_exclusive'] - row['start_frame']).encode(), b'"' + raw + b'"']]
         inserted.append((b'CAPTION', body, row['start_frame']))
-    # Existing equal-frame nodes retain their order; captions follow them.
-    merged = [(name, body, frame, 0, i) for i, (name, body, frame) in enumerate(original_nodes)]
-    merged += [(name, body, frame, 1, i) for i, (name, body, frame) in enumerate(inserted)]
-    merged.sort(key=lambda row: (row[2], row[3], row[4]))
     init = blocks[0][1] + [[b'CAPTION_COUNT', str(len(rows)).encode()]]
-    lines = [[b'SCR_TYPE', b'CUTSCENE'], [b'INIT_DATA', b'{'], *init, [b'}']]
-    for name, body, *_ in merged:
-        lines += [[name, b'{'], *body, [b'}']]
-    lines.append([b'END'])
-    result = b'\r\n'.join(b' '.join(line) for line in lines) + b'\r\n'
+
+    def render(nodes):
+        # Existing equal-frame nodes retain their order; captions follow them.
+        merged = [(name, body, frame, 0, i) for i, (name, body, frame) in enumerate(nodes)]
+        merged += [(name, body, frame, 1, i) for i, (name, body, frame) in enumerate(inserted)]
+        merged.sort(key=lambda row: (row[2], row[3], row[4]))
+        lines = [[b'SCR_TYPE', b'CUTSCENE'], [b'INIT_DATA', b'{'], *init, [b'}']]
+        for name, body, *_ in merged:
+            lines += [[name, b'{'], *body, [b'}']]
+        return b'\r\n'.join(b' '.join(line) for line in lines + [[b'END']]) + b'\r\n'
+
+    result = render(original_nodes)
+    full_candidate_size = len(result)
+    removed = []; position_proof = None
+    if len(result) > len(script) and original_elf is not None:
+        position_proof = inspect_sound_position_elision(original_elf)
+        compact_nodes = []
+        for node_index, (name, body, frame) in enumerate(original_nodes):
+            types = [line for line in body if line[0] == b'SOUND_TYPE']
+            positions = [(i, line) for i, line in enumerate(body) if line[0] == b'POSITION']
+            if (name == b'SOUND' and len(types) == 1 and len(types[0]) == 3
+                    and types[0][1] in (b'BGM', b'VOICE') and len(positions) == 1
+                    and positions[0][1] == [b'POSITION', b'0', b'0', b'0']):
+                index, line = positions[0]
+                removed.append({'node_index': node_index, 'command_index': index,
+                                'block': 'SOUND', 'frame': frame, 'sound_type': types[0][1].decode('ascii'),
+                                'name_tokens_hex': [[token.hex() for token in command] for command in body if command[0] == b'NAME'],
+                                'tokens_hex': [token.hex() for token in line], 'bytes_saved': 16})
+                body = [command for i, command in enumerate(body) if i != index]
+            compact_nodes.append((name, body, frame))
+        result = render(compact_nodes)
     if len(result) > len(script):
         raise ValueError(f'Caption SCR exceeds original member capacity: {len(result)} > {len(script)}')
+    content_size = len(result)
     result = result.ljust(len(script), b' ')
-    # Independent structural readback strips only the explicitly added nodes/count.
+    # Independent readback reverses additions AND only the declared ignored lines,
+    # then requires every original node/command/value/order to match exactly.
     parsed = _line_blocks(result); restored_init = parsed[0][1][:-1]
     restored_nodes = [(name, body) for name, body in parsed[1:] if name != b'CAPTION']
+    for omitted in removed:
+        name, body = restored_nodes[omitted['node_index']]
+        body.insert(omitted['command_index'], [bytes.fromhex(token) for token in omitted['tokens_hex']])
     if restored_init != blocks[0][1] or restored_nodes != blocks[1:]:
         raise AssertionError('Caption injection altered original cutscene semantics')
     return result, {
         'source_sha256': sha(script), 'modified_sha256': sha(result), 'source_size': len(script),
         'captions': len(rows), 'original_nodes': len(original_nodes),
-        'original_tokens_retained': True, 'retail_GetToken_command_lines_retained': True,
+        'original_tokens_retained': not removed, 'original_semantics_retained': True,
+        'retail_GetToken_command_lines_retained': True,
+        'full_candidate_size': full_candidate_size, 'content_size': content_size,
+        'padding_bytes': len(script) - content_size, 'removed_ignored_commands': removed,
+        'ignored_command_bytes_saved': sum(row['bytes_saved'] for row in removed),
+        'ignored_sound_position_proof': position_proof,
         'same_frame_order': 'original nodes first, original relative order retained',
         'camera_frames': camera_frames, 'cues': rows, 'changed': True,
     }
@@ -345,11 +408,13 @@ def build_script_edits(image, catalogue: Mapping, mapping: Mapping[str, int]) ->
     are inventory entries, not a declaration that the scene is fully subtitled.
     """
     source_rows = validate_catalogue(image, catalogue)
+    original_elf = image.read('SCKA_200.55')
     edits = {}; reports = []; total = 0
     for source in source_rows:
         scene = source['scene']; cues = source['cues']
         archive = parse_res(image.read(source['resource'])); member = archive.get(source['member'])
-        replacement, detail = inject_script(archive.read(member), cues, lambda text: encode_text(text, mapping), camera_frames=source['camera_frames'])
+        replacement, detail = inject_script(archive.read(member), cues, lambda text: encode_text(text, mapping),
+                                            camera_frames=source['camera_frames'], original_elf=original_elf)
         if replacement != archive.read(member):
             edits.setdefault(source['resource'], {})[member.key] = replacement
         reports.append({'scene': scene, 'resource': source['resource'], 'member': source['member'], **detail})

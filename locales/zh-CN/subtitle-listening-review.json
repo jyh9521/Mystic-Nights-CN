@@ -1,0 +1,108 @@
+{
+  "format": "subtitle-listening-feedback",
+  "version": 1,
+  "reviewer": "user",
+  "date": "2026-11-06",
+  "source_catalogue_sha256": "5166714b5ddceff28a55a5ca61cc16880fd355d7878823f759e232f71d1581ad",
+  "corrections": [
+    {
+      "id": "C005-001_002",
+      "start_frame": 980,
+      "text": "这里是……呃啊……"
+    },
+    {
+      "id": "C021-016_001",
+      "start_frame": 335,
+      "text": "呃啊"
+    },
+    {
+      "id": "C027-021_003",
+      "start_frame": 1405,
+      "text": "啊！"
+    }
+  ],
+  "unresolved": [
+    {
+      "id": "C012-007_001",
+      "start_frame": 380,
+      "heard": "신!",
+      "question": "是人名、地名还是其他，需要判断"
+    }
+  ],
+  "other_cues": "其他的都没问题",
+  "approval_scope": "9 cue texts confirmed including3 corrections; C012 identity delegated for contextual resolution; no end-frame values supplied",
+  "applied_cues": [
+    "C005-001_001",
+    "C005-001_002",
+    "C005-001_003",
+    "C008-003_001",
+    "C021-016_001",
+    "C021-016_002",
+    "C027-021_001",
+    "C027-021_002",
+    "C027-021_003"
+  ],
+  "source_game_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "timing_approval_supplied": false,
+  "contextual_resolution": {
+    "id": "C012-007_001",
+    "text": "简！",
+    "heard_retained": "신!",
+    "evidence_level": "high-confidence contextual deduction",
+    "user_explicitly_confirmed_reference": false,
+    "reference": "docs/C012_REFERENCE.md"
+  },
+  "authored_timing": [
+    {
+      "id": "C005-001_001",
+      "start": 720,
+      "end_exclusive": 864
+    },
+    {
+      "id": "C005-001_002",
+      "start": 980,
+      "end_exclusive": 1325
+    },
+    {
+      "id": "C005-001_003",
+      "start": 1405,
+      "end_exclusive": 1563
+    },
+    {
+      "id": "C008-003_001",
+      "start": 960,
+      "end_exclusive": 1105
+    },
+    {
+      "id": "C012-007_001",
+      "start": 380,
+      "end_exclusive": 524
+    },
+    {
+      "id": "C021-016_001",
+      "start": 335,
+      "end_exclusive": 410
+    },
+    {
+      "id": "C021-016_002",
+      "start": 410,
+      "end_exclusive": 536
+    },
+    {
+      "id": "C027-021_001",
+      "start": 210,
+      "end_exclusive": 270
+    },
+    {
+      "id": "C027-021_002",
+      "start": 270,
+      "end_exclusive": 416
+    },
+    {
+      "id": "C027-021_003",
+      "start": 1405,
+      "end_exclusive": 1472
+    }
+  ],
+  "runtime_sync_verified": false
+}
