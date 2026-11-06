@@ -117,7 +117,8 @@ CONTENTS 260 "经过声音复核并编码后的译文"
 - `inventory(original_image)`：完整47场景SCR/相机身份。
 - `validate_catalogue(image,catalogue,locale=...)`：在生成字体前核验完整来源、locale及全部字幕门控；没有reviewed cue也拒绝启用。
 - `validate_cues(cues,camera_frames=...)`：音审/帧/区间/文本门控。
-- `inject_script(script,cues,encode,camera_frames=...)`：保留原生行语义的同尺寸脚本。
+- `inject_script(script,cues,encode,camera_frames=...,original_elf=None)`：保留原生行语义的同尺寸脚本；仅在容量不足且提供受支持原ELF时，启用严格的SOUND零POSITION省略守卫。
+- `inspect_sound_position_elision(original_elf)`：完整原ELF身份及七处原生reader/分配/播放锚点验证；不是允许任意版本删字段的布尔开关。
 - `build_script_edits(image,catalogue,mapping)`：按`resource -> (group,index) -> bytes`返回成员改动；调用者与图像成员改动合并后重建RES。
 - `build_engine_patch(original_elf,current_elf,entries,mapping)`：在其他汉化ELF编辑之后生成代码；返回修改ELF和守卫式receipt。
 - `reverse_engine_patch(elf,receipt)`：独立副本逐字节恢复。
