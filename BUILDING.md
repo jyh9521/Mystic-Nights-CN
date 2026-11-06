@@ -23,7 +23,7 @@ python -X utf8 tools/verify_runtime_patches.py --original "[full2]미스틱 나�
 
 输出目录必须尚不存在。构建在新的同级事务目录中完成后才发布，不覆盖已有镜像。构建和修改版验证均支持 `--font` 指定同哈希字体；未指定时使用 `build/fonts/` 的锁定字体。
 
-最新28项意见修订见 `docs/IMAGE_FEEDBACK_E004.md`，前次91项见 `docs/IMAGE_FEEDBACK_C7.md`，历史完整图片/按钮复核见 `docs/ARTWORK_SWEEP.md`；本地左右图筛查网页与意见 JSON/CSV 回传见 `docs/IMAGE_REVIEW.md`。网页由 `tools/build_image_review.py` 从最终 ISO 重建，输出完整图片不提交 Git。
+最新29项意见修订见 `docs/IMAGE_FEEDBACK_17E7.md`，前次28项见 `docs/IMAGE_FEEDBACK_E004.md`、91项见 `docs/IMAGE_FEEDBACK_C7.md`，历史完整图片/按钮复核见 `docs/ARTWORK_SWEEP.md`；本地左右图筛查网页与意见 JSON/CSV 回传见 `docs/IMAGE_REVIEW.md`。网页由 `tools/build_image_review.py` 从最终 ISO 重建，输出完整图片不提交 Git。
 
 ## 当前配置和输出
 

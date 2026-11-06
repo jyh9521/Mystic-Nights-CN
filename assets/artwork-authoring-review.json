@@ -650,6 +650,156 @@
       "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
       "registration": "28 targeted rows in assets/artwork-feedback-e004.json; full outline print for plain industrial labels; genuine-alpha imagegen sprites for stylized capsules; per-variant source lamps/blood/chrome preserved",
       "important_alpha_rule": "No color threshold/dilation of composited glyphs. Full em masks and continuous alpha survive scaling. Source palette/headers stay exact. Icon gaps and cross-axis centers are separate checks."
+    },
+    {
+      "id": "feedback-17e7-menu-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. The attached image is the original 2005 PS2 horror-game menu button. Restore this ONE button to a completely text-free blank. Remove NEW GAME, ALL its metallic bevels, ALL shadows, AND every dark angular letter-like glyph/reflection through the ENTIRE inside glass including both ends. The old dark glyphs on left and right must ALL disappear. Repaint the full glass interior as a single continuous smoothly illuminated vermilion/amber glass surface, with horizontal specular illumination and restrained soft amorphous refraction only. NO blocky mechanical silhouettes, no upright bars, no tiny marks, no grids, no black patch rectangles, no letter-like patterns anywhere. Keep original aspect ratio, exact capsule outline, thin mauve/chrome rim, silver triangular endcaps, bright yellow-orange highlights and external horizontal glow, dark bottom vs hot upper surface. Not flat solid fill and not blurred old lettering. Fill every interior location with the NEW continuous glass material. No text of any language. No new icons or geometry. Output same tightly framed single button.",
+      "transparent_background": false,
+      "selected_output_sha256": "b528b70b3dcd9838856bef30d140982b70bcef01b664fb5a6c91a932bb06eca6",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/076f1530ee2a.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-capsule-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit the original PS2 game UI reference with exactly TWO short capsule buttons side by side. LEFT cobalt-blue/silver, RIGHT orange-red/gold. Remove EASY and its bevel, outline and shadow. Equally important: REMOVE every dark black letter-like mechanical reflection at the left and right ends and across the ENTIRE interior glass. Reconstruct the full interior of each button using continuous luminous glass: clean blue horizontal light gradients on left; clean amber/red horizontal gradients on right; soft subtle amorphous refraction, no glyph-like tiny bars or polygonal writing. Preserve the exact thin metallic capsule rim, original triangular silver endcaps, outer shape, top silver highlight and dark lower glass. Stay faithful to original 2005 science-fiction-horror UI, not flat cartoon fill, not a text covering rectangle. ALL glass is NEW text-free material; no old ink or shadows carried over. No writing, symbols, pseudo-letters or black industrial glyph texture. Exactly two buttons in one horizontal row, same original proportions and palette, tightly framed.",
+      "transparent_background": false,
+      "selected_output_sha256": "4dccb3297a96cbcc964be000088b2fb681a8835997da3ffc253735334b2e5aea",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c6e8f426b688.json",
+        "locales/zh-CN/artwork/4a853bbf762c.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-door-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. This is a cropped original PS2 sci-fi horror laboratory door with two metal leaves. Remove ALL cyan MAIN CONTROL CENTER and UNLOCK lettering, ALL red RESTRICTED AREA text and every antialiased edge, shadow and reflection. Reconstruct a continuous text-free original charcoal brushed steel surface under all three text bands, keeping the subtle broad overhead lamp reflections and gradual vertical steel shading. Keep the central vertical seam, exact geometry, relative left/right illumination, top/bottom horizontal rails and palette unchanged. No new panels, no dark rectangles, no letters, no icons, no bolt additions, no redesign. Restore smooth coherent whole surfaces rather than separately pasting rectangular patches. Entire output has ZERO writing.",
+      "transparent_background": false,
+      "selected_output_sha256": "faa96a5574097775252fb8e5e3720c11574d43b681e7fa766bd169830a69a845",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/c58c820b6113.json",
+        "locales/zh-CN/artwork/f4a11c596ef6.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-paper-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Restore ONLY the large black vertical CAUTION word on this narrow old-game rust-orange paper/metal warning strip to its natural text-free surface. Preserve ALL the much smaller illegible fine-print line at the far LEFT, every black capsule cutout, the original dark upper edge and black/blue recess at right. Match the original mottled dirty orange/brown worn paper, scratches, uneven illumination, low contrast and grain continuously across the former letters. No red label patch, no solid rectangle, no darker outline of the old word. The area of the removed large word should become plain naturally aged orange paper, no new writing. Same geometry and colors as reference, no newly invented decoration.",
+      "transparent_background": false,
+      "selected_output_sha256": "98a61d0bd5137d679ca11d4ea755a84d19d331d9a2c8859f73598086938035b9",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/89d4eec42316.json",
+        "locales/zh-CN/artwork/cb1beda20720.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-blood-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit target is this original low-resolution blue illuminated EXIT badge behind translucent dark-red blood stains. Remove ONLY the cyan English lettering VITAL CREATIONS and EXIT (including their small bright strokes); keep the thin badge rim and the tiny lower-contrast microprint across the middle. Restore the obscured blue illuminated metal while keeping every original red/maroon blood stain at its exact position, shape, coverage, translucency and color, especially the central/lower stain crossing the EXIT word and the red upper right patch. Do NOT clean the blood, do NOT copy a clean blue badge over it, do NOT smooth/repaint the whole plaque. No Chinese or new text yet. Preserve the same uneven cyan lighting, aged surface, tiny microprint and all surrounding blood. Only the readable English ink is removed, textless blank donor; original pixel-art geometry remains exact.",
+      "transparent_background": false,
+      "selected_output_sha256": "9fa9c20d2ec475d59dc47ea6278612e0b8afd3484e05d5a1e335e5848765e15f",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/a1239fdc5560.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-power-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit original 2005 PS2 sci-fi horror texture. Remove ONLY the upside-down two-line POWER WATCH / PUSH DOWN text and all ink edges. Restore clean continuous pale cyan illuminated metal wall, including the smooth turquoise spotlight falloff and subtle worn grain. No letters or ghosts, no flat rectangle. Preserve original cyan illumination, background shading, framing and all wall seams. Source-faithful restoration, not a redesigned object. Output exactly the same cropped object composition without readable text.",
+      "transparent_background": false,
+      "selected_output_sha256": "42df39285f92ad67d190c28e975c7db52fedb46f43a16f289c51811595ce2cf1",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/16c04c38c46c.json",
+        "locales/zh-CN/artwork/6a2034752e22.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-red-door-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit original 2005 PS2 sci-fi horror texture. Remove the cream CAUTION and RESTRICTED AREA lettering and ALL letter shadows and underline fragments, leaving text-free original deep-red reflective door metal. Preserve the tiny cyan lamp at bottom, dark vertical center seam, original red lamp falloff and framing. Do not replace with a flat red patch. No writing or new icons. Source-faithful restoration, not a redesigned object. Output exactly the same cropped object composition without readable text.",
+      "transparent_background": false,
+      "selected_output_sha256": "39226ad8a9861fd427a299b025f1524a187434517bc19f458abd496ac4d2a7f1",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/69902adfff36.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-detector-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Edit original 2005 PS2 sci-fi horror texture. Remove ONLY the large METAL DETECTOR heading. Preserve the three tiny unreadable lines below it EXACTLY in their position and style, do not invent words. Restore the slate-gray worn metal behind the removed heading continuously, no lettering ghosts or rectangular patch. Keep all fine print, borders, tonal gradients and scratches. Source-faithful restoration, not a redesigned object. Output exactly the same cropped object composition without readable text.",
+      "transparent_background": false,
+      "selected_output_sha256": "9729f48280a65b1bcd673c12822cf7d38187293ab268c5657c310e1c9a5e6aa5",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/17210fa50297.json",
+        "locales/zh-CN/artwork/4051fb2bdf6c.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-footer-182-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Restore the original game footer strip. Remove ONLY the cream serif words OK and BACK completely, including outlines/shadows and fine antialiased ink. Preserve the red circle O and gray cross X EXACTLY, the original thin metal frame and lower border, and restore the original continuous dark red-to-black dotted/striped brushed background behind the removed words. Do not invent bars, vertical scratches, straight-line glyph shadows or boxes. Keep source colors, geometry and placement. Output this same narrow strip with the TWO icons remaining and NO text.",
+      "transparent_background": false,
+      "selected_output_sha256": "ee3f400cd4e97b8ffbe86253261320a5c18f255942e9bb68929f83abac204948",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/4ef12dc04532.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-footer-183-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Restore the original game footer strip. Remove ONLY the cream serif words OK and BACK completely, including outlines/shadows and fine antialiased ink. Preserve the red circle O and gray cross X EXACTLY, the original thin metal frame and lower border, and restore the original continuous dark red-to-black dotted/striped brushed background behind the removed words. Do not invent bars, vertical scratches, straight-line glyph shadows or boxes. Keep source colors, geometry and placement. Output this same narrow strip with the TWO icons remaining and NO text.",
+      "transparent_background": false,
+      "selected_output_sha256": "20481c3017cd70d9345cfbab86613efa4ffbfcf155f3b153cf82cb4bad1fac1c",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/af91ca0e0985.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-notice-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Source is original PS2 horror-game texture. Remove ONLY the small NOTICE heading and every antialiased edge. Preserve the smaller illegible fine-print line beneath it, all physical slate-blue plaque edges and the original uneven cyan illumination. Reconstruct a continuous matching dark blue-gray painted sign surface behind the removed heading, not a flat dark rectangle. No added text or symbols. Same framing, original surface detail; no redesign.",
+      "transparent_background": false,
+      "selected_output_sha256": "f795ef48a67330c0c8384cef7579074cf51abd2983bd07bba6734de4139d0f88",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/646dd6d4a6a9.json",
+        "locales/zh-CN/artwork/96b77b854a90.json",
+        "locales/zh-CN/artwork/e10ecf9cea50.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-keepout-blank",
+      "tool": "built-in imagegen",
+      "prompt": "Use case: precise-object-edit. Source is original PS2 horror-game texture. Remove all four KEEP OUT labels from their two broad red cross-bars, including the small black and large white versions and every outline. Keep all original red light gradients, exact red cross-bar boundaries, metallic louvers, central seam, red horizontal glow and all hardware. Restore coherent red surfaces, never flat black text-box patches. No lettering or pseudo-letter residue. Exact original layout and palette. Same framing, original surface detail; no redesign.",
+      "transparent_background": false,
+      "selected_output_sha256": "ff93184b380fd963016ffed6c5bf9fc3f7420edb944b2b6295d9e973a28d5405",
+      "usage": "Only registered text-free material in guarded native beds; never import generated frame/lamps/fineprint/blood wholesale. Original pixels and approved typography protected separately.",
+      "native_artwork_deltas": [
+        "locales/zh-CN/artwork/7da5e0e485ee.json"
+      ]
+    },
+    {
+      "id": "feedback-17e7-native-registration",
+      "tool": "native UV/palette registration, continuous original master unmatting, whole outline rasterization",
+      "font_sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+      "basis": "29 rows recorded in assets/artwork-feedback-17e7.json. No threshold/dilation of a composited Chinese face; whole outline/alpha assets.9 verified-profile HD artwork carriers, including unchanged12-layer main-menu lettering.",
+      "rejected_attempts": [
+        "Whole semitransparent master background copied to opaque sibling produced dark rectangle; instead keep own material and unmatte only complete glyph coverage.",
+        "CLUT16 does not use existing CLUT32 hash profile; no guessed runtime keys.",
+        "Equal em does not imply identical thresholded glyph height: footer core9/10px, common11px outline em and original safe cell retained."
+      ]
     }
   ]
 }

@@ -12,12 +12,17 @@ def digest(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
 
-def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sha256: str) -> bytes:
+def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sha256: str,
+                          reference: bytes | None = None, reference_sha256: str | None = None,
+                          reference_rectangles: list | None = None) -> bytes:
     """Import reviewed RGBA artwork without typesetting or regenerating a CLUT.
 
     Unchanged decoded pixels retain their original *index*, even when the
     palette contains duplicate colors. Quantization compares premultiplied
     RGB and alpha, avoiding opaque fringes around transparent lettering.
+    A hash-bound, same-header/CLUT reference may retain already-localized
+    equal-color indices inside allowed regions. It cannot introduce colors,
+    change quantized RGBA, or expand the permitted edit area.
     """
     from .graphics import decode_tim2, _palette
 
@@ -28,6 +33,20 @@ def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sh
         raise ValueError("Artwork import requires matching indexed TIM2 and RGBA dimensions")
     allowed = validate_rectangles(rectangles, *original.size)
     colors = _palette(source, info)
+    if reference is not None:
+        if reference_sha256 is None or digest(reference) != reference_sha256:
+            raise ValueError("Artwork reference identity mismatch")
+        if (len(reference) != len(source)
+                or reference[:info["pixel_offset"]] != source[:info["pixel_offset"]]
+                or reference[info["palette_offset"]:] != source[info["palette_offset"]:]):
+            raise ValueError("Artwork reference header/palette mismatch")
+    elif reference_sha256 is not None:
+        raise ValueError("Artwork reference bytes missing")
+    preferred = allowed if reference_rectangles is None else validate_rectangles(reference_rectangles, *original.size)
+    if not preferred <= allowed:
+        raise ValueError("Artwork reference regions exceed allowed pixels")
+    if reference is None and reference_rectangles is not None:
+        raise ValueError("Artwork reference regions require reference bytes")
 
     def premultiply(color):
         return tuple(color[k] * color[3] // 255 for k in range(3)) + (color[3],)
@@ -47,6 +66,12 @@ def import_indexed_pixels(source: bytes, artwork, rectangles: list, *, source_sh
             cache[after] = min(range(len(palette)), key=lambda n:
                 sum((palette[n][k] - value[k]) ** 2 * (2 if k == 3 else 1) for k in range(4)))
         output[info["pixel_offset"] + i] = cache[after]
+    if reference is not None:
+        start = info["pixel_offset"]
+        for i in preferred:
+            old_index = reference[start + i]
+            if colors[old_index] == colors[output[start + i]]:
+                output[start + i] = old_index
     return bytes(output)
 
 

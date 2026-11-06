@@ -2,7 +2,7 @@
   "format": "graphics-source-review",
   "version": 1,
   "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
-  "review_basis": "Closed original TIM2 inventory plus bounded feedback e004 revision:28 text-bearing TIM2s modified,2 prior explicit original restorations unchanged. Offline source/decoded-native evidence, not game/user artistic acceptance.",
+  "review_basis": "Closed original1140TIM2/2634-reference inventory, feedback17e7 changes29 native TIM2s, retains all other carriers and two explicit original restorations. Offline scope proof is not user artistic approval.",
   "summary": {
     "unique_textures": 1140,
     "physical_members": 2634,

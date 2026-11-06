@@ -14,12 +14,17 @@ def main():
     parser.add_argument("--png", type=Path, required=True)
     parser.add_argument("--recipe", type=Path, required=True, help="JSON with allowed_rectangles and targets")
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--reference", type=Path, help="Prior localized TIM2; equal-color index preference only")
+    parser.add_argument("--reference-sha256", help="Required exact identity with --reference")
     args = parser.parse_args()
     source = args.source.read_bytes()
     recipe = json.loads(args.recipe.read_text("utf8"))
     with Image.open(args.png) as png:
         modified = import_indexed_pixels(source, png.convert("RGBA"), recipe["allowed_rectangles"],
-                                         source_sha256=args.source_sha256)
+                                         source_sha256=args.source_sha256,
+                                         reference=args.reference.read_bytes() if args.reference else None,
+                                         reference_sha256=args.reference_sha256,
+                                         reference_rectangles=recipe.get("reference_rectangles"))
     patch = make_artwork_delta(source, modified, recipe["allowed_rectangles"], recipe["targets"])
     if "state_checks" in recipe:
         patch["state_checks"] = recipe["state_checks"]

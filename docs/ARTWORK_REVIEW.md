@@ -91,6 +91,12 @@ python -X utf8 tools/import_raw_artwork.py --source original.rgb --source-sha256
 
 ## 当前范围
 
+### 已汉化图的增量再导入
+
+可选 `tools/import_artwork.py --reference prior-localized.TM2 --reference-sha256 HASH` 保留已汉化图中RGBA相同的原索引别名。原盘`--source`及其hash仍是版本锚点；reference必须与其长度、完整头和CLUT相同，并校验单独hash。该选项只在允许区域、输出量化颜色与reference完全相同时选择reference索引，不引入reference的新颜色，不放宽字区或保护检查。未传该选项保持旧行为。
+
+配方可另设`reference_rectangles`，限定保留前版索引的区域，且必须是`allowed_rectangles`的子集。恢复原材质/微字的区域应排除，避免把前版的同色别名又带回已经恢复的原索引。17e7的93号只对未修改的主海报使用reference，侧边原纸/微字仍恢复原盘索引。
+
 ### 主菜单选中态反馈修订
 
 2026-11-05，用户游戏截图揭示选中态字形过小及白色下划线。旧 ISO 的 L001_004 SHA 为 `8e956ca33df0b3ae3473390c3adb12f9b8f8ec25d1a2f4c02f8f51a1ba178f5e`，与当时已提交差分一致：属于实装素材问题。原版稳态缩放对照见 TECHNICAL。

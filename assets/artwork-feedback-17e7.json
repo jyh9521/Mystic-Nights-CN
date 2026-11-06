@@ -1,0 +1,2136 @@
+{
+  "format": "artwork-feedback-resolution",
+  "version": 1,
+  "source_iso_sha256": "4eacce4ea467ade6ac04f7006c216d8ba6504661bc0e3d11ac990eed7e379c3b",
+  "feedback_iso_sha256": "17e7dc6d9e2f4138493975f0b8697744f4347fdd71af46284e94b173b4e2a44d",
+  "feedback_file_sha256": "aae4f0de2e9393b4909e2df576cf21a0036ca4c5834c1b973418923e43e54330",
+  "opinions": 29,
+  "localized_revisions": 29,
+  "unchanged_approvals": 164,
+  "other_localized_tim2_unchanged": 162,
+  "hd_artwork_textures": 9,
+  "user_approval": "Pending for29 changed native images;164 exact unchanged explicit approvals retained",
+  "items": [
+    {
+      "number": 13,
+      "source_sha256": "076f1530ee2a270274761a58ee122416255f3215a6e69f22a07694acf6bf39cc",
+      "before_sha256": "38523617f222d4c4dd64e59759ec1c87db640e4a2e7a8c6b733350d90bd70e78",
+      "after_sha256": "d6dbe40f9ac51261c7485577d0a1902d91a8ec70ab2c731503b1acdb83815771",
+      "changed_indices": 6068,
+      "note": "New continuous text-free glass across all four complete interiors; donor has no mechanical pseudo-letter texture. Exact existing12HD text layers and native normal/title/START retained. Original exterior/rim outside interior mask unchanged.",
+      "feedback_rectangles": [
+        [
+          280,
+          132,
+          132,
+          16
+        ],
+        [
+          280,
+          156,
+          132,
+          16
+        ],
+        [
+          280,
+          180,
+          132,
+          16
+        ],
+        [
+          280,
+          204,
+          132,
+          16
+        ]
+      ]
+    },
+    {
+      "number": 14,
+      "source_sha256": "c6e8f426b688ec75161ad647ff0a7b36f16d78a70ac0665ddf2f15911d91817f",
+      "before_sha256": "fc9b4c570e9e87c524ee030a8dffb26d87e8fe7677a6f27bd20209583d77d0fc",
+      "after_sha256": "07cd9b0f75c7257cc87258fe0a0e870532879f7520730b1905c95ecff526e440",
+      "changed_indices": 17891,
+      "note": "New smooth cobalt/vermilion glass interiors without pseudo-letter reflections; original source chrome and endcaps exact. Full prior metallic Chinese alpha art, shared15px height and13px em, identical two-state geometry.",
+      "feedback_rectangles": [
+        [
+          15,
+          14,
+          84,
+          15
+        ],
+        [
+          125,
+          14,
+          84,
+          15
+        ],
+        [
+          15,
+          44,
+          84,
+          15
+        ],
+        [
+          125,
+          44,
+          84,
+          15
+        ],
+        [
+          15,
+          74,
+          84,
+          15
+        ],
+        [
+          125,
+          74,
+          84,
+          15
+        ],
+        [
+          15,
+          104,
+          84,
+          15
+        ],
+        [
+          125,
+          104,
+          84,
+          15
+        ],
+        [
+          15,
+          134,
+          84,
+          15
+        ],
+        [
+          125,
+          134,
+          84,
+          15
+        ],
+        [
+          15,
+          164,
+          84,
+          15
+        ],
+        [
+          125,
+          164,
+          84,
+          15
+        ],
+        [
+          15,
+          194,
+          84,
+          15
+        ],
+        [
+          125,
+          194,
+          84,
+          15
+        ],
+        [
+          15,
+          224,
+          84,
+          15
+        ],
+        [
+          125,
+          224,
+          84,
+          15
+        ],
+        [
+          44,
+          14,
+          26,
+          15
+        ],
+        [
+          154,
+          14,
+          26,
+          15
+        ],
+        [
+          44,
+          44,
+          26,
+          15
+        ],
+        [
+          154,
+          44,
+          26,
+          15
+        ],
+        [
+          44,
+          74,
+          26,
+          15
+        ],
+        [
+          154,
+          74,
+          26,
+          15
+        ],
+        [
+          38,
+          104,
+          39,
+          15
+        ],
+        [
+          148,
+          104,
+          39,
+          15
+        ],
+        [
+          38,
+          134,
+          39,
+          15
+        ],
+        [
+          148,
+          134,
+          39,
+          15
+        ],
+        [
+          44,
+          164,
+          26,
+          15
+        ],
+        [
+          154,
+          164,
+          26,
+          15
+        ],
+        [
+          44,
+          194,
+          26,
+          15
+        ],
+        [
+          154,
+          194,
+          26,
+          15
+        ],
+        [
+          38,
+          224,
+          39,
+          15
+        ],
+        [
+          148,
+          224,
+          39,
+          15
+        ]
+      ]
+    },
+    {
+      "number": 15,
+      "source_sha256": "4a853bbf762cda8f2ae1bc5fca4558cd97e8db42104b85d5c5db92a738ac31ec",
+      "before_sha256": "7bbedcc954c825d7ccc579faf70e3ee8f84c7051e6accebea5dad1929de67a73",
+      "after_sha256": "c93b542df2e9cc54c58bd3c151ecba2fc89244762f9d703c1a6099b9faeaf0e3",
+      "changed_indices": 11519,
+      "note": "New smooth cobalt/vermilion glass interiors without pseudo-letter reflections; original source chrome and endcaps exact. Full prior metallic Chinese alpha art, shared15px height and13px em, identical two-state geometry.",
+      "feedback_rectangles": [
+        [
+          15,
+          104,
+          84,
+          15
+        ],
+        [
+          125,
+          104,
+          84,
+          15
+        ],
+        [
+          15,
+          134,
+          84,
+          15
+        ],
+        [
+          125,
+          134,
+          84,
+          15
+        ],
+        [
+          15,
+          164,
+          84,
+          15
+        ],
+        [
+          125,
+          164,
+          84,
+          15
+        ],
+        [
+          15,
+          194,
+          84,
+          15
+        ],
+        [
+          125,
+          194,
+          84,
+          15
+        ],
+        [
+          15,
+          224,
+          84,
+          15
+        ],
+        [
+          125,
+          224,
+          84,
+          15
+        ],
+        [
+          44,
+          104,
+          26,
+          15
+        ],
+        [
+          154,
+          104,
+          26,
+          15
+        ],
+        [
+          38,
+          134,
+          39,
+          15
+        ],
+        [
+          148,
+          134,
+          39,
+          15
+        ],
+        [
+          44,
+          164,
+          26,
+          15
+        ],
+        [
+          154,
+          164,
+          26,
+          15
+        ],
+        [
+          44,
+          194,
+          26,
+          15
+        ],
+        [
+          154,
+          194,
+          26,
+          15
+        ],
+        [
+          50,
+          224,
+          13,
+          15
+        ],
+        [
+          160,
+          224,
+          13,
+          15
+        ]
+      ]
+    },
+    {
+      "number": 37,
+      "source_sha256": "16c04c38c46c4ba4c652964de12ac13e8b67bd90cbf03c3c77159cac48475f08",
+      "before_sha256": "7d59540559f259107a02322e7206de1d5075836bf020a7c5e75c3b224e4e4118",
+      "after_sha256": "b3b90e58eadb235bdb9de53fbb6fdf2e2535d5770475fc3edca562ab5c7db4f5",
+      "changed_indices": 870,
+      "note": "Complete10px two-line Chinese outline, correct180-degree atlas orientation, natural cyan spotlight donor; no tiny blurred generated glyphs. True4x matching glyph layer included.",
+      "feedback_rectangles": [
+        [
+          10,
+          25,
+          47,
+          22
+        ],
+        [
+          12,
+          26,
+          44,
+          21
+        ]
+      ]
+    },
+    {
+      "number": 38,
+      "source_sha256": "6a2034752e224e37c0f172bd7c712b6368854dd1322ac0c8f571f49e688af9d2",
+      "before_sha256": "d71c67c3e3c420a66e3eaaf7451a0f5a43f1787b565743ff4d27f054a261278b",
+      "after_sha256": "d8bfdf1924219e65307d17752af85217197ed1a2c82b457289399dfc106a4e02",
+      "changed_indices": 885,
+      "note": "Complete10px two-line Chinese outline, correct180-degree atlas orientation, natural cyan spotlight donor; no tiny blurred generated glyphs. True4x matching glyph layer included.",
+      "feedback_rectangles": [
+        [
+          10,
+          25,
+          47,
+          22
+        ],
+        [
+          12,
+          26,
+          44,
+          21
+        ]
+      ]
+    },
+    {
+      "number": 40,
+      "source_sha256": "7da5e0e485eefd23b44cd5338cfd7b43ef63530060b593552d0381b2e43726bf",
+      "before_sha256": "11a8d819fa2ca96ad798dda1c9da8866be7e90ccab26f1d12ffff0b8dea68b51",
+      "after_sha256": "acb5787613cd4dc903b23d445c63d96b4fba395b71b38343b80c9bd4fdb1bf40",
+      "changed_indices": 2162,
+      "note": "Complete accepted master39 glyph coverage and identical UV origin; continuously un-matted from red, not copying its semitransparent background into opaque variant. New own red material under labels; source louvers/seam unchanged.",
+      "feedback_rectangles": [
+        [
+          17,
+          53,
+          45,
+          20
+        ],
+        [
+          70,
+          77,
+          33,
+          10
+        ],
+        [
+          14,
+          158,
+          37,
+          11
+        ],
+        [
+          68,
+          172,
+          47,
+          20
+        ]
+      ]
+    },
+    {
+      "number": 42,
+      "source_sha256": "d37e08bb58cdf6326cf4b2fb69e344ba36b9e241667b1002621823b2e6d8dea6",
+      "before_sha256": "76587e96e9895416c2aa90e9508b57cb3eb7689c8c060f11030eb71d72972085",
+      "after_sha256": "5616b743b05b3424a38ad2ba84a35df3a204631c2e262858c195e3ce4574c2b8",
+      "changed_indices": 392,
+      "note": "Exact complete accepted master#41 word-bed coordinates/size copied; no independent font fitting or retouched accepted master. Own texture outside declared word beds and own original CLUT preserved.",
+      "feedback_rectangles": [
+        [
+          160,
+          164,
+          61,
+          13
+        ]
+      ]
+    },
+    {
+      "number": 43,
+      "source_sha256": "e05113db2385a6bf51dbe31c8bc7b3561819ea62c00e04da64881b411e11bde7",
+      "before_sha256": "aed6cb0cf6a7d37fc58435ae322cae02dad2b5635472b502aaa05f46e30e5b2b",
+      "after_sha256": "35839ffb6c797932ab788743e0104c7c85d556030dd85480ce8c68f586701516",
+      "changed_indices": 292,
+      "note": "Exact complete accepted master#41 word-bed coordinates/size copied; no independent font fitting or retouched accepted master. Own texture outside declared word beds and own original CLUT preserved.",
+      "feedback_rectangles": [
+        [
+          160,
+          164,
+          61,
+          13
+        ]
+      ]
+    },
+    {
+      "number": 46,
+      "source_sha256": "69902adfff36d7b3048d4a9367f70336bd26dbe5011312d8166f353c33da6107",
+      "before_sha256": "d8a9277782f4aeadd2ebf65378f75b59fcaaaf4be8c410072ac0fd4e3690f26a",
+      "after_sha256": "11f4bbd5df4822b3d8d60551a5bd27e71038ad78d6b23cdebc3f2c34f773d7c7",
+      "changed_indices": 1597,
+      "note": "Whole16px 注意 and11px 限制区域 source-style cream industrial print over coherent own red metal, open counters/no dirty composite edge. Source lamps and geometry unchanged; true4x outlines.",
+      "feedback_rectangles": [
+        [
+          49,
+          58,
+          59,
+          29
+        ],
+        [
+          62,
+          60,
+          30,
+          15
+        ],
+        [
+          57,
+          78,
+          43,
+          10
+        ]
+      ]
+    },
+    {
+      "number": 49,
+      "source_sha256": "646dd6d4a6a93f58c986f770c92bcbeb2ae5aed9b3c77e5db7c8901ede5c5fae",
+      "before_sha256": "e03508410db3279776e8def4230112348a53e52760952056f4a29665190b9c97",
+      "after_sha256": "91c6f5d185f626157890cce2bd9dbe1ce4ec9b9241f2d63c2f50e7150935aaeb",
+      "changed_indices": 155,
+      "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
+      "feedback_rectangles": [
+        [
+          71,
+          4,
+          27,
+          11
+        ],
+        [
+          71,
+          4,
+          27,
+          9
+        ],
+        [
+          72,
+          3,
+          24,
+          10
+        ],
+        [
+          76,
+          4,
+          15,
+          8
+        ]
+      ]
+    },
+    {
+      "number": 50,
+      "source_sha256": "96b77b854a9087ed84d7482f7cdd09e7e143c3e43592c592854e7fa4f0e9b67b",
+      "before_sha256": "cf814d2d17aa98e578fa28f7337e6512df1466beb140fb544f47a23ec8fafdd6",
+      "after_sha256": "9218ef067d6069595973a3d8d5330a2c8f54affc94af45b6a20f1be1972d75be",
+      "changed_indices": 151,
+      "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
+      "feedback_rectangles": [
+        [
+          71,
+          4,
+          27,
+          11
+        ],
+        [
+          71,
+          4,
+          27,
+          9
+        ],
+        [
+          72,
+          3,
+          24,
+          10
+        ],
+        [
+          76,
+          4,
+          15,
+          8
+        ]
+      ]
+    },
+    {
+      "number": 51,
+      "source_sha256": "e10ecf9cea50ae66d1f6daab7eb247d74b79d49c06364f3220461659e00de916",
+      "before_sha256": "e13ea9f185e41945520e1d9798628f696b25df844baebbbcc2d74692e2b6e5ec",
+      "after_sha256": "7c1448d26db2e90dc4431c98c9ae165dc27169df46ef90049987c3ac1a3a0c4a",
+      "changed_indices": 172,
+      "note": "Complete8px 告示 outline with common x/y and natural source aspect in three own-palette variants; new matched source sign material, exact original lower microprint and source perimeter retained, no dark rectangle.",
+      "feedback_rectangles": [
+        [
+          71,
+          4,
+          27,
+          11
+        ],
+        [
+          71,
+          4,
+          27,
+          9
+        ],
+        [
+          72,
+          3,
+          24,
+          10
+        ],
+        [
+          76,
+          4,
+          15,
+          8
+        ]
+      ]
+    },
+    {
+      "number": 52,
+      "source_sha256": "2703c76fa0d403e15540dd8ae639e9ed164bf877ecd543605f825df421ec29fc",
+      "before_sha256": "ad9b806794704deb2a9920b1df6e5e42a35ff305daf3240d277e4b257c04b9fb",
+      "after_sha256": "e0557066f58a39870c078ce706580e4b1a08e22e22962af6449e4aa606248132",
+      "changed_indices": 30,
+      "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
+      "feedback_rectangles": [
+        [
+          88,
+          136,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "number": 53,
+      "source_sha256": "6b3da2d9f62eeb9c1ae2950cf9e1617856603c054b487dd0ae3d33a0ae4c936d",
+      "before_sha256": "834f44cfe99c8d3f8775cfa233372505c88931202cc107f83a81d21fbd2f0cb5",
+      "after_sha256": "bf9044536106cdbcac3faf4ce3b75bf647e39fad91c6432b552601b1881d01ff",
+      "changed_indices": 11,
+      "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
+      "feedback_rectangles": [
+        [
+          88,
+          136,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "number": 54,
+      "source_sha256": "a038662342eef2a107e0fd0873676836cc7c7a884356c114dc0f528142369e44",
+      "before_sha256": "c9f5d1fc15ba61b48e1464c4d97f35a2c44304cf0b8d9d0682b66a5fe774cc05",
+      "after_sha256": "8ee07973369e723d8c81ae0fb8ee501c3ee59c78282a7a30d6107033b9bbe288",
+      "changed_indices": 30,
+      "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
+      "feedback_rectangles": [
+        [
+          88,
+          136,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "number": 55,
+      "source_sha256": "f04efd60e59c102667f8be855a25d96811ac8ff8bde45cde7cc6527ff8430f12",
+      "before_sha256": "047dc680d371be0889cfdda8ecf8353b065232e83ac5dff69829150d1ef6d870",
+      "after_sha256": "1dda4e0df93e8c05130e573c4a2f2b4ee5a2ab765153c7ea5c4b687726671e11",
+      "changed_indices": 30,
+      "note": "Full8x5 original cursor neighborhood restored exactly, rather than the clipped5x2 slice; accepted 错误 heading and other statuses retained.",
+      "feedback_rectangles": [
+        [
+          88,
+          136,
+          8,
+          5
+        ]
+      ]
+    },
+    {
+      "number": 56,
+      "source_sha256": "63a4d2a40a1a95b9bc123c37f91cafa1c177c0a6e5fedcd6a80c1fa62da400df",
+      "before_sha256": "9b7395b91dfac103e7652209eb1f69e75e98517aee787793580fd44d5c83d8a1",
+      "after_sha256": "de866b7f7a363815a0658c9bae2f36d8d3ca86c54082aebe3a4226b0401f128f",
+      "changed_indices": 1832,
+      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "feedback_rectangles": [
+        [
+          46,
+          61,
+          69,
+          26
+        ],
+        [
+          54,
+          65,
+          54,
+          10
+        ],
+        [
+          58,
+          76,
+          43,
+          10
+        ],
+        [
+          44,
+          87,
+          73,
+          7
+        ]
+      ]
+    },
+    {
+      "number": 57,
+      "source_sha256": "db107f489be660f9b090f166e05d61dbdf18d27173b79384f782c125cff17ec3",
+      "before_sha256": "0e04b17c57729d260d0000a8b1f83540d87d32f2d3605a40dfe3f2a8d7b5aec7",
+      "after_sha256": "53d3f74f3f54763ea00c65eacac322c4227601b56625212a858fe31babb68842",
+      "changed_indices": 1603,
+      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "feedback_rectangles": [
+        [
+          46,
+          61,
+          69,
+          26
+        ],
+        [
+          54,
+          65,
+          54,
+          10
+        ],
+        [
+          58,
+          76,
+          43,
+          10
+        ],
+        [
+          44,
+          87,
+          73,
+          7
+        ]
+      ]
+    },
+    {
+      "number": 58,
+      "source_sha256": "55b23003c6eb855a0237c476ee8504341bd14951793c8632e2ac38990140e4f2",
+      "before_sha256": "5a71e4d1a0addb4d4205db415802e3e1105e33fb68d4ce09b919f608bdf51a99",
+      "after_sha256": "455f98ccd71b804bc1b7db2f45c25535f531b7b6ecd843a223b3d7c6e46825c5",
+      "changed_indices": 1501,
+      "note": "Complete11px full outlines, identical shared geometry in three lighting states, own source red/cyan lamp protected; clean old beds and native aspect retained. Supported CLUT32 variants additionally receive true4x glyphs.",
+      "feedback_rectangles": [
+        [
+          46,
+          61,
+          69,
+          26
+        ],
+        [
+          54,
+          65,
+          54,
+          10
+        ],
+        [
+          58,
+          76,
+          43,
+          10
+        ],
+        [
+          44,
+          87,
+          73,
+          7
+        ]
+      ]
+    },
+    {
+      "number": 59,
+      "source_sha256": "133aa7eea03053951dc5b3bf549bd59a0bd959536622002b3814917cefcae089",
+      "before_sha256": "40322edca7c3c13e307b7999062f2572dd9bf8701237e3367747719ddf2840f3",
+      "after_sha256": "de439083a8d27a8cf9b287b36f56bc37a02b08c42905b4d4c196f1f67ccdf4f7",
+      "changed_indices": 697,
+      "note": "Complete10px black camera label with open counters and full outlines; no blurred face/photo crop. Existing camera body/optic untouched; true4x print layers.",
+      "feedback_rectangles": [
+        [
+          2,
+          86,
+          44,
+          23
+        ],
+        [
+          14,
+          88,
+          19,
+          10
+        ],
+        [
+          9,
+          99,
+          30,
+          10
+        ]
+      ]
+    },
+    {
+      "number": 61,
+      "source_sha256": "c58c820b6113c342b7047abd397d6a150b6703c2221d3e23fc2801a05c49a8ec",
+      "before_sha256": "d5e54a8d04ccf4becc329d3e89b94fed703fccf5d0e5d5fdb7c5a7ad8f623a92",
+      "after_sha256": "92e5484d5dbbe3f355418da8104b5594134cdc5f6ecbc5df59e69322bf94afad",
+      "changed_indices": 5953,
+      "note": "New continuous blank steel donor across full old letter/shadow footprints, not a color threshold carrying old background back. Complete cyan/red glyphs; own central seam, braces, lights and outside steel retained.",
+      "feedback_rectangles": [
+        [
+          75,
+          87,
+          63,
+          43
+        ],
+        [
+          142,
+          87,
+          61,
+          43
+        ],
+        [
+          77,
+          142,
+          36,
+          15
+        ],
+        [
+          143,
+          142,
+          36,
+          15
+        ],
+        [
+          92,
+          92,
+          32,
+          10
+        ],
+        [
+          98,
+          104,
+          21,
+          10
+        ],
+        [
+          88,
+          117,
+          39,
+          10
+        ],
+        [
+          87,
+          146,
+          18,
+          9
+        ],
+        [
+          155,
+          92,
+          32,
+          10
+        ],
+        [
+          160,
+          104,
+          21,
+          10
+        ],
+        [
+          152,
+          117,
+          39,
+          10
+        ],
+        [
+          150,
+          146,
+          18,
+          9
+        ]
+      ]
+    },
+    {
+      "number": 71,
+      "source_sha256": "17210fa50297479b8337ddce5c1a6ab1f30121d6279e3f864d077ad76528d2bb",
+      "before_sha256": "e554a47278c55cfc7d82e4c0ebbf1caaf508454d61d557ed41ad65ec75ba0b8a",
+      "after_sha256": "78eac6fbe729ceb08f9a006e903498399ca69f82164b9d0d5b40357f9f75788d",
+      "changed_indices": 1458,
+      "note": "Same complete11px detector heading and10px rotated company outlines on two source variants; exact original lower microprint, border and light outside beds. CLUT16 native profile retained, no speculative replacement key.",
+      "feedback_rectangles": [
+        [
+          65,
+          207,
+          69,
+          13
+        ],
+        [
+          187,
+          152,
+          14,
+          60
+        ],
+        [
+          73,
+          208,
+          54,
+          10
+        ],
+        [
+          189,
+          162,
+          10,
+          39
+        ]
+      ]
+    },
+    {
+      "number": 72,
+      "source_sha256": "4051fb2bdf6cdb74af37c43ca88db8e3c3b00d347b34cb034dc2084a59ce0269",
+      "before_sha256": "b2d3521f5a5c42a7726738f462f784222dac7e865649f2bf6935f08fa9cb84f7",
+      "after_sha256": "e1a0eb737f2462a526060f783009e8af6f01fca9717362e12efb106ad7fb68ef",
+      "changed_indices": 1372,
+      "note": "Same complete11px detector heading and10px rotated company outlines on two source variants; exact original lower microprint, border and light outside beds. CLUT16 native profile retained, no speculative replacement key.",
+      "feedback_rectangles": [
+        [
+          65,
+          207,
+          69,
+          13
+        ],
+        [
+          187,
+          152,
+          14,
+          60
+        ],
+        [
+          73,
+          208,
+          54,
+          10
+        ],
+        [
+          189,
+          162,
+          10,
+          39
+        ]
+      ]
+    },
+    {
+      "number": 93,
+      "source_sha256": "89d4eec42316b14339cff7e3481db2326350e19966233e13787acedf5f1d635d",
+      "before_sha256": "893cc2d31ef6f19bb5a6ca427acd15f6d66f6f156aa4d9b234862d57eda4160b",
+      "after_sha256": "3e6da491b3aaf28feede317f571a63d1e33543cf84688407d5e3bcaa77cef8c6",
+      "changed_indices": 913,
+      "note": "Original side paper and tiny fine-print recovered; only the narrow actual CAUTION bed gets matched worn-paper donor and modest9px whole rotated 注意. No broad red plate. Main3 translated lines unchanged. Equal-RGBA existing localized palette aliases retained byte-exact with hash-bound reference. Equal-RGBA existing localized palette aliases retained byte-exact with hash-bound reference.",
+      "feedback_rectangles": [
+        [
+          14,
+          4,
+          18,
+          60
+        ],
+        [
+          21,
+          23,
+          10,
+          40
+        ],
+        [
+          22,
+          34,
+          8,
+          17
+        ]
+      ]
+    },
+    {
+      "number": 94,
+      "source_sha256": "cb1beda20720e40ddf0c73c46894a7573c931959ffb296c58f7148ebcfa64f58",
+      "before_sha256": "f01b38adf5569959bf3c38dfae7f921b703135667d35c369640f5beab33262d9",
+      "after_sha256": "145e6f0c637edf72b55ee8a90f4562ca55336fbc8a8b6246a5fc72c752ce9c59",
+      "changed_indices": 909,
+      "note": "Original side paper and tiny fine-print recovered; only the narrow actual CAUTION bed gets matched worn-paper donor and modest9px whole rotated 注意. No broad red plate. Main3 translated lines unchanged.",
+      "feedback_rectangles": [
+        [
+          14,
+          4,
+          18,
+          60
+        ],
+        [
+          21,
+          23,
+          10,
+          40
+        ],
+        [
+          22,
+          34,
+          8,
+          17
+        ]
+      ]
+    },
+    {
+      "number": 154,
+      "source_sha256": "f4a11c596ef643d76563fedc68dd7f29a1f69cd4a846abad15eda28b681e8d15",
+      "before_sha256": "700d2402e1142bc58bd9e17be6eae58934028c98887b4996c55ddf26ca88f191",
+      "after_sha256": "225e0e515e5c30e0f0a7f9b6807dcc8537d4f54f556a3694fa905e3d11486990",
+      "changed_indices": 5614,
+      "note": "New continuous blank steel donor across full old letter/shadow footprints, not a color threshold carrying old background back. Complete cyan/red glyphs; own central seam, braces, lights and outside steel retained.",
+      "feedback_rectangles": [
+        [
+          75,
+          87,
+          63,
+          43
+        ],
+        [
+          142,
+          87,
+          61,
+          43
+        ],
+        [
+          77,
+          142,
+          36,
+          15
+        ],
+        [
+          143,
+          142,
+          36,
+          15
+        ],
+        [
+          92,
+          92,
+          32,
+          10
+        ],
+        [
+          98,
+          104,
+          21,
+          10
+        ],
+        [
+          88,
+          117,
+          39,
+          10
+        ],
+        [
+          87,
+          146,
+          18,
+          9
+        ],
+        [
+          155,
+          92,
+          32,
+          10
+        ],
+        [
+          160,
+          104,
+          21,
+          10
+        ],
+        [
+          152,
+          117,
+          39,
+          10
+        ],
+        [
+          150,
+          146,
+          18,
+          9
+        ]
+      ]
+    },
+    {
+      "number": 163,
+      "source_sha256": "a1239fdc55604c87df9c14dff247928a40f28889042b91087baf60bfd8014a0c",
+      "before_sha256": "971d3fba734970ed5900c31846cf502049681d399227dcfb42c7e548eb5b69ad",
+      "after_sha256": "28e6a49a35a3e807a2327d138c183014659fb5463828a8b3d89b14e7344c19a6",
+      "changed_indices": 678,
+      "note": "Own original complete blood field restored, not clean sibling palette. Only identified readable old ink and fresh Chinese glyph footprints change; source blood pixels crossing letters, full rim and middle microprint protected pixel-exact.",
+      "feedback_rectangles": [
+        [
+          7,
+          143,
+          51,
+          31
+        ]
+      ]
+    },
+    {
+      "number": 182,
+      "source_sha256": "4ef12dc045324effd49667e8fdd802bedecc18e92e09f4ed0bd72f61a86d253b",
+      "before_sha256": "bbbf7f348652752ba409b131f83fbfca9377962937a8b1b5507ffb0e7f091efd",
+      "after_sha256": "1f00adade38584363f8eeb14f71941a076a34809c8e6ead61bcff7a1c2dd29cd",
+      "changed_indices": 2394,
+      "note": "Complete11px ivory footer words inside original UV/frame, no repeated-row stripe background. Both lower alpha states rebuilt from same full outline, centered on original O/X; clear full20px beds removes stray horizontal lines, icons and frame exact.",
+      "feedback_rectangles": [
+        [
+          128,
+          88,
+          30,
+          17
+        ],
+        [
+          180,
+          88,
+          53,
+          17
+        ],
+        [
+          0,
+          139,
+          28,
+          40
+        ],
+        [
+          52,
+          139,
+          49,
+          40
+        ],
+        [
+          132,
+          92,
+          21,
+          10
+        ],
+        [
+          204,
+          92,
+          21,
+          10
+        ],
+        [
+          101,
+          178,
+          1,
+          1
+        ]
+      ]
+    },
+    {
+      "number": 183,
+      "source_sha256": "af91ca0e09852b68bcc2f6a80834c6c362b2b4771316b585b79ea77bef3ae268",
+      "before_sha256": "3b54f3c8a0048f86f908fbe039cce8cc767912f4410164020ab566317d4fd05d",
+      "after_sha256": "69bdd8e0cc132533191f027b322d5d3dead9cfa592a75ab7f741e7a9e77dbd05",
+      "changed_indices": 2384,
+      "note": "Complete11px ivory footer words inside original UV/frame, no repeated-row stripe background. Both lower alpha states rebuilt from same full outline, centered on original O/X; clear full20px beds removes stray horizontal lines, icons and frame exact.",
+      "feedback_rectangles": [
+        [
+          128,
+          88,
+          30,
+          17
+        ],
+        [
+          180,
+          88,
+          53,
+          17
+        ],
+        [
+          0,
+          139,
+          28,
+          40
+        ],
+        [
+          52,
+          139,
+          49,
+          40
+        ],
+        [
+          132,
+          92,
+          21,
+          10
+        ],
+        [
+          204,
+          92,
+          21,
+          10
+        ],
+        [
+          101,
+          178,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "placements": {
+    "14": [
+      {
+        "id": "capsule-0-0",
+        "rect": [
+          44,
+          14,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-0-1",
+        "rect": [
+          154,
+          14,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-1-0",
+        "rect": [
+          44,
+          44,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-1-1",
+        "rect": [
+          154,
+          44,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-2-0",
+        "rect": [
+          44,
+          74,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-2-1",
+        "rect": [
+          154,
+          74,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-3-0",
+        "rect": [
+          38,
+          104,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-3-1",
+        "rect": [
+          148,
+          104,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-4-0",
+        "rect": [
+          38,
+          134,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-4-1",
+        "rect": [
+          148,
+          134,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-5-0",
+        "rect": [
+          44,
+          164,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-5-1",
+        "rect": [
+          154,
+          164,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-6-0",
+        "rect": [
+          44,
+          194,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-6-1",
+        "rect": [
+          154,
+          194,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-7-0",
+        "rect": [
+          38,
+          224,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-7-1",
+        "rect": [
+          148,
+          224,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      }
+    ],
+    "15": [
+      {
+        "id": "capsule-3-0",
+        "rect": [
+          44,
+          104,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-3-1",
+        "rect": [
+          154,
+          104,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-4-0",
+        "rect": [
+          38,
+          134,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-4-1",
+        "rect": [
+          148,
+          134,
+          39,
+          15
+        ],
+        "em_geometry": [
+          39,
+          15
+        ]
+      },
+      {
+        "id": "capsule-5-0",
+        "rect": [
+          44,
+          164,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-5-1",
+        "rect": [
+          154,
+          164,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-6-0",
+        "rect": [
+          44,
+          194,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-6-1",
+        "rect": [
+          154,
+          194,
+          26,
+          15
+        ],
+        "em_geometry": [
+          26,
+          15
+        ]
+      },
+      {
+        "id": "capsule-7-0",
+        "rect": [
+          50,
+          224,
+          13,
+          15
+        ],
+        "em_geometry": [
+          13,
+          15
+        ]
+      },
+      {
+        "id": "capsule-7-1",
+        "rect": [
+          160,
+          224,
+          13,
+          15
+        ],
+        "em_geometry": [
+          13,
+          15
+        ]
+      }
+    ],
+    "49": [
+      {
+        "id": "notice",
+        "rect": [
+          76,
+          4,
+          15,
+          8
+        ],
+        "em_geometry": [
+          15,
+          8
+        ]
+      }
+    ],
+    "50": [
+      {
+        "id": "notice",
+        "rect": [
+          76,
+          4,
+          15,
+          8
+        ],
+        "em_geometry": [
+          15,
+          8
+        ]
+      }
+    ],
+    "51": [
+      {
+        "id": "notice",
+        "rect": [
+          76,
+          4,
+          15,
+          8
+        ],
+        "em_geometry": [
+          15,
+          8
+        ]
+      }
+    ],
+    "37": [
+      {
+        "id": "power-down",
+        "rect": [
+          12,
+          26,
+          44,
+          21
+        ],
+        "em_geometry": [
+          44,
+          21
+        ]
+      }
+    ],
+    "38": [
+      {
+        "id": "power-down",
+        "rect": [
+          12,
+          26,
+          44,
+          21
+        ],
+        "em_geometry": [
+          44,
+          21
+        ]
+      }
+    ],
+    "46": [
+      {
+        "id": "caution",
+        "rect": [
+          62,
+          60,
+          30,
+          15
+        ],
+        "em_geometry": [
+          30,
+          15
+        ]
+      },
+      {
+        "id": "restricted",
+        "rect": [
+          57,
+          78,
+          43,
+          10
+        ],
+        "em_geometry": [
+          43,
+          10
+        ]
+      }
+    ],
+    "56": [
+      {
+        "id": "larva-lab",
+        "rect": [
+          54,
+          65,
+          54,
+          10
+        ],
+        "em_geometry": [
+          54,
+          10
+        ]
+      },
+      {
+        "id": "restricted",
+        "rect": [
+          58,
+          76,
+          43,
+          10
+        ],
+        "em_geometry": [
+          43,
+          10
+        ]
+      }
+    ],
+    "57": [
+      {
+        "id": "larva-lab",
+        "rect": [
+          54,
+          65,
+          54,
+          10
+        ],
+        "em_geometry": [
+          54,
+          10
+        ]
+      },
+      {
+        "id": "restricted",
+        "rect": [
+          58,
+          76,
+          43,
+          10
+        ],
+        "em_geometry": [
+          43,
+          10
+        ]
+      }
+    ],
+    "58": [
+      {
+        "id": "larva-lab",
+        "rect": [
+          54,
+          65,
+          54,
+          10
+        ],
+        "em_geometry": [
+          54,
+          10
+        ]
+      },
+      {
+        "id": "restricted",
+        "rect": [
+          58,
+          76,
+          43,
+          10
+        ],
+        "em_geometry": [
+          43,
+          10
+        ]
+      }
+    ],
+    "59": [
+      {
+        "id": "closed-circuit",
+        "rect": [
+          14,
+          88,
+          19,
+          10
+        ],
+        "em_geometry": [
+          19,
+          10
+        ]
+      },
+      {
+        "id": "camera",
+        "rect": [
+          9,
+          99,
+          30,
+          10
+        ],
+        "em_geometry": [
+          30,
+          10
+        ]
+      }
+    ],
+    "71": [
+      {
+        "id": "metal-detector",
+        "rect": [
+          73,
+          208,
+          54,
+          10
+        ],
+        "em_geometry": [
+          54,
+          10
+        ]
+      },
+      {
+        "id": "vital-creations",
+        "rect": [
+          189,
+          162,
+          10,
+          39
+        ],
+        "em_geometry": [
+          10,
+          39
+        ]
+      }
+    ],
+    "72": [
+      {
+        "id": "metal-detector",
+        "rect": [
+          73,
+          208,
+          54,
+          10
+        ],
+        "em_geometry": [
+          54,
+          10
+        ]
+      },
+      {
+        "id": "vital-creations",
+        "rect": [
+          189,
+          162,
+          10,
+          39
+        ],
+        "em_geometry": [
+          10,
+          39
+        ]
+      }
+    ],
+    "61": [
+      {
+        "id": "main-108",
+        "rect": [
+          92,
+          92,
+          32,
+          10
+        ],
+        "em_geometry": [
+          32,
+          10
+        ]
+      },
+      {
+        "id": "center-108",
+        "rect": [
+          98,
+          104,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "area-108",
+        "rect": [
+          88,
+          117,
+          39,
+          10
+        ],
+        "em_geometry": [
+          39,
+          10
+        ]
+      },
+      {
+        "id": "unlock-108",
+        "rect": [
+          87,
+          146,
+          18,
+          9
+        ],
+        "em_geometry": [
+          18,
+          9
+        ]
+      },
+      {
+        "id": "main-171",
+        "rect": [
+          155,
+          92,
+          32,
+          10
+        ],
+        "em_geometry": [
+          32,
+          10
+        ]
+      },
+      {
+        "id": "center-171",
+        "rect": [
+          160,
+          104,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "area-171",
+        "rect": [
+          152,
+          117,
+          39,
+          10
+        ],
+        "em_geometry": [
+          39,
+          10
+        ]
+      },
+      {
+        "id": "unlock-171",
+        "rect": [
+          150,
+          146,
+          18,
+          9
+        ],
+        "em_geometry": [
+          18,
+          9
+        ]
+      }
+    ],
+    "154": [
+      {
+        "id": "main-108",
+        "rect": [
+          92,
+          92,
+          32,
+          10
+        ],
+        "em_geometry": [
+          32,
+          10
+        ]
+      },
+      {
+        "id": "center-108",
+        "rect": [
+          98,
+          104,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "area-108",
+        "rect": [
+          88,
+          117,
+          39,
+          10
+        ],
+        "em_geometry": [
+          39,
+          10
+        ]
+      },
+      {
+        "id": "unlock-108",
+        "rect": [
+          87,
+          146,
+          18,
+          9
+        ],
+        "em_geometry": [
+          18,
+          9
+        ]
+      },
+      {
+        "id": "main-171",
+        "rect": [
+          155,
+          92,
+          32,
+          10
+        ],
+        "em_geometry": [
+          32,
+          10
+        ]
+      },
+      {
+        "id": "center-171",
+        "rect": [
+          160,
+          104,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "area-171",
+        "rect": [
+          152,
+          117,
+          39,
+          10
+        ],
+        "em_geometry": [
+          39,
+          10
+        ]
+      },
+      {
+        "id": "unlock-171",
+        "rect": [
+          150,
+          146,
+          18,
+          9
+        ],
+        "em_geometry": [
+          18,
+          9
+        ]
+      }
+    ],
+    "93": [
+      {
+        "id": "side-caution",
+        "rect": [
+          22,
+          34,
+          8,
+          17
+        ],
+        "em_geometry": [
+          8,
+          17
+        ]
+      }
+    ],
+    "94": [
+      {
+        "id": "side-caution",
+        "rect": [
+          22,
+          34,
+          8,
+          17
+        ],
+        "em_geometry": [
+          8,
+          17
+        ]
+      }
+    ],
+    "182": [
+      {
+        "id": "footer-确定",
+        "rect": [
+          132,
+          92,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "footer-返回",
+        "rect": [
+          204,
+          92,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      }
+    ],
+    "183": [
+      {
+        "id": "footer-确定",
+        "rect": [
+          132,
+          92,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      },
+      {
+        "id": "footer-返回",
+        "rect": [
+          204,
+          92,
+          21,
+          10
+        ],
+        "em_geometry": [
+          21,
+          10
+        ]
+      }
+    ]
+  }
+}

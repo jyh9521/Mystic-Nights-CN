@@ -45,6 +45,55 @@ class ArtworkTests(unittest.TestCase):
         source=bytes(source);image,_=decode_tim2(source)
         self.assertEqual(import_indexed_pixels(source,image,[],source_sha256=digest(source)),source)
 
+    def test_revision_preserves_reference_duplicate_color_indices(self):
+        source = bytearray(self.source)
+        palette = 64 + 32 * 24
+        source[palette + 7 * 4:palette + 8 * 4] = source[palette + 4:palette + 8]
+        source = bytes(source)
+        reference = bytearray(source)
+        reference[64 + 10 * 32 + 10] = 7
+        reference = bytes(reference)
+        image, _ = decode_tim2(reference)
+        # The unchanged localized face used index7, not its equal-color alias1.
+        self.assertEqual(import_indexed_pixels(source, image, [[10, 10, 1, 1]],
+                         source_sha256=digest(source), reference=reference,
+                         reference_sha256=digest(reference)), reference)
+
+    def test_revision_reference_requires_exact_identity_and_palette(self):
+        image, _ = decode_tim2(self.source)
+        for reference, identity in [(self.source, None), (self.source, '0' * 64),
+                                    (self.source[:-1] + b'\x01', digest(self.source[:-1] + b'\x01'))]:
+            with self.assertRaises(ValueError):
+                import_indexed_pixels(self.source, image, [[0, 0, 1, 1]],
+                                      source_sha256=digest(self.source), reference=reference,
+                                      reference_sha256=identity)
+
+    def test_revision_reference_never_expands_protected_region(self):
+        reference = bytearray(self.source)
+        reference[64] = 7  # same decoded black, different original index
+        reference = bytes(reference)
+        image, _ = decode_tim2(reference)
+        self.assertEqual(import_indexed_pixels(self.source, image, [],
+                         source_sha256=digest(self.source), reference=reference,
+                         reference_sha256=digest(reference)), self.source)
+
+    def test_revision_reference_can_exclude_source_restoration_region(self):
+        reference = bytearray(self.source)
+        reference[64:66] = b'\x07\x07'
+        reference = bytes(reference)
+        image, _ = decode_tim2(reference)
+        result = import_indexed_pixels(self.source, image, [[0, 0, 2, 1]],
+                    source_sha256=digest(self.source), reference=reference,
+                    reference_sha256=digest(reference), reference_rectangles=[[0, 0, 1, 1]])
+        self.assertEqual(result[64:66], b'\x07\x00')
+
+    def test_revision_reference_regions_must_be_within_allowed_pixels(self):
+        image, _ = decode_tim2(self.source)
+        with self.assertRaisesRegex(ValueError, 'reference regions exceed'):
+            import_indexed_pixels(self.source, image, [[0, 0, 1, 1]],
+                    source_sha256=digest(self.source), reference=self.source,
+                    reference_sha256=digest(self.source), reference_rectangles=[[0, 0, 2, 1]])
+
     def test_import_exact_color_and_round_trip(self):
         image,_=decode_tim2(self.source)
         image.putpixel((10,10),(255,255,255,255))
